@@ -2,4 +2,6 @@
   import "../app.css";
 </script>
 
-<slot />
+<div class="min-w[320px]">
+  <slot />
+</div>
