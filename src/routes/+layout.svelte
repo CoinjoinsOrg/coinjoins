@@ -3,31 +3,55 @@
   import CoinjoinLogo from "../lib/img/CoinjoinLogo.svelte";
   import gustavo from "@lib/img/gus.png";
   import thibaud from "@lib/img/thib.png";
+  import { page } from "$app/stores";
+  import { onMount } from "svelte";
+  onMount(() => console.log("pathname", $page.url.pathname));
 </script>
 
-<div class="flex justify-between max-w-5xl mx-auto py-6 items-center">
+<div class="flex justify-between max-w-5xl mx-auto py-6 items-center px-4">
   <div class="flex-auto">
     <div class="w-6">
-      <CoinjoinLogo />
+      <a href="/">
+        <CoinjoinLogo />
+      </a>
     </div>
   </div>
-  <div
-    class="flex flex-1 justify-between font-inconsolata font-normal text-white"
-  >
-    <div class="hover:text-green-cj hover:cursor-pointer">Intro</div>
-    <div class="hover:text-green-cj hover:cursor-pointer">Advanced</div>
-    <div class="hover:text-green-cj hover:cursor-pointer">History</div>
+  <div class="flex flex-1 justify-between font-inconsolata font-normal gap-4">
+    <div
+      class="hover:text-green-cj hover:cursor-pointer {$page.url.pathname ===
+      '/'
+        ? 'text-green-cj'
+        : 'text-white'}"
+    >
+      <a href="/" class="no-underline"> Intro </a>
+    </div>
+    <div
+      class="hover:text-green-cj hover:cursor-pointer {$page.url.pathname ===
+      '/advanced'
+        ? 'text-green-cj'
+        : 'text-white'}"
+    >
+      <a href="/advanced" class="no-underline">Advanced </a>
+    </div>
+    <div
+      class="hover:text-green-cj hover:cursor-pointer {$page.url.pathname ===
+      '/history'
+        ? 'text-green-cj'
+        : 'text-white'}"
+    >
+      <a href="/history" class="no-underline"> History </a>
+    </div>
   </div>
   <div class="flex-auto flex justify-end">
     <a
-      href="/"
+      href="#try"
       class="block border border-green-cj bg-green-cj px-6 py-2 rounded-md text-base text-dark-blue no-underline"
       >Try coinjoins</a
     >
   </div>
 </div>
 
-<div class="min-w[320px] bg-dark-blue flex flex-col gap-40">
+<div class="min-w[320px] bg-dark-blue flex flex-col gap-72">
   <slot />
 </div>
 
