@@ -4,6 +4,9 @@ export default {
   theme: {
     colors: {
       "green-cj": "#00FF19",
+      "dark-blue": "#181B2D",
+      white: "#FFFFFF",
+      red: "#EA2424",
     },
     extend: {
       fontFamily: {

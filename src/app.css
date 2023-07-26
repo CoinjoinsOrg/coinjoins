@@ -1,4 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+
+/* @import url("https://fonts.googleapis.com/css2?family=Inconsolata display=swap"); */
+
+:root {
+  --dark-blue-background: #181b2d;
+}
+
+html {
+  background-color: var(--dark-blue-background);
+  color: #ffffff;
+}
+
+a {
+  text-decoration: underline;
+}
