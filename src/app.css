@@ -14,6 +14,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body.mobile-menu-active {
+  overflow: hidden;
+}
+
 a {
   text-decoration: underline;
 }
