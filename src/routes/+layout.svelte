@@ -57,7 +57,7 @@
   <div
     class="font-inconsolata isolate {showMobileMenu
       ? 'z-10 font-semibold text-5xl bg-dark-blue fixed h-screen w-screen top-24 left-0 px-4 overflow-hidden flex flex-col gap-8 items-start'
-      : 'hidden md:flex md:flex-1 md:justify-between md:font-normal md:gap-4'}    "
+      : 'hidden md:flex md:flex-1 md:justify-center md:font-normal md:gap-4'}    "
   >
     <div
       class="hover:text-green-cj hover:cursor-pointer {$page.url.pathname ===
@@ -75,7 +75,7 @@
         Intro
       </a>
     </div>
-    <div
+    <!-- <div
       class="hover:text-green-cj hover:cursor-pointer {$page.url.pathname ===
       '/advanced'
         ? 'text-green-cj'
@@ -89,7 +89,7 @@
         class="no-underline"
         >Advanced
       </a>
-    </div>
+    </div> -->
     <div
       class="cursor-default {$page.url.pathname === '/history'
         ? 'text-green-cj'
@@ -97,11 +97,11 @@
     >
       <div class="relative">
         <div
-          class="absolute -top-2 left-52 md:left-16 md:text-xs md:-top-3 text-sm border rounded px-1 text-green-cj"
+          class="absolute -top-2 left-52 md:left-20 md:text-xs md:-top-4 text-sm border rounded px-1 text-green-cj"
         >
           soon
         </div>
-        History
+        Advanced
       </div>
     </div>
     <div class="md:hidden flex justify-center">
