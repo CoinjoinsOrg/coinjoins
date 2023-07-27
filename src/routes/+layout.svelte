@@ -4,26 +4,76 @@
   import gustavo from "@lib/img/gus.png";
   import thibaud from "@lib/img/thib.png";
   import { page } from "$app/stores";
-  import { onMount } from "svelte";
-  onMount(() => console.log("pathname", $page.url.pathname));
+
+  let showMobileMenu = false;
+
+  function handleMobileIconClick() {
+    showMobileMenu = !showMobileMenu;
+    window.document.body.classList.toggle("mobile-menu-active");
+  }
+
+  function handleMobileMenuItemClick() {
+    showMobileMenu = false;
+    window.document.body.classList.toggle("mobile-menu-active");
+  }
+
+  function handleDesktopMenuItemClick() {
+    showMobileMenu = false;
+  }
 </script>
 
-<div class="flex justify-between max-w-5xl mx-auto py-6 items-center px-4">
-  <div class="flex-auto">
+<svelte:head>
+  <title>Coinjoins.org - Lean about bitcoin collaborative transactions</title>
+  <meta
+    name="description"
+    content="Coinjoins are collaborative bitcoin transactions."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Coinjoins.org" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:url" content="https://coinjoins.org" />
+  <meta
+    property="og:title"
+    content="Coinjoins.org - Lean about bitcoin collaborative transactions"
+  />
+  <meta
+    property="og:description"
+    content="Coinjoins are collaborative bitcoin transactions."
+  />
+  <meta property="og:image" content="https://coinjoins.org/preview.png" />
+</svelte:head>
+
+<header
+  class="min-w-[320px] flex justify-between h-[90px] md:max-w-5xl md:mx-auto py-6 items-center px-4"
+>
+  <div class="py-1 flex-auto">
     <div class="w-6">
       <a href="/">
         <CoinjoinLogo />
       </a>
     </div>
   </div>
-  <div class="flex flex-1 justify-between font-inconsolata font-normal gap-4">
+
+  <div
+    class="font-inconsolata isolate {showMobileMenu
+      ? 'z-10 font-semibold text-5xl bg-dark-blue fixed h-screen w-screen top-24 left-0 px-4 overflow-hidden flex flex-col gap-8 items-start'
+      : 'hidden md:flex md:flex-1 md:justify-between md:font-normal md:gap-4'}    "
+  >
     <div
       class="hover:text-green-cj hover:cursor-pointer {$page.url.pathname ===
       '/'
         ? 'text-green-cj'
         : 'text-white'}"
     >
-      <a href="/" class="no-underline"> Intro </a>
+      <a
+        on:click={showMobileMenu
+          ? handleMobileMenuItemClick
+          : handleDesktopMenuItemClick}
+        href="/"
+        class="no-underline"
+      >
+        Intro
+      </a>
     </div>
     <div
       class="hover:text-green-cj hover:cursor-pointer {$page.url.pathname ===
@@ -31,35 +81,68 @@
         ? 'text-green-cj'
         : 'text-white'}"
     >
-      <a href="/advanced" class="no-underline">Advanced </a>
+      <a
+        on:click={showMobileMenu
+          ? handleMobileMenuItemClick
+          : handleDesktopMenuItemClick}
+        href="/advanced"
+        class="no-underline"
+        >Advanced
+      </a>
     </div>
     <div
-      class="hover:text-green-cj hover:cursor-pointer {$page.url.pathname ===
-      '/history'
+      class="cursor-default {$page.url.pathname === '/history'
         ? 'text-green-cj'
         : 'text-white'}"
     >
-      <a href="/history" class="no-underline"> History </a>
+      <div class="relative">
+        <div
+          class="absolute -top-2 left-52 md:left-16 md:text-xs md:-top-3 text-sm border rounded px-1 text-green-cj"
+        >
+          soon
+        </div>
+        History
+      </div>
+    </div>
+    <div class="md:hidden flex justify-center">
+      <a
+        on:click={showMobileMenu
+          ? handleMobileMenuItemClick
+          : handleDesktopMenuItemClick}
+        href="#try"
+        class="block border border-green-cj bg-green-cj px-6 py-2 rounded-md text-base text-dark-blue no-underline"
+        >Try coinjoins</a
+      >
     </div>
   </div>
-  <div class="flex-auto flex justify-end">
+
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
+  <div
+    on:click={handleMobileIconClick}
+    class="mobile-icon w-6 h-4 relative cursor-pointer z-10 md:hidden"
+  >
+    <div class="middle-line" />
+  </div>
+
+  <div class="hidden md:flex flex-auto justify-end">
     <a
       href="#try"
       class="block border border-green-cj bg-green-cj px-6 py-2 rounded-md text-base text-dark-blue no-underline"
       >Try coinjoins</a
     >
   </div>
-</div>
+</header>
 
-<div class="min-w[320px] bg-dark-blue flex flex-col gap-72">
+<div class="min-w-[320px] bg-dark-blue flex flex-col gap-72">
   <slot />
 </div>
 
 <div class="flex flex-col items-center gap-16 pt-36">
-  <div class="h-px bg-green-cj w-80 mx-auto" />
+  <div class="h-px bg-green-cj w-full max-w-lg mx-auto" />
   <div class="flex flex-col items-center gap-8">
     <div class="text-xl">Maintainers</div>
-    <div class="flex gap-10">
+    <div class="flex flex-col md:flex-row gap-10">
       <div class="flex flex-col items-center gap-2">
         <div><img src={thibaud} alt="Thibaud" /></div>
         <div>
@@ -90,3 +173,43 @@
     </div>
   </div>
 </div>
+
+<style>
+  .mobile-icon:after,
+  .mobile-icon:before,
+  .middle-line {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: all 0.4s;
+  }
+
+  .mobile-icon:before,
+  .middle-line {
+    top: 0;
+  }
+
+  .mobile-icon:after,
+  .middle-line {
+    bottom: 0;
+  }
+
+  .mobile-icon:before {
+    width: 66%;
+  }
+
+  .mobile-icon:after {
+    width: 33%;
+  }
+
+  .middle-line {
+    margin: auto;
+  }
+
+  .mobile-icon:hover:before,
+  .mobile-icon:hover:after {
+    width: 100%;
+  }
+</style>
