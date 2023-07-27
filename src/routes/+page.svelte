@@ -96,7 +96,7 @@
     <CoinjoinVisual />
   </div>
   <div
-    class="absolute top-48 mx-auto right-0 left-0 flex flex-col h-full gap-80"
+    class="min-w-[320px] absolute top-48 mx-auto right-0 left-0 flex flex-col gap-48 xl:gap-0 xl:justify-between xl:h-[calc(100vh-10rem-90px)]"
   >
     <div class="flex flex-col items-center gap-10">
       <H1>Coinjoins</H1>
@@ -116,21 +116,22 @@
   </div>
 </div>
 
-<div id="open" class="relative h-full mx-auto w-full">
-  <div class="flex flex-col items-center gap-14 z-10">
-    <div class="w-32"><Bitcoin /></div>
+<div id="open" class="relative mx-auto w-full h-full">
+  <div
+    class="absolute flex flex-col items-center justify-center left-0 top-0 bottom-0 right-0 gap-10 md:gap-14 z-10 mx-auto"
+  >
+    <div class="w-20 md:w-32"><Bitcoin /></div>
 
-    <h2 class="text-5xl text-white font-inconsolata">Bitcoin is Open</h2>
+    <H2>Bitcoin is Open</H2>
 
-    <div>
-      <p class="text-xl text-center text-white max-w-2xl p-8">
-        By design, all bitcoin transactions are publicly visible. That’s great
-        to prevent inflation and fraud without relying on third parties. But it
-        has some privacy drawbacks.
-      </p>
-    </div>
+    <p class="text-xl text-center text-white max-w-2xl p-8">
+      By design, all bitcoin transactions are publicly visible. That’s great to
+      prevent inflation and fraud without relying on third parties. But it has
+      some privacy drawbacks.
+    </p>
   </div>
-  <div class="absolute top-0 left-0 w-full h-full z-0">
+
+  <div class="w-full h-[calc(50vh)]">
     <div class="w-10 eye-move-down eye-1 left-1/4 absolute block top-20">
       <Eye />
     </div>
@@ -170,12 +171,13 @@
   </div>
 </div>
 
-<div class="flex max-w-5xl mx-auto items-center gap-20 px-4">
-  <div class="flex-1"><Utxos /></div>
+<div
+  class="flex flex-col md:flex-row max-w-5xl mx-auto items-center gap-20 px-4"
+>
+  <div class="w-full px-4 md:px-0 flex-auto md:flex-1"><Utxos /></div>
+
   <div class="flex flex-col gap-12 flex-1">
-    <h2 class="text-5xl text-white font-inconsolata">
-      It’s all about the UTXOs
-    </h2>
+    <H2>It’s all about the UTXOs</H2>
     <p class="text-white text-xl">
       Unspent Transaction Outputs, or UTXOs, are essentially the coins in the
       bitcoin network. <br /><br />
@@ -186,7 +188,9 @@
   </div>
 </div>
 
-<div class="flex gap-20 max-w-5xl mx-auto items-center px-4">
+<div
+  class="flex flex-col md:flex-row gap-20 max-w-5xl mx-auto items-center px-4"
+>
   <div class="flex flex-col gap-12 flex-1">
     <H2>How a Bitcoin Transaction Works</H2>
 
@@ -208,7 +212,7 @@
       </li>
     </ol>
   </div>
-  <div class="flex-1"><TxVisual /></div>
+  <div class="px-4 md:px-0 w-full flex-1"><TxVisual /></div>
 </div>
 
 <div class="flex flex-col items-center gap-8 mx-auto max-w-5xl px-4">
@@ -222,8 +226,10 @@
     </p>
   </div>
 
-  <div class="flex justify-between gap-12 px-4">
-    <div class="flex flex-col items-center gap-6 py-8">
+  <div
+    class="flex flex-col md:flex-row justify-between gap-12 px-4 items-center"
+  >
+    <div class="flex flex-col items-center gap-6 py-8 max-w-md">
       <div class="w-8"><MoneyBill /></div>
       <div class="text-2xl">A Payment</div>
       <p class="text-white text-center">
@@ -231,7 +237,7 @@
         sender receives the unused amount back to its wallet.
       </p>
     </div>
-    <div class="flex flex-col items-center gap-6 py-8">
+    <div class="flex flex-col items-center gap-6 py-8 max-w-md">
       <div class="w-8"><Rotate /></div>
       <div class="text-2xl">A Self-Transfer</div>
       <p class="text-white text-center">
@@ -239,7 +245,7 @@
         change hands and that it is a self-spend.
       </p>
     </div>
-    <div class="flex flex-col items-center gap-6 py-8">
+    <div class="flex flex-col items-center gap-6 py-8 max-w-md">
       <div class="w-8"><User /></div>
       <div class="text-2xl">The Same Owner</div>
       <p class="text-white text-center">
@@ -250,7 +256,9 @@
   </div>
 </div>
 
-<div class="flex gap-12 max-w-5xl mx-auto items-center px-4">
+<div
+  class="flex flex-col md:flex-row gap-12 max-w-xl md:max-w-5xl mx-auto items-center px-4"
+>
   <div class="flex-1">
     <H2>Surveillance is Easy & Cheap on Bitcoin</H2>
   </div>
@@ -267,11 +275,11 @@
   </p>
 </div>
 
-<div class="flex flex-col gap-12 max-w-3xl mx-auto px-4">
+<div class="flex flex-col gap-12 max-w-xl md:max-w-3xl mx-auto px-4">
   <div
     class="border-2 border-green-cj rounded text-green-cj text-center px-8 py-6"
   >
-    <h2 class="text-5xl font-inconsolata">
+    <h2 class="text-3xl md:text-5xl font-inconsolata">
       “Good we can catch the bad guys, right?!”
     </h2>
   </div>
@@ -285,7 +293,12 @@
   </div>
 </div>
 
-<div class="flex max-w-5xl justify-between mx-auto gap-24 items-center px-4">
+<div
+  class="flex flex-col md:flex-row max-w-xl md:max-w-5xl justify-between mx-auto gap-24 items-center px-4"
+>
+  <div class="block md:hidden">
+    <H2>Do you really have nothing to hide?</H2>
+  </div>
   <div class="text-white text-xl">
     How about strangers knowing how much money you earn per month or saved in a
     year? <br /><br /><br />
@@ -295,8 +308,9 @@
 
     Or your employer knowing who you make political donations to?
   </div>
-
-  <H2>Do you really have nothing to hide?</H2>
+  <div class="hidden md:block">
+    <H2>Do you really have nothing to hide?</H2>
+  </div>
 </div>
 
 <div
@@ -311,28 +325,32 @@
 
 <div class="flex flex-col gap-20 items-center max-w-lg mx-auto px-4">
   <div
-    class="border-4 rounded border-red p-8 text-5xl text-center text-red font-inconsolata"
+    class="border-4 rounded border-red p-4 md:p-8 text-3xl md:text-5xl text-center text-red font-inconsolata"
   >
     That’s Not How Bitcoin Works
   </div>
   <div class="max-h-60"><RedLine /></div>
-  <div class="border-none text-5xl text-center text-white font-inconsolata">
+  <div
+    class="border-none text-3xl md:text-5xl text-center text-white font-inconsolata"
+  >
     But You Can Reclaim Your Privacy Today
   </div>
   <div class="max-h-60"><GreenLine /></div>
   <div
-    class="border-4 rounded border-green-cj p-8 text-5xl text-center text-green-cj font-inconsolata"
+    class="border-4 rounded border-green-cj p-4 md:p-8 text-3xl md:text-5xl text-center text-green-cj font-inconsolata"
   >
     Without Changing Bitcoin
   </div>
 </div>
 
-<div class="relative w-screen">
-  <div class="opacity-25">
+<div class="min-w-[320px] relative w-screen h-full">
+  <div class="h-[100vh] md:h-full opacity-25">
     <Cj />
   </div>
 
-  <div class="absolute mx-auto max-w-lg left-0 right-0 top-40 px-4">
+  <div
+    class="min-w-[320px] absolute mx-auto max-w-lg left-0 right-0 top-40 px-4"
+  >
     <div class="flex flex-col justify-around items-center gap-28 text-center">
       <H2>Hello, Coinjoins!</H2>
 
@@ -364,14 +382,15 @@
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <!-- svelte-ignore a11y-no-static-element-interactions -->
         <div
-          class="flex gap-10 items-center justify-between hover:cursor-pointer text-red"
+          class="flex gap-2 md:gap-10 items-center justify-between hover:cursor-pointer text-red"
           on:click={() => {
             handleQuestionClick(i);
           }}
         >
           <div
-            class="flex gap-2 font-inconsolata text-2xl {fudBustList[i]
-              .isClicked
+            class="flex gap-2 font-inconsolata text-xl md:text-2xl {fudBustList[
+              i
+            ].isClicked
               ? 'text-green-cj'
               : 'text-red'}"
           >
@@ -389,7 +408,7 @@
           </div>
         </div>
         {#if fudBustList[i].isClicked}
-          <div class="text-white text-lg px-16">
+          <div class="text-white text-lg md:px-16">
             {@html fud.answer}
           </div>
         {/if}
@@ -406,24 +425,26 @@
       principles to protect the security of users.
     </p>
   </div>
-  <div class="flex justify-between gap-8 max-w-5xl mx-auto">
+  <div
+    class="flex flex-col lg:flex-row justify-between gap-8 max-w-5xl mx-auto"
+  >
     <div
-      class="flex-1 flex flex-col items-center gap-8 border-2 border-white rounded-lg p-8 text-center"
+      class="flex-1 flex flex-col items-center gap-8 border-2 border-white rounded-lg px-10 py-8 text-center"
     >
       <div class="w-10"><GreenBitcoin /></div>
-      <p class="text-xl">Built on Bitcoin Only</p>
+      <p class="text-xl">Built on <br /> Bitcoin Only</p>
     </div>
     <div
-      class="flex-1 flex flex-col items-center gap-8 border-2 border-white rounded-lg p-8 text-center"
+      class="flex-1 flex flex-col items-center gap-8 border-2 border-white rounded-lg px-10 py-8 text-center"
     >
       <div class="w-10"><GreenBrackets /></div>
-      <p class="text-xl">100% Open Source Code</p>
+      <p class="text-xl">100% Open <br /> Source Code</p>
     </div>
     <div
-      class="flex-1 flex flex-col items-center gap-8 border-2 border-white rounded-lg p-8 text-center"
+      class="flex-1 flex flex-col items-center gap-8 border-2 border-white rounded-lg px-10 py-8 text-center"
     >
       <div class="w-10"><GreenBan /></div>
-      <p class="text-xl">No Personal Information</p>
+      <p class="text-xl">No Personal <br />Information</p>
     </div>
     <div
       class="flex-1 flex flex-col items-center gap-8 border-2 border-white rounded-lg p-8 text-center"
@@ -444,34 +465,34 @@
       that we will discuss later.
     </p>
   </div>
-  <div class="flex flex-col gap-16">
-    <div class="flex justify-between gap-12">
+  <div class="flex flex-col gap-16 items-center">
+    <div class="flex flex-col md:flex-row justify-between gap-6 md:gap-12">
       <div>
         <H3>Fully <br /> Trustless</H3>
       </div>
-      <p class="max-w-md text-xl">
+      <p class="max-w-lg md:max-w-md text-xl">
         Nobody can steal from you or spy on you. The code is 100% open source to
         anyone can verify its integrity.
       </p>
     </div>
-    <div class="flex justify-between gap-12">
+    <div class="flex flex-col md:flex-row justify-between gap-6 md:gap-12">
       <H3>Works With <br /> Any Amount</H3>
-      <p class="max-w-md text-xl">
+      <p class="max-w-lg md:max-w-md text-xl">
         From 6 561 sats (0.00006561 BTC) to 43 000 BTC, anyone can participate
         in a coinjoin transaction.
       </p>
     </div>
-    <div class="flex justify-between gap-12">
+    <div class="flex flex-col md:flex-row justify-between gap-6 md:gap-12">
       <H3>Fast & <br /> Affordable</H3>
-      <p class="max-w-md text-xl">
+      <p class="max-w-lg md:max-w-md text-xl">
         With ~3 coinjoins per hour, anyone can reclaim their privacy starting
         with one single transaction for 0.3% of bitcoin that has not yet
         coinjoined.
       </p>
     </div>
-    <div class="flex justify-between gap-12">
+    <div class="flex flex-col md:flex-row justify-between gap-6 md:gap-12">
       <H3>Block Space <br /> Efficient</H3>
-      <p class="max-w-md text-xl">
+      <p class="max-w-lg md:max-w-md text-xl">
         Consumes low amount of block space and generates mostly private outputs
         for participants.
       </p>
@@ -479,12 +500,14 @@
   </div>
 </div>
 
-<div class="flex flex-col items-center px-4">
-  <div class="flex justify-between max-w-5xl mx-auto items-center gap-28">
+<div class="gap-28 flex flex-col items-center px-4">
+  <div
+    class="flex flex-col md:flex-row justify-between max-w-5xl mx-auto items-center gap-28"
+  >
     <div>
       <WasabiLogo />
     </div>
-    <p class="text-xl">
+    <p class="block text-center md:text-left text-xl max-w-lg">
       A self-custodial bitcoin wallet with easy privacy by default. Receive
       bitcoin, wait and automatically coinjoin.
     </p>
@@ -516,7 +539,7 @@
   }
   li {
     counter-increment: cupcake;
-    padding-bottom: 16px;
+    padding-bottom: 32px;
   }
   li:before {
     content: counters(cupcake, ".") ". ";

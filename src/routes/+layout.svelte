@@ -4,7 +4,6 @@
   import gustavo from "@lib/img/gus.png";
   import thibaud from "@lib/img/thib.png";
   import { page } from "$app/stores";
-  import CoinjoinVisual from "../lib/img/CoinjoinVisual.svelte";
 
   let showMobileMenu = false;
 
@@ -45,9 +44,9 @@
 </svelte:head>
 
 <header
-  class="flex justify-between h-[90px] md:max-w-5xl md:mx-auto py-6 items-center px-4"
+  class="min-w-[320px] flex justify-between h-[90px] md:max-w-5xl md:mx-auto py-6 items-center px-4"
 >
-  <div class="flex-auto">
+  <div class="py-1 flex-auto">
     <div class="w-6">
       <a href="/">
         <CoinjoinLogo />
@@ -135,15 +134,15 @@
   </div>
 </header>
 
-<div class="min-w[320px] bg-dark-blue flex flex-col gap-72">
+<div class="min-w-[320px] bg-dark-blue flex flex-col gap-72">
   <slot />
 </div>
 
 <div class="flex flex-col items-center gap-16 pt-36">
-  <div class="h-px bg-green-cj w-80 mx-auto" />
+  <div class="h-px bg-green-cj w-full max-w-lg mx-auto" />
   <div class="flex flex-col items-center gap-8">
     <div class="text-xl">Maintainers</div>
-    <div class="flex gap-10">
+    <div class="flex flex-col md:flex-row gap-10">
       <div class="flex flex-col items-center gap-2">
         <div><img src={thibaud} alt="Thibaud" /></div>
         <div>

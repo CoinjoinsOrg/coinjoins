@@ -1,3 +1,3 @@
-<h1 class="text-white text-7xl font-inconsolata">
+<h1 class="text-white text-5xl md:text-7xl font-inconsolata">
   <slot />
 </h1>
