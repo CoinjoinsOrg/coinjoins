@@ -97,7 +97,7 @@
     >
       <div class="relative">
         <div
-          class="absolute -top-2 left-52 md:left-20 md:text-xs md:-top-4 text-sm border rounded px-1 text-green-cj"
+          class="absolute -top-6 left-56 md:left-20 md:text-xs md:-top-4 text-sm border rounded px-1 text-green-cj"
         >
           soon
         </div>
