@@ -376,7 +376,7 @@
   </div>
 </div>
 
-<div class=" px-4">
+<div class="px-4 flex flex-col gap-28">
   <div class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto">
     <H2>Heard Bad Things About Coinjoins?</H2>
     <p class="text-white text-xl">
@@ -427,7 +427,7 @@
   </div>
 </div>
 
-<div class="flex flex-col gap-36 px-4">
+<div class="flex flex-col gap-28 px-4">
   <div class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto">
     <H2>Security & Privacy Benefits</H2>
     <p class="text-white text-xl">
