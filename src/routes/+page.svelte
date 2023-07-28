@@ -196,7 +196,7 @@
 
     <ol class="text-white text-xl">
       <li>
-        User picks an amount of bitcoin to send (0.7 BTC) with the receive
+        User picks an amount of bitcoin to send (0.7 BTC) with the destination
         address. To do so, a bitcoin wallet selects at least one spendable coin
         or UTXO, and adds it as an input (1 BTC) in the transaction.
       </li>
@@ -356,11 +356,15 @@
 
       <div class="text-white text-2xl text-center">
         In a coinjoin, many different users participate together in one single
-        collaborative transaction.
+        collaborative transaction. It can be hundreds of people.
       </div>
       <div class="text-white text-2xl text-center">
-        Coinjoin users conceal the history of their coins from the public to
-        make their UTXOs fungible on the public bitcoin network.
+        A coinjoin transaction has many standard outputs of the same amounts,
+        which makes it very hard to track them back to their initial inputs.
+      </div>
+      <div class="text-white text-2xl text-center">
+        That allows coinjoin users to conceal the history of their coins from
+        the public to make their UTXOs fungible on the public bitcoin network.
       </div>
     </div>
   </div>
@@ -391,8 +395,8 @@
             class="flex gap-2 font-inconsolata text-xl md:text-2xl {fudBustList[
               i
             ].isClicked
-              ? 'text-green-cj'
-              : 'text-red'}"
+              ? 'text-green-cj font-bold'
+              : 'text-red font-normalât'}"
           >
             <div>{i + 1 + "."}</div>
             <div>
@@ -515,8 +519,8 @@
   <div>
     <a
       href="https://wasabiwallet.io/"
-      class="block border border-green-cj bg-green-cj px-6 py-2 rounded-md text-base text-dark-blue no-underline"
-      >Try Wasabi Wallet →</a
+      class="block border border-green-cj bg-green-cj px-8 py-2 rounded-md text-lg text-dark-blue no-underline"
+      >Try Wasabi Wallet</a
     >
   </div>
 </div>
@@ -527,7 +531,9 @@
   <H2>Have More Questions?</H2>
   <p class="text-white text-xl">
     If you have any comments or suggestions, we are open to hear from you.
-    Please reach out on coinjoins [at] protonmail [dot] com. <br /> <br />
+    Please reach out on <a href="mailto:coinjoins@protonmail.com"
+      >coinjoins@protonmail.com</a
+    >. <br /> <br />
     Soon, we will share more details about different bitcoin wallets, coinjoin implementations,
     benefits and tradeoffs.
   </p>
