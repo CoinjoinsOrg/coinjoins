@@ -139,7 +139,9 @@
 </div>
 
 <div class="flex flex-col items-center gap-16 pt-36">
-  <div class="h-px bg-green-cj w-full max-w-lg mx-auto" />
+  <div
+    class="h-px bg-green-cj w-[calc(100%-128px)] md:w-full max-w-lg mx-auto"
+  />
   <div class="flex flex-col items-center gap-8">
     <div class="text-xl">Maintainers</div>
     <div class="flex flex-col md:flex-row gap-10">
