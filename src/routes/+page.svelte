@@ -22,6 +22,8 @@
   import WasabiLogo from "../lib/img/WasabiLogo.svelte";
   import Cj from "../lib/img/Cj.svelte";
 
+  import CjMobile from "../lib/img/CjMobile.svelte";
+
   const fudBustList = [
     {
       question: "“Coinjoins are pointless. Bitcoin is already anonymous.”",
@@ -91,26 +93,24 @@
   }
 </script>
 
-<div class="">
-  <div class="flex items-center relative">
-    <CoinjoinVisual />
-    <div
-      class="min-w-[320px] absolute top-[40%] mx-auto right-0 left-0 flex flex-col gap-48 xl:gap-0 xl:justify-between xl:h-[calc(100vh-10rem-90px)]"
-    >
-      <div class="flex flex-col items-center gap-10">
-        <H1>Coinjoins</H1>
-        <p class="text-white text-center text-2xl">
-          Collaborative bitcoin <br />
-          transactions to reclaim your privacy.
-        </p>
-      </div>
+<div class="flex items-center relative">
+  <CoinjoinVisual />
+  <div
+    class="min-w-[320px] absolute top-[40%] mx-auto right-0 left-0 flex flex-col gap-10 md:gap-48"
+  >
+    <div class="flex flex-col items-center gap-10">
+      <H1>Coinjoins</H1>
+      <p class="text-white text-center text-2xl">
+        Collaborative bitcoin <br />
+        transactions to reclaim your privacy.
+      </p>
+    </div>
 
-      <div class="flex justify-center">
-        <div class="w-6 animate-bounce">
-          <a href="#open">
-            <ArrowDown />
-          </a>
-        </div>
+    <div class="flex justify-center">
+      <div class="w-6 animate-bounce">
+        <a href="#open">
+          <ArrowDown />
+        </a>
       </div>
     </div>
   </div>
@@ -296,7 +296,7 @@
 <div
   class="flex flex-col md:flex-row max-w-xl md:max-w-5xl justify-between mx-auto gap-24 items-center px-4"
 >
-  <div class="block md:hidden">
+  <div>
     <H2>Do you really have nothing to hide?</H2>
   </div>
   <div class="text-white text-xl">
@@ -307,9 +307,6 @@
     the big announcement?<br /><br /><br />
 
     Or your employer knowing who you make political donations to?
-  </div>
-  <div class="hidden md:block">
-    <H2>Do you really have nothing to hide?</H2>
   </div>
 </div>
 
@@ -343,28 +340,37 @@
   </div>
 </div>
 
-<div class="min-w-[320px] relative w-screen h-full">
-  <div class="h-[100vh] md:h-full opacity-25">
+<div class="relative w-screen h-full flex justify-center items-center">
+  <div
+    class="min-w-[320px] w-screen h-full hidden md:flex justify-center items-center"
+  >
     <Cj />
+  </div>
+  <div
+    class="min-w-[480px] w-screen h-full flex justify-center items-center md:hidden"
+  >
+    <CjMobile />
   </div>
 
   <div
-    class="min-w-[320px] absolute mx-auto max-w-lg left-0 right-0 top-40 px-4"
+    class="min-w-[320px] absolute mx-auto px-4 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-7xl"
   >
-    <div class="flex flex-col justify-around items-center gap-28 text-center">
+    <div class="flex flex-col items-center gap-28 text-center">
       <H2>Hello, Coinjoins!</H2>
 
-      <div class="text-white text-2xl text-center">
-        In a coinjoin, many different users participate together in one single
-        collaborative transaction. It can be hundreds of people.
-      </div>
-      <div class="text-white text-2xl text-center">
-        A coinjoin transaction has many standard outputs of the same amounts,
-        which makes it very hard to track them back to their initial inputs.
-      </div>
-      <div class="text-white text-2xl text-center">
-        That allows coinjoin users to conceal the history of their coins from
-        the public to make their UTXOs fungible on the public bitcoin network.
+      <div class="flex flex-col max-w-xl lg:flex-row lg:max-w-none gap-12">
+        <div class="text-white text-2xl text-center">
+          In a coinjoin, many different users participate together in one single
+          collaborative transaction. It can be hundreds of people.
+        </div>
+        <div class="text-white text-2xl text-center">
+          A coinjoin transaction has many standard outputs of the same amounts,
+          which makes it very hard to track them back to their initial inputs.
+        </div>
+        <div class="text-white text-2xl text-center">
+          That allows coinjoin users to conceal the history of their coins from
+          the public to make their UTXOs fungible on the public bitcoin network.
+        </div>
       </div>
     </div>
   </div>
@@ -432,29 +438,33 @@
   <div
     class="flex flex-col lg:flex-row justify-between gap-8 max-w-5xl mx-auto"
   >
-    <div
-      class="flex-1 flex flex-col items-center gap-8 border-2 border-white rounded-lg px-10 py-8 text-center"
-    >
-      <div class="w-10"><GreenBitcoin /></div>
-      <p class="text-xl">Built on <br /> Bitcoin Only</p>
+    <div class="flex-1 flex-col sm:flex-row flex gap-8">
+      <div
+        class="flex-1 flex flex-col items-center gap-8 border-2 border-white rounded-lg px-10 py-8 text-center"
+      >
+        <div class="w-10"><GreenBitcoin /></div>
+        <p class="text-xl">Built on <br /> Bitcoin Only</p>
+      </div>
+      <div
+        class="flex-1 flex flex-col items-center gap-8 border-2 border-white rounded-lg px-10 py-8 text-center"
+      >
+        <div class="w-10"><GreenBrackets /></div>
+        <p class="text-xl">100% Open <br /> Source Code</p>
+      </div>
     </div>
-    <div
-      class="flex-1 flex flex-col items-center gap-8 border-2 border-white rounded-lg px-10 py-8 text-center"
-    >
-      <div class="w-10"><GreenBrackets /></div>
-      <p class="text-xl">100% Open <br /> Source Code</p>
-    </div>
-    <div
-      class="flex-1 flex flex-col items-center gap-8 border-2 border-white rounded-lg px-10 py-8 text-center"
-    >
-      <div class="w-10"><GreenBan /></div>
-      <p class="text-xl">No Personal <br />Information</p>
-    </div>
-    <div
-      class="flex-1 flex flex-col items-center gap-8 border-2 border-white rounded-lg p-8 text-center"
-    >
-      <div class="w-10"><GreenKey /></div>
-      <p class="text-xl">Self-Custodial</p>
+    <div class="flex-1 flex-col sm:flex-row flex gap-8">
+      <div
+        class="flex-1 flex flex-col items-center gap-8 border-2 border-white rounded-lg px-10 py-8 text-center"
+      >
+        <div class="w-10"><GreenBan /></div>
+        <p class="text-xl">No Personal <br />Information</p>
+      </div>
+      <div
+        class="flex-1 flex flex-col items-center gap-8 border-2 border-white rounded-lg px-10 py-8 text-center"
+      >
+        <div class="w-10"><GreenKey /></div>
+        <p class="text-xl">Self-Custodial</p>
+      </div>
     </div>
   </div>
 </div>

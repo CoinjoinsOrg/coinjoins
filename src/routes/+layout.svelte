@@ -134,7 +134,7 @@
   </div>
 </header>
 
-<div class="min-w-[320px] bg-dark-blue flex flex-col gap-72">
+<div class="min-w-[320px] bg-dark-blue flex flex-col gap-40 md:gap-72">
   <slot />
 </div>
 
