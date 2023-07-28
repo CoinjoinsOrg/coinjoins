@@ -2055,10 +2055,7 @@
 
 <style>
   svg {
-    /* transform: scale(1.1);
-     */
     max-width: 100%;
-    /* min-width: 768px; */
-    opacity: 40%;
+    opacity: 30%;
   }
 </style>

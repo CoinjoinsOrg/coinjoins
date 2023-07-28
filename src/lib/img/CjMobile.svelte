@@ -2565,6 +2565,6 @@
 
 <style>
   svg {
-    opacity: 40%;
+    opacity: 30%;
   }
 </style>

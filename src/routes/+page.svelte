@@ -13,16 +13,16 @@
   import TxVisual from "@lib/img/TxVisual.svelte";
   import User from "@lib/img/User.svelte";
   import Utxos from "@lib/img/Utxos.svelte";
-  import ClickedArrow from "../lib/img/ClickedArrow.svelte";
-  import UnclickedArrow from "../lib/img/UnclickedArrow.svelte";
-  import GreenBitcoin from "../lib/img/GreenBitcoin.svelte";
-  import GreenBrackets from "../lib/img/GreenBrackets.svelte";
-  import GreenBan from "../lib/img/GreenBan.svelte";
-  import GreenKey from "../lib/img/GreenKey.svelte";
-  import WasabiLogo from "../lib/img/WasabiLogo.svelte";
-  import Cj from "../lib/img/Cj.svelte";
+  import ClickedArrow from "@lib/img/ClickedArrow.svelte";
+  import UnclickedArrow from "@lib/img/UnclickedArrow.svelte";
+  import GreenBitcoin from "@lib/img/GreenBitcoin.svelte";
+  import GreenBrackets from "@lib/img/GreenBrackets.svelte";
+  import GreenBan from "@lib/img/GreenBan.svelte";
+  import GreenKey from "@lib/img/GreenKey.svelte";
+  import WasabiLogo from "@lib/img/WasabiLogo.svelte";
+  import Cj from "@lib/img/Cj.svelte";
 
-  import CjMobile from "../lib/img/CjMobile.svelte";
+  import CjMobile from "@lib/img/CjMobile.svelte";
 
   const fudBustList = [
     {
