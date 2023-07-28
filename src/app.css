@@ -7,6 +7,10 @@
 :root {
   --dark-blue-background: #181b2d;
 }
+svg {
+  height: 100%;
+  width: auto;
+}
 
 html {
   background-color: var(--dark-blue-background);

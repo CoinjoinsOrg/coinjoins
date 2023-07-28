@@ -91,26 +91,26 @@
   }
 </script>
 
-<div class="pt-14">
-  <div class="opacity-50">
+<div class="">
+  <div class="flex items-center relative">
     <CoinjoinVisual />
-  </div>
-  <div
-    class="min-w-[320px] absolute top-48 mx-auto right-0 left-0 flex flex-col gap-48 xl:gap-0 xl:justify-between xl:h-[calc(100vh-10rem-90px)]"
-  >
-    <div class="flex flex-col items-center gap-10">
-      <H1>Coinjoins</H1>
-      <p class="text-white text-center text-2xl">
-        Collaborative bitcoin <br />
-        transactions to reclaim your privacy.
-      </p>
-    </div>
+    <div
+      class="min-w-[320px] absolute top-[40%] mx-auto right-0 left-0 flex flex-col gap-48 xl:gap-0 xl:justify-between xl:h-[calc(100vh-10rem-90px)]"
+    >
+      <div class="flex flex-col items-center gap-10">
+        <H1>Coinjoins</H1>
+        <p class="text-white text-center text-2xl">
+          Collaborative bitcoin <br />
+          transactions to reclaim your privacy.
+        </p>
+      </div>
 
-    <div class="flex justify-center">
-      <div class="w-6 animate-bounce">
-        <a href="#open">
-          <ArrowDown />
-        </a>
+      <div class="flex justify-center">
+        <div class="w-6 animate-bounce">
+          <a href="#open">
+            <ArrowDown />
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -395,8 +395,8 @@
             class="flex gap-2 font-inconsolata text-xl md:text-2xl {fudBustList[
               i
             ].isClicked
-              ? 'text-green-cj font-bold'
-              : 'text-red font-normalât'}"
+              ? 'text-red font-bold'
+              : 'text-white font-normal'}"
           >
             <div>{i + 1 + "."}</div>
             <div>
@@ -504,11 +504,11 @@
   </div>
 </div>
 
-<div class="gap-28 flex flex-col items-center px-4">
+<div class="gap-12 flex flex-col items-center px-4">
   <div
     class="flex flex-col md:flex-row justify-between max-w-5xl mx-auto items-center gap-28"
   >
-    <div>
+    <div class="w-52">
       <WasabiLogo />
     </div>
     <p class="block text-center md:text-left text-xl max-w-lg">
