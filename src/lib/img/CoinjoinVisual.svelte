@@ -2061,7 +2061,7 @@
 
 <style>
   svg {
-    max-width: 100%;
+
     opacity: 30%;
   }
 </style>

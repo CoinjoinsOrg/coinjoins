@@ -5,6 +5,7 @@
   import ArrowDown from "@lib/img/ArrowDown.svelte";
   import Bitcoin from "@lib/img/Bitcoin.svelte";
   import CoinjoinVisual from "@lib/img/CoinjoinVisual.svelte";
+  import CoinjoinVisualMobile from "@lib/img/CoinjoinVisualMobile.svelte";
   import Eye from "@lib/img/Eye.svelte";
   import GreenLine from "@lib/img/GreenLine.svelte";
   import MoneyBill from "@lib/img/MoneyBill.svelte";
@@ -94,7 +95,14 @@
 </script>
 
 <div class="flex items-center relative w-full">
-  <CoinjoinVisual />
+  <div class="flex md:hidden items-center w-full">
+    <CoinjoinVisualMobile />
+  </div>
+  <div class="md:flex hidden items-center w-full">
+    <CoinjoinVisual />
+  </div>
+  <!-- <CoinjoinVisualMobile /> -->
+
   <div
     class="min-w-[320px] absolute top-[40%] mx-auto right-0 left-0 flex flex-col gap-10 md:gap-48"
   >
@@ -339,14 +347,14 @@
   </div>
 </div>
 
-<div class="relative w-screen h-full flex justify-center items-center">
+<div class="relative w-full h-full flex justify-center items-center">
   <div
     class="min-w-[320px] w-full h-full hidden md:flex justify-center items-center"
   >
     <Cj />
   </div>
   <div
-    class="min-w-[480px] w-full h-full flex justify-center items-center md:hidden"
+    class="min-w-[320px] w-full h-full flex justify-center items-center md:hidden"
   >
     <CjMobile />
   </div>
