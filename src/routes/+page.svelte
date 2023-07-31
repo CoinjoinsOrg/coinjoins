@@ -183,7 +183,7 @@
       bitcoin network. <br /><br />
 
       Each UTXO has a very distinct transaction history, making all bitcoin
-      transactions easily trackable and unique from one another.
+      transactions unique from one another and thus, easily trackable.
     </p>
   </div>
 </div>
@@ -220,7 +220,7 @@
     <H2>Tracking Bitcoin Transactions</H2>
     <p class="text-white text-xl text-center">
       Most bitcoin transactions are public. Is a transaction a payment or a
-      self-spend? Is it a Lightning channel-opening? Is it connected to other
+      self-spend? Is it a Lightning channel opening? Is it connected to other
       transactions? It’s a guessing game with popular heuristics that chain
       analysts use to track bitcoin users.
     </p>
@@ -233,8 +233,8 @@
       <div class="w-8"><MoneyBill /></div>
       <div class="text-2xl">A Payment</div>
       <p class="text-white text-center">
-        If there is a change output, then it’s likely a payment, where the
-        sender receives the unused amount back to its wallet.
+        If there is a change output, then it’s likely a payment where the sender
+        receives the unused amount back to its wallet.
       </p>
     </div>
     <div class="flex flex-col items-center gap-6 py-8 max-w-md">
@@ -280,13 +280,12 @@
     class="border-2 border-green-cj rounded text-green-cj text-center px-8 py-6"
   >
     <h2 class="text-3xl md:text-5xl font-inconsolata">
-      “Good we can catch the bad guys, right?!”
+      “Good, we can catch the bad guys, right?”
     </h2>
   </div>
   <div class="text-white text-xl text-center">
-    Well... technically, due to its transparency bitcoin could become one of the
-    most advanced tool for financial surveillance due to the public nature of
-    its transactions.<br /><br />
+    Well...technically, due to its transparency, Bitcoin could become one of the
+    most advanced tools for financial surveillance.<br /><br />
 
     By default, that makes privacy for regular users quite low, which is harmful
     for the personal safety of consumers and commercial interests of businesses.
@@ -382,7 +381,7 @@
     <p class="text-white text-xl">
       Even 9 years after coinjoins were first discussed, there is still
       uncertainty about its usage. Let’s bust the Fear, Uncertainty and Doubt
-      (FUD) of coinjoins.
+      (FUD) surrounding coinjoins.
     </p>
   </div>
 
@@ -473,7 +472,7 @@
   <div class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto">
     <H2>Ready to Try for Yourself?</H2>
     <p class="text-white text-xl">
-      Don’t trust, verify. See for yourself, and learn how coinjoins work by
+      Don’t trust, verify. See for yourself and learn how coinjoins work by
       participating in them. There are different bitcoin wallets with built-in
       coinjoin features. Wasabi Wallet is one of them though there are others
       that we will discuss later.
@@ -485,7 +484,7 @@
         <H3>Fully <br /> Trustless</H3>
       </div>
       <p class="max-w-lg md:max-w-md text-xl">
-        Nobody can steal from you or spy on you. The code is 100% open source to
+        Nobody can steal from you or spy on you. The code is 100% open source so
         anyone can verify its integrity.
       </p>
     </div>
@@ -499,16 +498,15 @@
     <div class="flex flex-col md:flex-row justify-between gap-6 md:gap-12">
       <H3>Fast & <br /> Affordable</H3>
       <p class="max-w-lg md:max-w-md text-xl">
-        With ~3 coinjoins per hour, anyone can reclaim their privacy starting
-        with one single transaction for 0.3% of bitcoin that has not yet
-        coinjoined.
+        With ~3 coinjoins per hour and for just 0.3% (on non-coinjoined
+        bitcoin), anyone can reclaim their privacy.
       </p>
     </div>
     <div class="flex flex-col md:flex-row justify-between gap-6 md:gap-12">
       <H3>Block Space <br /> Efficient</H3>
       <p class="max-w-lg md:max-w-md text-xl">
-        Consumes low amount of block space and generates mostly private outputs
-        for participants.
+        Coinjoins are designed to be as block space efficient as possible,
+        sometimes even getting rid of toxic change.
       </p>
     </div>
   </div>
@@ -523,7 +521,7 @@
     </div>
     <p class="block text-center md:text-left text-xl max-w-lg">
       A self-custodial bitcoin wallet with easy privacy by default. Receive
-      bitcoin, wait and automatically coinjoin.
+      bitcoin then just wait for it to automatically coinjoin.
     </p>
   </div>
   <div>
@@ -540,7 +538,7 @@
 >
   <H2>Have More Questions?</H2>
   <p class="text-white text-xl">
-    If you have any comments or suggestions, we are open to hear from you.
+    If you have any comments or suggestions, we are open to hearing from you.
     Please reach out on <a href="mailto:coinjoins@protonmail.com"
       >coinjoins@protonmail.com</a
     >. <br /> <br />

@@ -23,7 +23,7 @@
 </script>
 
 <svelte:head>
-  <title>Coinjoins.org - Lean about bitcoin collaborative transactions</title>
+  <title>Coinjoins - Learn about bitcoin collaborative transactions</title>
   <meta
     name="description"
     content="Coinjoins are collaborative bitcoin transactions."
@@ -34,7 +34,7 @@
   <meta property="og:url" content="https://coinjoins.org" />
   <meta
     property="og:title"
-    content="Coinjoins.org - Lean about bitcoin collaborative transactions"
+    content="Coinjoins - Learn about bitcoin collaborative transactions"
   />
   <meta
     property="og:description"
