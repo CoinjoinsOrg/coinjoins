@@ -93,7 +93,7 @@
   }
 </script>
 
-<div class="flex items-center relative">
+<div class="flex items-center relative w-full">
   <CoinjoinVisual />
   <div
     class="min-w-[320px] absolute top-[40%] mx-auto right-0 left-0 flex flex-col gap-10 md:gap-48"
@@ -257,7 +257,7 @@
 </div>
 
 <div
-  class="flex flex-col md:flex-row gap-12 max-w-xl md:max-w-5xl mx-auto items-center px-4"
+  class="flex flex-col md:flex-row gap-12 max-w-xl md:max-w-5xl mx-auto items-center md:px-4"
 >
   <div class="flex-1">
     <H2>Surveillance is Easy & Cheap on Bitcoin</H2>
@@ -342,12 +342,12 @@
 
 <div class="relative w-screen h-full flex justify-center items-center">
   <div
-    class="min-w-[320px] w-screen h-full hidden md:flex justify-center items-center"
+    class="min-w-[320px] w-full h-full hidden md:flex justify-center items-center"
   >
     <Cj />
   </div>
   <div
-    class="min-w-[480px] w-screen h-full flex justify-center items-center md:hidden"
+    class="min-w-[480px] w-full h-full flex justify-center items-center md:hidden"
   >
     <CjMobile />
   </div>
