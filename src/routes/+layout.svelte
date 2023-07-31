@@ -46,17 +46,17 @@
 <header
   class="min-w-[320px] flex justify-between h-[90px] md:max-w-5xl md:mx-auto py-6 items-center px-4"
 >
-  <div class="py-1 flex-auto">
-    <div class="w-6">
-      <a href="/">
-        <CoinjoinLogo />
-      </a>
+  <div class="py-1 flex-auto isolate">
+    <!-- <a href="/"> -->
+    <div class="isolate w-10 h-6 z-40">
+      <CoinjoinLogo />
     </div>
+    <!-- </a> -->
   </div>
 
   <div
     class="font-inconsolata isolate {showMobileMenu
-      ? 'z-10 font-semibold text-5xl bg-dark-blue fixed h-screen w-screen top-24 left-0 px-4 overflow-hidden flex flex-col gap-8 items-start'
+      ? 'z-10 font-semibold text-5xl bg-dark-blue fixed h-screen w-screen top-20 pt-12 left-0 px-4 overflow-hidden flex flex-col gap-8 items-start'
       : 'hidden md:flex md:flex-1 md:justify-center md:font-normal md:gap-4'}    "
   >
     <div
@@ -104,7 +104,7 @@
         Advanced
       </div>
     </div>
-    <div class="md:hidden flex justify-center">
+    <div class="md:hidden flex justify-center pt-12">
       <a
         on:click={showMobileMenu
           ? handleMobileMenuItemClick

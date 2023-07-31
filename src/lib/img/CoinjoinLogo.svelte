@@ -22,3 +22,9 @@
     />
   </g>
 </svg>
+
+<style>
+  svg {
+    padding: 2px;
+  }
+</style>
