@@ -23,7 +23,7 @@
   import WasabiLogo from "@lib/img/WasabiLogo.svelte";
   import Cj from "@lib/img/Cj.svelte";
 
-  import CjMobile from "@lib/img/CjMobile.svelte";
+  import CoinjoinMobile from "@lib/img/CoinjoinMobile.svelte";
 
   const fudBustList = [
     {
@@ -101,14 +101,13 @@
   <div class="md:flex hidden items-center w-full">
     <CoinjoinVisual />
   </div>
-  <!-- <CoinjoinVisualMobile /> -->
 
   <div
     class="min-w-[320px] absolute top-[40%] mx-auto right-0 left-0 flex flex-col gap-10 md:gap-48"
   >
     <div class="flex flex-col items-center gap-10">
       <H1>Coinjoins</H1>
-      <p class="text-white text-center text-2xl">
+      <p class="text-white text-center text-2xl px-4">
         Collaborative bitcoin <br />
         transactions to reclaim your privacy.
       </p>
@@ -349,14 +348,12 @@
 
 <div class="relative">
   <div
-    class="min-w-[320px] w-full h-full hidden md:flex justify-center items-center"
+    class="min-w-[320px] hidden w-full h-full md:flex justify-center items-center"
   >
     <Cj />
   </div>
-  <div
-    class="min-w-[320px] w-full h-full flex justify-center items-center md:hidden"
-  >
-    <CjMobile />
+  <div class="min-w-[320px] w-full flex justify-center items-center md:hidden">
+    <CoinjoinMobile />
   </div>
 
   <div
