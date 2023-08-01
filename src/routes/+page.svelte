@@ -265,7 +265,7 @@
 </div>
 
 <div
-  class="flex flex-col md:flex-row gap-12 max-w-xl md:max-w-5xl mx-auto items-center md:px-4"
+  class="flex flex-col md:flex-row gap-12 max-w-xl md:max-w-5xl mx-auto items-center px-4"
 >
   <div class="flex-1">
     <H2>Surveillance is Easy & Cheap on Bitcoin</H2>
@@ -347,7 +347,7 @@
   </div>
 </div>
 
-<div class="relative w-full h-full flex justify-center items-center">
+<div class="relative">
   <div
     class="min-w-[320px] w-full h-full hidden md:flex justify-center items-center"
   >

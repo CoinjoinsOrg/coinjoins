@@ -47,11 +47,11 @@
   class="min-w-[320px] flex justify-between h-[90px] md:max-w-5xl md:mx-auto py-6 items-center px-4"
 >
   <div class="py-1 flex-auto isolate">
-    <!-- <a href="/"> -->
-    <div class="isolate w-10 h-6 z-40">
-      <CoinjoinLogo />
-    </div>
-    <!-- </a> -->
+    <a href="/">
+      <div class="isolate w-10 h-6 z-40">
+        <CoinjoinLogo />
+      </div>
+    </a>
   </div>
 
   <div
