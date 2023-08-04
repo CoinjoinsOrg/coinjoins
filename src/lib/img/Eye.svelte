@@ -16,3 +16,9 @@
     />
   </g>
 </svg>
+
+<style>
+  svg {
+    opacity: 70%;
+  }
+</style>
