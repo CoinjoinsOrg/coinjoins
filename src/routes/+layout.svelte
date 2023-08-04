@@ -26,7 +26,7 @@
   <title>Coinjoins - Learn about bitcoin collaborative transactions</title>
   <meta
     name="description"
-    content="Coinjoins are collaborative bitcoin transactions."
+    content="Reclaim your privacy with coinjoins. Learn about bitcoin collaborative transactions."
   />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Coinjoins.org" />
@@ -38,7 +38,7 @@
   />
   <meta
     property="og:description"
-    content="Coinjoins are collaborative bitcoin transactions."
+    content="Reclaim your privacy with coinjoins. Learn about bitcoin collaborative transactions."
   />
   <meta property="og:image" content="https://coinjoins.org/preview.png" />
 </svelte:head>
