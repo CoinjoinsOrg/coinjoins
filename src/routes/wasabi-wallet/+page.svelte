@@ -1,0 +1,106 @@
+<script>
+  import data from "@lib/data/wasabi.json";
+
+  import H1 from "@lib/components/H1.svelte";
+  import H2 from "@lib/components/H2.svelte";
+  import FlatCoinjoinSvg from "@lib/components/FlatCoinjoinSvg.svelte";
+  import ArrowDown from "@lib/img/ArrowDown.svelte";
+  import GreenText from "@lib/components/GreenText.svelte";
+  import wasabiLogo from "@lib/img/wallets/wasabi-bg.png";
+  import TelescopeSvg from "@lib/img/TelescopeSvg.svelte";
+  import GreenCircleSvg from "@lib/img/GreenCircleSvg.svelte";
+  import BlueCheckSvg from "@lib/img/BlueCheckSvg.svelte";
+  import XCircleSvg from "@lib/img/XCircleSvg.svelte";
+  import RedText from "@lib/components/RedText.svelte";
+
+  let y;
+
+  const wasabiData = data;
+</script>
+
+<svelte:window bind:scrollY={y} />
+
+<div class="relative px-4 pt-10 h-[60vh]">
+  <div class="absolute flex flex-col gap-10 pt-8">
+    <H1>Wasabi 2.0 <br /><GreenText>& WabiSabi</GreenText></H1>
+    <div class="text-lg">
+      {wasabiData.hero}
+    </div>
+    <div>
+      <FlatCoinjoinSvg />
+    </div>
+    <div class="flex justify-center">
+      <div class="w-6 animate-bounce">
+        <a href="#open">
+          <ArrowDown />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <img src={wasabiLogo} alt="Wasabi Logo" />
+</div>
+
+<div class="px-4 flex flex-col gap-6">
+  <div class="w-20">
+    <TelescopeSvg />
+  </div>
+  <H2>Overview</H2>
+  <div class="flex flex-col gap-6">
+    {#each Object.entries(wasabiData.overview) as [point, text]}
+      <div class="flex gap-4 items-start">
+        <div class="w-4 flex-shrink-0">
+          <GreenCircleSvg />
+        </div>
+        <p>{text}</p>
+      </div>
+    {/each}
+  </div>
+</div>
+
+<div class="px-4 flex flex-col gap-6">
+  <div
+    class="text-green-cj text-center rounded-lg border-4 border-green-cj px-6 py-4"
+  >
+    <H2><GreenText>Benefits</GreenText></H2>
+  </div>
+  <div class="flex flex-col gap-6">
+    {#each Object.entries(wasabiData.benefits) as [point, text]}
+      <div class="flex gap-4 items-start">
+        <div class="w-4 flex-shrink-0">
+          <BlueCheckSvg />
+        </div>
+        <p>{text}</p>
+      </div>
+    {/each}
+  </div>
+</div>
+<div class="px-4 flex flex-col gap-6">
+  <div
+    class="text-green-cj text-center rounded-lg border-4 border-red px-6 py-4"
+  >
+    <H2><RedText>Trade Offs</RedText></H2>
+  </div>
+  <div class="flex flex-col gap-6">
+    {#each Object.entries(wasabiData.tradeoffs) as [point, text]}
+      <div class="flex gap-4 items-start">
+        <div class="w-4 flex-shrink-0">
+          <XCircleSvg />
+        </div>
+        <p>{text}</p>
+      </div>
+    {/each}
+  </div>
+</div>
+
+<div
+  class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto px-4"
+>
+  <H2>Have More Questions?</H2>
+  <p class="text-white text-xl">
+    If you have any comments or suggestions, we are open to hearing from you.
+    Please reach out on <a href="mailto:coinjoins@protonmail.com"
+      >coinjoins@protonmail.com</a
+    >.
+  </p>
+</div>
