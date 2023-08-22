@@ -98,11 +98,6 @@
       "icon": "wasabi.png"
     },
     {
-      "name": "JoinMarket",
-      "page": "/joinmarket",
-      "icon": "joinmarket.png"
-    },
-    {
       "name": "Samourai Wallet",
       "page": "/samourai-wallet",
       "icon": "samourai.png"
@@ -110,16 +105,21 @@
     {
       "name": "Sparrow Wallet",
       "page": "/sparrow-wallet",
-      "icon": "wasabi.png"
+      "icon": "sparrow.png"
+    },
+    {
+      "name": "JoinMarket",
+      "page": "#",
+      "icon": "joinmarket.png"
     },
     {
       "name": "BTCPay Server",
-      "page": "/btcpay",
+      "page": "#",
       "icon": "btcpay.png"
     },
     {
       "name": "Trezor Suite",
-      "page": "/trezor-suite",
+      "page": "#",
       "icon": "trezor.png"
     }
   ]

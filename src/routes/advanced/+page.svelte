@@ -3,19 +3,12 @@
 
   import H1 from "@lib/components/H1.svelte";
   import H2 from "@lib/components/H2.svelte";
-  import H3 from "@lib/components/H3.svelte";
-  import FlatCoinjoinSvg from "../../lib/components/FlatCoinjoinSvg.svelte";
+  import FlatCoinjoinSvg from "@lib/components/FlatCoinjoinSvg.svelte";
   import ArrowDown from "@lib/img/ArrowDown.svelte";
-  import GreenText from "../../lib/components/GreenText.svelte";
-  import MagnifyingGlassSvg from "../../lib/img/MagnifyingGlassSvg.svelte";
+  import GreenText from "@lib/components/GreenText.svelte";
+  import MagnifyingGlassSvg from "@lib/img/MagnifyingGlassSvg.svelte";
   import ClickedArrow from "@lib/img/ClickedArrow.svelte";
   import UnclickedArrow from "@lib/img/UnclickedArrow.svelte";
-  import wasabiLogo from "@lib/img/logos/wasabi.png";
-  import btcpayLogo from "@lib/img/logos/btcpay.png";
-  import joinmarketLogo from "@lib/img/logos/joinmarket.png";
-  import samouraiLogo from "@lib/img/logos/samourai.png";
-  import trezorLogo from "@lib/img/logos/trezor.png";
-  import sparrowLogo from "@lib/img/logos/sparrow.png";
 
   const essentialsList = data.essentialsList;
   const wallets = data.wallets;
@@ -148,7 +141,13 @@
         </div>
         <a
           href={wallet.page}
-          class="border-2 rounded-lg border-green-cj py-2 px-4 text-green-cj no-underline hover:bg-green-cj hover:text-dark-blue"
+          class="border-2 rounded-lg py-2 px-4 no-underline hover:text-dark-blue {wallet.page.includes(
+            'wasabi'
+          ) ||
+          wallet.page.includes('samourai') ||
+          wallet.page.includes('sparrow')
+            ? 'border-green-cj text-green-cj hover:bg-green-cj'
+            : 'text-[rgba(107,110,134,0.95)] border-[rgba(107,110,134,0.95)] hover:text-[rgba(107,110,134,0.95)] hover:cursor-default'}"
           >About {wallet.name}</a
         >
       </div>
