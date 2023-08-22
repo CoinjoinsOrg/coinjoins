@@ -138,7 +138,7 @@
   <slot />
 </div>
 
-<div class="flex flex-col items-center gap-16 pt-36">
+<div class="flex flex-col items-center gap-16 pt-36 px-4">
   <div
     class="h-px bg-green-cj w-[calc(100%-128px)] md:w-full max-w-lg mx-auto"
   />

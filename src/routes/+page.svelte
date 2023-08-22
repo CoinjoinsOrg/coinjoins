@@ -557,9 +557,7 @@
     If you have any comments or suggestions, we are open to hearing from you.
     Please reach out on <a href="mailto:coinjoins@protonmail.com"
       >coinjoins@protonmail.com</a
-    >. <br /> <br />
-    Soon, we will share more details about different bitcoin wallets, coinjoin implementations,
-    benefits and tradeoffs.
+    >.
   </p>
 </div>
 
