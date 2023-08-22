@@ -24,6 +24,8 @@
   import Cj from "@lib/img/Cj.svelte";
 
   import CoinjoinMobile from "@lib/img/CoinjoinMobile.svelte";
+  import { fly } from "svelte/transition";
+  import { onMount } from "svelte";
 
   const fudBustList = [
     {
@@ -92,7 +94,16 @@
   function handleQuestionClick(i) {
     fudBustList[i].isClicked = !fudBustList[i].isClicked;
   }
+
+  let y;
+  $: console.log(y);
 </script>
+
+<svelte:window bind:scrollY={y} />
+
+<svelte:head>
+  <title>Coinjoins - Learn About Collaborative Bitcoin Transactions</title>
+</svelte:head>
 
 <div class="flex items-center relative w-full">
   <div class="flex md:hidden items-center w-full">
