@@ -1,28 +1,31 @@
 {
-  "hero": "Picking the right wallet with coinjoins ain’t easy. Some folks would say to use Wasabi Wallet. Others would tell you to use Samourai or suggest to try JoinMarket. So which one to choose? And why?",
+  "hero": "Sparrow Wallet is a bitcoin wallet desktop application with a built-in coinjoin feature using Whirlpool.",
   "overview": {
-    "point_1": "Sparrow Wallet is a bitcoin wallet desktop application with a built-in coinjoin feature using Whirlpool.",
-    "point_2": "Whirlpool is a Zerolink protocol based coinjoin implementation that produces mixing transactions without toxic non-private change outputs. It does so by first doing a premix transaction (Tx0) on which the UTXOs to coinjoin will be separated from the toxic change and from the coordinator fee. There’s a separate wallet account for non-mixing, premixing, post-mixing and badbank (change output separated in the premix transaction).",
-    "point_3": "Base Whirlpool coinjoin transactions have 5 inputs and 5 outputs, the latter which are all of the same value. There’s a minimum of 2 premixers (new entrants) in a coinjoin transaction, who pay the mining transaction fees, for the remaining users, the remixers. There’s three mixing pools to choose from with different output denominations: 0.01, 0.05, 0.5 BTC. The maximum amount of bitcoin per pool is 70 times the output denomination, and the maximum number of UTXOs to aggregate on Tx0 is 70 too.",
-    "point_4": "Whirlpool's coordinator charges a one time flat fee of 5% of the pool denomination. For the first mixing transaction, you pay a mining fee depending on the profile chosen, slow, normal or fast, depending on how fast you want your first coinjoin transaction to confirm. Mining fees change depending on the blockspace market. Remixing is free of mining and coordinator fees. You can never mix with an UTXO you just mixed with in a previous transaction. ",
-    "point_5": "Whenever fees readjust lower, there’s Surge Cycles on which the mining fees part of the premixers (new entrants) UTXOs are sufficient for larger transactions. There can be 6,7, or 8 outputs in Surge Cycles. These coinjoin transactions give you a slightly higher anonymity set."
+    "point_1": "Whirlpool is a Zerolink protocol based coinjoin implementation that splits the toxic change and collects the coordinator fee prior to participating in mixing transactions. It does so by first doing a premix transaction (Tx0) where UTXOs chosen to coinjoin will be consolidated and resized into the pool denomination. There’s a separate wallet account for non-mixing, premixing, post-mixing and badbank (change output separated in the premix transaction).",
+    "point_2": "Whirlpool coinjoin transactions have a minimum of 5 inputs and 5 outputs, the latter which are all of the same value. There’s a minimum of 2 premixers (new entrants) in a coinjoin transaction, who pay the mining transaction fees, for the remaining users, the remixers. There’s four mixing pools to choose from with different output denominations: 0.001, 0.01, 0.05, 0.5 BTC. The maximum amount of bitcoin per pool is 70 times the output denomination, and the maximum number of UTXOs to aggregate on Tx0 is 70 too.",
+    "point_3": "Whirlpool's coordinator charges a one time flat fee of 3.5-5% of the pool denomination. For the first mixing transaction, you pay a mining fee depending on the profile chosen, slow, normal or fast, depending on how fast you want your first coinjoin transaction to confirm. Mining fees change depending on the blockspace market. Remixing is free of mining and coordinator fees. You can never mix with an UTXO you just mixed with in a previous transaction. ",
+    "point_4": "Whenever fees readjust lower, there’s Surge Cycles where the mining fees allocated by premixers (new entrants) UTXOs are sufficient for larger transactions. There can be 6,7, or 8 outputs in Surge Cycles. These coinjoin transactions give you a slightly higher anonymity set."
   },
   "benefits": {
-    "point_1": "Fees can be low: if you register a lot of bitcoin, you will pay very little as coordinator fee because you pay the same amount if you register 0.5 or 35 bitcoin. Total fees can be as low as 0.1%.",
-    "point_2": "There’s no terms of service for Whirlpool and there’s no announced blacklisting policy.",
-    "point_3": "The anonymity set gain of Whirlpool coinjoin transactions can be easily calculated and understood.",
-    "point_4": "Tor can be enabled for bitcoin network and coordinator communication. You can also connect your own node by RPC interface or with a private electrum server.",
-    "point_5": "You can mix into another Sparrow Wallet such as a multi-signature or hardware wallet, and also target a number of mixing rounds before sending the UTXO to the other wallet.",
-    "point_6": "Once you set up mixing in Sparrow and the premix transaction, the coinjoin transactions will be automated and remixing will keep going if you leave the software open.",
-    "point_7": "You can enter a promo code SCODE when registering bitcoin to Whirlpool to get access to lower fees depending on social media promotional campaigns."
+    "point_1": "Total fees can be as low as 0.1%: if you register a lot of bitcoin, you will pay very little as coordinator fee because you pay the same amount if you register 0.5 or 35 bitcoin. You only pay mining fees for the premix tx0 and for the first coinjoin transaction.",
+    "point_2": "Zerolink-based coinjoin transactions implement Chaumian blind signatures to protect the user’s input to output linkage from the coordinator.",
+    "point_3": "There’s no terms of service for Whirlpool and there’s no announced blacklisting policy.",
+    "point_4": "The anonymity set gain of Whirlpool coinjoin transactions can be easily calculated and understood, the terms used are backward looking anonymity set and forward looking anonymity set.",
+    "point_5": "Tor can be connected for bitcoin network and coordinator communication, but it’s not bundled in. You can also connect your own node by RPC interface or with a private electrum server.",
+    "point_6": "You can mix into another Sparrow Wallet such as a multi-signature or hardware wallet, and also target a number of mixing rounds before sending the UTXO to the other wallet.",
+    "point_7": "Once you set up mixing in Sparrow and the premix transaction, the coinjoin transactions will be automated and remixing will keep going if you leave the software open",
+    "point_8": "You can enter a promo code SCODE when registering bitcoin to Whirlpool to get access to lower coordinator fees depending on social media promotional campaigns."
   },
   "tradeoffs": {
-    "point_1": "Fees can be high: if you register one single UTXO to coinjoin, you pay 5% in coordinator fees and some extra in mining fees.",
-    "point_2": "Toxic change is not eliminated, it is simply segregated into another wallet account. You will have to deal with those non-private outputs in the future. The premix transaction (Tx0) costs you in extra mining fees.",
-    "point_3": "There’s a minimum amount of 0.01 BTC to coinjoin on Whirlpool, which limits accessibility.",
-    "point_4": "Electrum SPV network connection is used by default which allows public servers to link all the UTXOs from your wallet, even the non-private ones with the private ones.",
-    "point_5": "Tor is not bundled with Sparrow and has to be installed by the user separately, it’s not on by default. This can lead to I.P. address leakage to the coordinator, and to a public electrum server (if one is not using his full node or private electrum server).",
-    "point_6": "The Whirlpool coordinator is a centralized service that can technically censor UTXOs from using its service and this would not be verifiable by the public.",
-    "point_7": "Privacy goals are not clear for the user. It’s unknown whether he’s advised to mix twice, five or whatever times."
+    "point_1": "Fees can be high: if you register one single UTXO to coinjoin, you pay 3.5%-5% in coordinator fees and some extra in mining fees.",
+    "point_2": "Given the maximum anonymity set gain per Whirlpool coinjoin transaction is 8, many users want to remix many times. This can lead to longer wait times.",
+    "point_3": "Toxic change is not eliminated, it is simply segregated into another wallet account. You will have to deal with those non-private outputs in the future.",
+    "point_4": "The premix transaction (Tx0) costs you extra mining fees since the outputs created are immediately consumed in the first coinjoin round and an output for the coordinator fee is created.",
+    "point_5": "There’s a minimum amount of 0.001 BTC to coinjoin on Whirlpool, which limits accessibility.",
+    "point_6": "Electrum SPV network connection is used by default which allows public servers to link all the UTXOs from your wallet, even the non-private ones with the private ones.",
+    "point_7": "Tor is not bundled with Sparrow and has to be installed by the user separately, it’s not on by default. This can lead to IP address leakage to the coordinator, and to a public electrum server (if one is not using his full node or private electrum server).",
+    "point_8": "The Whirlpool coordinator is a centralized service that can technically censor UTXOs from using its service and this would not be verifiable by the public.",
+    "point_9": "Privacy goals are not clear for the user. It’s unknown whether he’s advised to mix twice, five or whatever times.",
+    "point_10": "Sybil attacks are possible since mining fees for remixes are paid by the attack victims instead of the attacker, if the fidelity bond opportunity cost can be written off."
   }
 }
