@@ -22,7 +22,7 @@
 
 <div class="relative px-4 pt-10 h-[60vh] max-w-5xl mx-auto">
   <div class="absolute flex flex-col gap-10 pt-8">
-    <H1>Saprrow<br /><GreenText>& Whirlpool</GreenText></H1>
+    <H1>Sparrow<br /><GreenText>& Whirlpool</GreenText></H1>
     <div class="text-lg">
       {sparrowData.hero}
     </div>
@@ -31,7 +31,7 @@
     </div>
     <div class="flex justify-center">
       <div class="w-6 animate-bounce">
-        <a href="#open">
+        <a href="#overview">
           <ArrowDown />
         </a>
       </div>
@@ -41,7 +41,7 @@
   <img src={sparrowLogo} alt="Wasabi Logo" />
 </div>
 
-<div class="px-4 flex flex-col gap-6 max-w-3xl mx-auto md:gap-12">
+<div class="px-4 flex flex-col gap-6 max-w-3xl mx-auto md:gap-12" id="overview">
   <div class="w-20">
     <TelescopeSvg />
   </div>
