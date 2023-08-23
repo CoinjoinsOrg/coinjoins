@@ -6,7 +6,7 @@
   import FlatCoinjoinSvg from "@lib/components/FlatCoinjoinSvg.svelte";
   import ArrowDown from "@lib/img/ArrowDown.svelte";
   import GreenText from "@lib/components/GreenText.svelte";
-  import wasabiLogo from "@lib/img/wallets/wasabi-bg.png";
+  import sparrowLogo from "@lib/img/wallets/sparrow-bg.png";
   import TelescopeSvg from "@lib/img/TelescopeSvg.svelte";
   import GreenCircleSvg from "@lib/img/GreenCircleSvg.svelte";
   import BlueCheckSvg from "@lib/img/BlueCheckSvg.svelte";
@@ -15,16 +15,16 @@
 
   let y;
 
-  const wasabiData = data;
+  const sparrowData = data;
 </script>
 
 <svelte:window bind:scrollY={y} />
 
-<div class="relative px-4 pt-10 h-[60vh]">
+<div class="relative px-4 pt-10 h-[60vh] max-w-5xl mx-auto">
   <div class="absolute flex flex-col gap-10 pt-8">
-    <H1>Wasabi 2.0 <br /><GreenText>& WabiSabi</GreenText></H1>
+    <H1>Saprrow<br /><GreenText>& Whirlpool</GreenText></H1>
     <div class="text-lg">
-      {wasabiData.hero}
+      {sparrowData.hero}
     </div>
     <div>
       <FlatCoinjoinSvg />
@@ -38,16 +38,16 @@
     </div>
   </div>
 
-  <img src={wasabiLogo} alt="Wasabi Logo" />
+  <img src={sparrowLogo} alt="Wasabi Logo" />
 </div>
 
-<div class="px-4 flex flex-col gap-6">
+<div class="px-4 flex flex-col gap-6 max-w-3xl mx-auto md:gap-12">
   <div class="w-20">
     <TelescopeSvg />
   </div>
   <H2>Overview</H2>
   <div class="flex flex-col gap-6">
-    {#each Object.entries(wasabiData.overview) as [point, text]}
+    {#each Object.entries(sparrowData.overview) as [point, text]}
       <div class="flex gap-4 items-start">
         <div class="w-4 flex-shrink-0">
           <GreenCircleSvg />
@@ -58,14 +58,14 @@
   </div>
 </div>
 
-<div class="px-4 flex flex-col gap-6">
+<div class="px-4 flex flex-col gap-6 max-w-3xl mx-auto md:gap-12">
   <div
     class="text-green-cj text-center rounded-lg border-4 border-green-cj px-6 py-4"
   >
     <H2><GreenText>Benefits</GreenText></H2>
   </div>
   <div class="flex flex-col gap-6">
-    {#each Object.entries(wasabiData.benefits) as [point, text]}
+    {#each Object.entries(sparrowData.benefits) as [point, text]}
       <div class="flex gap-4 items-start">
         <div class="w-4 flex-shrink-0">
           <BlueCheckSvg />
@@ -75,14 +75,12 @@
     {/each}
   </div>
 </div>
-<div class="px-4 flex flex-col gap-6">
-  <div
-    class="text-green-cj text-center rounded-lg border-4 border-red px-6 py-4"
-  >
+<div class="px-4 flex flex-col gap-6 md:gap-12 max-w-3xl mx-auto">
+  <div class="text-center rounded-lg border-4 border-red px-6 py-4">
     <H2><RedText>Trade Offs</RedText></H2>
   </div>
   <div class="flex flex-col gap-6">
-    {#each Object.entries(wasabiData.tradeoffs) as [point, text]}
+    {#each Object.entries(sparrowData.tradeoffs) as [point, text]}
       <div class="flex gap-4 items-start">
         <div class="w-4 flex-shrink-0">
           <XCircleSvg />

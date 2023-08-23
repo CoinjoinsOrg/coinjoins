@@ -9,7 +9,9 @@
   import MagnifyingGlassSvg from "@lib/img/MagnifyingGlassSvg.svelte";
   import ClickedArrow from "@lib/img/ClickedArrow.svelte";
   import UnclickedArrow from "@lib/img/UnclickedArrow.svelte";
+  import GreenCircleSvg from "../../lib/img/GreenCircleSvg.svelte";
 
+  const overview = data.overview;
   const essentialsList = data.essentialsList;
   const wallets = data.wallets;
 
@@ -18,62 +20,54 @@
   }
 </script>
 
-<div class="px-4 flex flex-col gap-10 pt-8">
-  <H1>Into the Guts of Coinjoins</H1>
+<div class="px-4 flex flex-col gap-10 pt-8 max-w-3xl mx-auto">
+  <H1>{overview.hero_title}</H1>
   <div class="text-lg">
-    Picking the right wallet with coinjoins ain’t easy. Some folks would say to
-    use Wasabi Wallet. Others would tell you to use Samourai or suggest to try
-    JoinMarket. So which one to choose? And why?
+    {overview.hero_subtitle}
   </div>
   <div>
     <FlatCoinjoinSvg />
   </div>
   <div class="flex justify-center">
     <div class="w-6 animate-bounce">
-      <a href="#open">
+      <a href="#verify">
         <ArrowDown />
       </a>
     </div>
   </div>
 </div>
 
-<div class="px-4 flex flex-col gap-6">
+<div id="verify" class="px-4 flex flex-col gap-14 max-w-3xl mx-auto">
   <div class="w-16">
     <MagnifyingGlassSvg />
   </div>
-  <H2>Don’t Trust,<br /> <GreenText>Verify</GreenText></H2>
+  <H2>{@html overview.verify_header}</H2>
   <div class="flex flex-col gap-4">
     <p>
-      Unspent Transaction Outputs, or UTXOs, are essentially the coins in the
-      bitcoin network.
+      {overview.verify_body_1}
     </p>
     <p>
-      Each UTXO has a very distinct transaction history, making all bitcoin
-      transactions easily trackable and unique from one another.
+      {overview.verify_body_2}
     </p>
   </div>
 </div>
 
-<div class="flex flex-col gap-6 px-4">
+<div class="flex flex-col gap-14 px-4 max-w-3xl mx-auto">
   <div
     class="text-green-cj text-center rounded-lg border-4 border-green-cj px-6 py-4"
   >
-    <H2><GreenText>What is a Coinjoin Protocol?</GreenText></H2>
+    <H2><GreenText>{overview.cj_protocol_header}</GreenText></H2>
   </div>
   <div class="text-lg text-center">
-    A coinjoin protocol is the design of the software that is used to create
-    collaborative bitcoin transactions. There are currently 3 popular coinjoin
-    protocols that are used in bitcoin wallets: JoinMarket, WabiSabi, Whirlpool.
+    {overview.cj_protocol_body}
   </div>
 </div>
 
-<div class="px-4 flex flex-col gap-6">
-  <div class="flex flex-col gap-6 text-center">
-    <H2>Privacy Essentials for Coinjoins</H2>
+<div class="px-4 flex flex-col gap-14 max-w-3xl mx-auto">
+  <div class="flex flex-col gap-14 text-center">
+    <H2>{overview.essentials_header}</H2>
     <div>
-      Bitcoin wallets with coinjoins have different tradeoffs. Common to all,
-      there are essential things to consider when looking at all the options
-      available.
+      {overview.essentials_sub_header}
     </div>
   </div>
   <div class="flex flex-col gap-4">
@@ -108,12 +102,18 @@
           </div>
         </div>
         {#if essentialsList[i].isClicked}
-          <div class="text-white/80 text-xl md:px-16">
-            {@html essential.body}
+          <div class="text-white/80 text-xl md:px-16 pb-8 flex flex-col gap-6">
+            <div>
+              {@html essential.body}
+            </div>
+            <div class="font-bold">Additional Questions</div>
             <ul>
               {#each essential.questions as question, index}
-                <li>
-                  * {question}
+                <li class="pt-2">
+                  <div class="w-3 inline-block mx-4">
+                    <GreenCircleSvg />
+                  </div>
+                  {question}
                 </li>
               {/each}
             </ul>
@@ -124,18 +124,18 @@
   </div>
 </div>
 
-<div class="px-4 flex flex-col gap-8">
-  <div class="flex flex-col gap-6 text-center">
-    <H2>Let’s Compare Bitcoin Wallets with Coinjoins</H2>
+<div class="px-4 flex flex-col gap-14 max-w-3xl mx-auto">
+  <div class="flex flex-col gap-14 text-center">
+    <H2>{overview.compare_header}</H2>
     <div class="text-lg">
-      It is obviously not a walk in the park to compare each bitcoin wallet but
-      we will try to present them with different considerations so that you can
-      make up your own mind.
+      {overview.compare_subheader}
     </div>
   </div>
-  <div class="flex flex-col items-center gap-8">
+  <div
+    class="flex flex-col md:flex-row md:flex-wrap items-center gap-8 md:justify-between"
+  >
     {#each wallets as wallet}
-      <div class="flex flex-col gap-6 items-center">
+      <div class="md:flex-shrink-0 flex flex-col gap-6 items-center">
         <div class="w-16">
           <img src={"src/lib/img/logos/" + wallet.icon} alt={wallet.name} />
         </div>
