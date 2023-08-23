@@ -2,7 +2,7 @@
   "overview": {
     "hero_title": "Into the Guts of Coinjoins",
     "hero_subtitle": "Picking the right wallet to use coinjoins isn’t easy. Some folks would tell you to use Wasabi Wallet. Others would say to use Samourai instead. Others would even suggest JoinMarket. So which one to choose? And why?",
-    "verify_header": "Don’t Trust, <span style='color:rgb(0,255,251.0)'>Verify</span>",
+    "verify_header": "Don’t Trust, <br/><span style='color:rgb(0,255,25,1.0)'>Verify</span>",
     "verify_body_1": "We’ve done research on the most popular privacy wallets and coinjoin protocols. We tried to be as neutral, educational and accessible as possible. Of course, don’t trust us, but verify yourself.",
     "verify_body_2": "As of August 2023, there are six popular bitcoin  wallets using three different coinjoin protocols. In our research, we’ve selected 10 categories to make it easier to pick a bitcoin wallet with built-in coinjoins. Let’s dive in.",
     "cj_protocol_header": "What is a Coinjoin Protocol?",
@@ -168,6 +168,11 @@
       "name": "Trezor Suite",
       "page": "#",
       "icon": "trezor.png"
+    },
+    {
+      "name": "Vortex LN",
+      "page": "#",
+      "icon": "vortex.png"
     }
   ]
 }

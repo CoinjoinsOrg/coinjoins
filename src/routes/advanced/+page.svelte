@@ -41,7 +41,6 @@
   <div class="w-16">
     <MagnifyingGlassSvg />
   </div>
-  <H2>Don’t Trust,<br /> <GreenText>Verify</GreenText></H2>
   <H2>{@html overview.verify_header}</H2>
   <div class="flex flex-col gap-4">
     <p>

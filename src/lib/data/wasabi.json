@@ -1,28 +1,35 @@
 {
-  "hero": "Picking the right wallet with coinjoins ain’t easy. Some folks would say to use Wasabi Wallet. Others would tell you to use Samourai or suggest to try JoinMarket. So which one to choose? And why?",
+  "hero": "Wasabi Wallet 2.0 is a simple to use bitcoin wallet desktop app with a built-in coinjoin feature using WabiSabi.",
   "overview": {
-    "point_1": "Sparrow Wallet is a bitcoin wallet desktop application with a built-in coinjoin feature using Whirlpool.",
-    "point_2": "Whirlpool is a Zerolink protocol based coinjoin implementation that produces mixing transactions without toxic non-private change outputs. It does so by first doing a premix transaction (Tx0) on which the UTXOs to coinjoin will be separated from the toxic change and from the coordinator fee. There’s a separate wallet account for non-mixing, premixing, post-mixing and badbank (change output separated in the premix transaction).",
-    "point_3": "Base Whirlpool coinjoin transactions have 5 inputs and 5 outputs, the latter which are all of the same value. There’s a minimum of 2 premixers (new entrants) in a coinjoin transaction, who pay the mining transaction fees, for the remaining users, the remixers. There’s three mixing pools to choose from with different output denominations: 0.01, 0.05, 0.5 BTC. The maximum amount of bitcoin per pool is 70 times the output denomination, and the maximum number of UTXOs to aggregate on Tx0 is 70 too.",
-    "point_4": "Whirlpool's coordinator charges a one time flat fee of 5% of the pool denomination. For the first mixing transaction, you pay a mining fee depending on the profile chosen, slow, normal or fast, depending on how fast you want your first coinjoin transaction to confirm. Mining fees change depending on the blockspace market. Remixing is free of mining and coordinator fees. You can never mix with an UTXO you just mixed with in a previous transaction. ",
-    "point_5": "Whenever fees readjust lower, there’s Surge Cycles on which the mining fees part of the premixers (new entrants) UTXOs are sufficient for larger transactions. There can be 6,7, or 8 outputs in Surge Cycles. These coinjoin transactions give you a slightly higher anonymity set."
+    "point_1": "WabiSabi is a second-generation coinjoin protocol that fixes some limitations of the first-generation Zerolink protocol.",
+    "point_2": "WabiSabi allows variable amount denominations, which means users come with many different bitcoin amounts to coinjoin in a single collaborative transaction.",
+    "point_3": "Wasabi uses block filters to update wallet balances privately without requiring users to run a full node by default, though that is an option available.",
+    "point_4": "WabiSabi coordinator fees are 0.3% of the fresh bitcoin amount (fresh means it was not conjoined before).",
+    "point_5": "The minimum amount to participate in a single coinjoin is 6 561 sat (0.00006561 BTC) and the maximum is 40 000 BTC with a total of 79 possible denominations.",
+    "point_6": "Wasabi Wallet clients can randomly register up to 10 different inputs and 10 outputs into a coinjoin from the same wallet, without ever revealing that they are connected. Randomly, Wasabi can create more or less outputs than inputs selected.",
+    "point_7": "The coordinator cannot ever connect the different input and output registrations as all traffic is routed through Tor by default with different Tor hidden identities, which make it impossible to connect an input and an output coming from the same wallet and participating in the same coinjoin transaction.",
+    "point_8": "The WabiSabi coinjoin coordinator ensures that at least 150 inputs must be registered to create a coinjoin transaction. Coinjoins may have much more inputs than 150 registered in one single transaction."
   },
   "benefits": {
-    "point_1": "Fees can be low: if you register a lot of bitcoin, you will pay very little as coordinator fee because you pay the same amount if you register 0.5 or 35 bitcoin. Total fees can be as low as 0.1%.",
-    "point_2": "There’s no terms of service for Whirlpool and there’s no announced blacklisting policy.",
-    "point_3": "The anonymity set gain of Whirlpool coinjoin transactions can be easily calculated and understood.",
-    "point_4": "Tor can be enabled for bitcoin network and coordinator communication. You can also connect your own node by RPC interface or with a private electrum server.",
-    "point_5": "You can mix into another Sparrow Wallet such as a multi-signature or hardware wallet, and also target a number of mixing rounds before sending the UTXO to the other wallet.",
-    "point_6": "Once you set up mixing in Sparrow and the premix transaction, the coinjoin transactions will be automated and remixing will keep going if you leave the software open.",
-    "point_7": "You can enter a promo code SCODE when registering bitcoin to Whirlpool to get access to lower fees depending on social media promotional campaigns."
+    "point_1": "With a large number of participants, WabiSabi enables enormous amounts of possibilities making it hard to track flows of funds after one single transaction.",
+    "point_2": "Variable amounts in WabiSabi enable many possibilities to combine different inputs or outputs together, making traceability much harder.",
+    "point_3": "By default, the entire wallet and protocol work on Tor protecting users (clients) from leaking their personal IP addresses.",
+    "point_4": "Toxic change outputs are eliminated in most cases, except for lonely whales, which have relatively large inputs compared to other inputs from the same coinjoin transaction.",
+    "point_5": "No one can spy on you. All traffic from the client (desktop application) to the server (coordinator) is routed via Tor by default, which means using the application is fully anonymous.",
+    "point_6": "Wasabi Wallet has a change avoidance feature for sending bitcoin to other wallets, which allows to round up or down a payment to avoid creating unnecessary change, which would have to be coinjoined, saving fees and time for the user.",
+    "point_7": "The coinjoin feature is automatic. Just receive bitcoin to your Wasabi Wallet address, wait for the privacy score to hit 100%, and that's it, you are done coinjoining.",
+    "point_8": "Achieving a high amount of privacy for a given UTXO is possible in one single coinjoin transaction, making it quite block space efficient, therefore cheap in network fees for users.",
+    "point_9": "“Friends don’t pay” is a fee policy where inputs coming from previous WabiSabi coinjoins do not pay the coordinator fee.",
+    "point_10": "“Plebs don’t pay” is a fee policy where inputs under 1 million sats (0.01 BTC) do not pay the coordinator fee.",
+    "point_11": "The Wasabi “anonymity score” is very conservative, giving the user a safe measure of how much privacy gains or plausible deniability have been achieved.",
+    "point_12": "The simple 100% scale of the privacy score is simple to understand for the user at a high level, without requiring them to think too deeply about how it gets calculated."
   },
   "tradeoffs": {
-    "point_1": "Fees can be high: if you register one single UTXO to coinjoin, you pay 5% in coordinator fees and some extra in mining fees.",
-    "point_2": "Toxic change is not eliminated, it is simply segregated into another wallet account. You will have to deal with those non-private outputs in the future. The premix transaction (Tx0) costs you in extra mining fees.",
-    "point_3": "There’s a minimum amount of 0.01 BTC to coinjoin on Whirlpool, which limits accessibility.",
-    "point_4": "Electrum SPV network connection is used by default which allows public servers to link all the UTXOs from your wallet, even the non-private ones with the private ones.",
-    "point_5": "Tor is not bundled with Sparrow and has to be installed by the user separately, it’s not on by default. This can lead to I.P. address leakage to the coordinator, and to a public electrum server (if one is not using his full node or private electrum server).",
-    "point_6": "The Whirlpool coordinator is a centralized service that can technically censor UTXOs from using its service and this would not be verifiable by the public.",
-    "point_7": "Privacy goals are not clear for the user. It’s unknown whether he’s advised to mix twice, five or whatever times."
+    "point_1": "During onboarding, the Wasabi Wallet terms of service can be a friction for users who want to fully understand the legalities before moving forward.",
+    "point_2": "The “on by default” coinjoin feature can surprise users who may see their coins being coinjoined automatically after the fact, having paid both the regular coordinator and network fees.",
+    "point_3": "The “anonymity scores” of Wasabi Wallet are hard to understand. “How much is enough?” is not that straight forward.",
+    "point_4": "On Wasabi Wallet, the wallet loading phase can be slow for large wallets or wallets that have been out of sync with the block chain for some time as it uses block filters for privacy.",
+    "point_5": "The company running the default server for all Wasabi Wallet clients is purchasing data from a chain analysis provider to prevent some inputs from registering in its coinjoin service. While the privacy tradeoff is very limited, this setup lacks censorship-resistance. Users may prefer other P2P alternatives such as JoinMarket.",
+    "point_6": "Wasabi Wallet is not distributed on Apple or Windows app stores, which requires users to verify the binaries downloaded or to build from source to verify the integrity and authenticity of the software."
   }
 }

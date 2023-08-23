@@ -20,7 +20,7 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div class="relative px-4 pt-10 h-[60vh]">
+<div class="relative px-4 pt-10 h-[60vh] max-w-5xl mx-auto">
   <div class="absolute flex flex-col gap-10 pt-8">
     <H1>Wasabi 2.0 <br /><GreenText>& WabiSabi</GreenText></H1>
     <div class="text-lg">
@@ -41,7 +41,7 @@
   <img src={wasabiLogo} alt="Wasabi Logo" />
 </div>
 
-<div class="px-4 flex flex-col gap-6">
+<div class="px-4 flex flex-col gap-6 max-w-3xl mx-auto md:gap-12">
   <div class="w-20">
     <TelescopeSvg />
   </div>
@@ -58,7 +58,7 @@
   </div>
 </div>
 
-<div class="px-4 flex flex-col gap-6">
+<div class="px-4 flex flex-col gap-6 max-w-3xl mx-auto md:gap-12">
   <div
     class="text-green-cj text-center rounded-lg border-4 border-green-cj px-6 py-4"
   >
@@ -75,10 +75,8 @@
     {/each}
   </div>
 </div>
-<div class="px-4 flex flex-col gap-6">
-  <div
-    class="text-green-cj text-center rounded-lg border-4 border-red px-6 py-4"
-  >
+<div class="px-4 flex flex-col gap-6 md:gap-12 max-w-3xl mx-auto">
+  <div class="text-center rounded-lg border-4 border-red px-6 py-4">
     <H2><RedText>Trade Offs</RedText></H2>
   </div>
   <div class="flex flex-col gap-6">
