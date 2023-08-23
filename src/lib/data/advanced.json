@@ -1,93 +1,140 @@
 {
+  "overview": {
+    "hero_title": "Into the Guts of Coinjoins",
+    "hero_subtitle": "Picking the right wallet to use coinjoins isn’t easy. Some folks would tell you to use Wasabi Wallet. Others would say to use Samourai instead. Others would even suggest JoinMarket. So which one to choose? And why?",
+    "verify_header": "Don’t Trust, <span style='color:rgb(0,255,251.0)'>Verify</span>",
+    "verify_body_1": "We’ve done research on the most popular privacy wallets and coinjoin protocols. We tried to be as neutral, educational and accessible as possible. Of course, don’t trust us, but verify yourself.",
+    "verify_body_2": "As of August 2023, there are six popular bitcoin  wallets using three different coinjoin protocols. In our research, we’ve selected 10 categories to make it easier to pick a bitcoin wallet with built-in coinjoins. Let’s dive in.",
+    "cj_protocol_header": "What is a Coinjoin Protocol?",
+    "cj_protocol_body": "A coinjoin protocol is the design of the software that is used to create collaborative bitcoin transactions. There are currently 3 popular coinjoin protocols that are used in bitcoin wallets: JoinMarket, WabiSabi, Whirlpool.",
+    "essentials_header": "Privacy Essentials for Coinjoins",
+    "essentials_sub_header": "Bitcoin wallets with coinjoins have different tradeoffs. Common to all, there are essential things to consider when looking at all the options available.",
+    "compare_header": "Let’s Compare Bitcoin Wallets with Coinjoins",
+    "compare_subheader": "It is obviously not a walk in the park to compare each bitcoin wallet but we will try to present them with different considerations so that you can make up your own mind."
+  },
   "essentialsList": [
     {
       "isClicked": false,
-      "title": "Blockchain Privacy",
-      "body": "Everything that anyone can see in the public bitcoin ledger is fair game for this section. Look into the shape of transactions coming from a particular coinjoin protocol or privacy wallet. Some coinjoin designs require a minimum amount of inputs to have a valid transaction while other designs have a fixed number of inputs and outputs for all their transactions. The number of transactions required to achieve a certain level of privacy should also be considered. Is there a minimum required amount to participate in a coinjoin transaction? Are amounts fixed or variable depending on the coinjoin round? All of these points are going to be used by block chain analysts who try to find insights by searching all bitcoin transactions. We’ll come back to all of these questions in the other sections below.",
+      "title": "Block Chain Privacy",
+      "body": "Everything that anyone can see in the public bitcoin ledger is fair game for this section. Look into the shape of transactions coming from a particular coinjoin protocol or privacy wallet. Some coinjoin designs require a minimum amount of inputs to have a valid transaction while other designs have a fixed number of inputs and outputs for all their transactions. The number of transactions required to achieve a certain level of privacy should also be considered. <br/><br/>  All of these points are going to be used by block chain analysts who try to find insights by searching all bitcoin transactions. We’ll come back to all of these questions in the other sections below.",
       "questions": [
         "How does the coinjoin protocol work in a nutshell?",
-        "How is toxic change dealt with?"
+        "How is toxic change dealt with?",
+        "Is there a minimum required amount to participate in a coinjoin transaction?",
+        "Are amounts fixed or variable depending on the coinjoin round?"
       ]
     },
     {
       "isClicked": false,
-      "title": "Blockchain Privacy",
-      "body": "Everything that anyone can see in the public bitcoin ledger is fair game for this section. Look into the shape of transactions coming from a particular coinjoin protocol or privacy wallet. Some coinjoin designs require a minimum amount of inputs to have a valid transaction while other designs have a fixed number of inputs and outputs for all their transactions. The number of transactions required to achieve a certain level of privacy should also be considered. Is there a minimum required amount to participate in a coinjoin transaction? Are amounts fixed or variable depending on the coinjoin round? All of these points are going to be used by block chain analysts who try to find insights by searching all bitcoin transactions. We’ll come back to all of these questions in the other sections below.",
+      "title": "Coordinator & Peer Knowledge",
+      "body": "Privacy wallets with built-in coinjoin features most likely have a central server to coordinate transactions. This is what is called a coinjoin coordinator. Only one coinjoin protocol has no central coordinator and that is JoinMarket. A privacy wallet should always let the user choose to share certain information, and by default there should be no information collection or sharing.",
       "questions": [
-        "How does the coinjoin protocol work in a nutshell?",
-        "How is toxic change dealt with?"
+        "Can the coordinator link your inputs together?",
+        "Can the coordinator link your inputs to outputs?",
+        "Can the coordinator link your outputs to outputs?"
       ]
     },
     {
       "isClicked": false,
-      "title": "Blockchain Privacy",
-      "body": "Everything that anyone can see in the public bitcoin ledger is fair game for this section. Look into the shape of transactions coming from a particular coinjoin protocol or privacy wallet. Some coinjoin designs require a minimum amount of inputs to have a valid transaction while other designs have a fixed number of inputs and outputs for all their transactions. The number of transactions required to achieve a certain level of privacy should also be considered. Is there a minimum required amount to participate in a coinjoin transaction? Are amounts fixed or variable depending on the coinjoin round? All of these points are going to be used by block chain analysts who try to find insights by searching all bitcoin transactions. We’ll come back to all of these questions in the other sections below.",
+      "title": "Network & Public Key Privacy",
+      "body": "Connecting to the Bitcoin network is required for wallets to verify balances and send transactions to other users. Doing so privately without sharing sensitive information about wallet transactions is paramount. <br/><br/> Different privacy wallets have very different ways of managing this from using personal full nodes, trusted remote server and block filters.",
+      "questions": ["How’s the wallet connected to the Bitcoin network?"]
+    },
+    {
+      "isClicked": false,
+      "title": "Coinjoin Fees",
+      "body": "There are usually two types of fees related to coinjoins: the coordinator fee, and regular bitcoin mining fees. Some coordinator fees are fixed based on a certain amount of bitcoin while others are variable depending on the amount being coinjoined. <br/><br/> Some wallets, such as Samourai Wallet, have discounts (SCODE) based on referral codes, or for smaller amounts of bitcoin being coinjoined. Most coordinators waive fees for remixes, which incentivize users to coinjoin their bitcoin multiple times for extra privacy.",
       "questions": [
-        "How does the coinjoin protocol work in a nutshell?",
-        "How is toxic change dealt with?"
+        "How do fees work in general?",
+        "How about the difference between coordinator and mining fees?",
+        "What about remixing? Are coordinator and/or mining fees being waived?",
+        "What are the available discounts and offers?"
       ]
     },
     {
       "isClicked": false,
-      "title": "Blockchain Privacy",
-      "body": "Everything that anyone can see in the public bitcoin ledger is fair game for this section. Look into the shape of transactions coming from a particular coinjoin protocol or privacy wallet. Some coinjoin designs require a minimum amount of inputs to have a valid transaction while other designs have a fixed number of inputs and outputs for all their transactions. The number of transactions required to achieve a certain level of privacy should also be considered. Is there a minimum required amount to participate in a coinjoin transaction? Are amounts fixed or variable depending on the coinjoin round? All of these points are going to be used by block chain analysts who try to find insights by searching all bitcoin transactions. We’ll come back to all of these questions in the other sections below.",
+      "title": "Censorship Resistance",
+      "body": "While no coordinator ever holds private keys for users coinjoining, they can still censor as they take care of registering inputs and outputs before users sign them, whether it is a peer or a central coordinator. <br/><br/> Some coordinators have made it public that they actively censor user inputs deemed risky while other coordinators are actively condemning censorship. Other coinjoin protocols where no central coordinators are required do not have such a dilemma, but may still be liable to censorship.",
       "questions": [
-        "How does the coinjoin protocol work in a nutshell?",
-        "How is toxic change dealt with?"
+        "Can you get censored by the coordinator or a peer?",
+        "Is there a policy by coordinators, peers or the software that could get you censored? Terms and conditions in general?",
+        "What happens if you get censored? Could you switch coordinators or peers?",
+        "How many coordinators and peers are available?",
+        "Can you connect your own node and verify the bitcoin network by yourself?"
       ]
     },
     {
       "isClicked": false,
-      "title": "Blockchain Privacy",
-      "body": "Everything that anyone can see in the public bitcoin ledger is fair game for this section. Look into the shape of transactions coming from a particular coinjoin protocol or privacy wallet. Some coinjoin designs require a minimum amount of inputs to have a valid transaction while other designs have a fixed number of inputs and outputs for all their transactions. The number of transactions required to achieve a certain level of privacy should also be considered. Is there a minimum required amount to participate in a coinjoin transaction? Are amounts fixed or variable depending on the coinjoin round? All of these points are going to be used by block chain analysts who try to find insights by searching all bitcoin transactions. We’ll come back to all of these questions in the other sections below.",
+      "title": "Anonymity Scoring",
+      "body": "The anonymity set is the most commonly accepted way to measure privacy gained by using a coinjoin protocol. Usually this metric is meant to be verifiable by anyone using a public block explorer to observe a coinjoin transaction. There are other privacy metrics that may be more conservative considering that the anonymity set may be insufficient to measure privacy for bitcoin wallets that allow users to register multiple inputs into one single transaction. Each coinjoin implementation and bitcoin wallets have their own view on that matter.",
       "questions": [
-        "How does the coinjoin protocol work in a nutshell?",
-        "How is toxic change dealt with?"
+        "How is anonymity scored by different protocols, implementations, applications and development teams? Can it be verified independently from the wallet app?",
+        "How is non-private, semi-private and fully private defined by different protocols, implementations, applications and development teams?",
+        "Let’s say I don’t trust the anonymity scoring provided by the application. Can you continue to coinjoin even if you’ve reached the fully private status?",
+        "How high should privacy targets be? Is there a limit where it becomes useless beyond a certain point?"
       ]
     },
     {
       "isClicked": false,
-      "title": "Blockchain Privacy",
-      "body": "Everything that anyone can see in the public bitcoin ledger is fair game for this section. Look into the shape of transactions coming from a particular coinjoin protocol or privacy wallet. Some coinjoin designs require a minimum amount of inputs to have a valid transaction while other designs have a fixed number of inputs and outputs for all their transactions. The number of transactions required to achieve a certain level of privacy should also be considered. Is there a minimum required amount to participate in a coinjoin transaction? Are amounts fixed or variable depending on the coinjoin round? All of these points are going to be used by block chain analysts who try to find insights by searching all bitcoin transactions. We’ll come back to all of these questions in the other sections below.",
+      "title": "Block Space Efficiency",
+      "body": "Bitcoin block space is immensely scarce and valuable. Coinjoin protocols create collaborative bitcoin transactions with multiple parties involved, which require a high degree of efficiency to make it fast, affordable and reliable over time as fee rates change on the bitcoin network. Efficiency for coinjoins means creating the highest level of obscurity from each unit of block space consumed.",
       "questions": [
-        "How does the coinjoin protocol work in a nutshell?",
-        "How is toxic change dealt with?"
+        "Compare blockspace efficiency",
+        "Define what it is and how it affects users (fees, time delays, anon targets, etc.)"
       ]
     },
     {
       "isClicked": false,
-      "title": "Blockchain Privacy",
-      "body": "Everything that anyone can see in the public bitcoin ledger is fair game for this section. Look into the shape of transactions coming from a particular coinjoin protocol or privacy wallet. Some coinjoin designs require a minimum amount of inputs to have a valid transaction while other designs have a fixed number of inputs and outputs for all their transactions. The number of transactions required to achieve a certain level of privacy should also be considered. Is there a minimum required amount to participate in a coinjoin transaction? Are amounts fixed or variable depending on the coinjoin round? All of these points are going to be used by block chain analysts who try to find insights by searching all bitcoin transactions. We’ll come back to all of these questions in the other sections below.",
+      "title": "User Experience",
+      "body": "Privacy does not have to be difficult. Actually, it should just work. Until privacy “just works” in bitcoin wallets, users will make errors or simply not use the tools. Some privacy wallets already automatically coinjoin users’ bitcoin holdings while others allow for flexible configurations and post-coinjoin privacy tools. <br/><br/> Default features in privacy wallets are essential to remove friction. Delays to achieve a desired privacy target in coinjoins will often result in lower privacy for concerned users, which is why fewer required coinjoin transactions are better to save on time.",
       "questions": [
-        "How does the coinjoin protocol work in a nutshell?",
-        "How is toxic change dealt with?"
+        "Do you have to manually enter a coinjoin round or does the software execute it automatically upon coin reception and confirmation?",
+        "Are there any other forms of automatizations like remixing for example?",
+        "How many transactions are required? How long does it usually take to achieve privacy targets?",
+        "Do I need to run additional software on the side such as Tor or a full node?"
       ]
     },
     {
       "isClicked": false,
-      "title": "Blockchain Privacy",
-      "body": "Everything that anyone can see in the public bitcoin ledger is fair game for this section. Look into the shape of transactions coming from a particular coinjoin protocol or privacy wallet. Some coinjoin designs require a minimum amount of inputs to have a valid transaction while other designs have a fixed number of inputs and outputs for all their transactions. The number of transactions required to achieve a certain level of privacy should also be considered. Is there a minimum required amount to participate in a coinjoin transaction? Are amounts fixed or variable depending on the coinjoin round? All of these points are going to be used by block chain analysts who try to find insights by searching all bitcoin transactions. We’ll come back to all of these questions in the other sections below.",
+      "title": "Extra Privacy Features",
+      "body": "Privacy wallets may provide optional features for experienced users looking to get optional insight and advanced control during, before and after coinjoins.",
       "questions": [
-        "How does the coinjoin protocol work in a nutshell?",
-        "How is toxic change dealt with?"
+        "Is manual coin control available if you want to control which UTXOs are selected for spending or to coinjoin?",
+        "Is address and coin labeling encouraged by default?",
+        "Are stealth addresses provided in the wallet?",
+        "Is red coin isolation an option (only picking one single non-private input in a coinjoin)?",
+        "Is the wallet compatible with payjoins?",
+        "Can payments be made directly within a coinjoin transaction to optimize on privacy and fees?",
+        "Is there a change avoidance feature when sending bitcoin to prevent toxic change?"
       ]
     },
     {
       "isClicked": false,
-      "title": "Blockchain Privacy",
-      "body": "Everything that anyone can see in the public bitcoin ledger is fair game for this section. Look into the shape of transactions coming from a particular coinjoin protocol or privacy wallet. Some coinjoin designs require a minimum amount of inputs to have a valid transaction while other designs have a fixed number of inputs and outputs for all their transactions. The number of transactions required to achieve a certain level of privacy should also be considered. Is there a minimum required amount to participate in a coinjoin transaction? Are amounts fixed or variable depending on the coinjoin round? All of these points are going to be used by block chain analysts who try to find insights by searching all bitcoin transactions. We’ll come back to all of these questions in the other sections below.",
+      "title": "Free & Open Source Standards",
+      "body": "Bitcoin privacy wallets and their coinjoin protocols are expected to implement standard open source principles when it comes to building, deploying and maintaining software. User beware. Don’t trust, verify!",
       "questions": [
-        "How does the coinjoin protocol work in a nutshell?",
-        "How is toxic change dealt with?"
+        "Is the source code available publicly?",
+        "Is the license fully open source (permissive)? If not, what type of license restrictions are there?",
+        "Can users deterministically build the software binaries that are officially distributed?",
+        "How do software updates work?",
+        "What are the code signature verification standards?",
+        "Is there any security disclosure program with bug bounties available?",
+        "What are the number of contributors and public reviewers?"
       ]
     },
     {
       "isClicked": false,
-      "title": "Blockchain Privacy",
-      "body": "Everything that anyone can see in the public bitcoin ledger is fair game for this section. Look into the shape of transactions coming from a particular coinjoin protocol or privacy wallet. Some coinjoin designs require a minimum amount of inputs to have a valid transaction while other designs have a fixed number of inputs and outputs for all their transactions. The number of transactions required to achieve a certain level of privacy should also be considered. Is there a minimum required amount to participate in a coinjoin transaction? Are amounts fixed or variable depending on the coinjoin round? All of these points are going to be used by block chain analysts who try to find insights by searching all bitcoin transactions. We’ll come back to all of these questions in the other sections below.",
+      "title": "Advanced Considerations & Research",
+      "body": "For power users and technical folks, there are multiple additional items to consider in the existing privacy wallets and coinjoin protocols.",
       "questions": [
-        "How does the coinjoin protocol work in a nutshell?",
-        "How is toxic change dealt with?"
+        "Is there any address reuse? If so, how does it happen? Is is an unexpected software bug or an acceptable user behaviour?",
+        "How were previous bugs and vulnerabilities handled by the software maintainers?",
+        "On which operating systems is the software distributed?",
+        "What is the programming language used to develop the bitcoin wallet and coinjoin implementation?",
+        "Is there a Tesnet version available to try out the software and new features without real funds?",
+        "Is hardware wallet coinjoining even possible? If so, which hardware devices are compatible?",
+        "Which address formats or script types are compatible with the bitcoin wallet?",
+        "Are Lightning payment channels opening and closing possible within coinjoins provided by the bitcoin wallet?"
       ]
     }
   ],

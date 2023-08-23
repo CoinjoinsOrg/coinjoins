@@ -507,7 +507,7 @@
     <div class="flex flex-col md:flex-row justify-between gap-6 md:gap-12">
       <H3>Works With <br /> Any Amount</H3>
       <p class="max-w-lg md:max-w-md text-xl">
-        From 6 561 sats (0.00006561 BTC) to 43 000 BTC, anyone can participate
+        From 5 000 sats (0.00005000 BTC) to 43 000 BTC, anyone can participate
         in a coinjoin transaction.
       </p>
     </div>
