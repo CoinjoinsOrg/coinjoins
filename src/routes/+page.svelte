@@ -491,7 +491,7 @@
       Don’t trust, verify. See for yourself and learn how coinjoins work by
       participating in them. There are different bitcoin wallets with built-in
       coinjoin features. Wasabi Wallet is one of them though there are others
-      that we will discuss later.
+      that we discuss <a href="/advanced">here</a>.
     </p>
   </div>
   <div class="flex flex-col gap-16 items-center">

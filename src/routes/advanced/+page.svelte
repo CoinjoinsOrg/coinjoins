@@ -18,7 +18,10 @@
   function handleEssentialTitleClick(i) {
     essentialsList[i].isClicked = !essentialsList[i].isClicked;
   }
+  let y;
 </script>
+
+<svelte:window bind:scrollY={y} />
 
 <div class="px-4 flex flex-col gap-10 pt-8 max-w-3xl mx-auto">
   <H1>{overview.hero_title}</H1>
@@ -145,9 +148,10 @@
             'wasabi'
           ) ||
           wallet.page.includes('samourai') ||
-          wallet.page.includes('sparrow')
+          wallet.page.includes('sparrow') ||
+          wallet.page.includes('joinmarket')
             ? 'border-green-cj text-green-cj hover:bg-green-cj'
-            : 'text-[rgba(107,110,134,0.95)] border-[rgba(107,110,134,0.95)] hover:text-[rgba(107,110,134,0.95)] hover:cursor-default'}"
+            : 'text-[rgba(107,110,134,0.95)] border-[rgba(107,110,134,0.95)] hover:text-[rgba(107,110,134,0.95)] hover:cursor-not-allowed'}"
           >About {wallet.name}</a
         >
       </div>

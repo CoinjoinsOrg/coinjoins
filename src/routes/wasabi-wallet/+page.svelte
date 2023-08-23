@@ -31,7 +31,7 @@
     </div>
     <div class="flex justify-center">
       <div class="w-6 animate-bounce">
-        <a href="#open">
+        <a href="#overview">
           <ArrowDown />
         </a>
       </div>
@@ -41,7 +41,7 @@
   <img src={wasabiLogo} alt="Wasabi Logo" />
 </div>
 
-<div class="px-4 flex flex-col gap-6 max-w-3xl mx-auto md:gap-12">
+<div id="overview" class="px-4 flex flex-col gap-6 max-w-3xl mx-auto md:gap-12">
   <div class="w-20">
     <TelescopeSvg />
   </div>

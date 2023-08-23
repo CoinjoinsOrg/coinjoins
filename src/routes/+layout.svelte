@@ -1,9 +1,11 @@
 <script>
   import "../app.css";
-  import CoinjoinLogo from "../lib/img/CoinjoinLogo.svelte";
+  import { page } from "$app/stores";
+
+  import CoinjoinLogo from "@lib/img/CoinjoinLogo.svelte";
   import gustavo from "@lib/img/gus.png";
   import thibaud from "@lib/img/thib.png";
-  import { page } from "$app/stores";
+  import isturitz from "@lib/img/isturitz.png";
 
   let showMobileMenu = false;
 
@@ -109,7 +111,7 @@
         on:click={showMobileMenu
           ? handleMobileMenuItemClick
           : handleDesktopMenuItemClick}
-        href="#try"
+        href="/#try"
         class="block border border-green-cj bg-green-cj px-6 py-2 rounded-md text-base text-dark-blue no-underline"
         >Try coinjoins</a
       >
@@ -127,14 +129,14 @@
 
   <div class="hidden md:flex flex-auto justify-end">
     <a
-      href="#try"
+      href="/#try"
       class="block border border-green-cj bg-green-cj px-6 py-2 rounded-md text-base text-dark-blue no-underline"
       >Try coinjoins</a
     >
   </div>
 </header>
 
-<div class="min-w-[320px] bg-dark-blue flex flex-col gap-40 md:gap-72">
+<div class="min-w-[320px] bg-dark-blue flex flex-col gap-40 md:gap-56">
   <slot />
 </div>
 
@@ -160,6 +162,20 @@
           <a
             href="https://twitter.com/gustavojfe/"
             class="text-green-cj no-underline">Gustavo Flores</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col items-center gap-8">
+    <div class="text-xl">Designer</div>
+    <div class="flex flex-col md:flex-row gap-10">
+      <div class="flex flex-col items-center gap-2">
+        <div><img src={isturitz} alt="Isturitz" /></div>
+        <div>
+          <a
+            href="https://dribbble.com/isturitz_"
+            class="text-green-cj no-underline">Isturitz</a
           >
         </div>
       </div>

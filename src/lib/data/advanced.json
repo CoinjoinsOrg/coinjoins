@@ -156,22 +156,22 @@
     },
     {
       "name": "JoinMarket",
-      "page": "#",
+      "page": "/joinmarket",
       "icon": "joinmarket.png"
     },
     {
       "name": "BTCPay Server",
-      "page": "#",
+      "page": "",
       "icon": "btcpay.png"
     },
     {
       "name": "Trezor Suite",
-      "page": "#",
+      "page": "",
       "icon": "trezor.png"
     },
     {
       "name": "Vortex LN",
-      "page": "#",
+      "page": "",
       "icon": "vortex.png"
     }
   ]
