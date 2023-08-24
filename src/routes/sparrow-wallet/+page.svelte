@@ -23,14 +23,11 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div class="relative px-4 pt-10 h-[60vh] max-w-5xl mx-auto">
-  <div class="absolute flex flex-col gap-10 pt-8">
+<div class="relative px-4 pt-10 h-[50vh] max-w-5xl mx-auto">
+  <div class="absolute flex flex-col gap-10 pt-32">
     <H1>Sparrow<br /><GreenText>& Whirlpool</GreenText></H1>
     <div class="text-lg">
       {sparrowData.hero}
-    </div>
-    <div>
-      <FlatCoinjoinSvg />
     </div>
     <div class="flex justify-center">
       <div class="w-6 animate-bounce">
@@ -42,6 +39,9 @@
   </div>
 
   <img src="/wallets-bg/sparrow-bg.png" alt="Sparrow Logo" />
+</div>
+<div>
+  <FlatCoinjoinSvg />
 </div>
 
 <div class="px-4 flex flex-col gap-6 max-w-3xl mx-auto md:gap-12" id="overview">

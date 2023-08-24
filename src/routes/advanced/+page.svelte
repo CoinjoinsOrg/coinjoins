@@ -24,20 +24,22 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div class="px-4 flex flex-col gap-10 pt-8 max-w-3xl mx-auto">
-  <H1>{overview.hero_title}</H1>
-  <div class="text-lg">
-    {overview.hero_subtitle}
+<div class="px-4 flex flex-col gap-10 w-full mx-auto pt-32">
+  <div class=" flex flex-col gap-10 max-w-3xl mx-auto">
+    <H1>{overview.hero_title}</H1>
+    <div class="text-lg">
+      {overview.hero_subtitle}
+    </div>
+    <div class="flex justify-center">
+      <div class="w-6 animate-bounce">
+        <a href="#verify">
+          <ArrowDown />
+        </a>
+      </div>
+    </div>
   </div>
   <div>
     <FlatCoinjoinSvg />
-  </div>
-  <div class="flex justify-center">
-    <div class="w-6 animate-bounce">
-      <a href="#verify">
-        <ArrowDown />
-      </a>
-    </div>
   </div>
 </div>
 
@@ -63,7 +65,7 @@
     <H2><GreenText>{overview.cj_protocol_header}</GreenText></H2>
   </div>
   <div class="text-lg text-center">
-    {overview.cj_protocol_body}
+    {@html overview.cj_protocol_body}
   </div>
 </div>
 

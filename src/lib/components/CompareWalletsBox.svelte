@@ -1,6 +1,7 @@
 <script>
   import H2 from "@lib/components/H2.svelte";
   import { page } from "$app/stores";
+  import { goto } from "$app/navigation";
 
   export let header;
   export let subheader;
@@ -8,6 +9,10 @@
 
   $: currentPath = $page.url.pathname;
   $: console.log("currentPath", currentPath);
+
+  function goToWalletPage(url) {
+    goto(url);
+  }
 </script>
 
 <div class="px-4 flex flex-col gap-14 max-w-3xl mx-auto">
@@ -28,17 +33,20 @@
           <div class="w-16">
             <img src={"/wallets-icon/" + wallet.icon} alt={wallet.name} />
           </div>
-          <a
-            href={wallet.page}
-            class="border-2 w-full text-center rounded-lg py-2 px-4 no-underline hover:text-dark-blue {wallet.page.includes(
+          <button
+            disabled={wallet.id.includes("btcpay") ||
+              wallet.id.includes("vortex") ||
+              wallet.id.includes("trezor")}
+            on:click={() => goToWalletPage(wallet.page)}
+            class="border-2 w-full text-center rounded-lg py-2 px-4 no-underline {wallet.id.includes(
               'wasabi'
             ) ||
-            wallet.page.includes('samourai') ||
-            wallet.page.includes('sparrow') ||
-            wallet.page.includes('joinmarket')
-              ? 'border-green-cj text-green-cj hover:bg-green-cj'
-              : 'text-[rgba(107,110,134,0.95)] border-[rgba(107,110,134,0.95)] hover:text-[rgba(107,110,134,0.95)] hover:cursor-not-allowed'}"
-            >About {wallet.name}</a
+            wallet.id.includes('samourai') ||
+            wallet.id.includes('sparrow') ||
+            wallet.id.includes('joinmarket')
+              ? 'border-green-cj text-green-cj enabled:hover:bg-green-cj hover:text-dark-blue'
+              : 'text-[rgba(107,110,134,0.95)] border-[rgba(107,110,134,0.95)] hover:cursor-not-allowed hover:text-[rgba(107,110,134,0.95)]'}"
+            >About {wallet.name}</button
           >
         </div>
       {/if}
