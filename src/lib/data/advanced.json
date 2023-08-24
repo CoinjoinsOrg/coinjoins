@@ -42,8 +42,8 @@
     },
     {
       "isClicked": false,
-      "title": "Coinjoin Fees",
-      "body": "There are usually two types of fees related to coinjoins: the coordinator fee, and regular bitcoin mining fees. Some coordinator fees are fixed based on a certain amount of bitcoin while others are variable depending on the amount being coinjoined. <br/><br/> Some wallets, such as Samourai Wallet, have discounts (SCODE) based on referral codes, or for smaller amounts of bitcoin being coinjoined. Most coordinators waive fees for remixes, which incentivize users to coinjoin their bitcoin multiple times for extra privacy.",
+      "title": "Coinjoin & Network Fees",
+      "body": "There are usually two types of fees related to coinjoins: the coordinator fee, and regular bitcoin mining fees. Some coordinators charge flat entry fees while others are variable depending on the amount being coinjoined. <br/><br/> Some wallets, such as Samourai Wallet, have discounts (SCODE) based on referral codes, or for smaller amounts of bitcoin being coinjoined. Most coordinators waive fees for remixes, which incentivize users to coinjoin their bitcoin multiple times for extra privacy.",
       "questions": [
         "How do fees work in general?",
         "How about the difference between coordinator and mining fees?",
@@ -76,17 +76,17 @@
     },
     {
       "isClicked": false,
-      "title": "Block Space Efficiency",
+      "title": "Coinjoin Efficiency",
       "body": "Bitcoin block space is immensely scarce and valuable. Coinjoin protocols create collaborative bitcoin transactions with multiple parties involved, which require a high degree of efficiency to make it fast, affordable and reliable over time as fee rates change on the bitcoin network. Efficiency for coinjoins means creating the highest level of obscurity from each unit of block space consumed.",
       "questions": [
-        "Compare blockspace efficiency",
+        "How does coinjoin efficiency compare with different coinjoin protocols?",
         "Define what it is and how it affects users (fees, time delays, anon targets, etc.)"
       ]
     },
     {
       "isClicked": false,
       "title": "User Experience",
-      "body": "Privacy does not have to be difficult. Actually, it should just work. Until privacy “just works” in bitcoin wallets, users will make errors or simply not use the tools. Some privacy wallets already automatically coinjoin users’ bitcoin holdings while others allow for flexible configurations and post-coinjoin privacy tools. <br/><br/> Default features in privacy wallets are essential to remove friction. Delays to achieve a desired privacy target in coinjoins will often result in lower privacy for concerned users, which is why fewer required coinjoin transactions are better to save on time.",
+      "body": "Privacy does not have to be difficult. Actually, it should just work. Until privacy “just works” in bitcoin wallets, users will make errors or simply not use the tools. Some privacy wallets  automatically coinjoin users’ bitcoin holdings while others allow for flexible configurations and post-coinjoin privacy tools. <br/><br/> Default features in privacy wallets are essential to remove friction. Delays to achieve a desired privacy target in coinjoins will often result in lower privacy for concerned users, which is why fewer required coinjoin transactions are better to save on time.",
       "questions": [
         "Do you have to manually enter a coinjoin round or does the software execute it automatically upon coin reception and confirmation?",
         "Are there any other forms of automatizations like remixing for example?",
@@ -131,7 +131,7 @@
         "How were previous bugs and vulnerabilities handled by the software maintainers?",
         "On which operating systems is the software distributed?",
         "What is the programming language used to develop the bitcoin wallet and coinjoin implementation?",
-        "Is there a Tesnet version available to try out the software and new features without real funds?",
+        "Is there a Testnet version available to try out the software and new features without real funds?",
         "Is hardware wallet coinjoining even possible? If so, which hardware devices are compatible?",
         "Which address formats or script types are compatible with the bitcoin wallet?",
         "Are Lightning payment channels opening and closing possible within coinjoins provided by the bitcoin wallet?"

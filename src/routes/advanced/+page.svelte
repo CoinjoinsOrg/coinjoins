@@ -140,7 +140,7 @@
     {#each wallets as wallet}
       <div class="md:flex-shrink-0 flex flex-col gap-6 items-center">
         <div class="w-16">
-          <img src={"src/lib/img/logos/" + wallet.icon} alt={wallet.name} />
+          <img src={"/src/lib/img/logos/" + wallet.icon} alt={wallet.name} />
         </div>
         <a
           href={wallet.page}
