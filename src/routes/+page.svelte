@@ -446,8 +446,9 @@
   <div class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto">
     <H2>Security & Privacy Benefits</H2>
     <p class="text-white text-xl">
-      Coinjoin implementations should make no compromises on fundamental privacy
-      principles to protect the security of users.
+      Coinjoin implementations and bitcoin privacy wallets should make no
+      compromises on fundamental privacy principles to protect the security of
+      users.
     </p>
   </div>
   <div
