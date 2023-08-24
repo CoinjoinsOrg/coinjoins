@@ -6,6 +6,7 @@
   import Footer from "@lib/components/Footer.svelte";
   import CoinjoinLogo from "@lib/img/CoinjoinLogo.svelte";
   import ClickedArrow from "@lib/img/ClickedArrow.svelte";
+  import UnclickedArrow from "../lib/img/UnclickedArrow.svelte";
 
   let showMobileMenu = false;
 
@@ -24,8 +25,17 @@
   }
 
   let y;
-
+  let isAdvancedMenuClicked = false;
   $: currentPath = $page.url.pathname;
+
+  function handleAdvancedMenuClicked() {
+    isAdvancedMenuClicked = !isAdvancedMenuClicked;
+  }
+
+  function handleAdvancedSubMenuClicked(url) {
+    goto(url);
+    isAdvancedMenuClicked = false;
+  }
 </script>
 
 <svelte:head>
@@ -97,19 +107,98 @@
       </a>
     </div>
     <div
-      class="hover:text-green-cj hover:cursor-pointer {$page.url.pathname ===
-      '/advanced'
+      class="relative flex gap-2 hover:text-green-cj hover:cursor-pointer {$page
+        .url.pathname === '/advanced'
         ? 'text-green-cj'
         : 'text-white'}"
     >
       <a
-        on:click={showMobileMenu
-          ? handleMobileMenuItemClick
-          : handleDesktopMenuItemClick}
+        on:click={handleAdvancedMenuClicked}
         href="/advanced"
         class="no-underline"
         >Advanced
       </a>
+      <div class="w-6">
+        {#if isAdvancedMenuClicked}
+          <ClickedArrow
+            color={$page.url.pathname === "/advanced"
+              ? "rgb(0,255,25,1.0)"
+              : "rgb(255,255,255,1.0)"}
+          />
+        {:else}
+          <UnclickedArrow
+            color={$page.url.pathname === "/advanced"
+              ? "rgb(0,255,25,1.0)"
+              : "rgb(255,255,255,1.0)"}
+          />
+        {/if}
+      </div>
+      {#if isAdvancedMenuClicked}
+        <div class="absolute top-10 flex w-80 justify-between gap-6">
+          <div>
+            <div>
+              <button
+                on:click={() => handleAdvancedSubMenuClicked("/advanced")}
+                class="no-underline text-white hover:text-green-cj font-inconsolata"
+                href="/advanced">Overview</button
+              >
+            </div>
+            <div>
+              <button
+                on:click={() => handleAdvancedSubMenuClicked("/wasabi-wallet")}
+                class="no-underline text-white hover:text-green-cj font-inconsolata"
+                href="/wasabi-wallet">Wasabi Wallet</button
+              >
+            </div>
+            <div>
+              <button
+                on:click={() => handleAdvancedSubMenuClicked("/sparrow-wallet")}
+                class="no-underline text-white hover:text-green-cj font-inconsolata"
+                href="/sparrow-wallet">Sparrow Wallet</button
+              >
+            </div>
+            <div>
+              <button
+                on:click={() => handleAdvancedSubMenuClicked("/joinmarket")}
+                class="no-underline text-white hover:text-green-cj font-inconsolata"
+                href="/joinmarket">JoinMarket</button
+              >
+            </div>
+          </div>
+          <div>
+            <div>
+              <button
+                on:click={() =>
+                  handleAdvancedSubMenuClicked("/samourai-wallet")}
+                class="no-underline text-white hover:text-green-cj font-inconsolata"
+                href="/samourai-wallet">Samourai Wallet</button
+              >
+            </div>
+            <div>
+              <button
+                on:click={() => handleAdvancedSubMenuClicked("/tezor-suite")}
+                class="no-underline text-white hover:text-green-cj font-inconsolata"
+                href="/trezor-suite">Trezor Suite</button
+              >
+            </div>
+            <div>
+              <button
+                on:click={() => handleAdvancedSubMenuClicked("/btcpay-server")}
+                class="no-underline text-white hover:text-green-cj font-inconsolata"
+                href="/btcpay-server"
+                >BTCPay Server
+              </button>
+            </div>
+            <div>
+              <button
+                on:click={() => handleAdvancedSubMenuClicked("/vortex-ln")}
+                class="no-underline text-white hover:text-green-cj font-inconsolata"
+                href="/vortex-ln">Vortex LN</button
+              >
+            </div>
+          </div>
+        </div>
+      {/if}
     </div>
     <div
       class="cursor-default {$page.url.pathname === '/history'
