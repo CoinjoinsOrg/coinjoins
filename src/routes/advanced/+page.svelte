@@ -10,10 +10,11 @@
   import ClickedArrow from "@lib/img/ClickedArrow.svelte";
   import UnclickedArrow from "@lib/img/UnclickedArrow.svelte";
   import GreenCircleSvg from "../../lib/img/GreenCircleSvg.svelte";
+  import CompareWalletsBox from "../../lib/components/CompareWalletsBox.svelte";
 
   const overview = data.overview;
-  const essentialsList = data.essentialsList;
   const wallets = data.wallets;
+  const essentialsList = data.essentialsList;
 
   function handleEssentialTitleClick(i) {
     essentialsList[i].isClicked = !essentialsList[i].isClicked;
@@ -23,20 +24,22 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div class="px-4 flex flex-col gap-10 pt-8 max-w-3xl mx-auto">
-  <H1>{overview.hero_title}</H1>
-  <div class="text-lg">
-    {overview.hero_subtitle}
+<div class="px-4 flex flex-col gap-10 w-full mx-auto pt-32">
+  <div class=" flex flex-col gap-10 max-w-3xl mx-auto">
+    <H1>{overview.hero_title}</H1>
+    <div class="text-lg">
+      {overview.hero_subtitle}
+    </div>
+    <div class="flex justify-center">
+      <div class="w-6 animate-bounce">
+        <a href="#verify">
+          <ArrowDown />
+        </a>
+      </div>
+    </div>
   </div>
   <div>
     <FlatCoinjoinSvg />
-  </div>
-  <div class="flex justify-center">
-    <div class="w-6 animate-bounce">
-      <a href="#verify">
-        <ArrowDown />
-      </a>
-    </div>
   </div>
 </div>
 
@@ -62,7 +65,7 @@
     <H2><GreenText>{overview.cj_protocol_header}</GreenText></H2>
   </div>
   <div class="text-lg text-center">
-    {overview.cj_protocol_body}
+    {@html overview.cj_protocol_body}
   </div>
 </div>
 
@@ -127,7 +130,12 @@
   </div>
 </div>
 
-<div class="px-4 flex flex-col gap-14 max-w-3xl mx-auto">
+<CompareWalletsBox
+  header={overview.compare_header}
+  subheader={overview.compare_subheader}
+  walletsList={wallets}
+/>
+<!-- <div class="px-4 flex flex-col gap-14 max-w-3xl mx-auto">
   <div class="flex flex-col gap-14 text-center">
     <H2>{overview.compare_header}</H2>
     <div class="text-lg">
@@ -140,7 +148,7 @@
     {#each wallets as wallet}
       <div class="md:flex-shrink-0 flex flex-col gap-6 items-center">
         <div class="w-16">
-          <img src={"/src/lib/img/logos/" + wallet.icon} alt={wallet.name} />
+          <img src={"/wallets-icon/" + wallet.icon} alt={wallet.name} />
         </div>
         <a
           href={wallet.page}
@@ -157,7 +165,7 @@
       </div>
     {/each}
   </div>
-</div>
+</div> -->
 
 <div
   class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto px-4"

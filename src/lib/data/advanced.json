@@ -6,7 +6,7 @@
     "verify_body_1": "We’ve done research on the most popular privacy wallets and coinjoin protocols. We tried to be as neutral, educational and accessible as possible. Of course, don’t trust us, but verify yourself.",
     "verify_body_2": "As of August 2023, there are six popular bitcoin  wallets using three different coinjoin protocols. In our research, we’ve selected 10 categories to make it easier to pick a bitcoin wallet with built-in coinjoins. Let’s dive in.",
     "cj_protocol_header": "What is a Coinjoin Protocol?",
-    "cj_protocol_body": "A coinjoin protocol is the design of the software that is used to create collaborative bitcoin transactions. There are currently 3 popular coinjoin protocols that are used in bitcoin wallets: JoinMarket, WabiSabi, Whirlpool.",
+    "cj_protocol_body": "A coinjoin protocol is the design of the software that is used to create collaborative bitcoin transactions. There are currently 3 popular coinjoin protocols that are used in bitcoin wallets: <span style='color:rgb(0,255,25,1.0)'>JoinMarket</span>, <span style='color:rgb(0,255,25,1.0)'>WabiSabi</span>, <span style='color:rgb(0,255,25,1.0)'>Whirlpool</span>.",
     "essentials_header": "Privacy Essentials for Coinjoins",
     "essentials_sub_header": "Bitcoin wallets with coinjoins have different tradeoffs. Common to all, there are essential things to consider when looking at all the options available.",
     "compare_header": "Let’s Compare Bitcoin Wallets with Coinjoins",
@@ -142,37 +142,44 @@
     {
       "name": "Wasabi Wallet",
       "page": "/wasabi-wallet",
-      "icon": "wasabi.png"
+      "icon": "wasabi.png",
+      "id": "wasabi"
     },
     {
       "name": "Samourai Wallet",
       "page": "/samourai-wallet",
-      "icon": "samourai.png"
+      "icon": "samourai.png",
+      "id": "samourai"
     },
     {
       "name": "Sparrow Wallet",
       "page": "/sparrow-wallet",
-      "icon": "sparrow.png"
+      "icon": "sparrow.png",
+      "id": "sparrow"
     },
     {
       "name": "JoinMarket",
       "page": "/joinmarket",
-      "icon": "joinmarket.png"
+      "icon": "joinmarket.png",
+      "id": "joinmarket"
     },
     {
       "name": "BTCPay Server",
       "page": "",
-      "icon": "btcpay.png"
+      "icon": "btcpay.png",
+      "id": "btcpay"
     },
     {
       "name": "Trezor Suite",
       "page": "",
-      "icon": "trezor.png"
+      "icon": "trezor.png",
+      "id": "trezor"
     },
     {
       "name": "Vortex LN",
       "page": "",
-      "icon": "vortex.png"
+      "icon": "vortex.png",
+      "id": "vortex"
     }
   ]
 }

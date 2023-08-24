@@ -1,33 +1,33 @@
 <script>
-  import data from "@lib/data/wasabi.json";
+  import wasabiDataFile from "@lib/data/wasabi.json";
+  import advancedDataFile from "@lib/data/advanced.json";
 
-  import H1 from "@lib/components/H1.svelte";
-  import H2 from "@lib/components/H2.svelte";
-  import FlatCoinjoinSvg from "@lib/components/FlatCoinjoinSvg.svelte";
+  import H1 from "@components/H1.svelte";
+  import H2 from "@components/H2.svelte";
+  import FlatCoinjoinSvg from "@components/FlatCoinjoinSvg.svelte";
   import ArrowDown from "@lib/img/ArrowDown.svelte";
-  import GreenText from "@lib/components/GreenText.svelte";
-  import wasabiLogo from "@lib/img/wallets/wasabi-bg.png";
+  import GreenText from "@components/GreenText.svelte";
+  import CompareWalletsBox from "@components/CompareWalletsBox.svelte";
   import TelescopeSvg from "@lib/img/TelescopeSvg.svelte";
   import GreenCircleSvg from "@lib/img/GreenCircleSvg.svelte";
   import BlueCheckSvg from "@lib/img/BlueCheckSvg.svelte";
   import XCircleSvg from "@lib/img/XCircleSvg.svelte";
-  import RedText from "@lib/components/RedText.svelte";
+  import RedText from "@components/RedText.svelte";
 
   let y;
 
-  const wasabiData = data;
+  const wasabiData = wasabiDataFile;
+  const overview = advancedDataFile.overview;
+  const wallets = advancedDataFile.wallets;
 </script>
 
 <svelte:window bind:scrollY={y} />
 
-<div class="relative px-4 pt-10 h-[60vh] max-w-5xl mx-auto">
-  <div class="absolute flex flex-col gap-10 pt-8">
+<div class="relative px-4 pt-10 h-[50vh] max-w-3xl mx-auto">
+  <div class="absolute flex flex-col gap-10 pt-32">
     <H1>Wasabi 2.0 <br /><GreenText>& WabiSabi</GreenText></H1>
     <div class="text-lg">
       {wasabiData.hero}
-    </div>
-    <div>
-      <FlatCoinjoinSvg />
     </div>
     <div class="flex justify-center">
       <div class="w-6 animate-bounce">
@@ -38,7 +38,10 @@
     </div>
   </div>
 
-  <img src={wasabiLogo} alt="Wasabi Logo" />
+  <img src="/wallets-bg/wasabi-bg.png" alt="Wasabi Logo" />
+</div>
+<div>
+  <FlatCoinjoinSvg />
 </div>
 
 <div id="overview" class="px-4 flex flex-col gap-6 max-w-3xl mx-auto md:gap-12">
@@ -90,6 +93,12 @@
     {/each}
   </div>
 </div>
+
+<CompareWalletsBox
+  header={overview.compare_header}
+  subheader={overview.compare_subheader}
+  walletsList={wallets}
+/>
 
 <div
   class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto px-4"

@@ -1,33 +1,32 @@
 <script>
-  import data from "@lib/data/joinmarket.json";
+  import joinmarketDataFile from "@lib/data/joinmarket.json";
+  import advancedDataFile from "@lib/data/advanced.json";
 
   import H1 from "@lib/components/H1.svelte";
   import H2 from "@lib/components/H2.svelte";
   import FlatCoinjoinSvg from "@lib/components/FlatCoinjoinSvg.svelte";
   import ArrowDown from "@lib/img/ArrowDown.svelte";
   import GreenText from "@lib/components/GreenText.svelte";
-  import joinmarketLogo from "@lib/img/wallets/joinmarket-bg.png";
+  import CompareWalletsBox from "@components/CompareWalletsBox.svelte";
   import TelescopeSvg from "@lib/img/TelescopeSvg.svelte";
   import GreenCircleSvg from "@lib/img/GreenCircleSvg.svelte";
   import BlueCheckSvg from "@lib/img/BlueCheckSvg.svelte";
   import XCircleSvg from "@lib/img/XCircleSvg.svelte";
   import RedText from "@lib/components/RedText.svelte";
+  import ClickedArrow from "@lib/img/ClickedArrow.svelte";
 
   let y;
 
-  const joinmarketData = data;
+  const joinmarketData = joinmarketDataFile;
+  const overview = advancedDataFile.overview;
+  const wallets = advancedDataFile.wallets;
 </script>
 
-<svelte:window bind:scrollY={y} />
-
-<div class="relative px-4 pt-10 h-[60vh] max-w-5xl mx-auto">
-  <div class="absolute flex flex-col gap-10 pt-8">
+<div class="relative px-4 pt-10 h-[50vh] max-w-5xl mx-auto">
+  <div class="absolute flex flex-col gap-10 pt-32">
     <H1>QT & CLI <br /><GreenText>By JoinMarket</GreenText></H1>
     <div class="text-lg">
       {joinmarketData.hero}
-    </div>
-    <div>
-      <FlatCoinjoinSvg />
     </div>
     <div class="flex justify-center">
       <div class="w-6 animate-bounce">
@@ -38,7 +37,11 @@
     </div>
   </div>
 
-  <img src={joinmarketLogo} alt="JoinMarket Logo" />
+  <img src="/wallets-bg/joinmarket-bg.png" alt="JoinMarket Logo" />
+</div>
+
+<div class="pt-24">
+  <FlatCoinjoinSvg />
 </div>
 
 <div class="px-4 flex flex-col gap-6 max-w-3xl mx-auto md:gap-12" id="overview">
@@ -90,6 +93,12 @@
     {/each}
   </div>
 </div>
+
+<CompareWalletsBox
+  header={overview.compare_header}
+  subheader={overview.compare_subheader}
+  walletsList={wallets}
+/>
 
 <div
   class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto px-4"
