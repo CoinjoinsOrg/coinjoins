@@ -13,6 +13,7 @@
   import BlueCheckSvg from "@lib/img/BlueCheckSvg.svelte";
   import XCircleSvg from "@lib/img/XCircleSvg.svelte";
   import RedText from "@lib/components/RedText.svelte";
+  import ClickedArrow from "@lib/img/ClickedArrow.svelte";
 
   let y;
 
@@ -20,8 +21,6 @@
   const overview = advancedDataFile.overview;
   const wallets = advancedDataFile.wallets;
 </script>
-
-<svelte:window bind:scrollY={y} />
 
 <div class="relative px-4 pt-10 h-[50vh] max-w-5xl mx-auto">
   <div class="absolute flex flex-col gap-10 pt-32">

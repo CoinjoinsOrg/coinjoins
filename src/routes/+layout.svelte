@@ -1,8 +1,11 @@
 <script>
   import "../app.css";
   import { page } from "$app/stores";
+  import { goto } from "$app/navigation";
+
   import Footer from "@lib/components/Footer.svelte";
   import CoinjoinLogo from "@lib/img/CoinjoinLogo.svelte";
+  import ClickedArrow from "@lib/img/ClickedArrow.svelte";
 
   let showMobileMenu = false;
 
@@ -19,6 +22,10 @@
   function handleDesktopMenuItemClick() {
     showMobileMenu = false;
   }
+
+  let y;
+
+  $: currentPath = $page.url.pathname;
 </script>
 
 <svelte:head>
@@ -41,6 +48,21 @@
   />
   <meta property="og:image" content="https://coinjoins.org/preview.png" />
 </svelte:head>
+
+<svelte:window bind:scrollY={y} />
+
+{#if y > 700}
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
+  <div
+    on:click={() => goto(currentPath)}
+    class="hover:cursor-pointer bg-lighter-blue rounded-full p-4 fixed bottom-14 right-8"
+  >
+    <div class="w-8">
+      <ClickedArrow color="white" />
+    </div>
+  </div>
+{/if}
 
 <header
   class="min-w-[320px] flex justify-between h-[90px] md:max-w-5xl md:mx-auto py-6 items-center px-4"

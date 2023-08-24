@@ -8,7 +8,6 @@
   export let walletsList;
 
   $: currentPath = $page.url.pathname;
-  $: console.log("currentPath", currentPath);
 
   function goToWalletPage(url) {
     goto(url);
