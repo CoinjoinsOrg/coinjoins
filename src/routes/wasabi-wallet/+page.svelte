@@ -6,7 +6,7 @@
   import FlatCoinjoinSvg from "@lib/components/FlatCoinjoinSvg.svelte";
   import ArrowDown from "@lib/img/ArrowDown.svelte";
   import GreenText from "@lib/components/GreenText.svelte";
-  import wasabiLogo from "@lib/img/wallets/wasabi-bg.png";
+
   import TelescopeSvg from "@lib/img/TelescopeSvg.svelte";
   import GreenCircleSvg from "@lib/img/GreenCircleSvg.svelte";
   import BlueCheckSvg from "@lib/img/BlueCheckSvg.svelte";
@@ -38,7 +38,7 @@
     </div>
   </div>
 
-  <img src={wasabiLogo} alt="Wasabi Logo" />
+  <img src="/wallets-bg/wasabi-bg.png" alt="Wasabi Logo" />
 </div>
 
 <div id="overview" class="px-4 flex flex-col gap-6 max-w-3xl mx-auto md:gap-12">
