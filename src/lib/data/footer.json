@@ -1,0 +1,105 @@
+{
+  "logo_url": "/",
+  "intro": {
+    "title": "Intro",
+    "menu": [
+      {
+        "text": "Transactions",
+        "link": "/#transactions"
+      },
+      {
+        "text": "Surveillance",
+        "link": "/#surveillance"
+      },
+      {
+        "text": "Coinjoins",
+        "link": "/#coinjoins"
+      },
+      {
+        "text": "FAQ",
+        "link": "/#faq"
+      },
+      {
+        "text": "Try",
+        "link": "/#try"
+      }
+    ]
+  },
+  "advanced": {
+    "title": "Advanced",
+    "menu": [
+      {
+        "text": "Wasabi Wallet",
+        "link": "/wasabi-wallet"
+      },
+      {
+        "text": "BTCPay Server",
+        "link": "/btcpay-server"
+      },
+      {
+        "text": "Samourai Wallet",
+        "link": "/samourai-wallet"
+      },
+
+      {
+        "text": "Sparrow Wallet",
+        "link": "/sparrow-wallet"
+      },
+
+      {
+        "text": "Trezor Suite",
+        "link": "/trezor-suite"
+      },
+      {
+        "text": "Vortex LN",
+        "link": "/vortex-ln"
+      }
+    ]
+  },
+  "history": {
+    "title": "History",
+    "menu": [
+      {
+        "text": "Samourai Wallet",
+        "link": "/samourai-wallet"
+      },
+
+      {
+        "text": "Sparrow Wallet",
+        "link": "/sparrow-wallet"
+      },
+
+      {
+        "text": "Trezor Suite",
+        "link": "/trezor-suite"
+      },
+      {
+        "text": "Vortex LN",
+        "link": "/vortex-ln"
+      }
+    ]
+  },
+  "contributors_title": "Contributors",
+  "contributors": [
+    {
+      "name": "Thibaud Marechal",
+      "photo": "thib.png",
+      "link": "https://twitter.com/thibm_"
+    },
+    {
+      "name": "Gustavo Flores",
+      "photo": "gus.png",
+      "link": "https://twitter.com/gustavojfe/"
+    },
+    {
+      "name": "Isturitz",
+      "photo": "isturitz.png",
+      "link": "https://twitter.com/isturitz_/"
+    }
+  ],
+  "wrap": {
+    "site": "Coinjoins.org",
+    "hashtag": "#LearnCoinjoins",
+    "hashtag_url": "https://twitter.com/hashtag/LearnCoinjoins"
+  }
+}

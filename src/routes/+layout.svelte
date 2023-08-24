@@ -1,11 +1,8 @@
 <script>
   import "../app.css";
   import { page } from "$app/stores";
-
+  import Footer from "@lib/components/Footer.svelte";
   import CoinjoinLogo from "@lib/img/CoinjoinLogo.svelte";
-  import gustavo from "@lib/img/gus.png";
-  import thibaud from "@lib/img/thib.png";
-  import isturitz from "@lib/img/isturitz.png";
 
   let showMobileMenu = false;
 
@@ -139,58 +136,7 @@
 <div class="min-w-[320px] bg-dark-blue flex flex-col gap-40 md:gap-56">
   <slot />
 </div>
-
-<div class="flex flex-col items-center gap-16 pt-36 px-4">
-  <div
-    class="h-px bg-green-cj w-[calc(100%-128px)] md:w-full max-w-lg mx-auto"
-  />
-  <div class="flex flex-col items-center gap-8">
-    <div class="text-xl">Maintainers</div>
-    <div class="flex flex-col md:flex-row gap-10">
-      <div class="flex flex-col items-center gap-2">
-        <div><img src={thibaud} alt="Thibaud" /></div>
-        <div>
-          <a
-            href="https://twitter.com/thibm_/"
-            class="text-green-cj no-underline">Thibaud Marechal</a
-          >
-        </div>
-      </div>
-      <div class="flex flex-col items-center gap-2">
-        <div><img src={gustavo} alt="Gustavo" /></div>
-        <div>
-          <a
-            href="https://twitter.com/gustavojfe/"
-            class="text-green-cj no-underline">Gustavo Flores</a
-          >
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="flex flex-col items-center gap-8">
-    <div class="text-xl">Designer</div>
-    <div class="flex flex-col md:flex-row gap-10">
-      <div class="flex flex-col items-center gap-2">
-        <div><img src={isturitz} alt="Isturitz" /></div>
-        <div>
-          <a
-            href="https://dribbble.com/isturitz_"
-            class="text-green-cj no-underline">Isturitz</a
-          >
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="flex flex-col gap-4 items-center text-center pt-36 pb-4">
-    <div class="w-10">
-      <CoinjoinLogo />
-    </div>
-    <div>
-      <div class="text-lg font-bold">Coinjoins.org</div>
-      <div>Learn about bitcoin collaborative transactions</div>
-    </div>
-  </div>
-</div>
+<Footer />
 
 <style>
   .mobile-icon:after,
