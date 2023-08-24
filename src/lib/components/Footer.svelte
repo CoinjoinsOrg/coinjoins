@@ -81,7 +81,7 @@
         {/each}
       </div>
     </div>
-    <div class="flex flex-col items-center gap-2">
+    <div class="flex flex-col items-center gap-2 md:items-end">
       <div>{footerData.wrap.site}</div>
       <div>
         <a
