@@ -1,21 +1,24 @@
 <script>
-  import data from "@lib/data/sparrow.json";
+  import sparrowDataFile from "@lib/data/sparrow.json";
+  import advancedDataFile from "@lib/data/advanced.json";
 
-  import H1 from "@lib/components/H1.svelte";
-  import H2 from "@lib/components/H2.svelte";
-  import FlatCoinjoinSvg from "@lib/components/FlatCoinjoinSvg.svelte";
+  import H1 from "@components/H1.svelte";
+  import H2 from "@components/H2.svelte";
+  import FlatCoinjoinSvg from "@components/FlatCoinjoinSvg.svelte";
   import ArrowDown from "@lib/img/ArrowDown.svelte";
-  import GreenText from "@lib/components/GreenText.svelte";
-
+  import GreenText from "@components/GreenText.svelte";
+  import CompareWalletsBox from "@components/CompareWalletsBox.svelte";
   import TelescopeSvg from "@lib/img/TelescopeSvg.svelte";
   import GreenCircleSvg from "@lib/img/GreenCircleSvg.svelte";
   import BlueCheckSvg from "@lib/img/BlueCheckSvg.svelte";
   import XCircleSvg from "@lib/img/XCircleSvg.svelte";
-  import RedText from "@lib/components/RedText.svelte";
+  import RedText from "@components/RedText.svelte";
 
   let y;
 
-  const sparrowData = data;
+  const sparrowData = sparrowDataFile;
+  const overview = advancedDataFile.overview;
+  const wallets = advancedDataFile.wallets;
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -90,6 +93,12 @@
     {/each}
   </div>
 </div>
+
+<CompareWalletsBox
+  header={overview.compare_header}
+  subheader={overview.compare_subheader}
+  walletsList={wallets}
+/>
 
 <div
   class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto px-4"

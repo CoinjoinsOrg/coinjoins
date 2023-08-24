@@ -10,10 +10,11 @@
   import ClickedArrow from "@lib/img/ClickedArrow.svelte";
   import UnclickedArrow from "@lib/img/UnclickedArrow.svelte";
   import GreenCircleSvg from "../../lib/img/GreenCircleSvg.svelte";
+  import CompareWalletsBox from "../../lib/components/CompareWalletsBox.svelte";
 
   const overview = data.overview;
-  const essentialsList = data.essentialsList;
   const wallets = data.wallets;
+  const essentialsList = data.essentialsList;
 
   function handleEssentialTitleClick(i) {
     essentialsList[i].isClicked = !essentialsList[i].isClicked;
@@ -127,7 +128,12 @@
   </div>
 </div>
 
-<div class="px-4 flex flex-col gap-14 max-w-3xl mx-auto">
+<CompareWalletsBox
+  header={overview.compare_header}
+  subheader={overview.compare_subheader}
+  walletsList={wallets}
+/>
+<!-- <div class="px-4 flex flex-col gap-14 max-w-3xl mx-auto">
   <div class="flex flex-col gap-14 text-center">
     <H2>{overview.compare_header}</H2>
     <div class="text-lg">
@@ -157,7 +163,7 @@
       </div>
     {/each}
   </div>
-</div>
+</div> -->
 
 <div
   class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto px-4"

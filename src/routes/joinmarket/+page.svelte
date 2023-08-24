@@ -1,12 +1,13 @@
 <script>
-  import data from "@lib/data/joinmarket.json";
+  import joinmarketDataFile from "@lib/data/joinmarket.json";
+  import advancedDataFile from "@lib/data/advanced.json";
 
   import H1 from "@lib/components/H1.svelte";
   import H2 from "@lib/components/H2.svelte";
   import FlatCoinjoinSvg from "@lib/components/FlatCoinjoinSvg.svelte";
   import ArrowDown from "@lib/img/ArrowDown.svelte";
   import GreenText from "@lib/components/GreenText.svelte";
-
+  import CompareWalletsBox from "@components/CompareWalletsBox.svelte";
   import TelescopeSvg from "@lib/img/TelescopeSvg.svelte";
   import GreenCircleSvg from "@lib/img/GreenCircleSvg.svelte";
   import BlueCheckSvg from "@lib/img/BlueCheckSvg.svelte";
@@ -15,7 +16,9 @@
 
   let y;
 
-  const joinmarketData = data;
+  const joinmarketData = joinmarketDataFile;
+  const overview = advancedDataFile.overview;
+  const wallets = advancedDataFile.wallets;
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -90,6 +93,12 @@
     {/each}
   </div>
 </div>
+
+<CompareWalletsBox
+  header={overview.compare_header}
+  subheader={overview.compare_subheader}
+  walletsList={wallets}
+/>
 
 <div
   class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto px-4"
