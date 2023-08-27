@@ -90,41 +90,49 @@
         Intro
       </a>
     </div>
+
+    <div />
     <!-- svelte-ignore a11y-no-static-element-interactions -->
     <!-- svelte-ignore a11y-mouse-events-have-key-events -->
     <!-- svelte-ignore a11y-click-events-have-key-events -->
+
     <div
       on:mouseover={handleShowSubMenuOnHover}
       on:mouseout={handleHideSubMenuOnHoverOut}
       on:click={handleAdvancedMenuClicked}
-      class="z-10 relative flex gap-2 hover:text-green-cj hover:cursor-pointer {$page
-        .url.pathname === '/advanced'
+      class="z-10 relative hover:text-green-cj hover:cursor-pointer {$page.url
+        .pathname === '/advanced'
         ? 'text-green-cj'
         : 'text-white'}"
     >
       <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-      Advanced
+      <div class="flex gap-2">
+        <div>Advanced</div>
 
-      <div class="w-6">
-        {#if isAdvancedSubMenuShown}
-          <ClickedArrow
-            color={$page.url.pathname === "/advanced" || isAdvancedSubMenuShown
-              ? "rgb(0,255,25,1.0)"
-              : "rgb(255,255,255,1.0)"}
-          />
-        {:else}
-          <UnclickedArrow
-            color={$page.url.pathname === "/advanced" || isAdvancedSubMenuShown
-              ? "rgb(0,255,25,1.0)"
-              : "rgb(255,255,255,1.0)"}
-          />
-        {/if}
+        <div class="w-6">
+          {#if isAdvancedSubMenuShown}
+            <ClickedArrow
+              color={$page.url.pathname === "/advanced" ||
+              isAdvancedSubMenuShown
+                ? "rgb(0,255,25,1.0)"
+                : "rgb(255,255,255,1.0)"}
+            />
+          {:else}
+            <UnclickedArrow
+              color={$page.url.pathname === "/advanced" ||
+              isAdvancedSubMenuShown
+                ? "rgb(0,255,25,1.0)"
+                : "rgb(255,255,255,1.0)"}
+            />
+          {/if}
+        </div>
       </div>
+
       {#if isAdvancedSubMenuShown}
         <div
-          class="absolute flex w-80 justify-between py-4 px-2 bg-dark-blue rounded h-auto {showMobileMenu
-            ? 'flex-col top-12 text-3xl text-left'
-            : 'flex-row top-8'}"
+          class=" flex w-80 justify-between py-4 px-2 bg-dark-blue h-auto {showMobileMenu
+            ? 'block flex-col top-12 text-3xl text-left'
+            : 'absolute flex-row top-8 rounded'}"
           on:mouseover={handleShowSubMenuOnHover}
           on:mouseout={handleHideSubMenuOnHoverOut}
           on:click={handleAdvancedMenuClicked}
@@ -203,7 +211,7 @@
     >
       <div class="relative">
         <div
-          class="absolute -top-6 left-56 md:left-20 md:text-[10px] font-bold md:-top-4 text-sm border rounded-md px-2 text-green-cj"
+          class="absolute -top-4 left-52 md:left-20 md:text-[10px] font-bold md:-top-4 text-sm border rounded-md px-2 text-green-cj"
         >
           SOON
         </div>
