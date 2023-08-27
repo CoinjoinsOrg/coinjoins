@@ -23,8 +23,8 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div class="relative px-4 pt-10 h-[50vh] max-w-5xl mx-auto">
-  <div class="absolute flex flex-col gap-10 pt-32">
+<div class="relative px-4 pt-10 h-[50vh] max-w-5xl mx-auto z-0">
+  <div class="absolute flex flex-col gap-10 pt-32 z-0">
     <H1>Samourai<br /><GreenText>& Whirlpool</GreenText></H1>
     <div class="text-lg">
       {samouraiData.hero}
