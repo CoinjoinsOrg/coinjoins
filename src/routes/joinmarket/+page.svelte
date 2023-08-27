@@ -13,7 +13,9 @@
   import BlueCheckSvg from "@lib/img/BlueCheckSvg.svelte";
   import XCircleSvg from "@lib/img/XCircleSvg.svelte";
   import RedText from "@lib/components/RedText.svelte";
-  import ClickedArrow from "@lib/img/ClickedArrow.svelte";
+  import GitHub from "@lib/img/GitHub.svelte";
+  import Twitter from "@lib/img/Twitter.svelte";
+  import Website from "@lib/img/Website.svelte";
 
   let y;
 
@@ -28,6 +30,13 @@
     <div class="text-lg">
       {joinmarketData.hero}
     </div>
+
+    <div class="flex gap-6">
+      <div class="w-6"><a href={joinmarketData.github}> <GitHub /></a></div>
+      <div class="w-6"><a href={joinmarketData.twitter}> <Twitter /></a></div>
+      <div class="w-6"><a href={joinmarketData.website}> <Website /></a></div>
+    </div>
+
     <div class="flex justify-center">
       <div class="w-6 animate-bounce">
         <a href="#overview">

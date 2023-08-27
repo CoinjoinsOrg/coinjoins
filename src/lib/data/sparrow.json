@@ -1,5 +1,8 @@
 {
   "hero": "Sparrow Wallet is a bitcoin wallet desktop application with a built-in coinjoin feature using Whirlpool.",
+  "github": "https://github.com/sparrowwallet/sparrow",
+  "twitter": "https://twitter.com/sparrowwallet",
+  "website": "https://sparrowwallet.com/",
   "overview": {
     "point_1": "Whirlpool is a Zerolink protocol based coinjoin implementation that splits the toxic change and collects the coordinator fee prior to participating in mixing transactions. It does so by first doing a premix transaction (Tx0) where UTXOs chosen to coinjoin will be consolidated and resized into the pool denomination. There’s a separate wallet account for non-mixing, premixing, post-mixing and badbank (change output separated in the premix transaction).",
     "point_2": "Whirlpool coinjoin transactions have a minimum of 5 inputs and 5 outputs, the latter which are all of the same value. There’s a minimum of 2 premixers (new entrants) in a coinjoin transaction, who pay the mining transaction fees, for the remaining users, the remixers. There’s four mixing pools to choose from with different output denominations: 0.001, 0.01, 0.05, 0.5 BTC. The maximum amount of bitcoin per pool is 70 times the output denomination, and the maximum number of UTXOs to aggregate on Tx0 is 70 too.",

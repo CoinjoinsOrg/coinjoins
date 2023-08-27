@@ -136,7 +136,7 @@
 
 <div id="open" class="relative mx-auto w-full h-full">
   <div
-    class="absolute flex flex-col items-center justify-center left-0 top-0 bottom-0 right-0 gap-10 md:gap-14 z-10 mx-auto"
+    class="absolute flex flex-col items-center justify-center left-0 top-0 bottom-0 right-0 gap-10 md:gap-14 mx-auto"
   >
     <div class="w-20 md:w-32"><Bitcoin /></div>
 

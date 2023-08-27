@@ -1,5 +1,8 @@
 {
   "hero": "Wasabi Wallet 2.0 is a simple to use bitcoin wallet desktop app with a built-in coinjoin feature using WabiSabi.",
+  "github": "https://github.com/zkSNACKs/WalletWasabi/",
+  "twitter": "https://twitter.com/wasabiwallet",
+  "website": "https://wasabiwallet.io/",
   "overview": {
     "point_1": "WabiSabi is a second-generation coinjoin protocol that fixes some limitations of the first-generation Zerolink protocol.",
     "point_2": "WabiSabi allows variable amount denominations, which means users come with many different bitcoin amounts to coinjoin in a single collaborative transaction.",
