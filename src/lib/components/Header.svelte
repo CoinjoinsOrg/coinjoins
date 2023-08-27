@@ -30,14 +30,15 @@
   }
 
   function handleAdvancedSubMenuClicked(url) {
-    if (showMobileMenu) {
-      handleMobileMenuItemClick();
-    }
-    isAdvancedSubMenuShown = !isAdvancedSubMenuShown;
-    clearTimeout(timeoutHideSubMenuAdvanced);
-    timeoutHideSubMenuAdvanced = null;
-
     goto(url);
+    setTimeout(() => {
+      if (showMobileMenu) {
+        handleMobileMenuItemClick();
+      }
+      isAdvancedSubMenuShown = !isAdvancedSubMenuShown;
+      clearTimeout(timeoutHideSubMenuAdvanced);
+      timeoutHideSubMenuAdvanced = null;
+    }, 200);
   }
 
   function handleShowSubMenuOnHover() {
@@ -91,7 +92,6 @@
       </a>
     </div>
 
-    <div />
     <!-- svelte-ignore a11y-no-static-element-interactions -->
     <!-- svelte-ignore a11y-mouse-events-have-key-events -->
     <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -207,7 +207,7 @@
     <div
       class="cursor-default {$page.url.pathname === '/history'
         ? 'text-green-cj'
-        : 'text-white'}"
+        : 'text-inactive-grey'}"
     >
       <div class="relative">
         <div
