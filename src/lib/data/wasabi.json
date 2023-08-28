@@ -4,35 +4,33 @@
   "twitter": "https://twitter.com/wasabiwallet",
   "website": "https://wasabiwallet.io/",
   "overview": {
-    "point_1": "WabiSabi is a second-generation coinjoin protocol that fixes some limitations of the first-generation Zerolink protocol.",
-    "point_2": "WabiSabi allows variable amount denominations, which means users come with many different bitcoin amounts to coinjoin in a single collaborative transaction.",
-    "point_3": "Wasabi uses block filters to update wallet balances privately without requiring users to run a full node by default, though that is an option available.",
-    "point_4": "WabiSabi coordinator fees are 0.3% of the fresh bitcoin amount (fresh means it was not conjoined before).",
-    "point_5": "The minimum amount to participate in a single coinjoin is 6 561 sat (0.00006561 BTC) and the maximum is 40 000 BTC with a total of 79 possible denominations.",
-    "point_6": "Wasabi Wallet clients can randomly register up to 10 different inputs and 10 outputs into a coinjoin from the same wallet, without ever revealing that they are connected. Randomly, Wasabi can create more or less outputs than inputs selected.",
-    "point_7": "The coordinator cannot ever connect the different input and output registrations as all traffic is routed through Tor by default with different Tor hidden identities, which make it impossible to connect an input and an output coming from the same wallet and participating in the same coinjoin transaction.",
-    "point_8": "The WabiSabi coinjoin coordinator ensures that at least 150 inputs must be registered to create a coinjoin transaction. Coinjoins may have much more inputs than 150 registered in one single transaction."
+    "point_1": "WabiSabi is a second-generation coinjoin protocol that overcomes limitations of the Zerolink protocol, allowing variable output amount denominations. This makes it possible to create coinjoin transactions without any toxic change.",
+    "point_2": "Wasabi updates wallet balances privately using block filters, without needing a full node, although that option is available. ",
+    "point_3": "Wasabi coordinator fees are 0.3% of the fresh bitcoin amount (fresh means not coinjoined before). ",
+    "point_4": "The minimum amount to participate in a coinjoin is 5,000 sat (0.00005000 BTC), and the maximum is 40,000 BTC, with 79 standard output denominations.",
+    "point_5": "Clients can randomly register up to 10 different inputs and 10 outputs into a coinjoin from the same wallet, without revealing connections. Randomly, Wasabi can create more or less outputs than inputs selected.",
+    "point_6": "All traffic is routed through Tor by default, using different Tor hidden identities, making it impossible to connect an input and output from the same wallet in the same coinjoin transaction.",
+    "point_7": "The Wasabi coinjoin coordinator ensures at least 150 inputs for a transaction, but there can be more."
   },
   "benefits": {
-    "point_1": "With a large number of participants, WabiSabi enables enormous amounts of possibilities making it hard to track flows of funds after one single transaction.",
-    "point_2": "Variable amounts in WabiSabi enable many possibilities to combine different inputs or outputs together, making traceability much harder.",
-    "point_3": "By default, the entire wallet and protocol work on Tor protecting users (clients) from leaking their personal IP addresses.",
-    "point_4": "Toxic change outputs are eliminated in most cases, except for lonely whales, which have relatively large inputs compared to other inputs from the same coinjoin transaction.",
-    "point_5": "No one can spy on you. All traffic from the client (desktop application) to the server (coordinator) is routed via Tor by default, which means using the application is fully anonymous.",
-    "point_6": "Wasabi Wallet has a change avoidance feature for sending bitcoin to other wallets, which allows to round up or down a payment to avoid creating unnecessary change, which would have to be coinjoined, saving fees and time for the user.",
-    "point_7": "The coinjoin feature is automatic. Just receive bitcoin to your Wasabi Wallet address, wait for the privacy score to hit 100%, and that's it, you are done coinjoining.",
-    "point_8": "Achieving a high amount of privacy for a given UTXO is possible in one single coinjoin transaction, making it quite block space efficient, therefore cheap in network fees for users.",
-    "point_9": "“Friends don’t pay” is a fee policy where inputs coming from previous WabiSabi coinjoins do not pay the coordinator fee.",
-    "point_10": "“Plebs don’t pay” is a fee policy where inputs under 1 million sats (0.01 BTC) do not pay the coordinator fee.",
-    "point_11": "The Wasabi “anonymity score” is very conservative, giving the user a safe measure of how much privacy gains or plausible deniability have been achieved.",
-    "point_12": "The simple 100% scale of the privacy score is simple to understand for the user at a high level, without requiring them to think too deeply about how it gets calculated."
+    "point_1": "With a large number of participants, WabiSabi allows for an enormous amount of possibilities, making it difficult to trace the flow of funds after a single transaction.",
+    "point_2": "Variable amounts in WabiSabi allow for many ways to combine different inputs or outputs, making traceability much harder.",
+    "point_3": "By default, the entire wallet and protocol run on Tor, protecting users (clients) from having their personal IP addresses exposed.",
+    "point_4": "Toxic change outputs are eliminated in most cases, except for lone whales that have relatively large inputs compared to other inputs from the same coinjoin transaction.",
+    "point_5": "No one can spy on you. All traffic from the client (desktop application) to the server (coordinator) is routed through Tor by default, which means that using the application is completely anonymous.",
+    "point_6": "Wasabi Wallet has a change avoidance feature for sending bitcoin to other wallets, which allows a payment to be rounded up or down to avoid creating unnecessary change, saving fees and time for the user. ",
+    "point_7": "The coinjoin function is automatic while a user’s balance is at least 1 million sats (0.01 BTC).",
+    "point_8": "Achieving a high level of privacy for a given UTXO is possible in a single coinjoin transaction, making it quite block space efficient and therefore cheap in network fees for users.",
+    "point_9": "Coordinator fees are not paid for remixing coins created by a previous coinjoin round. Coordinator fees are not paid for outputs created by previously mixed coins. This allows the sender’s change and the recipient’s payment to be coinjoined for free. ",
+    "point_10": "'Plebs don't pay' is a fee policy where any input below 1 million sats (0.01 BTC) does not pay the coordinator fee.",
+    "point_11": "Wasabi's 'anonymity score' is very conservative, giving the user a safe measure of how much privacy or plausible deniability has been achieved. Clients only count outputs with matching values towards your score, but coinjoin outputs of other sizes increase privacy as well.",
+    "point_12": "The simple 100% scale of the privacy score is easy for the user to understand at a high level without having to think too deeply about how it is calculated."
   },
   "tradeoffs": {
-    "point_1": "During onboarding, the Wasabi Wallet terms of service can be a friction for users who want to fully understand the legalities before moving forward.",
+    "point_1": "During onboarding, the Wasabi Wallet Terms of Service can be a friction point for users who want to fully understand the legalities before moving forward.",
     "point_2": "The “on by default” coinjoin feature can surprise users who may see their coins being coinjoined automatically after the fact, having paid both the regular coordinator and network fees.",
-    "point_3": "The “anonymity scores” of Wasabi Wallet are hard to understand. “How much is enough?” is not that straight forward.",
-    "point_4": "On Wasabi Wallet, the wallet loading phase can be slow for large wallets or wallets that have been out of sync with the block chain for some time as it uses block filters for privacy.",
-    "point_5": "The company running the default server for all Wasabi Wallet clients is purchasing data from a chain analysis provider to prevent some inputs from registering in its coinjoin service. While the privacy tradeoff is very limited, this setup lacks censorship-resistance. Users may prefer other P2P alternatives such as JoinMarket.",
-    "point_6": "Wasabi Wallet is not distributed on Apple or Windows app stores, which requires users to verify the binaries downloaded or to build from source to verify the integrity and authenticity of the software."
+    "point_3": "The “anonymity scores” of Wasabi Wallet are hard to understand. “How much is enough?” is not that straight forward. The way anonymity scoring is calculated is also difficult to understand.",
+    "point_4": "On Wasabi Wallet, the wallet loading phase can be slow for large wallets or wallets that have been out of sync with the blockchain for some time, as it uses blockfiltering for privacy.",
+    "point_5": "The company that runs the default server for all Wasabi Wallet clients buys data from a chain analysis provider to prevent some inputs from registering with its coinjoin service. While the privacy tradeoff is very limited, this setup lacks censorship resistance. Users may prefer other P2P alternatives such as JoinMarket."
   }
 }
