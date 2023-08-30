@@ -1,12 +1,21 @@
 <script>
   import data from "@lib/data/footer.json";
 
+  import H2 from "@components/H2.svelte";
   import CoinjoinLogo from "@lib/img/CoinjoinLogo.svelte";
 
   const footerData = data;
 </script>
 
 <div class="px-4 max-w-5xl mx-auto pt-32 pb-8 flex flex-col gap-20">
+  <div
+    class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto px-4"
+  >
+    <H2>{footerData.questions.title}</H2>
+    <p class="text-white text-xl">
+      {@html footerData.questions.body}
+    </p>
+  </div>
   <div class="flex flex-col md:flex-row md:justify-between gap-20">
     <div class="md:flex-1">
       <a href={footerData.logo_url}><div class="w-12"><CoinjoinLogo /></div></a>
@@ -29,11 +38,11 @@
       </div>
       <div class="flex flex-col gap-5 w-1/2 sm:w-[30%]">
         <div class="text-green-cj font-bold text-lg font-inconsolata">
-          {footerData.advanced.title}
+          {footerData.basics.title}
         </div>
 
         <div class="flex flex-col gap-2">
-          {#each footerData.advanced.menu as item}
+          {#each footerData.basics.menu as item}
             <div>
               <a
                 class="no-underline {item.link.includes('#')
@@ -42,7 +51,7 @@
                 href={item.link}>{item.text}</a
               >{#if item.link.includes("#")}
                 <span
-                  class="ml-2 text-green-cj text-xs px-1 rounded border border-green-cj"
+                  class="ml-2 text-green-cj text-[9px] px-1 rounded border border-green-cj"
                   >SOON</span
                 >
               {/if}
@@ -50,21 +59,6 @@
           {/each}
         </div>
       </div>
-      <!-- <div class="flex flex-col gap-5 w-1/2 sm:w-[30%]">
-        <div class="text-green-cj font-bold text-lg font-inconsolata">
-          {footerData.history.title}
-        </div>
-
-        <div class="flex flex-col gap-2">
-          {#each footerData.history.menu as item}
-            <div>
-              <a class="no-underline hover:cursor-pointer" href={item.link}
-                >{item.text}</a
-              >
-            </div>
-          {/each}
-        </div>
-      </div> -->
     </div>
   </div>
   <div class="h-[1px] bg-green-cj w-full" />

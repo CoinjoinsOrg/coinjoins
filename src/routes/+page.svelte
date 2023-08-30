@@ -96,7 +96,6 @@
   }
 
   let y;
-  $: console.log(y);
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -492,7 +491,7 @@
       Don’t trust, verify. See for yourself and learn how coinjoins work by
       participating in them. There are different bitcoin wallets with built-in
       coinjoin features. Wasabi Wallet is one of them though there are others
-      that we discuss <a href="/advanced">here</a>.
+      that we discuss <a href="/basics">here</a>.
     </p>
   </div>
   <div class="flex flex-col gap-16 items-center">
@@ -548,18 +547,6 @@
       >Try Wasabi Wallet</a
     >
   </div>
-</div>
-
-<div
-  class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto px-4"
->
-  <H2>Have More Questions?</H2>
-  <p class="text-white text-xl">
-    If you have any comments or suggestions, we are open to hearing from you.
-    Please reach out on <a href="mailto:coinjoins@protonmail.com"
-      >coinjoins@protonmail.com</a
-    >.
-  </p>
 </div>
 
 <style>
