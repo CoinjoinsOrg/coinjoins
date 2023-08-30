@@ -1,4 +1,7 @@
 {
+  "wallet_name": "QT & CLI",
+  "protocol_name": "JoinMarket",
+  "wallet_logo": "joinmarket",
   "hero": "Joinmarket is a P2P market-based coinjoin protocol and implementation that has typically attracted more advanced and technical users.",
   "github": "https://github.com/JoinMarket-Org/joinmarket-clientserver",
   "twitter": "https://twitter.com/joinmarket",

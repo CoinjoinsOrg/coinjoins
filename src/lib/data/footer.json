@@ -1,4 +1,8 @@
 {
+  "questions": {
+    "title": "Have More Questions?",
+    "body": "If you have any comments or suggestions, we are open to hearing from you. Please reach out on <a href='mailto:coinjoins@protonmail.com'>coinjoins@protonmail.com</a> or open an issue on the public<a href='https://github.com/CoinjoinsOrg/coinjoins'>GitHub repository</a>."
+  },
   "logo_url": "/",
   "intro": {
     "title": "Intro",
@@ -25,12 +29,12 @@
       }
     ]
   },
-  "advanced": {
-    "title": "Advanced",
+  "basics": {
+    "title": "Basics",
     "menu": [
       {
         "text": "Wasabi Wallet",
-        "link": "/wasabi-wallet"
+        "link": "/wasabi-2.0"
       },
       {
         "text": "JoinMarket",
@@ -38,12 +42,12 @@
       },
       {
         "text": "Samourai Wallet",
-        "link": "/samourai-wallet"
+        "link": "/samourai"
       },
 
       {
         "text": "Sparrow Wallet",
-        "link": "/sparrow-wallet"
+        "link": "/sparrow"
       },
       {
         "text": "BTCPay Server",

@@ -133,25 +133,25 @@
   "wallets": [
     {
       "name": "Wasabi Wallet",
-      "page": "/wasabi-wallet",
+      "page": "/wallets/wasabi-2.0",
       "icon": "wasabi.png",
       "id": "wasabi"
     },
     {
       "name": "Samourai Wallet",
-      "page": "/samourai-wallet",
+      "page": "/wallets/samourai",
       "icon": "samourai.png",
       "id": "samourai"
     },
     {
       "name": "Sparrow Wallet",
-      "page": "/sparrow-wallet",
+      "page": "/wallets/sparrow",
       "icon": "sparrow.png",
       "id": "sparrow"
     },
     {
       "name": "JoinMarket",
-      "page": "/joinmarket",
+      "page": "/wallets/joinmarket",
       "icon": "joinmarket.png",
       "id": "joinmarket"
     },
