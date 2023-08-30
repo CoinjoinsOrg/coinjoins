@@ -137,6 +137,7 @@
 </div>
 
 <div
+  id="transactions"
   class="flex flex-col md:flex-row gap-20 max-w-5xl mx-auto items-center px-4"
 >
   <div class="flex flex-col gap-12 flex-1">
@@ -185,6 +186,7 @@
 </div>
 
 <div
+  id="surveillance"
   class="flex flex-col md:flex-row gap-12 max-w-xl md:max-w-5xl mx-auto items-center px-4"
 >
   <div class="flex-1">
@@ -260,6 +262,7 @@
   </div>
 
   <div
+    id="coinjoins"
     class="min-w-[320px] absolute mx-auto px-4 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-7xl"
   >
     <div class="flex flex-col items-center gap-28 text-center">
@@ -276,7 +279,7 @@
   </div>
 </div>
 
-<div class="px-4 flex flex-col gap-28">
+<div id="faq" class="px-4 flex flex-col gap-28">
   <div class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto">
     <H2>{data.fud.title}</H2>
     <p class="text-white text-xl">
@@ -390,7 +393,7 @@
   <div>
     <a
       href={data.try.wasabi.link}
-      class="block border border-green-cj bg-green-cj px-8 py-2 rounded-md text-lg text-dark-blue no-underline"
+      class="block border border-green-cj bg-green-cj px-6 py-2 rounded-md text-base text-dark-blue no-underline hover:text-green-cj hover:bg-dark-blue hover:border-green-cj"
       >{data.try.wasabi.cta}</a
     >
   </div>

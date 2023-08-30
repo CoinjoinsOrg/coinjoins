@@ -172,17 +172,17 @@
         >
           SOON
         </div>
-        History
+        {headerData.menu.history}
       </div>
     </div>
     <div class="md:hidden flex justify-center pt-12">
       <a
+        href="/#try"
         on:click={showMobileMenu
           ? handleMobileMenuItemClick
           : handleDesktopMenuItemClick}
-        href="/#try"
-        class="block border border-green-cj bg-green-cj px-6 py-2 rounded-md text-base text-dark-blue no-underline"
-        >Try coinjoins</a
+        class="block border border-green-cj bg-green-cj px-6 py-2 rounded-md text-base text-dark-blue no-underline hover:text-green-cj hover:bg-dark-blue hover:border-green-cj"
+        >{headerData.cta}</a
       >
     </div>
   </div>
@@ -199,8 +199,8 @@
   <div class="hidden md:flex flex-auto justify-end">
     <a
       href="/#try"
-      class="block border border-green-cj bg-green-cj px-6 py-2 rounded-md text-base text-dark-blue no-underline"
-      >Try coinjoins</a
+      class="block border border-green-cj bg-green-cj px-6 py-2 rounded-md text-base text-dark-blue no-underline hover:text-green-cj hover:bg-dark-blue hover:border-green-cj"
+      >{headerData.cta}</a
     >
   </div>
 </header>
