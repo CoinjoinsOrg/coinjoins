@@ -17,10 +17,17 @@
   import Website from "@lib/img/Website.svelte";
 
   export let data;
+  let y;
 
   const overview = overviewDataFile.overview;
   const wallets = overviewDataFile.wallets;
 </script>
+
+<svelte:window bind:scrollY={y} />
+
+<svelte:head>
+  <title>{data.content.title}</title>
+</svelte:head>
 
 <div class="relative px-4 pt-10 h-[50vh] max-w-3xl mx-auto">
   <div class="absolute flex flex-col gap-10 pt-32">
