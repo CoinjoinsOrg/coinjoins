@@ -13,7 +13,7 @@
     "point_2": "Zerolink-based coinjoin transactions implement Chaumian blind signatures to protect the user’s input to output link from the coordinator. ",
     "point_3": "There are no terms of service for Samourai or Whirlpool and there is no announced blacklisting policy.",
     "point_4": "The anonymity set gain of Whirlpool coinjoin transactions is easy to calculate and understand, the terms used are backward looking anonymity set and forward looking anonymity set.",
-    "point_5": "Tor is bundled in and can be enabled with a single click on first startup. You can also change Tor identities in the network settings with a single click.",
+    "point_5": "Tor is bundled in, can be enabled with a single click on first startup but it is opt-in. Your Tor identity updates between input and output registration. You can also change Tor identities in the network settings with a single click.",
     "point_6": "Samourai has many additional privacy features that complement the post-mixing experience.",
     "point_7": "You can connect your own node by running the Dojo software and connecting it to your wallet during the initial setup process.",
     "point_8": "Once you set up mixing in Samourai, the coinjoin transactions will be automated and mixing will continue if you leave the software open.",

@@ -11,7 +11,7 @@
     "point_2": "Zerolink-based coinjoin transactions implement Chaumian blind signatures to protect the user’s input to output linkage from the coordinator.",
     "point_3": "There are no terms of service for Sparrow or Whirlpool and there is no announced blacklisting policy.",
     "point_4": "The anonymity set gain of Whirlpool coinjoin transactions is easy to calculate and understand, the terms used are backward looking anonymity set and forward looking anonymity set.",
-    "point_5": "Tor can be connected for Bitcoin network and coordinator communication, but it’s not bundled in. You can also connect your own node through the RPC interface or with a private Electrum server.",
+    "point_5": "Tor can be connected for Bitcoin network and coordinator communication, but it’s not bundled in. If enabled, your Tor identity updates between input and output registration. You can also connect your own node through the RPC interface or with a private Electrum server.",
     "point_6": "You can mix into another Sparrow wallet such as a multi-signature or hardware wallet, and also target a number of mixing rounds before sending the UTXO to the other wallet.",
     "point_7": "Once you set up mixing in Sparrow and the premix transaction, the coinjoin transactions will be automated and mixing will continue if you leave the software open.",
     "point_8": "You can enter a promo code SCODE when registering bitcoin with Whirlpool for discounted coordinator fees during social media promotions."
