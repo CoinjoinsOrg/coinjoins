@@ -7,6 +7,7 @@
   import CoinjoinVisual from "@lib/img/CoinjoinVisual.svelte";
   import CoinjoinVisualMobile from "@lib/img/CoinjoinVisualMobile.svelte";
   import Eye from "@lib/img/Eye.svelte";
+  import GreenText from "@lib/components/GreenText.svelte";
   import GreenLine from "@lib/img/GreenLine.svelte";
   import MoneyBill from "@lib/img/MoneyBill.svelte";
   import RedLine from "@lib/img/RedLine.svelte";
@@ -96,7 +97,6 @@
   }
 
   let y;
-  $: console.log(y);
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -119,8 +119,9 @@
     <div class="flex flex-col items-center gap-10">
       <H1>Coinjoins</H1>
       <p class="text-white text-center text-2xl px-4">
-        Collaborative bitcoin <br />
-        transactions to reclaim your privacy.
+        Reclaim your privacy
+        <br />
+        with collaborative bitcoin transactions.
       </p>
     </div>
 
@@ -190,17 +191,18 @@
 </div>
 
 <div
+  id="transactions"
   class="flex flex-col md:flex-row max-w-5xl mx-auto items-center gap-20 px-4"
 >
   <div class="w-full px-4 md:px-0 flex-auto md:flex-1"><Utxos /></div>
 
   <div class="flex flex-col gap-12 flex-1">
-    <H2>It’s all about the UTXOs</H2>
+    <H2>It’s all about the Coins</H2>
     <p class="text-white text-xl">
       Unspent Transaction Outputs, or UTXOs, are essentially the coins in the
       bitcoin network. <br /><br />
 
-      Each UTXO has a very distinct transaction history, making all bitcoin
+      Each coin has a very distinct transaction history, making all bitcoin
       transactions unique from one another and thus, easily trackable.
     </p>
   </div>
@@ -275,6 +277,7 @@
 </div>
 
 <div
+  id="surveillance"
   class="flex flex-col md:flex-row gap-12 max-w-xl md:max-w-5xl mx-auto items-center px-4"
 >
   <div class="flex-1">
@@ -314,7 +317,7 @@
   class="flex flex-col md:flex-row max-w-xl md:max-w-5xl justify-between mx-auto gap-24 items-center px-4"
 >
   <div>
-    <H2>Do you really have nothing to hide?</H2>
+    <H2>Do you <GreenText>really</GreenText> have nothing to hide?</H2>
   </div>
   <div class="text-white text-xl">
     How about strangers knowing how much money you earn per month or saved in a
@@ -323,14 +326,19 @@
     Or your future spouse knowing you bought her wedding ring before you make
     the big announcement?<br /><br /><br />
 
-    Or your employer knowing who you make political donations to?
+    Or your employer knowing who you make political donations to? <br /><br
+    /><br />
+
+    <GreenText>Think twice before saying you've got nothing to hide.</GreenText>
   </div>
 </div>
 
 <div
   class="flex flex-col gap-12 items-center text-center max-w-3xl mx-auto px-4"
 >
-  <H2>Privacy is a Choice to Not Share Certain Information</H2>
+  <H2
+    >Privacy is a Choice to <GreenText>Not Share</GreenText> Certain Information</H2
+  >
   <p class="text-white text-xl">
     And the choice should be yours. If you want to share information publicly or
     keep some of it personal, it should be up to you.
@@ -357,7 +365,7 @@
   </div>
 </div>
 
-<div class="relative">
+<div class="relative" id="coinjoins">
   <div
     class="min-w-[320px] hidden w-full h-full md:flex justify-center items-center"
   >
@@ -391,7 +399,7 @@
   </div>
 </div>
 
-<div class="px-4 flex flex-col gap-28">
+<div class="px-4 flex flex-col gap-28" id="faq">
   <div class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto">
     <H2>Heard Bad Things About Coinjoins?</H2>
     <p class="text-white text-xl">

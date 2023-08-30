@@ -30,7 +30,8 @@
     "point_9": "Coordinator fees are not paid for remixing coins created by a previous coinjoin round. Coordinator fees are not paid for outputs created by previously mixed coins. This allows the sender’s change and the recipient’s payment to be coinjoined for free. ",
     "point_10": "'Plebs don't pay' is a fee policy where any input below 1 million sats (0.01 BTC) does not pay the coordinator fee.",
     "point_11": "Wasabi's 'anonymity score' is very conservative, giving the user a safe measure of how much privacy or plausible deniability has been achieved. Clients only count outputs with matching values towards your score, but coinjoin outputs of other sizes increase privacy as well.",
-    "point_12": "The simple 100% scale of the privacy score is easy for the user to understand at a high level without having to think too deeply about how it is calculated."
+    "point_12": "The simple 100% scale of the privacy score is easy for the user to understand at a high level without having to think too deeply about how it is calculated.",
+    "point_13": "Privacy warnings are available for users sending bitcoin from their wallet. Whether users use private or non-private coins, use different labels, create change, consolidate coins or use unconfirmed funds, privacy warnings help users avoid making costly mistakes to protect their privacy."
   },
   "tradeoffs": {
     "point_1": "During onboarding, the Wasabi Wallet Terms of Service can be a friction point for users who want to fully understand the legalities before moving forward.",
