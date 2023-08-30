@@ -1,7 +1,7 @@
 {
   "questions": {
     "title": "Have More Questions?",
-    "body": "If you have any comments or suggestions, we are open to hearing from you. Please reach out on <a href='mailto:coinjoins@protonmail.com'>coinjoins@protonmail.com</a> or open an issue on the public<a href='https://github.com/CoinjoinsOrg/coinjoins'>GitHub repository</a>."
+    "body": "If you have any comments or suggestions, please reach out to <a href='mailto:coinjoins@protonmail.com'>coinjoins@protonmail.com</a> or open an issue on the <a href='https://github.com/CoinjoinsOrg/coinjoins'>GitHub repository</a>. Thank you!"
   },
   "logo_url": "/",
   "intro": {
@@ -29,25 +29,29 @@
       }
     ]
   },
-  "basics": {
-    "title": "Basics",
+  "wallet_overview": {
+    "title": "Wallets",
     "menu": [
       {
+        "text": "Overview",
+        "link": "wallet-overview"
+      },
+      {
         "text": "Wasabi Wallet",
-        "link": "/wasabi-2.0"
+        "link": "wasabi-2.0"
       },
       {
         "text": "JoinMarket",
-        "link": "/joinmarket"
+        "link": "joinmarket"
       },
       {
         "text": "Samourai Wallet",
-        "link": "/samourai"
+        "link": "samourai"
       },
 
       {
         "text": "Sparrow Wallet",
-        "link": "/sparrow"
+        "link": "sparrow"
       },
       {
         "text": "BTCPay Server",
@@ -55,6 +59,10 @@
       },
       {
         "text": "Trezor Suite",
+        "link": "#"
+      },
+      {
+        "text": "Jam",
         "link": "#"
       },
       {

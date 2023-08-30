@@ -1,12 +1,13 @@
 {
   "menu": {
     "basics": "Basics",
-    "wallets": "Wallets"
+    "wallets": "Wallets",
+    "history": "History"
   },
   "submenu": [
     {
       "name": "Overview",
-      "path": "basics",
+      "path": "wallet-overview",
       "isActive": true,
       "isDeprecated": false
     },
@@ -35,14 +36,14 @@
       "isDeprecated": true
     },
     {
-      "name": "Trezor suite",
-      "path": "trezor",
+      "name": "BTCPay Server",
+      "path": "btcpay",
       "isActive": false,
       "isDeprecated": false
     },
     {
-      "name": "Vortex LN",
-      "path": "vortex",
+      "name": "Trezor suite",
+      "path": "trezor",
       "isActive": false,
       "isDeprecated": false
     },
@@ -51,6 +52,13 @@
       "path": "jam",
       "isActive": false,
       "isDeprecated": false
+    },
+    {
+      "name": "Vortex LN",
+      "path": "vortex",
+      "isActive": false,
+      "isDeprecated": false
     }
-  ]
+  ],
+  "cta": "Try Coinjoins"
 }

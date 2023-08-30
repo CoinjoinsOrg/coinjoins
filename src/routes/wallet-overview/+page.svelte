@@ -1,5 +1,5 @@
 <script>
-  import data from "@lib/data/basics.json";
+  import data from "@lib/data/wallet-overview.json";
 
   import H1 from "@lib/components/H1.svelte";
   import H2 from "@lib/components/H2.svelte";
