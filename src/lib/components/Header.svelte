@@ -9,8 +9,8 @@
 
   let showMobileMenu = false;
   let y;
-  let timeoutHideSubMenuBasics;
-  let isBasicsSubMenuShown = false;
+  let timeoutHideSubMenuWallets;
+  let isWalletsSubMenuShown = false;
 
   function handleMobileIconClick() {
     showMobileMenu = !showMobileMenu;
@@ -26,33 +26,33 @@
     showMobileMenu = false;
   }
 
-  function handleBasicsMenuClicked() {
-    isBasicsSubMenuShown = !isBasicsSubMenuShown;
+  function handleWalletsMenuClicked() {
+    isWalletsSubMenuShown = !isWalletsSubMenuShown;
   }
 
-  function handleBasicsSubMenuClicked(url) {
+  function handleWalletsSubMenuClicked(url) {
     goto(url);
     setTimeout(() => {
       if (showMobileMenu) {
         handleMobileMenuItemClick();
       }
-      isBasicsSubMenuShown = false;
-      clearTimeout(timeoutHideSubMenuBasics);
-      timeoutHideSubMenuBasics = null;
+      isWalletsSubMenuShown = false;
+      clearTimeout(timeoutHideSubMenuWallets);
+      timeoutHideSubMenuWallets = null;
     }, 200);
   }
 
   function handleShowSubMenuOnHover() {
-    clearTimeout(timeoutHideSubMenuBasics);
-    timeoutHideSubMenuBasics = null;
-    isBasicsSubMenuShown = true;
+    clearTimeout(timeoutHideSubMenuWallets);
+    timeoutHideSubMenuWallets = null;
+    isWalletsSubMenuShown = true;
   }
   function handleHideSubMenuOnHoverOut() {
-    if (timeoutHideSubMenuBasics) {
-      clearTimeout(timeoutHideSubMenuBasics);
+    if (timeoutHideSubMenuWallets) {
+      clearTimeout(timeoutHideSubMenuWallets);
     }
-    timeoutHideSubMenuBasics = setTimeout(
-      () => (isBasicsSubMenuShown = false),
+    timeoutHideSubMenuWallets = setTimeout(
+      () => (isWalletsSubMenuShown = false),
       300
     );
   }
@@ -101,9 +101,10 @@
     <div
       on:mouseover={handleShowSubMenuOnHover}
       on:mouseout={handleHideSubMenuOnHoverOut}
-      on:click={handleBasicsMenuClicked}
+      on:click={handleWalletsMenuClicked}
       class="z-10 relative hover:text-green-cj hover:cursor-pointer {$page.url
-        .pathname === '/basics' || $page.url.pathname.includes('wallets')
+        .pathname === '/wallet-overview' ||
+      $page.url.pathname.includes('wallets')
         ? 'text-green-cj'
         : 'text-white'}"
     >
@@ -112,18 +113,18 @@
         <div>{headerData.menu.wallets}</div>
 
         <div class="w-6">
-          {#if isBasicsSubMenuShown}
+          {#if isWalletsSubMenuShown}
             <ClickedArrow
-              color={$page.url.pathname === "/basics" ||
-              isBasicsSubMenuShown ||
+              color={$page.url.pathname === "/wallet-overview" ||
+              isWalletsSubMenuShown ||
               $page.url.pathname.includes("wallets")
                 ? "rgb(0,255,25,1.0)"
                 : "rgb(255,255,255,1.0)"}
             />
           {:else}
             <UnclickedArrow
-              color={$page.url.pathname === "/basics" ||
-              isBasicsSubMenuShown ||
+              color={$page.url.pathname === "/wallet-overview" ||
+              isWalletsSubMenuShown ||
               $page.url.pathname.includes("wallets")
                 ? "rgb(0,255,25,1.0)"
                 : "rgb(255,255,255,1.0)"}
@@ -132,7 +133,7 @@
         </div>
       </div>
 
-      {#if isBasicsSubMenuShown}
+      {#if isWalletsSubMenuShown}
         <div
           class="flex w-96 justify-between py-4 px-2 bg-dark-blue h-auto hover:cursor-default {showMobileMenu
             ? 'block flex-col top-12 text-3xl text-left'
@@ -145,8 +146,10 @@
               <button
                 disabled={!sub.isActive}
                 on:click={() =>
-                  handleBasicsSubMenuClicked(
-                    `${sub.path === "basics" ? "/" : "/wallets/"}${sub.path}`
+                  handleWalletsSubMenuClicked(
+                    `${sub.path === "wallet-overview" ? "/" : "/wallets/"}${
+                      sub.path
+                    }`
                   )}
                 class="no-underline font-inconsolata {sub.isActive
                   ? 'hover:text-green-cj text-white'

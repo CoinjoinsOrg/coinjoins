@@ -24,3 +24,7 @@ body.mobile-menu-active {
 a {
   text-decoration: underline;
 }
+
+a:hover {
+  color: #00ff19;
+}

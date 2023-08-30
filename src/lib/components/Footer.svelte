@@ -1,5 +1,6 @@
 <script>
   import data from "@lib/data/footer.json";
+  import { goto } from "$app/navigation";
 
   import H2 from "@components/H2.svelte";
   import CoinjoinLogo from "@lib/img/CoinjoinLogo.svelte";
@@ -38,17 +39,20 @@
       </div>
       <div class="flex flex-col gap-5 w-1/2 sm:w-[30%]">
         <div class="text-green-cj font-bold text-lg font-inconsolata">
-          {footerData.basics.title}
+          {footerData.wallet_overview.title}
         </div>
 
         <div class="flex flex-col gap-2">
-          {#each footerData.basics.menu as item}
+          {#each footerData.wallet_overview.menu as item}
             <div>
-              <a
+              <button
+                disabled={item.link === "#"}
                 class="no-underline {item.link.includes('#')
                   ? 'text-inactive-grey hover:cursor-default'
-                  : 'hover:cursor-pointer'}"
-                href={item.link}>{item.text}</a
+                  : 'hover:cursor-pointer hover:text-green-cj'}"
+                on:click={item.link === "wallet-overview"
+                  ? () => goto("/" + item.link)
+                  : () => goto("/wallets/" + item.link)}>{item.text}</button
               >{#if item.link.includes("#")}
                 <span
                   class="ml-2 text-green-cj text-[9px] px-1 rounded border border-green-cj"

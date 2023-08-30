@@ -1,0 +1,177 @@
+{
+  "overview": {
+    "hero_title": "Into the Guts of Coinjoins",
+    "hero_subtitle": "Picking the right wallet to use coinjoins isn’t easy. Some folks would tell you to use Wasabi Wallet. Others would say to use Samourai instead. Others would even suggest JoinMarket. So which one to choose? And why?",
+    "verify_header": "Don’t Trust, <br/><span style='color:rgb(0,255,25,1.0)'>Verify</span>",
+    "verify_body_1": "We’ve done research on the most popular privacy wallets and coinjoin protocols. We tried to be as neutral, educational and accessible as possible. Of course, don’t trust us, but verify yourself.",
+    "verify_body_2": "As of August 2023, there are six popular bitcoin  wallets using three different coinjoin protocols. In our research, we’ve selected 10 categories to make it easier to pick a bitcoin wallet with built-in coinjoins. Let’s dive in.",
+    "cj_protocol_header": "What is a Coinjoin Protocol?",
+    "cj_protocol_body": "A coinjoin protocol is the design of the software that is used to create collaborative bitcoin transactions. There are currently 3 popular coinjoin protocols that are used in bitcoin wallets: <span style='color:rgb(0,255,25,1.0)'>JoinMarket</span>, <span style='color:rgb(0,255,25,1.0)'>WabiSabi</span>, <span style='color:rgb(0,255,25,1.0)'>Whirlpool</span>.",
+    "essentials_header": "Privacy Essentials for Coinjoins",
+    "essentials_sub_header": "Bitcoin wallets with coinjoins have different tradeoffs. Common to all, there are essential things to consider when looking at all the options available.",
+    "compare_header": "Let’s Compare Bitcoin Wallets with Coinjoins",
+    "compare_subheader": "It is obviously not a walk in the park to compare each bitcoin wallet but we will try to present them with different considerations so that you can make up your own mind."
+  },
+  "essentialsList": [
+    {
+      "isClicked": false,
+      "title": "Block Chain Privacy",
+      "body": "The main goal of a coinjoin protocol is to break the deterministic link between an input and an output on the blockchain. We evaluate coinjoin protocols by examining the details of how they work. Anything that anyone can see in the public bitcoin ledger is fair game for this section. Look at the shape of transactions coming from a particular coinjoin protocol or privacy wallet. Some coinjoin designs require a minimum number of inputs to have a valid transaction while other designs have a fixed number of inputs and outputs for all their transactions. The number of transactions required to achieve a given level of privacy should also be considered. <br/><br/>  All of these points are going to be used by blockchain analysts who try to find insights by searching all bitcoin transactions.",
+      "questions": [
+        "How does the coinjoin protocol work in a nutshell?",
+        "Are amounts fixed or variable depending on the coinjoin round?",
+        "How many equal outputs are in a transaction and how many transactions are required for a complete coinjoin experience?",
+        "How much liquidity is there in the coinjoin pool?"
+      ]
+    },
+    {
+      "isClicked": false,
+      "title": "Coordinator & Peer Knowledge",
+      "body": "Privacy wallets with built-in coinjoin features have a coordinator. In WabiSabi and Whirlpool, this coordinator is a single entity server. In Joinmarket, anybody can be a coinjoin coordinator. We evaluate how the coordinator process works and what user information is known to him.By default, there should be no information collection or sharing.      ",
+      "questions": [
+        "Can the coordinator link your inputs together?",
+        "Can the coordinator link your inputs to outputs?",
+        "Can the coordinator link your outputs to outputs?"
+      ]
+    },
+    {
+      "isClicked": false,
+      "title": "Network & Public Key Privacy",
+      "body": "Connecting to the bitcoin network is necessary for wallets to verify balances and send transactions to other users. Doing this privately, without sharing sensitive information about wallet transactions, is paramount. Different privacy wallets have very different ways of handling this, from using personal full nodes, bloom filters SPV (Simple Payment Verification) method, API (Application Specific Interface) method, and block filters (BIP 157-158). <br/><br/> Tor (The Onion Router) should also be implemented by coinjoin wallets for network connectivity and coordinator communication.",
+      "questions": [
+        "How is the wallet connected to the bitcoin network by default?",
+        "Can you connect to your Bitcoin node? If so, how?",
+        "Is Tor bundled in? Is it opt-in or opt-out? Are there Tor identity updates?"
+      ]
+    },
+    {
+      "isClicked": false,
+      "title": "Coinjoin & Network Fees",
+      "body": "There are two types of fees associated with coinjoin transactions: coordinator fees (flat or percentage-based) and bitcoin network fees.Some coordinators waive fees for remixes, which incentivize users to coinjoin their bitcoin multiple times for added privacy.Some protocols have fee exemptions or reductions for UTXOs that meet certain criteria. Many mixing pools and different fees are also something to consider. Whirlpool clients like Sparrow and Samourai have discounts (SCODE) based on referral codes. Finally, the P2P nature of Joinmarket creates a different fee dynamic. <br/><br/> We evaluate the total amount of fees considering all these factors and in different scenarios.",
+      "questions": [
+        "How do coordinator fees work in the protocol?",
+        "How much network fee does a user pay? How much block space does he pay for?",
+        "What about remixing? Are coordinator and/or mining fees being waived?",
+        "What discounts, offers and exceptions are available?"
+      ]
+    },
+    {
+      "isClicked": false,
+      "title": "Censorship Resistance",
+      "body": "Coinjoin protocols are not decentralized; unlike bitcoin, there is no guarantee of censorship resistance. While no coordinator ever holds private keys for users, they can still censor because they are the messenger that delivers inputs and outputs before users sign them. Some coordinators have made it public that they actively censor user input that they deem risky. Joinmarket is a marketplace of coordinators (takers) where you can easily switch coordinators if you're restricted, but it's far from providing perfect censorship resistance. <br/><br/> Coordinators need to enforce a certain level of UTXO censorship for DDOS protection against bad actors, and they all have a certain ban policy regarding attacks, which can range from temporary to permanent bans.      ",
+      "questions": [
+        "What is the coordinator policy for DDOS protection?",
+        "Do they have a blacklisting policy or terms of service?",
+        "What happens if you are censored? Can you change coordinators or peers?",
+        "How many coordinators are there?"
+      ]
+    },
+    {
+      "isClicked": false,
+      "title": "Anonymity Scoring",
+      "body": "The anonymity set is the most commonly accepted way to measure the privacy gained by using a coinjoin wallet. Typically, this metric is meant to be verifiable by anyone using a public block explorer to observe a coinjoin transaction. Anonymity Score (as used in the Wasabi Wallet) is a more conservative approach that accounts for certain edge cases. Anonymity Score is always lower than anonymity set. <br/><br/> The other question, of course, is: how high should privacy goals be? Is there a cutoff? Each coinjoin implementation and privacy wallet has its own view on this.",
+      "questions": [
+        "What term is used in the wallet for anonymity scoring? How is it calculated?",
+        "How easy is it to understand how anonymity gains are calculated?",
+        "Is there a privacy goal recommended by the wallet? How conservative is the goal?"
+      ]
+    },
+    {
+      "isClicked": false,
+      "title": "Coinjoin Efficiency",
+      "body": "Bitcoin block space is immensely scarce and valuable. Coinjoin protocols create collaborative bitcoin transactions with multiple parties involved, which require a high degree of efficiency to make it fast, affordable and reliable over time as fee rates change on the bitcoin network. Coinjoin efficiency is the absence of toxic change non-private coinjoin outputs.",
+      "questions": [
+        "Is there toxic change created by the coinjoin protocol? If so, how is it dealt with?"
+      ]
+    },
+    {
+      "isClicked": false,
+      "title": "User Experience",
+      "body": "Privacy does not have to be hard. In fact, it should just work. Until privacy in bitcoin wallets 'just works,' users will make mistakes or simply not use the tools. Some privacy wallets automatically coinjoin users' bitcoin holdings, while others allow for flexible configurations and post-coinjoin privacy tools. Default features in privacy wallets are essential to removing friction. Delays in achieving a desired privacy goal in coinjoins often result in less privacy for affected users, so fewer required coinjoin transactions are better to save time.",
+      "questions": [
+        "Do you have to manually enter a coinjoin round, or does the software do it automatically upon coin receipt and confirmation? Are there other forms of automation such as remixing?",
+        "How many transactions are needed? How long does it typically take to meet privacy goals?",
+        "Do I need to run additional software on the side like Tor or a full node?",
+        "Is the learning curve for the coinjoin experience steep on the wallet?",
+        "What is the general user experience of the wallet for installation, setup, and use?"
+      ]
+    },
+    {
+      "isClicked": false,
+      "title": "Extra Privacy Features",
+      "body": "Privacy wallets may offer optional features for experienced users who want optional insight and advanced control during, before, and after coinjoins. Coin control is the most important privacy feature bitcoin wallets have, but labeling, payjoins, stealth addresses are a few examples.",
+      "questions": [
+        "Is manual coin control available if you want to control which UTXOs are selected for spending or coinjoining?",
+        "Is address and coin labeling enabled by default?",
+        "Is the wallet payjoin compatible?",
+        "Can payments be made directly within a coinjoin transaction to optimize privacy and fees?",
+        "What other privacy features does the wallet have?"
+      ]
+    },
+    {
+      "isClicked": false,
+      "title": "Accessibility",
+      "body": "The final evaluation criteria for coinjoin wallets is accessibility. What is the minimum amount of bitcoin required to coinjoin using a particular protocol? Many users with relatively small amounts of bitcoin have been not been able to participate in coinjoin transactions in the past. This is a major concern for many people.",
+      "questions": [
+        "What is the minimum amount of bitcoin required to coinjoin using a particular protocol?"
+      ]
+    },
+    {
+      "isClicked": false,
+      "title": "Advanced Considerations & Research",
+      "body": "For power users and technical folks, there are multiple additional items to consider in the existing privacy wallets and coinjoin protocols.",
+      "questions": [
+        "Is there any address reuse? If so, how does it happen? Is is an unexpected software bug or an acceptable user behaviour?",
+        "Is there a testnet version available to try the software and new features without real money?",
+        "Is hardware wallet coinjoining possible at all? If so, what hardware devices are compatible?",
+        "What address formats or script types are compatible with the bitcoin wallet?",
+        "Is it possible to open and close Lightning payment channels within Bitcoin Wallet coinjoins?",
+        "How costly would it be for a Sybil attacker to effectively deanonymize coinjoin participants?"
+      ]
+    }
+  ],
+  "wallets": [
+    {
+      "name": "Wasabi Wallet",
+      "page": "/wallets/wasabi-2.0",
+      "icon": "wasabi.png",
+      "id": "wasabi"
+    },
+    {
+      "name": "Samourai Wallet",
+      "page": "/wallets/samourai",
+      "icon": "samourai.png",
+      "id": "samourai"
+    },
+    {
+      "name": "Sparrow Wallet",
+      "page": "/wallets/sparrow",
+      "icon": "sparrow.png",
+      "id": "sparrow"
+    },
+    {
+      "name": "JoinMarket",
+      "page": "/wallets/joinmarket",
+      "icon": "joinmarket.png",
+      "id": "joinmarket"
+    },
+    {
+      "name": "BTCPay Server",
+      "page": "",
+      "icon": "btcpay.png",
+      "id": "btcpay"
+    },
+    {
+      "name": "Trezor Suite",
+      "page": "",
+      "icon": "trezor.png",
+      "id": "trezor"
+    },
+    {
+      "name": "Vortex LN",
+      "page": "",
+      "icon": "vortex.png",
+      "id": "vortex"
+    }
+  ]
+}
