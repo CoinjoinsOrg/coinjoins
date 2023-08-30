@@ -1,5 +1,11 @@
 {
   "hero": "Wasabi Wallet 2.0 is a simple to use bitcoin wallet desktop app with a built-in coinjoin feature using WabiSabi.",
+  "basics": {
+    "release_date": "October 31st 2018",
+    "platform": "Desktop (Mac, Windows, Linux)",
+    "programming_language": ".NET (C#)",
+    "address_type": "Segwit Native (bc1), Taproot"
+  },
   "overview": {
     "point_1": "WabiSabi is a second-generation coinjoin protocol that overcomes limitations of the Zerolink protocol, allowing variable output amount denominations. This makes it possible to create coinjoin transactions without any toxic change.",
     "point_2": "Wasabi updates wallet balances privately using block filters, without needing a full node, although that option is available. ",
