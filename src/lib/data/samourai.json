@@ -3,6 +3,12 @@
   "github": "https://code.samourai.io/wallet/samourai-wallet-android",
   "twitter": "https://twitter.com/SamouraiWallet/",
   "website": "https://samouraiwallet.com/",
+  "basics": {
+    "release_date": "February 2015",
+    "platform": "Mobile (Android)",
+    "programming_language": "Java and Kotlin",
+    "address_type": "Segwit Native (bc1), supports all."
+  },
   "overview": {
     "point_1": "You can use Whirlpool directly on Samourai, link your wallet to Whirlpool GUI (desktop) to manage your mixing, or use Whirlpool GUI as a standalone application.",
     "point_2": "Whirlpool is a Zerolink protocol-based coinjoin implementation that splits the toxic change and collects the coordinator fee before participating in mix transactions. It does this by first performing a premix transaction (Tx0) where UTXOs selected for coinjoin are consolidated and resized to the pool denomination. There is a separate wallet account for non-mixing, premixing, post-mixing, and bad bank (change output separated in the premix transaction).",
@@ -16,7 +22,7 @@
     "point_2": "Zerolink-based coinjoin transactions implement Chaumian blind signatures to protect the user’s input to output link from the coordinator. ",
     "point_3": "There are no terms of service for Samourai or Whirlpool and there is no announced blacklisting policy.",
     "point_4": "The anonymity set gain of Whirlpool coinjoin transactions is easy to calculate and understand, the terms used are backward looking anonymity set and forward looking anonymity set.",
-    "point_5": "Tor is bundled in and can be enabled with a single click on first startup. You can also change Tor identities in the network settings with a single click.",
+    "point_5": "Tor is bundled in, can be enabled with a single click on first startup but it is opt-in. Your Tor identity updates between input and output registration. You can also change Tor identities in the network settings with a single click.",
     "point_6": "Samourai has many additional privacy features that complement the post-mixing experience.",
     "point_7": "You can connect your own node by running the Dojo software and connecting it to your wallet during the initial setup process.",
     "point_8": "Once you set up mixing in Samourai, the coinjoin transactions will be automated and mixing will continue if you leave the software open.",

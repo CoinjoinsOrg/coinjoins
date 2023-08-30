@@ -3,6 +3,12 @@
   "github": "https://github.com/sparrowwallet/sparrow",
   "twitter": "https://twitter.com/sparrowwallet",
   "website": "https://sparrowwallet.com/",
+    "basics": {
+    "release_date": "September 1st 2020",
+    "platform": "Desktop (Mac, Windows, Linux)",
+    "programming_language": "Java",
+    "address_type": "Segwit Native (bc1), supports all."
+  },
   "overview": {
     "point_1": "Whirlpool is a Zerolink protocol-based coinjoin implementation that splits the toxic change and collects the coordinator fee before participating in mix transactions. It does this by first performing a premix transaction (Tx0) where UTXOs selected for coinjoin are consolidated and resized to the pool denomination. There is a separate wallet account for non-mixing, premixing, post-mixing, and bad bank (change output separated in the premix transaction).",
     "point_2": "Whirlpool coinjoin transactions have a minimum of 5 inputs and 5 outputs, the latter all of the same value. There is a minimum of 2 premixers (new entrants) in a coinjoin transaction, who pay the mining transaction fees for the remaining users, the remixers. There are four remix pools to choose from with different output denominations: 0.001, 0.01, 0.05, 0.5 BTC. The maximum amount of bitcoin a user can register at once per pool is 70 times the output denomination (35 BTC for the 0.5 BTC pool), and the maximum number of UTXOs to aggregate on Tx0 is also 70.",
@@ -14,7 +20,7 @@
     "point_2": "Zerolink-based coinjoin transactions implement Chaumian blind signatures to protect the user’s input to output linkage from the coordinator.",
     "point_3": "There are no terms of service for Sparrow or Whirlpool and there is no announced blacklisting policy.",
     "point_4": "The anonymity set gain of Whirlpool coinjoin transactions is easy to calculate and understand, the terms used are backward looking anonymity set and forward looking anonymity set.",
-    "point_5": "Tor can be connected for Bitcoin network and coordinator communication, but it’s not bundled in. You can also connect your own node through the RPC interface or with a private Electrum server.",
+    "point_5": "Tor can be connected for Bitcoin network and coordinator communication, but it’s not bundled in. If enabled, your Tor identity updates between input and output registration. You can also connect your own node through the RPC interface or with a private Electrum server.",
     "point_6": "You can mix into another Sparrow wallet such as a multi-signature or hardware wallet, and also target a number of mixing rounds before sending the UTXO to the other wallet.",
     "point_7": "Once you set up mixing in Sparrow and the premix transaction, the coinjoin transactions will be automated and mixing will continue if you leave the software open.",
     "point_8": "You can enter a promo code SCODE when registering bitcoin with Whirlpool for discounted coordinator fees during social media promotions."
