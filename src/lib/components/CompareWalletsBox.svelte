@@ -44,7 +44,7 @@
             wallet.id.includes('sparrow') ||
             wallet.id.includes('joinmarket')
               ? 'border-green-cj text-green-cj enabled:hover:bg-green-cj hover:text-dark-blue'
-              : 'text-[rgba(107,110,134,0.95)] border-[rgba(107,110,134,0.95)] hover:cursor-not-allowed hover:text-[rgba(107,110,134,0.95)]'}"
+              : 'text-inactive-grey border-inactive-grey hover:cursor-not-allowed hover:text-inactive-grey'}"
             >About {wallet.name}</button
           >
         </div>

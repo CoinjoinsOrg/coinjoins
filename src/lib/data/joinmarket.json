@@ -1,5 +1,8 @@
 {
   "hero": "Joinmarket is a P2P market-based coinjoin protocol and implementation that has typically attracted more advanced and technical users.",
+  "github": "https://github.com/JoinMarket-Org/joinmarket-clientserver",
+  "twitter": "https://twitter.com/joinmarket",
+  "website": "https://github.com/JoinMarket-Org/joinmarket-clientserver",
   "basics": {
     "release_date": "January 9th 2015",
     "platform": "Desktop (Mac, Windows, Linux)",

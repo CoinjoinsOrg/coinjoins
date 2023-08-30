@@ -105,7 +105,7 @@
   <title>Coinjoins - Learn About Collaborative Bitcoin Transactions</title>
 </svelte:head>
 
-<div class="flex items-center relative w-full">
+<div class="flex items-center relative w-full z-0">
   <div class="flex md:hidden items-center w-full">
     <CoinjoinVisualMobile />
   </div>
@@ -114,7 +114,7 @@
   </div>
 
   <div
-    class="min-w-[320px] absolute top-[40%] mx-auto right-0 left-0 flex flex-col gap-10 md:gap-48"
+    class="min-w-[320px] absolute top-[40%] mx-auto right-0 left-0 flex flex-col gap-10 md:gap-48 z-0"
   >
     <div class="flex flex-col items-center gap-10">
       <H1>Coinjoins</H1>
@@ -136,7 +136,7 @@
 
 <div id="open" class="relative mx-auto w-full h-full">
   <div
-    class="absolute flex flex-col items-center justify-center left-0 top-0 bottom-0 right-0 gap-10 md:gap-14 z-10 mx-auto"
+    class="absolute flex flex-col items-center justify-center left-0 top-0 bottom-0 right-0 gap-10 md:gap-14 mx-auto"
   >
     <div class="w-20 md:w-32"><Bitcoin /></div>
 

@@ -1,5 +1,8 @@
 {
   "hero": "Samourai Wallet is a bitcoin wallet mobile application on Android with built-in coinjoin functionality using Whirlpool.",
+  "github": "https://code.samourai.io/wallet/samourai-wallet-android",
+  "twitter": "https://twitter.com/SamouraiWallet/",
+  "website": "https://samouraiwallet.com/",
   "basics": {
     "release_date": "February 2015",
     "platform": "Mobile (Android)",

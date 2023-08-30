@@ -1,6 +1,9 @@
 {
   "hero": "Sparrow Wallet is a bitcoin wallet desktop application with a built-in coinjoin feature using Whirlpool.",
-  "basics": {
+  "github": "https://github.com/sparrowwallet/sparrow",
+  "twitter": "https://twitter.com/sparrowwallet",
+  "website": "https://sparrowwallet.com/",
+    "basics": {
     "release_date": "September 1st 2020",
     "platform": "Desktop (Mac, Windows, Linux)",
     "programming_language": "Java",

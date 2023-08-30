@@ -1,5 +1,8 @@
 {
   "hero": "Wasabi Wallet 2.0 is a simple to use bitcoin wallet desktop app with a built-in coinjoin feature using WabiSabi.",
+  "github": "https://github.com/zkSNACKs/WalletWasabi/",
+  "twitter": "https://twitter.com/wasabiwallet",
+  "website": "https://wasabiwallet.io/",
   "basics": {
     "release_date": "October 31st 2018",
     "platform": "Desktop (Mac, Windows, Linux)",

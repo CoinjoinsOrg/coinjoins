@@ -13,6 +13,9 @@
   import BlueCheckSvg from "@lib/img/BlueCheckSvg.svelte";
   import XCircleSvg from "@lib/img/XCircleSvg.svelte";
   import RedText from "@lib/components/RedText.svelte";
+  import GitHub from "../../lib/img/GitHub.svelte";
+  import Twitter from "../../lib/img/Twitter.svelte";
+  import Website from "../../lib/img/Website.svelte";
 
   let y;
 
@@ -23,11 +26,16 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div class="relative px-4 pt-10 h-[50vh] max-w-5xl mx-auto">
-  <div class="absolute flex flex-col gap-10 pt-32">
+<div class="relative px-4 pt-10 h-[50vh] max-w-5xl mx-auto z-0">
+  <div class="absolute flex flex-col gap-10 pt-32 z-0">
     <H1>Samourai<br /><GreenText>& Whirlpool</GreenText></H1>
     <div class="text-lg">
       {samouraiData.hero}
+    </div>
+    <div class="flex gap-6">
+      <div class="w-6"><a href={samouraiData.github}> <GitHub /></a></div>
+      <div class="w-6"><a href={samouraiData.twitter}> <Twitter /></a></div>
+      <div class="w-6"><a href={samouraiData.website}> <Website /></a></div>
     </div>
     <div class="flex justify-center">
       <div class="w-6 animate-bounce">
