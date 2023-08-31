@@ -8,6 +8,7 @@
   import CoinjoinVisual from "@lib/img/CoinjoinVisual.svelte";
   import CoinjoinVisualMobile from "@lib/img/CoinjoinVisualMobile.svelte";
   import Eye from "@lib/img/Eye.svelte";
+  import GreenText from "@lib/components/GreenText.svelte";
   import GreenLine from "@lib/img/GreenLine.svelte";
   import MoneyBill from "@lib/img/MoneyBill.svelte";
   import RedLine from "@lib/img/RedLine.svelte";
