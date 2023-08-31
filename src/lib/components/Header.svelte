@@ -75,7 +75,7 @@
   <div
     class="z-10 font-inconsolata isolate {showMobileMenu
       ? ' font-semibold text-5xl bg-dark-blue fixed h-screen w-screen top-20 pt-12 left-0 px-4 overflow-hidden flex flex-col gap-8 items-start'
-      : 'hidden md:flex md:flex-1 md:justify-center md:font-normal md:gap-12'}    "
+      : 'hidden md:flex md:flex-1 md:justify-center md:font-normal md:gap-12'}"
   >
     <div
       class="hover:text-green-cj hover:cursor-pointer {$page.url.pathname ===
@@ -101,7 +101,6 @@
     <div
       on:mouseover={handleShowSubMenuOnHover}
       on:mouseout={handleHideSubMenuOnHoverOut}
-      on:click={handleWalletsMenuClicked}
       class="z-10 relative hover:text-green-cj hover:cursor-pointer {$page.url
         .pathname === '/wallet-overview' ||
       $page.url.pathname.includes('wallets')
@@ -109,10 +108,10 @@
         : 'text-white'}"
     >
       <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-      <div class="flex gap-2">
+      <div class="flex gap-2" on:click={handleWalletsMenuClicked}>
         <div>{headerData.menu.wallets}</div>
 
-        <div class="w-6">
+        <div class="w-6" on:click={handleWalletsMenuClicked}>
           {#if isWalletsSubMenuShown}
             <ClickedArrow
               color={$page.url.pathname === "/wallet-overview" ||
