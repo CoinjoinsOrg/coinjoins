@@ -25,15 +25,18 @@
   import Cj from "@lib/img/Cj.svelte";
 
   import CoinjoinMobile from "@lib/img/CoinjoinMobile.svelte";
-  import { fly } from "svelte/transition";
+  import { fade, fly } from "svelte/transition";
   import { onMount } from "svelte";
 
   const data = basicsData;
   function handleQuestionClick(i) {
     data.fudBustList[i].isClicked = !data.fudBustList[i].isClicked;
   }
+  let isLoaded = false;
 
   let y;
+  onMount(() => (isLoaded = true));
+  $: console.log("y:", y);
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -46,190 +49,225 @@
   <div class="flex md:hidden items-center w-full">
     <CoinjoinVisualMobile />
   </div>
-  <div class="md:flex hidden items-center w-full">
+  <div class="md:flex hidden items-center w-full" transition:fade>
     <CoinjoinVisual />
   </div>
 
+  {#if isLoaded}
+    <div
+      class="min-w-[320px] absolute top-[40%] mx-auto right-0 left-0 flex flex-col gap-10 md:gap-48 z-0"
+    >
+      <div class="flex flex-col items-center gap-10">
+        <H1>{data.header}</H1>
+        <p class="text-white text-center text-2xl px-4">
+          {@html data.subheader}
+        </p>
+      </div>
+
+      <div class="flex justify-center">
+        <div class="w-6 animate-bounce">
+          <a href="#open">
+            <ArrowDown />
+          </a>
+        </div>
+      </div>
+    </div>
+  {/if}
+</div>
+{#if y > 100}
   <div
-    class="min-w-[320px] absolute top-[40%] mx-auto right-0 left-0 flex flex-col gap-10 md:gap-48 z-0"
+    id="open"
+    class="relative mx-auto w-full h-full"
+    transition:fade={{
+      delay: 200,
+      duration: 400,
+    }}
   >
-    <div class="flex flex-col items-center gap-10">
-      <H1>{data.header}</H1>
-      <p class="text-white text-center text-2xl px-4">
-        {@html data.subheader}
+    <div
+      class="absolute flex flex-col items-center justify-center left-0 top-0 bottom-0 right-0 gap-10 md:gap-14 mx-auto"
+    >
+      <div class="w-20 md:w-32"><Bitcoin /></div>
+
+      <H2>{data.open.title}</H2>
+
+      <p class="text-xl text-center text-white max-w-2xl p-8">
+        {data.open.body}
       </p>
     </div>
 
-    <div class="flex justify-center">
-      <div class="w-6 animate-bounce">
-        <a href="#open">
-          <ArrowDown />
-        </a>
+    <div class="w-full h-[calc(50vh)]">
+      <div class="w-10 eye-move-down eye-1 left-1/4 absolute block top-20">
+        <Eye />
+      </div>
+      <div class="w-10 eye-move-down eye-2 right-1/4 absolute block top-0">
+        <Eye />
+      </div>
+      <div class="w-10 eye-move-down eye-3 absolute block top-4 left-8">
+        <Eye />
+      </div>
+      <div class="w-10 eye-move-down eye-4 absolute block right-8 top-4">
+        <Eye />
+      </div>
+      <div class="w-10 eye-move-up eye-5 absolute block top-2/3 left-20">
+        <Eye />
+      </div>
+      <div class="w-10 eye-move-up eye-11 absolute block top-1/2 right-6">
+        <Eye />
+      </div>
+      <div class="w-10 eye-move-down eye-12 absolute block bottom-10 right-10">
+        <Eye />
+      </div>
+      <div class="w-10 eye-move-up eye-6 absolute block bottom-0 left-1/3">
+        <Eye />
+      </div>
+      <div class="w-10 eye-move-down eye-7 absolute block bottom-10 left-40">
+        <Eye />
+      </div>
+      <div class="w-10 eye-move-down eye-8 absolute block bottom-10 left-0">
+        <Eye />
+      </div>
+      <div class="w-10 eye-move-up eye-9 absolute block bottom-0 right-1/3">
+        <Eye />
+      </div>
+      <div class="w-10 eye-move-down eye-10 absolute block bottom-28 right-20">
+        <Eye />
       </div>
     </div>
   </div>
-</div>
+{/if}
 
-<div id="open" class="relative mx-auto w-full h-full">
+{#if y > 900}
   <div
-    class="absolute flex flex-col items-center justify-center left-0 top-0 bottom-0 right-0 gap-10 md:gap-14 mx-auto"
+    transition:fly={{ x: 200, duration: 800 }}
+    class="flex flex-col md:flex-row max-w-5xl mx-auto items-center gap-20 px-4"
   >
-    <div class="w-20 md:w-32"><Bitcoin /></div>
+    <div class="w-full px-4 md:px-0 flex-auto md:flex-1"><Utxos /></div>
 
-    <H2>{data.open.title}</H2>
-
-    <p class="text-xl text-center text-white max-w-2xl p-8">
-      {data.open.body}
-    </p>
-  </div>
-
-  <div class="w-full h-[calc(50vh)]">
-    <div class="w-10 eye-move-down eye-1 left-1/4 absolute block top-20">
-      <Eye />
-    </div>
-    <div class="w-10 eye-move-down eye-2 right-1/4 absolute block top-0">
-      <Eye />
-    </div>
-    <div class="w-10 eye-move-down eye-3 absolute block top-4 left-8">
-      <Eye />
-    </div>
-    <div class="w-10 eye-move-down eye-4 absolute block right-8 top-4">
-      <Eye />
-    </div>
-    <div class="w-10 eye-move-up eye-5 absolute block top-2/3 left-20">
-      <Eye />
-    </div>
-    <div class="w-10 eye-move-up eye-11 absolute block top-1/2 right-6">
-      <Eye />
-    </div>
-    <div class="w-10 eye-move-down eye-12 absolute block bottom-10 right-10">
-      <Eye />
-    </div>
-    <div class="w-10 eye-move-up eye-6 absolute block bottom-0 left-1/3">
-      <Eye />
-    </div>
-    <div class="w-10 eye-move-down eye-7 absolute block bottom-10 left-40">
-      <Eye />
-    </div>
-    <div class="w-10 eye-move-down eye-8 absolute block bottom-10 left-0">
-      <Eye />
-    </div>
-    <div class="w-10 eye-move-up eye-9 absolute block bottom-0 right-1/3">
-      <Eye />
-    </div>
-    <div class="w-10 eye-move-down eye-10 absolute block bottom-28 right-20">
-      <Eye />
+    <div class="flex flex-col gap-12 flex-1">
+      <H2>{data.utxos.title}</H2>
+      <p class="text-white text-xl">
+        {@html data.utxos.body}
+      </p>
     </div>
   </div>
-</div>
+{/if}
 
-<div
-  class="flex flex-col md:flex-row max-w-5xl mx-auto items-center gap-20 px-4"
->
-  <div class="w-full px-4 md:px-0 flex-auto md:flex-1"><Utxos /></div>
-
-  <div class="flex flex-col gap-12 flex-1">
-    <H2>{data.utxos.title}</H2>
-    <p class="text-white text-xl">
-      {@html data.utxos.body}
-    </p>
-  </div>
-</div>
-
-<div
-  id="transactions"
-  class="flex flex-col md:flex-row gap-20 max-w-5xl mx-auto items-center px-4"
->
-  <div class="flex flex-col gap-12 flex-1">
-    <H2>{data.transactions.title}</H2>
-
-    <ol class="text-white text-xl">
-      {#each data.transactions.explainer as explainer}
-        <li>
-          {explainer}
-        </li>
-      {/each}
-    </ol>
-  </div>
-  <div class="px-4 md:px-0 w-full flex-1"><TxVisual /></div>
-</div>
-
-<div class="flex flex-col items-center gap-8 mx-auto max-w-5xl px-4">
-  <div class="flex flex-col gap-12 items-center text-center">
-    <H2>{data.tracking.title}</H2>
-    <p class="text-white text-xl text-center">
-      {data.tracking.body}
-    </p>
-  </div>
-
+{#if y > 1400}
   <div
-    class="flex flex-col md:flex-row justify-between gap-12 px-4 items-center"
+    id="transactions"
+    transition:fly={{ x: -400, duration: 1000 }}
+    class="flex flex-col md:flex-row gap-20 max-w-5xl mx-auto items-center px-4"
   >
-    {#each data.tracking.examples as example}
-      <div class="flex flex-col items-center gap-6 py-8 max-w-md">
-        <div class="w-8">
-          {#if example.icon === "moneybill"}
-            <MoneyBill />
-          {:else if example.icon === "rotate"}
-            <Rotate />
-          {:else if example.icon === "user"}
-            <User />
-          {/if}
+    <div class="flex flex-col gap-12 flex-1">
+      <H2>{data.transactions.title}</H2>
+
+      <ol class="text-white text-xl">
+        {#each data.transactions.explainer as explainer}
+          <li>
+            {explainer}
+          </li>
+        {/each}
+      </ol>
+    </div>
+    <div class="px-4 md:px-0 w-full flex-1"><TxVisual /></div>
+  </div>
+{/if}
+
+{#if y > 2500}
+  <div
+    class="flex flex-col items-center gap-8 mx-auto max-w-5xl px-4"
+    transition:fly={{ x: 200, duration: 1000 }}
+  >
+    <div class="flex flex-col gap-12 items-center text-center">
+      <H2>{data.tracking.title}</H2>
+      <p class="text-white text-xl text-center">
+        {data.tracking.body}
+      </p>
+    </div>
+
+    <div
+      class="flex flex-col md:flex-row justify-between gap-12 px-4 items-center"
+    >
+      {#each data.tracking.examples as example}
+        <div class="flex flex-col items-center gap-6 py-8 max-w-md">
+          <div class="w-8">
+            {#if example.icon === "moneybill"}
+              <MoneyBill />
+            {:else if example.icon === "rotate"}
+              <Rotate />
+            {:else if example.icon === "user"}
+              <User />
+            {/if}
+          </div>
+          <div class="text-2xl">{example.title}</div>
+          <p class="text-white text-center">
+            {example.body}
+          </p>
         </div>
-        <div class="text-2xl">{example.title}</div>
-        <p class="text-white text-center">
-          {example.body}
-        </p>
-      </div>
-    {/each}
+      {/each}
+    </div>
   </div>
-</div>
+{/if}
 
-<div
-  id="surveillance"
-  class="flex flex-col md:flex-row gap-12 max-w-xl md:max-w-5xl mx-auto items-center px-4"
->
-  <div class="flex-1">
-    <H2>{data.surveillance.title}</H2>
-  </div>
-
-  <p class="flex-1 text-white text-xl">
-    {@html data.surveillance.body}
-  </p>
-</div>
-
-<div class="flex flex-col gap-12 max-w-xl md:max-w-3xl mx-auto px-4">
+{#if y > 3100}
   <div
-    class="border-2 border-green-cj rounded text-green-cj text-center px-8 py-6"
+    transition:fly={{ x: -400, duration: 1000 }}
+    id="surveillance"
+    class="flex flex-col md:flex-row gap-12 max-w-xl md:max-w-5xl mx-auto items-center px-4"
   >
-    <h2 class="text-3xl md:text-5xl font-inconsolata">
-      {data.catch.title}
-    </h2>
-  </div>
-  <div class="text-white text-xl text-center">
-    {@html data.catch.body}
-  </div>
-</div>
+    <div class="flex-1">
+      <H2>{data.surveillance.title}</H2>
+    </div>
 
-<div
-  class="flex flex-col md:flex-row max-w-xl md:max-w-5xl justify-between mx-auto gap-24 items-center px-4"
->
-  <div>
-    <H2>{data.hide.title}</H2>
+    <p class="flex-1 text-white text-xl">
+      {@html data.surveillance.body}
+    </p>
   </div>
-  <div class="text-white text-xl">
-    {@html data.hide.body}
-  </div>
-</div>
+{/if}
 
-<div
-  class="flex flex-col gap-12 items-center text-center max-w-3xl mx-auto px-4"
->
-  <H2>{data.privacy.title}</H2>
-  <p class="text-white text-xl">
-    {data.privacy.body}
-  </p>
-</div>
+{#if y > 3600}
+  <div
+    transition:fade={{ duration: 1200 }}
+    class="flex flex-col gap-12 max-w-xl md:max-w-3xl mx-auto px-4"
+  >
+    <div
+      class="border-2 border-green-cj rounded text-green-cj text-center px-8 py-6"
+    >
+      <h2 class="text-3xl md:text-5xl font-inconsolata">
+        {data.catch.title}
+      </h2>
+    </div>
+    <div class="text-white text-xl text-center">
+      {@html data.catch.body}
+    </div>
+  </div>
+{/if}
+
+{#if y > 4000}
+  <div
+    transition:fly={{ x: -400, duration: 1000 }}
+    class="flex flex-col md:flex-row max-w-xl md:max-w-5xl justify-between mx-auto gap-24 items-center px-4"
+  >
+    <div>
+      <H2>{data.hide.title}</H2>
+    </div>
+    <div class="text-white text-xl">
+      {@html data.hide.body}
+    </div>
+  </div>
+{/if}
+
+{#if y > 4400}
+  <div
+    transition:fly={{ y: -200, duration: 1000 }}
+    class="flex flex-col gap-12 items-center text-center max-w-3xl mx-auto px-4"
+  >
+    <H2>{data.privacy.title}</H2>
+    <p class="text-white text-xl">
+      {data.privacy.body}
+    </p>
+  </div>
+{/if}
 
 <div class="flex flex-col gap-20 items-center max-w-lg mx-auto px-4">
   <div
@@ -251,112 +289,132 @@
   </div>
 </div>
 
-<div class="relative">
-  <div
-    class="min-w-[320px] hidden w-full h-full md:flex justify-center items-center"
-  >
-    <Cj />
-  </div>
-  <div class="min-w-[320px] w-full flex justify-center items-center md:hidden">
-    <CoinjoinMobile />
-  </div>
+{#if y > 6500}
+  <div class="relative" transition:fade={{ duration: 1400 }}>
+    <div
+      class="min-w-[320px] hidden w-full h-full md:flex justify-center items-center"
+    >
+      <Cj />
+    </div>
+    <div
+      class="min-w-[320px] w-full flex justify-center items-center md:hidden"
+    >
+      <CoinjoinMobile />
+    </div>
 
-  <div
-    id="coinjoins"
-    class="min-w-[320px] absolute mx-auto px-4 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-7xl"
-  >
-    <div class="flex flex-col items-center gap-28 text-center">
-      <H2>{data.coinjoins.title}</H2>
+    <div
+      id="coinjoins"
+      class="min-w-[320px] absolute mx-auto px-4 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-7xl"
+    >
+      <div
+        class="flex flex-col items-center gap-28 text-center"
+        transition:fade={{ duration: 1400, delay: 400 }}
+      >
+        <H2>{data.coinjoins.title}</H2>
 
-      <div class="flex flex-col max-w-xl lg:flex-row lg:max-w-none gap-12">
-        {#each data.coinjoins.description as desc}
-          <div class="text-white text-2xl text-center">
-            {desc}
-          </div>
-        {/each}
+        <div class="flex flex-col max-w-xl lg:flex-row lg:max-w-none gap-12">
+          {#each data.coinjoins.description as desc}
+            <div class="text-white text-2xl text-center">
+              {desc}
+            </div>
+          {/each}
+        </div>
       </div>
     </div>
   </div>
-</div>
+{/if}
 
-<div id="faq" class="px-4 flex flex-col gap-28">
-  <div class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto">
-    <H2>{data.fud.title}</H2>
-    <p class="text-white text-xl">
-      {data.fud.body}
-    </p>
-  </div>
+{#if y > 7600}
+  <div
+    id="faq"
+    class="px-4 flex flex-col gap-28"
+    transition:fade={{ duration: 1400 }}
+  >
+    <div
+      class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto"
+    >
+      <H2>{data.fud.title}</H2>
+      <p class="text-white text-xl">
+        {data.fud.body}
+      </p>
+    </div>
 
-  <div class="text-white max-w-5xl mx-auto flex flex-col gap-12 flex-1 pt-12">
-    {#each data.fudBustList as fud, i}
-      <div class="flex flex-col gap-4">
-        <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <!-- svelte-ignore a11y-no-static-element-interactions -->
-        <div
-          class="flex gap-2 md:gap-10 items-center justify-between hover:cursor-pointer text-red"
-          on:click={() => {
-            handleQuestionClick(i);
-          }}
-        >
+    <div class="text-white max-w-5xl mx-auto flex flex-col gap-12 flex-1 pt-12">
+      {#each data.fudBustList as fud, i}
+        <div class="flex flex-col gap-4">
+          <!-- svelte-ignore a11y-click-events-have-key-events -->
+          <!-- svelte-ignore a11y-no-static-element-interactions -->
           <div
-            class="flex gap-2 font-inconsolata text-xl md:text-2xl {data
-              .fudBustList[i].isClicked
-              ? 'text-red font-bold'
-              : 'text-white font-normal'}"
+            class="flex gap-2 md:gap-10 items-center justify-between hover:cursor-pointer text-red"
+            on:click={() => {
+              handleQuestionClick(i);
+            }}
           >
-            <div>{i + 1 + "."}</div>
-            <div>
-              {fud.question}
+            <div
+              class="flex gap-2 font-inconsolata text-xl md:text-2xl {data
+                .fudBustList[i].isClicked
+                ? 'text-red font-bold'
+                : 'text-white font-normal'}"
+            >
+              <div>{i + 1 + "."}</div>
+              <div>
+                {fud.question}
+              </div>
+            </div>
+            <div class="w-8 flex-shrink-0">
+              {#if data.fudBustList[i].isClicked}
+                <ClickedArrow />
+              {:else}
+                <UnclickedArrow />
+              {/if}
             </div>
           </div>
-          <div class="w-8 flex-shrink-0">
-            {#if data.fudBustList[i].isClicked}
-              <ClickedArrow />
-            {:else}
-              <UnclickedArrow />
-            {/if}
-          </div>
-        </div>
-        {#if data.fudBustList[i].isClicked}
-          <div class="text-white/80 text-xl md:px-16">
-            {@html fud.answer}
-          </div>
-        {/if}
-      </div>
-    {/each}
-  </div>
-</div>
-
-<div class="flex flex-col gap-28 px-4">
-  <div class="flex flex-col items-start gap-14 max-w-3xl text-center mx-auto">
-    <H2>{data.benefits.title}</H2>
-    <p class="text-white text-xl">
-      {data.benefits.body}
-    </p>
-  </div>
-  <div
-    class="flex flex-wrap lg:flex-row justify-between gap-8 max-w-5xl mx-auto"
-  >
-    {#each data.benefits.list as benefit}
-      <div
-        class="whitespace-nowrap flex-1 flex flex-col items-center gap-8 border-2 border-white rounded-lg px-10 py-8 text-center"
-      >
-        <div class="w-10">
-          {#if benefit.icon === "greenbitcoin"}
-            <GreenBitcoin />
-          {:else if benefit.icon === "greenbrackets"}
-            <GreenBrackets />
-          {:else if benefit.icon === "greenban"}
-            <GreenBan />
-          {:else if benefit.icon === "greenkey"}
-            <GreenKey />
+          {#if data.fudBustList[i].isClicked}
+            <div class="text-white/80 text-xl md:px-16">
+              {@html fud.answer}
+            </div>
           {/if}
         </div>
-        <p class="text-xl">{@html benefit.title}</p>
-      </div>
-    {/each}
+      {/each}
+    </div>
   </div>
-</div>
+{/if}
+
+{#if y > 9000}
+  <div
+    transition:fly={{ y: -300, duration: 1400 }}
+    class="flex flex-col gap-28 px-4"
+  >
+    <div class="flex flex-col items-start gap-14 max-w-3xl text-center mx-auto">
+      <H2>{data.benefits.title}</H2>
+      <p class="text-white text-xl">
+        {data.benefits.body}
+      </p>
+    </div>
+    <div
+      class="flex flex-wrap lg:flex-row justify-between gap-8 max-w-5xl mx-auto"
+    >
+      {#each data.benefits.list as benefit}
+        <div
+          class="whitespace-nowrap flex-1 flex flex-col items-center gap-8 border-2 border-white rounded-lg px-10 py-8 text-center"
+        >
+          <div class="w-10">
+            {#if benefit.icon === "greenbitcoin"}
+              <GreenBitcoin />
+            {:else if benefit.icon === "greenbrackets"}
+              <GreenBrackets />
+            {:else if benefit.icon === "greenban"}
+              <GreenBan />
+            {:else if benefit.icon === "greenkey"}
+              <GreenKey />
+            {/if}
+          </div>
+          <p class="text-xl">{@html benefit.title}</p>
+        </div>
+      {/each}
+    </div>
+  </div>
+{/if}
 
 <div id="try" class="flex flex-col max-w-5xl mx-auto gap-28 px-4">
   <div class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto">
