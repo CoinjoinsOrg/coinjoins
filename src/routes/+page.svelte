@@ -141,7 +141,7 @@
   class="flex flex-col md:flex-row gap-20 max-w-5xl mx-auto items-center px-4"
 >
   <div class="flex flex-col gap-12 flex-1">
-    <H2>{data.title}</H2>
+    <H2>{data.transactions.title}</H2>
 
     <ol class="text-white text-xl">
       {#each data.transactions.explainer as explainer}
