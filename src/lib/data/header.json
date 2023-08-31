@@ -1,0 +1,64 @@
+{
+  "menu": {
+    "basics": "Basics",
+    "wallets": "Wallets",
+    "history": "History"
+  },
+  "submenu": [
+    {
+      "name": "Overview",
+      "path": "wallet-overview",
+      "isActive": true,
+      "isDeprecated": false
+    },
+    {
+      "name": "Wasabi 2.0",
+      "path": "wasabi-2.0",
+      "isActive": true,
+      "isDeprecated": false
+    },
+    {
+      "name": "JoinMarket",
+      "path": "joinmarket",
+      "isActive": true,
+      "isDeprecated": false
+    },
+    {
+      "name": "Samourai",
+      "path": "samourai",
+      "isActive": true,
+      "isDeprecated": true
+    },
+    {
+      "name": "Sparrow",
+      "path": "sparrow",
+      "isActive": true,
+      "isDeprecated": true
+    },
+    {
+      "name": "BTCPay Server",
+      "path": "btcpay",
+      "isActive": false,
+      "isDeprecated": false
+    },
+    {
+      "name": "Trezor suite",
+      "path": "trezor",
+      "isActive": false,
+      "isDeprecated": false
+    },
+    {
+      "name": "Jam",
+      "path": "jam",
+      "isActive": false,
+      "isDeprecated": false
+    },
+    {
+      "name": "Vortex LN",
+      "path": "vortex",
+      "isActive": false,
+      "isDeprecated": false
+    }
+  ],
+  "cta": "Try Coinjoins"
+}

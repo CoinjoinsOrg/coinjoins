@@ -1,5 +1,5 @@
 <script>
-  import data from "@lib/data/advanced.json";
+  import data from "@lib/data/wallet-overview.json";
 
   import H1 from "@lib/components/H1.svelte";
   import H2 from "@lib/components/H2.svelte";
@@ -9,8 +9,8 @@
   import MagnifyingGlassSvg from "@lib/img/MagnifyingGlassSvg.svelte";
   import ClickedArrow from "@lib/img/ClickedArrow.svelte";
   import UnclickedArrow from "@lib/img/UnclickedArrow.svelte";
-  import GreenCircleSvg from "../../lib/img/GreenCircleSvg.svelte";
-  import CompareWalletsBox from "../../lib/components/CompareWalletsBox.svelte";
+  import GreenCircleSvg from "@lib/img/GreenCircleSvg.svelte";
+  import CompareWalletsBox from "@lib/components/CompareWalletsBox.svelte";
 
   const overview = data.overview;
   const wallets = data.wallets;

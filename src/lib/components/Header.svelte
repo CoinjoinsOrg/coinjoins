@@ -1,6 +1,7 @@
 <script>
   import { page } from "$app/stores";
   import { goto } from "$app/navigation";
+  import data from "@lib/data/header.json";
 
   import CoinjoinLogo from "@lib/img/CoinjoinLogo.svelte";
   import ClickedArrow from "@lib/img/ClickedArrow.svelte";
@@ -8,8 +9,8 @@
 
   let showMobileMenu = false;
   let y;
-  let timeoutHideSubMenuAdvanced;
-  let isAdvancedSubMenuShown = false;
+  let timeoutHideSubMenuWallets;
+  let isWalletsSubMenuShown = false;
 
   function handleMobileIconClick() {
     showMobileMenu = !showMobileMenu;
@@ -25,55 +26,61 @@
     showMobileMenu = false;
   }
 
-  function handleAdvancedMenuClicked() {
-    isAdvancedSubMenuShown = !isAdvancedSubMenuShown;
+  function handleWalletsMenuClicked() {
+    isWalletsSubMenuShown = !isWalletsSubMenuShown;
   }
 
-  function handleAdvancedSubMenuClicked(url) {
+  function handleWalletsSubMenuClicked(url) {
     goto(url);
     setTimeout(() => {
       if (showMobileMenu) {
         handleMobileMenuItemClick();
       }
-      isAdvancedSubMenuShown = !isAdvancedSubMenuShown;
-      clearTimeout(timeoutHideSubMenuAdvanced);
-      timeoutHideSubMenuAdvanced = null;
+      isWalletsSubMenuShown = false;
+      clearTimeout(timeoutHideSubMenuWallets);
+      timeoutHideSubMenuWallets = null;
     }, 200);
   }
 
   function handleShowSubMenuOnHover() {
-    clearTimeout(timeoutHideSubMenuAdvanced);
-    timeoutHideSubMenuAdvanced = null;
-    isAdvancedSubMenuShown = true;
+    clearTimeout(timeoutHideSubMenuWallets);
+    timeoutHideSubMenuWallets = null;
+    isWalletsSubMenuShown = true;
   }
   function handleHideSubMenuOnHoverOut() {
-    if (timeoutHideSubMenuAdvanced) {
-      clearTimeout(timeoutHideSubMenuAdvanced);
+    if (timeoutHideSubMenuWallets) {
+      clearTimeout(timeoutHideSubMenuWallets);
     }
-    timeoutHideSubMenuAdvanced = setTimeout(
-      () => (isAdvancedSubMenuShown = false),
+    timeoutHideSubMenuWallets = setTimeout(
+      () => (isWalletsSubMenuShown = false),
       300
     );
+  }
+  const headerData = data;
+  function goHome() {
+    showMobileMenu = false;
+    goto("/");
   }
 </script>
 
 <svelte:window bind:scrollY={y} />
 
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-static-element-interactions -->
 <header
   class="z-10 min-w-[320px] flex justify-between h-[90px] md:max-w-5xl md:mx-auto py-6 items-center px-4"
 >
-  <div class="py-1 flex-auto isolate">
-    <a href="/">
-      <div class="isolate w-10 h-6 z-40">
-        <CoinjoinLogo />
-      </div>
-    </a>
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <div class="py-1 flex-auto isolate hover:cursor-pointer" on:click={goHome}>
+    <div class="w-10 h-6">
+      <CoinjoinLogo />
+    </div>
   </div>
 
   <div
     class="z-10 font-inconsolata isolate {showMobileMenu
       ? ' font-semibold text-5xl bg-dark-blue fixed h-screen w-screen top-20 pt-12 left-0 px-4 overflow-hidden flex flex-col gap-8 items-start'
-      : 'hidden md:flex md:flex-1 md:justify-center md:font-normal md:gap-12'}    "
+      : 'hidden md:flex md:flex-1 md:justify-center md:font-normal md:gap-12'}"
   >
     <div
       class="hover:text-green-cj hover:cursor-pointer {$page.url.pathname ===
@@ -88,7 +95,7 @@
         href="/"
         class="no-underline"
       >
-        Intro
+        {headerData.menu.basics}
       </a>
     </div>
 
@@ -99,28 +106,30 @@
     <div
       on:mouseover={handleShowSubMenuOnHover}
       on:mouseout={handleHideSubMenuOnHoverOut}
-      on:click={handleAdvancedMenuClicked}
       class="z-10 relative hover:text-green-cj hover:cursor-pointer {$page.url
-        .pathname === '/advanced'
+        .pathname === '/wallet-overview' ||
+      $page.url.pathname.includes('wallets')
         ? 'text-green-cj'
         : 'text-white'}"
     >
       <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-      <div class="flex gap-2">
-        <div>Advanced</div>
+      <div class="flex gap-2" on:click={handleWalletsMenuClicked}>
+        <div>{headerData.menu.wallets}</div>
 
-        <div class="w-6">
-          {#if isAdvancedSubMenuShown}
+        <div class="w-6" on:click={handleWalletsMenuClicked}>
+          {#if isWalletsSubMenuShown}
             <ClickedArrow
-              color={$page.url.pathname === "/advanced" ||
-              isAdvancedSubMenuShown
+              color={$page.url.pathname === "/wallet-overview" ||
+              isWalletsSubMenuShown ||
+              $page.url.pathname.includes("wallets")
                 ? "rgb(0,255,25,1.0)"
                 : "rgb(255,255,255,1.0)"}
             />
           {:else}
             <UnclickedArrow
-              color={$page.url.pathname === "/advanced" ||
-              isAdvancedSubMenuShown
+              color={$page.url.pathname === "/wallet-overview" ||
+              isWalletsSubMenuShown ||
+              $page.url.pathname.includes("wallets")
                 ? "rgb(0,255,25,1.0)"
                 : "rgb(255,255,255,1.0)"}
             />
@@ -128,79 +137,31 @@
         </div>
       </div>
 
-      {#if isAdvancedSubMenuShown}
+      {#if isWalletsSubMenuShown}
         <div
-          class=" flex w-80 justify-between py-4 px-2 bg-dark-blue h-auto {showMobileMenu
+          class="flex w-96 justify-between py-4 px-2 bg-dark-blue h-auto hover:cursor-default {showMobileMenu
             ? 'block flex-col top-12 text-3xl text-left'
-            : 'absolute flex-row top-8 rounded'}"
+            : 'absolute flex-row flex-wrap top-8 rounded'}"
           on:mouseover={handleShowSubMenuOnHover}
           on:mouseout={handleHideSubMenuOnHoverOut}
-          on:click={handleAdvancedMenuClicked}
         >
-          <div class="flex flex-col">
-            <div>
+          {#each headerData.submenu as sub}
+            <div class="w-1/2 whitespace-nowrap">
               <button
-                on:click={() => handleAdvancedSubMenuClicked("/advanced")}
-                class=" no-underline text-white hover:text-green-cj font-inconsolata"
-                >Overview</button
-              >
-            </div>
-            <div>
-              <button
-                on:click={() => handleAdvancedSubMenuClicked("/wasabi-wallet")}
-                class=" no-underline text-white hover:text-green-cj font-inconsolata"
-                >Wasabi Wallet</button
-              >
-            </div>
-            <div>
-              <button
-                on:click={() => handleAdvancedSubMenuClicked("/sparrow-wallet")}
-                class=" no-underline text-white hover:text-green-cj font-inconsolata"
-                >Sparrow Wallet</button
-              >
-            </div>
-            <div>
-              <button
-                on:click={() => handleAdvancedSubMenuClicked("/joinmarket")}
-                class=" no-underline text-white hover:text-green-cj font-inconsolata"
-                >JoinMarket</button
-              >
-            </div>
-          </div>
-          <div class="flex flex-col">
-            <div>
-              <button
+                disabled={!sub.isActive}
                 on:click={() =>
-                  handleAdvancedSubMenuClicked("/samourai-wallet")}
-                class=" no-underline text-white hover:text-green-cj font-inconsolata"
-                >Samourai Wallet</button
+                  handleWalletsSubMenuClicked(
+                    `${sub.path === "wallet-overview" ? "/" : "/wallets/"}${
+                      sub.path
+                    }`
+                  )}
+                class="no-underline font-inconsolata {sub.isActive
+                  ? 'hover:text-green-cj text-white'
+                  : 'text-inactive-grey hover:text-inactive-grey'}"
+                >{sub.name}</button
               >
             </div>
-            <div>
-              <button
-                disabled={true}
-                on:click={() => handleAdvancedSubMenuClicked("/trezor-suite")}
-                class=" no-underline text-inactive-grey font-inconsolata"
-                >Trezor Suite</button
-              >
-            </div>
-            <div>
-              <button
-                disabled={true}
-                on:click={() => handleAdvancedSubMenuClicked("/btcpay-server")}
-                class=" no-underline text-inactive-grey font-inconsolata"
-                >BTCPay Server
-              </button>
-            </div>
-            <div>
-              <button
-                disabled={true}
-                on:click={() => handleAdvancedSubMenuClicked("/vortex-ln")}
-                class=" no-underline text-inactive-grey font-inconsolata"
-                >Vortex LN</button
-              >
-            </div>
-          </div>
+          {/each}
         </div>
       {/if}
     </div>
@@ -215,17 +176,17 @@
         >
           SOON
         </div>
-        History
+        {headerData.menu.history}
       </div>
     </div>
     <div class="md:hidden flex justify-center pt-12">
       <a
+        href="/#try"
         on:click={showMobileMenu
           ? handleMobileMenuItemClick
           : handleDesktopMenuItemClick}
-        href="/#try"
-        class="block border border-green-cj bg-green-cj px-6 py-2 rounded-md text-base text-dark-blue no-underline"
-        >Try coinjoins</a
+        class="block border border-green-cj bg-green-cj px-6 py-2 rounded-md text-base text-dark-blue no-underline hover:text-green-cj hover:bg-dark-blue hover:border-green-cj"
+        >{headerData.cta}</a
       >
     </div>
   </div>
@@ -242,8 +203,8 @@
   <div class="hidden md:flex flex-auto justify-end">
     <a
       href="/#try"
-      class="block border border-green-cj bg-green-cj px-6 py-2 rounded-md text-base text-dark-blue no-underline"
-      >Try coinjoins</a
+      class="block border border-green-cj bg-green-cj px-6 py-2 rounded-md text-base text-dark-blue no-underline hover:text-green-cj hover:bg-dark-blue hover:border-green-cj"
+      >{headerData.cta}</a
     >
   </div>
 </header>

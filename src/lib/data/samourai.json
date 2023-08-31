@@ -1,4 +1,8 @@
 {
+  "title": "Coinjoins.org - Samourai Wallet Review",
+  "wallet_name": "Samourai",
+  "protocol_name": "Whirlpool",
+  "wallet_logo": "samourai",
   "hero": "Samourai Wallet is a bitcoin wallet mobile application on Android with built-in coinjoin functionality using Whirlpool.",
   "github": "https://code.samourai.io/wallet/samourai-wallet-android",
   "twitter": "https://twitter.com/SamouraiWallet/",

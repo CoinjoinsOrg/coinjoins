@@ -1,4 +1,8 @@
 {
+  "title": "Coinjoins.org - Wasabi Wallet 2.0 Review",
+  "wallet_name": "Wasabi 2.0",
+  "protocol_name": "WabiSabi",
+  "wallet_logo": "wasabi",
   "hero": "Wasabi Wallet 2.0 is a simple to use bitcoin wallet desktop app with a built-in coinjoin feature using WabiSabi.",
   "github": "https://github.com/zkSNACKs/WalletWasabi/",
   "twitter": "https://twitter.com/wasabiwallet",

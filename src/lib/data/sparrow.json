@@ -1,4 +1,8 @@
 {
+  "title": "Coinjoins.org - Sparrow Wallet Review",
+  "wallet_name": "Sparrow",
+  "protocol_name": "Whirlpool",
+  "wallet_logo": "sparrow",
   "hero": "Sparrow Wallet is a bitcoin wallet desktop application with a built-in coinjoin feature using Whirlpool.",
   "github": "https://github.com/sparrowwallet/sparrow",
   "twitter": "https://twitter.com/sparrowwallet",

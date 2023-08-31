@@ -1,6 +1,5 @@
 <script>
-  import wasabiDataFile from "@lib/data/wasabi.json";
-  import advancedDataFile from "@lib/data/advanced.json";
+  import overviewDataFile from "@lib/data/wallet-overview.json";
 
   import H1 from "@components/H1.svelte";
   import H2 from "@components/H2.svelte";
@@ -13,30 +12,38 @@
   import BlueCheckSvg from "@lib/img/BlueCheckSvg.svelte";
   import XCircleSvg from "@lib/img/XCircleSvg.svelte";
   import RedText from "@components/RedText.svelte";
-  import GitHub from "../../lib/img/GitHub.svelte";
-  import Twitter from "../../lib/img/Twitter.svelte";
-  import Website from "../../lib/img/Website.svelte";
+  import GitHub from "@lib/img/GitHub.svelte";
+  import Twitter from "@lib/img/Twitter.svelte";
+  import Website from "@lib/img/Website.svelte";
 
+  export let data;
   let y;
 
-  const wasabiData = wasabiDataFile;
-  const overview = advancedDataFile.overview;
-  const wallets = advancedDataFile.wallets;
+  const overview = overviewDataFile.overview;
+  const wallets = overviewDataFile.wallets;
 </script>
 
 <svelte:window bind:scrollY={y} />
 
+<svelte:head>
+  <title>{data.content.title}</title>
+</svelte:head>
+
 <div class="relative px-4 pt-10 h-[50vh] max-w-3xl mx-auto">
   <div class="absolute flex flex-col gap-10 pt-32">
-    <H1>Wasabi 2.0 <br /><GreenText>& WabiSabi</GreenText></H1>
+    <H1
+      >{data.content.wallet_name}<br /><GreenText
+        >& {data.content.protocol_name}</GreenText
+      ></H1
+    >
     <div class="text-lg">
-      {wasabiData.hero}
+      {data.content.hero}
     </div>
 
     <div class="flex gap-6">
-      <div class="w-6"><a href={wasabiData.github}> <GitHub /></a></div>
-      <div class="w-6"><a href={wasabiData.twitter}> <Twitter /></a></div>
-      <div class="w-6"><a href={wasabiData.website}> <Website /></a></div>
+      <div class="w-6"><a href={data.content.github}> <GitHub /></a></div>
+      <div class="w-6"><a href={data.content.twitter}> <Twitter /></a></div>
+      <div class="w-6"><a href={data.content.website}> <Website /></a></div>
     </div>
 
     <div class="flex justify-center">
@@ -48,8 +55,9 @@
     </div>
   </div>
 
-  <img src="/wallets-bg/wasabi-bg.png" alt="Wasabi Logo" />
+  <img src="/wallets-bg/{data.content.wallet_logo}-bg.png" alt="Wasabi Logo" />
 </div>
+
 <div>
   <FlatCoinjoinSvg />
 </div>
@@ -60,7 +68,7 @@
   </div>
   <H2>Overview</H2>
   <div class="flex flex-col gap-6">
-    {#each Object.entries(wasabiData.overview) as [point, text]}
+    {#each Object.entries(data.content.overview) as [point, text]}
       <div class="flex gap-4 items-start">
         <div class="w-4 flex-shrink-0">
           <GreenCircleSvg />
@@ -78,7 +86,7 @@
     <H2><GreenText>Benefits</GreenText></H2>
   </div>
   <div class="flex flex-col gap-6">
-    {#each Object.entries(wasabiData.benefits) as [point, text]}
+    {#each Object.entries(data.content.benefits) as [point, text]}
       <div class="flex gap-4 items-start">
         <div class="w-4 flex-shrink-0">
           <BlueCheckSvg />
@@ -88,12 +96,13 @@
     {/each}
   </div>
 </div>
+
 <div class="px-4 flex flex-col gap-6 md:gap-12 max-w-3xl mx-auto">
   <div class="text-center rounded-lg border-4 border-red px-6 py-4">
     <H2><RedText>Trade Offs</RedText></H2>
   </div>
   <div class="flex flex-col gap-6">
-    {#each Object.entries(wasabiData.tradeoffs) as [point, text]}
+    {#each Object.entries(data.content.tradeoffs) as [point, text]}
       <div class="flex gap-4 items-start">
         <div class="w-4 flex-shrink-0">
           <XCircleSvg />
@@ -109,15 +118,3 @@
   subheader={overview.compare_subheader}
   walletsList={wallets}
 />
-
-<div
-  class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto px-4"
->
-  <H2>Have More Questions?</H2>
-  <p class="text-white text-xl">
-    If you have any comments or suggestions, we are open to hearing from you.
-    Please reach out on <a href="mailto:coinjoins@protonmail.com"
-      >coinjoins@protonmail.com</a
-    >.
-  </p>
-</div>
