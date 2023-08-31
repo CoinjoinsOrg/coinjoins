@@ -57,19 +57,24 @@
     );
   }
   const headerData = data;
+  function goHome() {
+    showMobileMenu = false;
+    goto("/");
+  }
 </script>
 
 <svelte:window bind:scrollY={y} />
 
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-static-element-interactions -->
 <header
   class="z-10 min-w-[320px] flex justify-between h-[90px] md:max-w-5xl md:mx-auto py-6 items-center px-4"
 >
-  <div class="py-1 flex-auto isolate">
-    <a href="/">
-      <div class="isolate w-10 h-6 z-40">
-        <CoinjoinLogo />
-      </div>
-    </a>
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <div class="py-1 flex-auto isolate hover:cursor-pointer" on:click={goHome}>
+    <div class="w-10 h-6">
+      <CoinjoinLogo />
+    </div>
   </div>
 
   <div

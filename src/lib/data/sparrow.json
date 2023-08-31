@@ -31,13 +31,14 @@
   },
   "tradeoffs": {
     "point_1": "Fees can be high: if you register one single UTXO to coinjoin, you pay 3.5%-5% in coordinator fees and some extra in mining fees. ",
-    "point_2": "Since the maximum anonymity set gain per Whirlpool coinjoin transaction is 8, many users want to remix many times. This may result in longer waiting times.",
-    "point_3": "Toxic change is not eliminated, it is simply segregated into another wallet account. You will have to deal with those non-private outputs in the future.",
-    "point_4": "The premix transaction (Tx0) will incur transaction mining fees, which elevates the cost of the mixing experience. ",
-    "point_5": "There’s a minimum amount of 0.001 BTC to coinjoin on Whirlpool, which limits accessibility. ",
-    "point_6": "Electrum SPV network connection is used by default which allows public servers to connect all the UTXOs from your wallet, even the non-private ones with the private ones.",
-    "point_7": "Tor is not bundled with Sparrow and must be installed separately by the user, it’s not enabled by default. This can lead to IP address leakage to the coordinator, and to a public Electrum server (if you are not using your full node or a private Electrum server).",
-    "point_8": "The Whirlpool coordinator is a centralized service that can technically censor UTXOs from using its service and this would not be verifiable by the public. ",
-    "point_9": "The privacy objectives are not clear to the user. It's unknown if he's advised to mix two times, five times, or whatever."
+    "point_2": "Whirlpool Tx0 reveals common input ownership, which connects different past transactions together.",
+    "point_3": "Since the maximum anonymity set gain per Whirlpool coinjoin transaction is 8, many users want to remix many times. This may result in longer waiting times.",
+    "point_4": "Toxic change is not eliminated, it is simply segregated into another wallet account. You will have to deal with those non-private outputs in the future.",
+    "point_5": "The premix transaction (Tx0) will incur transaction mining fees, which elevates the cost of the mixing experience. ",
+    "point_6": "There’s a minimum amount of 0.001 BTC to coinjoin on Whirlpool, which limits accessibility. ",
+    "point_7": "Electrum SPV network connection is used by default which allows public servers to connect all the UTXOs from your wallet, even the non-private ones with the private ones.",
+    "point_8": "Tor is not bundled with Sparrow and must be installed separately by the user, it’s not enabled by default. This can lead to IP address leakage to the coordinator, and to a public Electrum server (if you are not using your full node or a private Electrum server).",
+    "point_9": "The Whirlpool coordinator is a centralized service that can technically censor UTXOs from using its service and this would not be verifiable by the public. ",
+    "point_10": "The privacy objectives are not clear to the user. It's unknown if he's advised to mix two times, five times, or whatever."
   }
 }
