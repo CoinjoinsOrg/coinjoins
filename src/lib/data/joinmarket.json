@@ -7,12 +7,28 @@
   "github": "https://github.com/JoinMarket-Org/joinmarket-clientserver",
   "twitter": "https://twitter.com/joinmarket",
   "website": "https://github.com/JoinMarket-Org/joinmarket-clientserver",
-  "basics": {
-    "release_date": "January 9th 2015",
-    "platform": "Desktop (Mac, Windows, Linux)",
-    "programming_language": "Python",
-    "address_type": "Segwit Native (bc1), P2SH wrapped (3)"
-  },
+  "basics": [
+    {
+      "id": "release_date",
+      "title": "Release Date",
+      "body": "January 9th 2015"
+    },
+    {
+      "id": "platform",
+      "title": "Platform",
+      "body": "Desktop (Mac, Windows, Linux)"
+    },
+    {
+      "id": "programming_language",
+      "title": "Code",
+      "body": "Python"
+    },
+    {
+      "id": "address_type",
+      "title": "Address Type",
+      "body": "Segwit Native (bc1), P2SH wrapped (3)"
+    }
+  ],
   "overview": {
     "point_1": "JoinMarket is available on desktop as a graphical user interface (GUI) or as a terminal-based command line interface (CLI). It differs from other coinjoin protocols because it doesn’t have a centralized individual entity coordinator, but rather two user roles in a P2P (peer-to-peer) environment: makers (who provide liquidity for a fee) and takers (who pay a fee for liquidity and coordinate the transaction). Any user can be a maker or a taker.",
     "point_2": "The process begins with makers posting orders on the available messaging channels with the <i>Yieldgenerator</i> bot. These orders contain the counterparty's hash, the maker fee (in percent), the miner fee contribution (in btc), the minimum and maximum size, and the bond value (explained later). Takers choose Single Join or Multi Join (Tumbler) with their desired properties. The software then chooses the right makers and enters into a coordination process to create a coinjoin transaction.",

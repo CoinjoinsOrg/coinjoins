@@ -7,12 +7,28 @@
   "github": "https://code.samourai.io/wallet/samourai-wallet-android",
   "twitter": "https://twitter.com/SamouraiWallet/",
   "website": "https://samouraiwallet.com/",
-  "basics": {
-    "release_date": "February 2015",
-    "platform": "Mobile (Android)",
-    "programming_language": "Java and Kotlin",
-    "address_type": "Segwit Native (bc1), supports all."
-  },
+  "basics": [
+    {
+      "id": "release_date",
+      "title": "Release Date",
+      "body": "February 2015"
+    },
+    {
+      "id": "platform",
+      "title": "Platform",
+      "body": "Mobile (Android)"
+    },
+    {
+      "id": "programming_language",
+      "title": "Code",
+      "body": "Java and Kotlin"
+    },
+    {
+      "id": "address_type",
+      "title": "Address Type",
+      "body": "Segwit Native (bc1), supports all."
+    }
+  ],
   "overview": {
     "point_1": "You can use Whirlpool directly on Samourai, link your wallet to Whirlpool GUI (desktop) to manage your mixing, or use Whirlpool GUI as a standalone application.",
     "point_2": "Whirlpool is a Zerolink protocol-based coinjoin implementation that splits the toxic change and collects the coordinator fee before participating in mix transactions. It does this by first performing a premix transaction (Tx0) where UTXOs selected for coinjoin are consolidated and resized to the pool denomination. There is a separate wallet account for non-mixing, premixing, post-mixing, and bad bank (change output separated in the premix transaction).",

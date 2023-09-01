@@ -15,6 +15,10 @@
   import GitHub from "@lib/img/GitHub.svelte";
   import Twitter from "@lib/img/Twitter.svelte";
   import Website from "@lib/img/Website.svelte";
+  import Calendar from "../../../lib/img/Calendar.svelte";
+  import Package from "../../../lib/img/Package.svelte";
+  import Code from "../../../lib/img/Code.svelte";
+  import Address from "../../../lib/img/Address.svelte";
 
   export let data;
   let y;
@@ -108,6 +112,35 @@
           <XCircleSvg />
         </div>
         <p>{text}</p>
+      </div>
+    {/each}
+  </div>
+</div>
+
+<div class="flex flex-col justify-between gap-10 px-2 text-center">
+  <H2>Extra Details</H2>
+  <div
+    class="flex flex-wrap justify-center md:justify-between max-w-5xl mx-auto gap-10"
+  >
+    {#each data.content.basics as item}
+      <div
+        class="flex flex-col gap-2 items-center w-full sm:w-[calc(50%-40px)] md:w-[calc(25%-40px)]"
+      >
+        <div class="w-8">
+          {#if item.id === "release_date"}
+            <Calendar />
+          {:else if item.id === "platform"}
+            <Package />
+          {:else if item.id === "programming_language"}
+            <Code />
+          {:else}
+            <Address />
+          {/if}
+        </div>
+        <div class="text-lg font-inconsolata">
+          {item.title}
+        </div>
+        <div class="text-sm">{item.body}</div>
       </div>
     {/each}
   </div>
