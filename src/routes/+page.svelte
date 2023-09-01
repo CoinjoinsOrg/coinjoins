@@ -1,5 +1,8 @@
 <script>
+  import { fade, fly } from "svelte/transition";
+  import { onMount } from "svelte";
   import basicsData from "@data/basics.json";
+
   import H1 from "@lib/components/H1.svelte";
   import H2 from "@lib/components/H2.svelte";
   import H3 from "@lib/components/H3.svelte";
@@ -24,18 +27,16 @@
   import GreenKey from "@lib/img/GreenKey.svelte";
   import WasabiLogo from "@lib/img/WasabiLogo.svelte";
   import Cj from "@lib/img/Cj.svelte";
-
   import CoinjoinMobile from "@lib/img/CoinjoinMobile.svelte";
-  import { fade, fly } from "svelte/transition";
-  import { onMount } from "svelte";
 
   const data = basicsData;
+  let isLoaded = false;
+  let y;
+
   function handleQuestionClick(i) {
     data.fudBustList[i].isClicked = !data.fudBustList[i].isClicked;
   }
-  let isLoaded = false;
 
-  let y;
   onMount(() => (isLoaded = true));
   $: console.log("y:", y);
 </script>
@@ -46,7 +47,7 @@
   <title>{data.title}</title>
 </svelte:head>
 
-<div class="flex items-center relative w-full z-0">
+<div class="flex items-center relative w-full z-0 h-[60vh] md:h-[80vh]">
   <div class="flex md:hidden items-center w-full">
     <CoinjoinVisualMobile />
   </div>
@@ -56,6 +57,8 @@
 
   {#if isLoaded}
     <div
+      in:fly={{ duration: 2000 }}
+      out:fade={{ delay: 0, duration: 300 }}
       class="min-w-[320px] absolute top-[40%] mx-auto right-0 left-0 flex flex-col gap-10 md:gap-48 z-0"
     >
       <div class="flex flex-col items-center gap-10">
@@ -75,14 +78,16 @@
     </div>
   {/if}
 </div>
-{#if y > 100}
+
+{#if y > 1}
   <div
     id="open"
     class="relative mx-auto w-full h-full"
-    transition:fade={{
-      delay: 200,
-      duration: 400,
+    in:fade={{
+      delay: 1000,
+      duration: 2000,
     }}
+    out:fade={{ delay: 0, duration: 300 }}
   >
     <div
       class="absolute flex flex-col items-center justify-center left-0 top-0 bottom-0 right-0 gap-10 md:gap-14 mx-auto"
@@ -137,9 +142,10 @@
   </div>
 {/if}
 
-{#if y > 900}
+{#if y > 600}
   <div
-    transition:fly={{ x: 200, duration: 800 }}
+    in:fly={{ delay: 1000, x: 200, duration: 1400 }}
+    out:fade={{ delay: 0, duration: 300 }}
     class="flex flex-col md:flex-row max-w-5xl mx-auto items-center gap-20 px-4"
   >
     <div class="w-full px-4 md:px-0 flex-auto md:flex-1"><Utxos /></div>
@@ -153,10 +159,11 @@
   </div>
 {/if}
 
-{#if y > 1400}
+{#if y > 1100}
   <div
     id="transactions"
-    transition:fly={{ x: -400, duration: 1000 }}
+    in:fly={{ delay: 1000, x: -400, duration: 1400 }}
+    out:fade={{ delay: 0, duration: 300 }}
     class="flex flex-col md:flex-row gap-20 max-w-5xl mx-auto items-center px-4"
   >
     <div class="flex flex-col gap-12 flex-1">
@@ -174,10 +181,11 @@
   </div>
 {/if}
 
-{#if y > 2500}
+{#if y > 2000}
   <div
     class="flex flex-col items-center gap-8 mx-auto max-w-5xl px-4"
-    transition:fly={{ x: 200, duration: 1000 }}
+    in:fly={{ delay: 1000, x: 200, duration: 1400 }}
+    out:fade={{ delay: 0, duration: 300 }}
   >
     <div class="flex flex-col gap-12 items-center text-center">
       <H2>{data.tracking.title}</H2>
@@ -187,7 +195,7 @@
     </div>
 
     <div
-      class="flex flex-col md:flex-row justify-between gap-12 px-4 items-center"
+      class="flex flex-col md:flex-row justify-between gap-12 px-4 items-center md:items-start"
     >
       {#each data.tracking.examples as example}
         <div class="flex flex-col items-center gap-6 py-8 max-w-md">
@@ -210,9 +218,10 @@
   </div>
 {/if}
 
-{#if y > 3100}
+{#if y > 2700}
   <div
-    transition:fly={{ x: -400, duration: 1000 }}
+    in:fly={{ delay: 1000, x: -400, duration: 1000 }}
+    out:fade={{ delay: 0, duration: 300 }}
     id="surveillance"
     class="flex flex-col md:flex-row gap-12 max-w-xl md:max-w-5xl mx-auto items-center px-4"
   >
@@ -226,9 +235,10 @@
   </div>
 {/if}
 
-{#if y > 3600}
+{#if y > 3000}
   <div
-    transition:fade={{ duration: 1200 }}
+    in:fade={{ delay: 1000, duration: 1600 }}
+    out:fade={{ delay: 0, duration: 300 }}
     class="flex flex-col gap-12 max-w-xl md:max-w-3xl mx-auto px-4"
   >
     <div
@@ -244,9 +254,10 @@
   </div>
 {/if}
 
-{#if y > 4000}
+{#if y > 3800}
   <div
-    transition:fly={{ x: -400, duration: 1000 }}
+    in:fly={{ delay: 1000, x: -400, duration: 1400 }}
+    out:fade={{ delay: 0, duration: 300 }}
     class="flex flex-col md:flex-row max-w-xl md:max-w-5xl justify-between mx-auto gap-24 items-center px-4"
   >
     <div>
@@ -258,9 +269,10 @@
   </div>
 {/if}
 
-{#if y > 4400}
+{#if y > 4300}
   <div
-    transition:fly={{ y: -200, duration: 1000 }}
+    in:fade={{ delay: 1000, duration: 1400 }}
+    out:fade={{ delay: 0, duration: 300 }}
     class="flex flex-col gap-12 items-center text-center max-w-3xl mx-auto px-4"
   >
     <H2>{data.privacy.title}</H2>
@@ -270,28 +282,38 @@
   </div>
 {/if}
 
-<div class="flex flex-col gap-20 items-center max-w-lg mx-auto px-4">
+{#if y > 4800}
   <div
-    class="border-4 rounded border-red p-4 md:p-8 text-3xl md:text-5xl text-center text-red font-inconsolata"
+    in:fade={{ delay: 1000, duration: 1400 }}
+    out:fade={{ delay: 0, duration: 300 }}
+    class="flex flex-col gap-20 items-center max-w-lg mx-auto px-4"
   >
-    {data.reclaim.one}
+    <div
+      class="border-4 rounded border-red p-4 md:p-8 text-3xl md:text-5xl text-center text-red font-inconsolata"
+    >
+      {data.reclaim.one}
+    </div>
+    <div class="max-h-60"><RedLine /></div>
+    <div
+      class="border-none text-3xl md:text-5xl text-center text-white font-inconsolata"
+    >
+      {data.reclaim.two}
+    </div>
+    <div class="max-h-60"><GreenLine /></div>
+    <div
+      class="border-4 rounded border-green-cj p-4 md:p-8 text-3xl md:text-5xl text-center text-green-cj font-inconsolata"
+    >
+      {data.reclaim.three}
+    </div>
   </div>
-  <div class="max-h-60"><RedLine /></div>
-  <div
-    class="border-none text-3xl md:text-5xl text-center text-white font-inconsolata"
-  >
-    {data.reclaim.two}
-  </div>
-  <div class="max-h-60"><GreenLine /></div>
-  <div
-    class="border-4 rounded border-green-cj p-4 md:p-8 text-3xl md:text-5xl text-center text-green-cj font-inconsolata"
-  >
-    {data.reclaim.three}
-  </div>
-</div>
+{/if}
 
-{#if y > 6500}
-  <div class="relative" transition:fade={{ duration: 1400 }}>
+{#if y > 6200}
+  <div
+    class="relative"
+    in:fade={{ delay: 1000, duration: 1400 }}
+    out:fade={{ delay: 0, duration: 300 }}
+  >
     <div
       class="min-w-[320px] hidden w-full h-full md:flex justify-center items-center"
     >
@@ -329,7 +351,8 @@
   <div
     id="faq"
     class="px-4 flex flex-col gap-28"
-    transition:fade={{ duration: 1400 }}
+    in:fade={{ duration: 1000 }}
+    out:fade={{ delay: 0, duration: 300 }}
   >
     <div
       class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto"
@@ -371,7 +394,11 @@
             </div>
           </div>
           {#if data.fudBustList[i].isClicked}
-            <div class="text-white/80 text-xl md:px-16">
+            <div
+              class="text-white/80 text-xl md:px-16"
+              in:fly={{ y: 200, duration: 600 }}
+              out:fade={{ delay: 0, duration: 300 }}
+            >
               {@html fud.answer}
             </div>
           {/if}
@@ -383,7 +410,8 @@
 
 {#if y > 9000}
   <div
-    transition:fly={{ y: -300, duration: 1400 }}
+    in:fly={{ delay: 1000, y: -200, duration: 1400 }}
+    out:fade={{ delay: 0, duration: 300 }}
     class="flex flex-col gap-28 px-4"
   >
     <div class="flex flex-col items-start gap-14 max-w-3xl text-center mx-auto">
@@ -468,7 +496,7 @@
   }
   li:before {
     content: counters(cupcake, ".") ". ";
-
+    color: #00ff19;
     font-weight: bold;
     font-size: large;
   }

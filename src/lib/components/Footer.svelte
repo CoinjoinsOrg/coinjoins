@@ -8,7 +8,9 @@
   const footerData = data;
 </script>
 
-<div class="px-4 max-w-5xl mx-auto pt-32 pb-8 flex flex-col gap-20">
+<div
+  class="px-4 max-w-5xl mx-auto pt-96 pb-8 flex flex-col gap-20 min-w-[320px]"
+>
   <div
     class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto px-4"
   >
@@ -44,7 +46,7 @@
 
         <div class="flex flex-col gap-2">
           {#each footerData.wallet_overview.menu as item}
-            <div>
+            <div class="flex gap-2 items-center">
               <button
                 disabled={item.link === "#"}
                 class="no-underline {item.link.includes('#')
@@ -55,7 +57,7 @@
                   : () => goto("/wallets/" + item.link)}>{item.text}</button
               >{#if item.link.includes("#")}
                 <span
-                  class="ml-2 text-green-cj text-[9px] px-1 rounded border border-green-cj"
+                  class="text-green-cj text-[9px] px-1 rounded border border-green-cj"
                   >SOON</span
                 >
               {/if}

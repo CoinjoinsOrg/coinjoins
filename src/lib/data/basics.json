@@ -3,15 +3,15 @@
   "header": "Coinjoins",
   "subheader": "Reclaim your privacy <br /> with collaborative bitcoin transactions.",
   "open": {
-    "title": "Bitcoin is Open",
+    "title": "Bitcoin is open",
     "body": " By design, all bitcoin transactions are publicly visible. That’s great to prevent inflation and fraud without relying on third parties. But it has some privacy drawbacks."
   },
   "utxos": {
-    "title": "It’s all about the UTXOs",
-    "body": "Unspent Transaction Outputs, or UTXOs, are essentially the coins in the bitcoin network. <br /><br /> Each UTXO has a very distinct transaction history, making all bitcoin transactions unique from one another and thus, easily trackable."
+    "title": "It’s all about the coins",
+    "body": "Unspent Transaction Outputs, or UTXOs, are essentially the coins in the bitcoin network. <br /><br /> Each coin has a very distinct transaction history, making all bitcoin transactions unique from one another and thus, easily trackable."
   },
   "transactions": {
-    "title": "How a Bitcoin Transaction Works",
+    "title": "How a Bitcoin transaction works",
     "explainer": [
       "User picks an amount of bitcoin to send (0.7 BTC) with the destination address. To do so, a bitcoin wallet selects at least one spendable coin or UTXO, and adds it as an input (1 BTC) in the transaction",
       "The transaction has two outputs: a payment output (0.7 BTC) and a change output (0.29 BTC), which returns to the user’s wallet. There is also a usual network fee (0.01 BTC to keep it simple in this example).",
@@ -19,7 +19,7 @@
     ]
   },
   "tracking": {
-    "title": "Tracking Bitcoin Transactions",
+    "title": "Tracking Bitcoin transactions",
     "body": " Most bitcoin transactions are public. Is a transaction a payment or a self-spend? Is it a Lightning channel opening? Is it connected to other transactions? It’s a guessing game with popular heuristics that chain analysts use to track bitcoin users.",
     "examples": [
       {
@@ -40,7 +40,7 @@
     ]
   },
   "surveillance": {
-    "title": "Surveillance is Easy & Cheap on Bitcoin",
+    "title": "Surveillance is easy & cheap on Bitcoin",
     "body": "There is a whole industry of bitcoin surveillance, referred to as chain analysis. <br /><br /> Public block explorers allow anyone to monitor, record and analyse transactions. <br /><br /> It is not necessarily bad or good. It just is. Bitcoin is easily verified by anyone."
   },
   "catch": {
@@ -52,13 +52,13 @@
     "body": "How about strangers knowing how much money you earn per month or saved in a year? <br /><br /><br /> Or your future spouse knowing you bought her wedding ring before you make the big announcement?<br /><br /><br /> Or your employer knowing who you make political donations to?"
   },
   "privacy": {
-    "title": "Privacy is a Choice to Not Share Certain Information",
+    "title": "Privacy is a choice to not share certain information",
     "body": "And the choice should be yours. If you want to share information publicly or keep some of it personal, it should be up to you."
   },
   "reclaim": {
-    "one": "That’s Not How Bitcoin Works",
-    "two": "But You Can Reclaim Your Privacy Today",
-    "three": "Without Changing Bitcoin"
+    "one": "That’s not how Bitcoin works",
+    "two": "But you can reclaim your privacy today",
+    "three": "Without changing Bitcoin"
   },
   "coinjoins": {
     "title": "Hello, Coinjoins!",
@@ -69,7 +69,7 @@
     ]
   },
   "fud": {
-    "title": "Heard Bad Things About Coinjoins?",
+    "title": "Heard bad things about coinjoins?",
     "body": "Even 9 years after coinjoins were first discussed, there is still uncertainty about its usage. Let’s bust the Fear, Uncertainty and Doubt (FUD) surrounding coinjoins."
   },
   "fudBustList": [
