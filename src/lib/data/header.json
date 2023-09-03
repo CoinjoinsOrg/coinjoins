@@ -42,7 +42,7 @@
       "isDeprecated": false
     },
     {
-      "name": "Trezor suite",
+      "name": "Trezor Suite",
       "path": "trezor",
       "isActive": false,
       "isDeprecated": false
