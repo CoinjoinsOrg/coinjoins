@@ -139,14 +139,14 @@
 
       {#if isWalletsSubMenuShown}
         <div
-          class="flex w-96 justify-between py-4 px-2 bg-dark-blue h-auto hover:cursor-default {showMobileMenu
-            ? 'block flex-col top-12 text-3xl text-left'
-            : 'absolute flex-row flex-wrap top-8 rounded'}"
+          class="flex flex-col items-start py-4 px-2 bg-dark-blue hover:cursor-default {showMobileMenu
+            ? 'block top-12 text-3xl text-left'
+            : 'absolute flex-wrap top-8 rounded h-40 justify-start w-96'}"
           on:mouseover={handleShowSubMenuOnHover}
           on:mouseout={handleHideSubMenuOnHoverOut}
         >
           {#each headerData.submenu as sub}
-            <div class="w-1/2 whitespace-nowrap">
+            <div class="w-1/2 whitespace-nowrap flex gap-2 items-center">
               <button
                 disabled={!sub.isActive}
                 on:click={() =>
@@ -160,6 +160,12 @@
                   : 'text-inactive-grey hover:text-inactive-grey'}"
                 >{sub.name}</button
               >
+              {#if !sub.isActive}
+                <span
+                  class="text-green-cj text-[9px] px-1 rounded border border-green-cj"
+                  >SOON</span
+                >
+              {/if}
             </div>
           {/each}
         </div>

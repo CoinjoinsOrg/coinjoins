@@ -47,7 +47,7 @@
   <title>{data.title}</title>
 </svelte:head>
 
-<div class="flex items-center relative w-full z-0 h-[60vh] md:h-[80vh]">
+<div class="flex items-center relative w-full z-0 h-[70vh] md:h-[80vh]">
   <div class="flex md:hidden items-center w-full">
     <CoinjoinVisualMobile />
   </div>
@@ -347,11 +347,11 @@
   </div>
 {/if}
 
-{#if y > 7600}
+{#if y > 7400}
   <div
     id="faq"
     class="px-4 flex flex-col gap-28"
-    in:fade={{ duration: 1000 }}
+    in:fade={{ delay: 400, duration: 1000 }}
     out:fade={{ delay: 0, duration: 300 }}
   >
     <div
@@ -410,7 +410,7 @@
 
 {#if y > 9000}
   <div
-    in:fly={{ delay: 1000, y: -200, duration: 1400 }}
+    in:fly={{ delay: 1000, y: -100, duration: 1400 }}
     out:fade={{ delay: 0, duration: 300 }}
     class="flex flex-col gap-28 px-4"
   >
