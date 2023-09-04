@@ -38,7 +38,6 @@
   }
 
   onMount(() => (isLoaded = true));
-  $: console.log("y:", y);
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -79,68 +78,66 @@
   {/if}
 </div>
 
-{#if y > 1}
+<div
+  id="open"
+  class="relative mx-auto w-full h-full"
+  in:fade={{
+    delay: 1000,
+    duration: 2000,
+  }}
+  out:fade={{ delay: 0, duration: 300 }}
+>
   <div
-    id="open"
-    class="relative mx-auto w-full h-full"
-    in:fade={{
-      delay: 1000,
-      duration: 2000,
-    }}
-    out:fade={{ delay: 0, duration: 300 }}
+    class="absolute flex flex-col items-center justify-center left-0 top-0 bottom-0 right-0 gap-10 md:gap-14 mx-auto"
   >
-    <div
-      class="absolute flex flex-col items-center justify-center left-0 top-0 bottom-0 right-0 gap-10 md:gap-14 mx-auto"
-    >
-      <div class="w-20 md:w-32"><Bitcoin /></div>
+    <div class="w-20 md:w-32"><Bitcoin /></div>
 
-      <H2>{data.open.title}</H2>
+    <H2>{data.open.title}</H2>
 
-      <p class="text-xl text-center text-white max-w-2xl p-8">
-        {data.open.body}
-      </p>
+    <p class="text-xl text-center text-white max-w-2xl p-8">
+      {data.open.body}
+    </p>
+  </div>
+
+  <div class="w-full h-[calc(50vh)]">
+    <div class="w-10 eye-move-down eye-1 left-1/4 absolute block top-20">
+      <Eye />
     </div>
-
-    <div class="w-full h-[calc(50vh)]">
-      <div class="w-10 eye-move-down eye-1 left-1/4 absolute block top-20">
-        <Eye />
-      </div>
-      <div class="w-10 eye-move-down eye-2 right-1/4 absolute block top-0">
-        <Eye />
-      </div>
-      <div class="w-10 eye-move-down eye-3 absolute block top-4 left-8">
-        <Eye />
-      </div>
-      <div class="w-10 eye-move-down eye-4 absolute block right-8 top-4">
-        <Eye />
-      </div>
-      <div class="w-10 eye-move-up eye-5 absolute block top-2/3 left-20">
-        <Eye />
-      </div>
-      <div class="w-10 eye-move-up eye-11 absolute block top-1/2 right-6">
-        <Eye />
-      </div>
-      <div class="w-10 eye-move-down eye-12 absolute block bottom-10 right-10">
-        <Eye />
-      </div>
-      <div class="w-10 eye-move-up eye-6 absolute block bottom-0 left-1/3">
-        <Eye />
-      </div>
-      <div class="w-10 eye-move-down eye-7 absolute block bottom-10 left-40">
-        <Eye />
-      </div>
-      <div class="w-10 eye-move-down eye-8 absolute block bottom-10 left-0">
-        <Eye />
-      </div>
-      <div class="w-10 eye-move-up eye-9 absolute block bottom-0 right-1/3">
-        <Eye />
-      </div>
-      <div class="w-10 eye-move-down eye-10 absolute block bottom-28 right-20">
-        <Eye />
-      </div>
+    <div class="w-10 eye-move-down eye-2 right-1/4 absolute block top-0">
+      <Eye />
+    </div>
+    <div class="w-10 eye-move-down eye-3 absolute block top-4 left-8">
+      <Eye />
+    </div>
+    <div class="w-10 eye-move-down eye-4 absolute block right-8 top-4">
+      <Eye />
+    </div>
+    <div class="w-10 eye-move-up eye-5 absolute block top-2/3 left-20">
+      <Eye />
+    </div>
+    <div class="w-10 eye-move-up eye-11 absolute block top-1/2 right-6">
+      <Eye />
+    </div>
+    <div class="w-10 eye-move-down eye-12 absolute block bottom-10 right-10">
+      <Eye />
+    </div>
+    <div class="w-10 eye-move-up eye-6 absolute block bottom-0 left-1/3">
+      <Eye />
+    </div>
+    <div class="w-10 eye-move-down eye-7 absolute block bottom-10 left-40">
+      <Eye />
+    </div>
+    <div class="w-10 eye-move-down eye-8 absolute block bottom-10 left-0">
+      <Eye />
+    </div>
+    <div class="w-10 eye-move-up eye-9 absolute block bottom-0 right-1/3">
+      <Eye />
+    </div>
+    <div class="w-10 eye-move-down eye-10 absolute block bottom-28 right-20">
+      <Eye />
     </div>
   </div>
-{/if}
+</div>
 
 {#if y > 600}
   <div
