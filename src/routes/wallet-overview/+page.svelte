@@ -135,37 +135,6 @@
   subheader={overview.compare_subheader}
   walletsList={wallets}
 />
-<!-- <div class="px-4 flex flex-col gap-14 max-w-3xl mx-auto">
-  <div class="flex flex-col gap-14 text-center">
-    <H2>{overview.compare_header}</H2>
-    <div class="text-lg">
-      {overview.compare_subheader}
-    </div>
-  </div>
-  <div
-    class="flex flex-col md:flex-row md:flex-wrap items-center gap-8 md:justify-between"
-  >
-    {#each wallets as wallet}
-      <div class="md:flex-shrink-0 flex flex-col gap-6 items-center">
-        <div class="w-16">
-          <img src={"/wallets-icon/" + wallet.icon} alt={wallet.name} />
-        </div>
-        <a
-          href={wallet.page}
-          class="border-2 rounded-lg py-2 px-4 no-underline hover:text-dark-blue {wallet.page.includes(
-            'wasabi'
-          ) ||
-          wallet.page.includes('samourai') ||
-          wallet.page.includes('sparrow') ||
-          wallet.page.includes('joinmarket')
-            ? 'border-green-cj text-green-cj hover:bg-green-cj'
-            : 'text-[rgba(107,110,134,0.95)] border-[rgba(107,110,134,0.95)] hover:text-[rgba(107,110,134,0.95)] hover:cursor-not-allowed'}"
-          >About {wallet.name}</a
-        >
-      </div>
-    {/each}
-  </div>
-</div> -->
 
 <div
   class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto px-4"

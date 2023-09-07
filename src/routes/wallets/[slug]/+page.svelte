@@ -36,9 +36,11 @@
 
 <div class="relative px-4 pt-10 h-[50vh] max-w-3xl mx-auto">
   <div class="absolute flex flex-col items-start gap-10 pt-32">
-    {#each data.content.tags as tag}
-      <Tag title={tag.title} description={tag.description} />
-    {/each}
+    <div class="flex gap-4">
+      {#each data.content.tags as tag}
+        <Tag title={tag.title} description={tag.description} />
+      {/each}
+    </div>
     <H1
       >{data.content.wallet_name}<br /><GreenText
         >& {data.content.protocol_name}</GreenText
@@ -54,7 +56,7 @@
       <div class="w-6"><a href={data.content.website}> <Website /></a></div>
     </div>
 
-    <div class="flex justify-center">
+    <div class="flex w-full justify-center">
       <div class="w-6 animate-bounce">
         <a href="#overview">
           <ArrowDown />
@@ -63,7 +65,10 @@
     </div>
   </div>
 
-  <img src="/wallets-bg/{data.content.wallet_logo}-bg.png" alt="Wasabi Logo" />
+  <img
+    src="/wallets-bg/{data.content.wallet_logo}-bg.png"
+    alt="{data.content.wallet_name} Logo"
+  />
 </div>
 
 <div>
