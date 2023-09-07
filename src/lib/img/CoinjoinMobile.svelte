@@ -36,6 +36,6 @@
 
 <style>
   svg {
-    opacity: 30%;
+    opacity: 10%;
   }
 </style>

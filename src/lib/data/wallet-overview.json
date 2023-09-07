@@ -132,28 +132,34 @@
   ],
   "wallets": [
     {
-      "name": "Wasabi Wallet",
-      "page": "/wasabi-wallet",
-      "icon": "wasabi.png",
-      "id": "wasabi"
+      "name": "Wasabi Wallet 2.0",
+      "page": "/wallets/wasabi-2.0",
+      "icon": "wasabi2.png",
+      "id": "wasabi-2.0"
     },
     {
       "name": "Samourai Wallet",
-      "page": "/samourai-wallet",
+      "page": "/wallets/samourai",
       "icon": "samourai.png",
       "id": "samourai"
     },
     {
       "name": "Sparrow Wallet",
-      "page": "/sparrow-wallet",
+      "page": "/wallets/sparrow",
       "icon": "sparrow.png",
       "id": "sparrow"
     },
     {
       "name": "JoinMarket",
-      "page": "/joinmarket",
+      "page": "/wallets/joinmarket",
       "icon": "joinmarket.png",
       "id": "joinmarket"
+    },
+    {
+      "name": "Wasabi Wallet 1.0",
+      "page": "/wallets/wasabi-1.0",
+      "icon": "wasabi1.png",
+      "id": "wasabi-1.0"
     },
     {
       "name": "BTCPay Server",
@@ -166,6 +172,12 @@
       "page": "",
       "icon": "trezor.png",
       "id": "trezor"
+    },
+    {
+      "name": "Jam",
+      "page": "",
+      "icon": "jam.png",
+      "id": "jam"
     },
     {
       "name": "Vortex LN",

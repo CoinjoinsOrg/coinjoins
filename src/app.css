@@ -5,16 +5,27 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Inconsolata display=swap"); */
 
 :root {
-  --dark-blue-background: #181b2d;
+  --dark-blue: #181b2d;
+  --green: #00ff19;
+  --white: #ffffff;
+}
+
+::selection {
+  background: var(--green);
+  color: var(--dark-blue);
 }
 svg {
   height: 100%;
 }
 
 html {
-  background-color: var(--dark-blue-background);
-  color: #ffffff;
+  background-color: var(--dark-blue);
+  color: var(--white);
   scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 body.mobile-menu-active {
@@ -23,4 +34,8 @@ body.mobile-menu-active {
 
 a {
   text-decoration: underline;
+}
+
+a:hover {
+  color: var(--green);
 }
