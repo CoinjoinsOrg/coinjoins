@@ -25,7 +25,7 @@
     class="relative"
 >
     <div
-        class="hover:cursor-default border rounded border-green-cj px-2 py-1 text-dark-blue bg-green-cj text-xs uppercase font-semibold font-inconsolata"
+        class="hover:cursor-default border rounded border-green-cj px-2 py-1 text-green-cj bg-dark-blue text-xs uppercase font-semibold font-inconsolata"
     >
         {title}
     </div>
