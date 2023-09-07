@@ -3,6 +3,12 @@
   "wallet_name": "Samourai",
   "protocol_name": "Whirlpool",
   "wallet_logo": "samourai",
+  "tags": [
+    {
+      "title": "Second Gen",
+      "description": "Whirlpool is a Zerolink coinjoin implementation, which has improvements over first gen coinjoins such as JoinMarket but is now falling behind third gen coinjoin implementations such as WabiSabi"
+    }
+  ],
   "hero": "Samourai Wallet is a bitcoin wallet mobile application on Android with built-in coinjoin functionality using Whirlpool.",
   "github": "https://code.samourai.io/wallet/samourai-wallet-android",
   "twitter": "https://twitter.com/SamouraiWallet/",

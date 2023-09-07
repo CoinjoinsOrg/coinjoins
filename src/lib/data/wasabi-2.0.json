@@ -3,6 +3,12 @@
   "wallet_name": "Wasabi 2.0",
   "protocol_name": "WabiSabi",
   "wallet_logo": "wasabi",
+  "tags": [
+    {
+      "title": "Third Gen",
+      "description": "WabiSabi is a third gen coinjoin protocol fixing the limitations of fixed denominations and toxic change that Zerolink, a second gen coinjoin protocol had."
+    }
+  ],
   "hero": "Wasabi Wallet 2.0 is a simple to use bitcoin wallet desktop app with a built-in coinjoin feature using WabiSabi.",
   "github": "https://github.com/zkSNACKs/WalletWasabi/",
   "twitter": "https://twitter.com/wasabiwallet",
