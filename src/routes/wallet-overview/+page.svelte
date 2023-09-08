@@ -135,15 +135,3 @@
   subheader={overview.compare_subheader}
   walletsList={wallets}
 />
-
-<div
-  class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto px-4"
->
-  <H2>Have More Questions?</H2>
-  <p class="text-white text-xl">
-    If you have any comments or suggestions, we are open to hearing from you.
-    Please reach out on <a href="mailto:coinjoins@protonmail.com"
-      >coinjoins@protonmail.com</a
-    >.
-  </p>
-</div>
