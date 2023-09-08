@@ -128,14 +128,26 @@
     "title": "Security & Privacy Benefits",
     "body": "Coinjoin implementations and bitcoin privacy wallets should make no compromises on fundamental privacy principles to protect the security of users.",
     "list": [
-      { "title": "Built on <br /> Bitcoin Only", "icon": "greenbitcoin" },
-      { "title": "100% Open <br /> Source Code", "icon": "greenbrackets" },
-      { "title": "No Personal <br />Information", "icon": "greenban" },
-      { "title": "Self-Custodial", "icon": "greenkey" }
+      {
+        "title": "Built on <br /> Bitcoin Only",
+        "icon": "greenbitcoin"
+      },
+      {
+        "title": "100% Open <br /> Source Code",
+        "icon": "greenbrackets"
+      },
+      {
+        "title": "No Personal <br />Information",
+        "icon": "greenban"
+      },
+      {
+        "title": "Self-Custodial",
+        "icon": "greenkey"
+      }
     ]
   },
   "try": {
-    "title": "Ready to Try for Yourself?",
+    "title": "Ready to Try for <span style='color:rgb(0,255,25,1.0)'>Yourself</span>?",
     "body": " Don’t trust, verify. See for yourself and learn how coinjoins work by participating in them. There are different bitcoin wallets with built-in coinjoin features. Wasabi Wallet is one of them though there are others that we discuss <a href='/wallet-overview'>here</a>.",
     "features": [
       {
