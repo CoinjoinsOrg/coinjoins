@@ -12,8 +12,13 @@
   }
 </script>
 
-<div class="max-w-4xl mx-auto flex justify-between h-[70vh] gap-16 pt-16">
+<div
+  class="flex-col md:flex-row max-w-4xl mx-auto flex justify-between h-[70vh] gap-16 pt-16 px-4"
+>
   <div class="flex flex-col items-start gap-12">
+    <div class="block md:hidden h-28">
+      <MagnifyingGlassSvg />
+    </div>
     <div class="text-7xl text-green-cj font-bold">{$page.status}</div>
     <div>{data.main_message}</div>
     <div>
@@ -31,7 +36,7 @@
       >
     </div>
   </div>
-  <div class="h-80">
+  <div class="hidden md:block h-72">
     <MagnifyingGlassSvg />
   </div>
 </div>

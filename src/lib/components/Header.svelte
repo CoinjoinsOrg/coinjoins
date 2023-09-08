@@ -79,7 +79,7 @@
 
   <div
     class="z-10 font-inconsolata isolate {showMobileMenu
-      ? ' font-semibold text-5xl bg-dark-blue fixed h-screen w-screen top-20 pt-12 left-0 px-4 overflow-hidden flex flex-col gap-8 items-start'
+      ? ' font-semibold text-5xl bg-dark-blue fixed h-screen w-screen top-20 pt-12 left-0 px-4 overflow-hidden flex flex-col gap-8 items-start justify-start'
       : 'hidden md:flex md:flex-1 md:justify-center md:font-normal md:gap-12'}"
   >
     <div
@@ -139,9 +139,9 @@
 
       {#if isWalletsSubMenuShown}
         <div
-          class="flex flex-col items-start py-4 px-2 bg-dark-blue hover:cursor-default {showMobileMenu
+          class="flex flex-wrap flex-col items-start py-4 px-2 bg-dark-blue hover:cursor-default {showMobileMenu
             ? 'block top-12 text-3xl text-left'
-            : 'absolute flex-wrap top-8 rounded h-40 justify-start w-96'}"
+            : 'absolute top-8 rounded h-40 justify-start w-96'}"
           on:mouseover={handleShowSubMenuOnHover}
           on:mouseout={handleHideSubMenuOnHoverOut}
         >
@@ -162,7 +162,7 @@
               >
               {#if !sub.isActive}
                 <span
-                  class="text-green-cj text-[9px] px-1 rounded border border-green-cj"
+                  class="text-green-cj text-[9px] px-1 rounded border border-green-cj inline-block"
                   >SOON</span
                 >
               {/if}
