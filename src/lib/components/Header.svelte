@@ -47,6 +47,7 @@
     timeoutHideSubMenuWallets = null;
     isWalletsSubMenuShown = true;
   }
+
   function handleHideSubMenuOnHoverOut() {
     if (timeoutHideSubMenuWallets) {
       clearTimeout(timeoutHideSubMenuWallets);
@@ -56,6 +57,7 @@
       300
     );
   }
+
   const headerData = data;
   function goHome() {
     showMobileMenu = false;
@@ -71,7 +73,10 @@
   class="z-10 min-w-[320px] flex justify-between h-[90px] md:max-w-5xl md:mx-auto py-6 items-center px-4"
 >
   <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <div class="py-1 flex-auto isolate hover:cursor-pointer" on:click={goHome}>
+  <div
+    class="py-1 flex-auto isolate z-20 hover:cursor-pointer"
+    on:click={goHome}
+  >
     <div class="w-10 h-6">
       <CoinjoinLogo />
     </div>
@@ -79,7 +84,7 @@
 
   <div
     class="z-10 font-inconsolata isolate {showMobileMenu
-      ? ' font-semibold text-5xl bg-dark-blue fixed h-screen w-screen top-20 pt-12 left-0 px-4 overflow-hidden flex flex-col gap-8 items-start justify-start'
+      ? ' font-semibold text-5xl bg-dark-blue fixed h-screen w-screen top-0 pt-24 left-0 px-4 overflow-hidden flex flex-col gap-8 items-start justify-start'
       : 'hidden md:flex md:flex-1 md:justify-center md:font-normal md:gap-12'}"
   >
     <div
@@ -104,8 +109,6 @@
     <!-- svelte-ignore a11y-click-events-have-key-events -->
 
     <div
-      on:mouseover={handleShowSubMenuOnHover}
-      on:mouseout={handleHideSubMenuOnHoverOut}
       class="z-10 relative hover:text-green-cj hover:cursor-pointer {$page.url
         .pathname === '/wallet-overview' ||
       $page.url.pathname.includes('wallets')
@@ -114,9 +117,14 @@
     >
       <!-- svelte-ignore a11y-mouse-events-have-key-events -->
       <div class="flex gap-2" on:click={handleWalletsMenuClicked}>
-        <div>{headerData.menu.wallets}</div>
+        <div
+          on:mouseover={handleShowSubMenuOnHover}
+          on:mouseout={handleHideSubMenuOnHoverOut}
+        >
+          {headerData.menu.wallets}
+        </div>
 
-        <div class="w-6" on:click={handleWalletsMenuClicked}>
+        <div class="w-6">
           {#if isWalletsSubMenuShown}
             <ClickedArrow
               color={$page.url.pathname === "/wallet-overview" ||
@@ -139,14 +147,16 @@
 
       {#if isWalletsSubMenuShown}
         <div
-          class="flex flex-wrap flex-col items-start py-4 px-2 bg-dark-blue hover:cursor-default {showMobileMenu
+          class="flex md:flex-wrap flex-col items-start py-4 px-2 bg-dark-blue hover:cursor-default {showMobileMenu
             ? 'block top-12 text-3xl text-left'
             : 'absolute top-8 rounded h-40 justify-start w-96'}"
           on:mouseover={handleShowSubMenuOnHover}
           on:mouseout={handleHideSubMenuOnHoverOut}
         >
           {#each headerData.submenu as sub}
-            <div class="w-1/2 whitespace-nowrap flex gap-2 items-center">
+            <div
+              class="w-1/2 whitespace-nowrap flex gap-2 items-center pt-2 md:pt-0 font-normal"
+            >
               <button
                 disabled={!sub.isActive}
                 on:click={() =>
@@ -161,10 +171,12 @@
                 >{sub.name}</button
               >
               {#if !sub.isActive}
-                <span
-                  class="text-green-cj text-[9px] px-1 rounded border border-green-cj inline-block"
-                  >SOON</span
-                >
+                <div class="pl-1 md:pl-0">
+                  <span
+                    class="text-green-cj text-[10px] px-1 py-1 md:py-0 rounded border border-green-cj"
+                    >SOON</span
+                  >
+                </div>
               {/if}
             </div>
           {/each}

@@ -6,10 +6,12 @@
     "tags": [
         {
             "title": "Second Gen",
+            "type": "gen",
             "description": "Zerolink is a second gen coinjoin protocol fixing the limitations of..."
         },
         {
             "title": "Deprecated",
+            "type": "status",
             "description": "Wasabi 1.0 is now deprecated in favor of third gen coinjoin protocol WabiSabi used in Wasabi Wallet 2.0"
         }
     ],

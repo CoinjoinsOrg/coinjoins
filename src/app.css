@@ -22,7 +22,6 @@ html {
   background-color: var(--dark-blue);
   color: var(--white);
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {

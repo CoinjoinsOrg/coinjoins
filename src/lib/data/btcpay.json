@@ -3,6 +3,13 @@
   "wallet_name": "BTC Pay Server",
   "protocol_name": "WabiSabi",
   "wallet_logo": "btcpay",
+  "tags": [
+    {
+      "title": "Third Gen",
+      "type": "gen",
+      "description": "WabiSabi is a third gen coinjoin protocol fixing the limitations of fixed denominations and toxic change that Zerolink, a second gen coinjoin protocol had."
+    }
+  ],
   "hero": "BTCPay Server Review.",
   "github": "https://github.com/",
   "twitter": "https://twitter.com/",

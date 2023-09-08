@@ -3,6 +3,13 @@
   "wallet_name": "Trezor Suite",
   "protocol_name": "WabiSabi",
   "wallet_logo": "trezor",
+  "tags": [
+    {
+      "title": "Third Gen",
+      "type": "gen",
+      "description": "WabiSabi is a third gen coinjoin protocol fixing the limitations of fixed denominations and toxic change that Zerolink, a second gen coinjoin protocol had."
+    }
+  ],
   "hero": "Trezor Suite Review.",
   "github": "https://github.com/",
   "twitter": "https://twitter.com/",

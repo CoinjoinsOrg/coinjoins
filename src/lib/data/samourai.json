@@ -6,6 +6,7 @@
   "tags": [
     {
       "title": "Second Gen",
+      "type": "gen",
       "description": "Whirlpool is a Zerolink coinjoin implementation, which has improvements over first gen coinjoins such as JoinMarket but is now falling behind third gen coinjoin implementations such as WabiSabi"
     }
   ],
