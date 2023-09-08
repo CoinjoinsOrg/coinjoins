@@ -79,12 +79,12 @@
   {/if}
 </div>
 
-{#if y > 1}
+{#if isLoaded}
   <div
     id="open"
     class="relative mx-auto w-full h-full"
     in:fade={{
-      delay: 1000,
+      delay: 1400,
       duration: 2000,
     }}
     out:fade={{ delay: 0, duration: 300 }}

@@ -1,80 +1,74 @@
     {
         "hero": {
             "title": "The History of Coinjoins",
-            "body": "Ea veniam non sunt adipisicing non minim. Ut ex elit adipisicing laborum officia. Tempor irure exercitation ad consectetur ipsum fugiat reprehenderit fugiat qui nulla. Aute culpa ut quis incididunt ad. Adipisicing esse veniam nisi laborum nulla nisi ipsum enim."
+            "body": "Bitcoin is almost perfect money with coinjoins enabling fungibility. When were coinjoins first discussed? With whom? What were the first coinjoin protocols like in the early days? Let's go down memory lane."
         },
         "timeline": [
             {
                 "date": "July 2nd 2011",
                 "title": "Hashcoin invents the Coinjoin technique",
-                "icon": "hashcoin.png",
+                "id": "hashcoin",
                 "body": "In the early years of bitcoin, users often thought that the system was anonymous. This couldn't have been further from the truth, as most used single address wallets before the introduction of HD (<a href='https://en.bitcoin.it/wiki/BIP_0032'>BIP32</a>) wallets. <br/><br/> However, as early as 2011, some enthusiasts began to explore the idea of privacy on bitcoin. Or rather, the lack thereof. Custodial mixers made their appearance around this time, but the trust requirement made them an unviable solution. <br/><br/> On July 2nd 2011, the <a href='https://bitcointalk.org/index.php?topic=12751.msg315793#msg315793'>Bitcointalk user Hashcoin first described a coinjoin</a>, a collaborative transaction to achieve privacy. Around the same time, the first blockchain heuristics were  identified such as: the <a href='https://docs.wasabiwallet.io/glossary/Glossary-PrivacyWasabi.html#common-input-ownership-heuristic'>common input ownership heuristic</a>. Blockchain analysts could easily infer that each input to a transaction was owned by the same entity."
             },
             {
                 "date": "August 22 2013",
                 "title": "Coinjoin Foundations Set by Gregory Maxwell",
-                "icon": "hashcoin.png",
+                "id": "bitcointalk",
                 "body": "On January 28 2013, Gregory Maxwell (a renowned and now retired bitcoin developer) posted on Bitcointalk.org <a href='https://bitcointalk.org/index.php?topic=139581.0'>an idea on how to break this heuristic</a>. He suggested that the forum community join him in what he described as 'raw transaction fun' to break taint analysis. On March 8, 2013, <a href='https://bitcointalk.org/index.php?topic=150681.0'>Killerstorm proposed the use of Chaum blind signatures</a> to protect user’s privacy from the coordinator. <br/><br/> Later that year, Maxwell made the legendary post <a href='https://bitcointalk.org/index.php?topic=279249.0'>Coinjoin: Bitcoin privacy for the real world</a> (Peter Todd coined the term), in which he introduces the foundations of the game-changing privacy technique. He mentions the need for same-denomination outputs, Tor or a similar anonymity network to obfuscate IP addresses, the use of coordinators and Chaum blind signatures, distributed coordinator markets, anonymity set, and DOS protection. <br/><br/> He simply laid out the ideas and set up a developer bounty to make them a reality. This was easier said than done."
             },
             {
                 "date": "2013-2014",
                 "title": "First Efforts and Why They Failed",
-                "icon": "hashcoin.png",
+                "id": "firstefforts",
                 "body": "It took only 4 days after Maxwell’s post for someone to try to claim the bounty with the <a href='https://github.com/calafou/coinjoin'>first coinjoin coordinator implementation</a>. In the months that followed, more projects were released with the goal of correctly implementing the coinjoin protocol: <a href='https://bitcointalk.org/index.php?topic=200952.0'>Bitprivacy</a>, <a href='https://github.com/sharedcoin/Sharedcoin'>Sharedcoin</a>, <a href='https://github.com/michaelgpearce/coinmux'>Coinmux</a>, <a href='https://github.com/darkwallet/darkwallet'>Darkwallet</a>, <a href='https://github.com/chris-belcher/coinjumble'>CoinJumble</a> and <a href='https://link.springer.com/chapter/10.1007/978-3-319-11212-1_20'>CoinShuffle</a>. <br/><br/> They all had one thing in common: they failed to provide guaranteed privacy to the user. Different problems were identified: in some implementations it was <a href='https://www.coindesk.com/markets/2014/06/10/blockchains-sharedcoin-users-can-be-identified-says-security-expert/'>difficult but possible to deanonymize coins</a>, in others the incentive system wasn’t set up right and there was no liquidity, and finally in most of them the coordinators had full knowledge of the user's transaction data."
             },
             {
                 "date": "January 9th 2015",
                 "title": "Joinmarket Launch",
-                "icon": "hashcoin.png",
+                "id": "joinmarket",
                 "body": "On that day, Chris Belcher <a href='https://bitcointalk.org/index.php?topic=919116.0'>announced Joinmarket to the world</a>. It was the first non-broken implementation of a coinjoin protocol. The idea was simple: set the incentives right by creating a market of takers and makers, allowing the latter to earn a fee for providing liquidity. To learn more about how Joinmarket works, read our <a href='https://www.coinjoins.org/wallets/joinmarket'>review here</a>. <br/><br/> Joinmarket was a success. It attracted a lot of liquidity and users gained a lot of privacy from using it. However, it wasn't perfect: the inherent nature of the system made it difficult to use, created sybil attack risks (later solved by fidelity bonds), and also the lack of blind coordination made participants aware of their peers' input and output linkages. <br/><br/> It was time for some to think outside the coinjoin box."
             },
             {
                 "date": "November 2016",
                 "title": "An Alternative To Coinjoins: Tumblebit",
-                "icon": "hashcoin.png",
+                "id": "tumblebit",
                 "body": "On Tumblebit, <a href='https://eprint.iacr.org/2016/575.pdf'>introduced in late 2016</a>, users create two fixed-amount payment channels to a Tumbler (coordinator) who can't steal their coins or deanonymize them. The coins get sent back to a user from payment channels of other users. It takes a total of 4 transactions to complete, but you get a very high anonymity rate.  The wallets Breeze and Hidden Wallet (now Wasabi Wallet) were the main clients to use this privacy technique. <br/><br/> Compared to the original version of Joinmarket, Tumblebit was theoretically presented as superior because it allowed you to get a very high anonymity set, the user experience was better, and the coordinator couldn't deanonymize you. However, the high liquidity requirements and lack of incentives made it extremely long in practice (a few hours) and very high in fees. It had very few participants and as of 2023, every Tumbler service seems to have shut down."
             },
             {
                 "date": "August 14th 2017",
                 "title": "Introducing ZeroLink — The Bitcoin Fungibility Framework (Paper Released)",
-                "icon": "hashcoin.png",
+                "id": "zerolink",
                 "body": "The <a href='https://github.com/nopara73/ZeroLink'>Zerolink paper</a> was a collaboration between the Hidden Wallet (now Wasabi Wallet) and Samourai Wallet teams, but the main contributor by far was Adam Ficsor (Nopara73). <br/><br/> It provided a framework not only for a coinjoin protocol, but for privacy wallets in general. It included everything that Gregory Maxwell had originally envisioned, such as the Chaumian blind coordinator, Tor (with identity updates), and DOS protection.<br/><br/> In addition, a good user experience, block filtering as a network privacy solution, high anonymity gains, and the right coordinator fee incentive system were all part of this major innovation. <br/><br/> A new golden era of coinjoins had just begun."
             },
             {
                 "date": "October 31st 2018",
                 "title": "Wasabi Wallet 1.0 Official Release",
-                "icon": "hashcoin.png",
+                "id": "ww1",
                 "body": "Wasabi Wallet changed the game. It provided an efficient alternative to Joinmarket for less technical users and a full zero-link coinjoin implementation. Like Tumblebit, there was no need to trust the central coordinator. Unlike Tumblebit, you could get anonymity very quickly and for a low fee. <br/><br/> Although it took a few years of R&D for Adam Ficsor to release Wasabi, once it was done it was an overnight success and attracted a lot of liquidity. Now that many of the problems inherent in the initial implementations had been solved, it was time to solve the remaining inherent caveats of the Zerolink protocol. Wasabi Wallet transactions created far too many toxic non-private change coinjoin outputs due to the fact that the output amounts were fixed. <br/><br/> Another team had an idea to address this, but it wasn't a real fix."
             },
             {
                 "date": "June 25th 2019",
                 "title": "Whirlpool Release: Tries but Fails to Address Toxic Change",
-                "icon": "hashcoin.png",
+                "id": "whirlpool",
                 "body": "On that day, the Samourai Wallet team added a coinjoin feature called Whirlpool, which implements the Zerolink protocol with one major change.<br/><br/> Instead of registering your non-private UTXOs as inputs in a coinjoin transaction and getting the exceeding change as a non-private output, a premixing transaction takes place beforehand. In it, you separate your excess change from your UTXOs to mix and from the coordinator fee. Subsequently, your UTXOs to mix would form a coinjoin transaction that produces no toxic change outputs. <br/><br/> This alternative mechanism gives the impression that coinjoin transactions are fully efficient, but one must consider the entire experience from premixing to final mix to properly compare it to Wasabi. In the end, the non-private toxic change stays in your wallet, it's just segregated into a separate account. <br/><br/> How does the WabiSabi protocol solve the problem of toxic change?"
             },
             {
                 "date": "February 2021",
                 "title": "WabiSabi To The Rescue (Paper Release)",
-                "icon": "hashcoin.png",
+                "id": "wabisabi",
                 "body": "From 2020, there were <a href='https://www.youtube.com/playlist?list=PLPwc75tPMdsgTYlu9dJZlosCm0s7WmIpF'>many open discussions</a> on the development of a second-generation coinjoin protocol that would solve the predecessor issues. Finally, Nopara73 and three co-authors published the academic paper WabiSabi: Centrally Coordinated Coinjoins with Variable Amounts. By introducing cryptographic methods, the fixed coinjoin output limit was removed and it was now possible to decompose the total bitcoin into variable output amounts. <br/><br/> This massively reduced the occurrence of toxic change and made WabiSabi the most efficient coinjoin protocol ever invented. <br/><br/> It was time to get this innovation into the hands of users."
             },
             {
                 "date": "June 15th 2022",
                 "title": "Wasabi Wallet 2.0 Released",
-                "icon": "hashcoin.png",
+                "id": "ww2",
                 "body": "Wasabi Wallet's initial user experience wasn't the best. You had to manually select your coins to mix and click on the queue for a coinjoin, and this had to be done for each coinjoin remix transaction. The Wasabi Wallet 2.0 release implemented the WabiSabi protocol and also improved the user experience by automating the coinjoin process. <br/><br/> Simply send bitcoin to your wallet and watch the magic happen without any effort. Once your anonymity score reaches your desired level of privacy, you can effortlessly spend your coins without the need for coin checks. The <a href='https://blog.wasabiwallet.io/what-is-the-difference-between-an-anonymity-set-and-an-anonymity-score/#:~:text=The%20anonymity%20score%20extends%20the%20definition%20of%20anonymity%20set%20by,to%20or%20lower%20than%20set.'>anonymity score</a> of your UTXOs is so high that the privacy impact of consolidation doesn't destroy your privacy. <br/><br/> As of August 31st, 2023, we're now on version 2.0.4 with many new improvements such as faster loading times on wallet initialization, RBF and CPFP to speed up or cancel unconfirmed transactions, and better decomposition to further prevent the creation of toxic change outputs."
             },
             {
-                "date": "Recently",
-                "title": "Additional Wallets implement coinjoin and Wasabi Wallet 1.0 Sunset",
-                "icon": "hashcoin.png",
-                "body": "It should be noted that you can now use Joinmarket with an alternative GUI application called Jam, which significantly improves the usability with great design and the accessibility through its distribution on many bitcoin node projects like <a href='http://umbrel.com'>Umbrel</a>. <br/><br/> In addition, the Trezor and BTCPay Server teams have implemented coinjoin features in their wallets, implementing the WabiSabi protocol and using the zkSNACKs coordinator, the default coordinator on Wasabi and the most liquid coinjoin coordinator in the world. On the other hand, wallets like Sparrow and Bitcoin Keeper have decided to implement the Whirlpool protocol and use the Samourai Wallet coordinator. <br/><br/> Also, the zkSNACKs coordinator for Wasabi Wallet 1.0 (Zerolink) has now been sunset."
-            },
-            {
-                "date": "Next",
-                "title": "The Future of Coinjoins",
-                "icon": "hashcoin.png",
-                "body": "It's unknown what the future of coinjoins holds, but we have a hint: it will include interoperability with the Lightning network. Vortex is a zerolink-based coinjoin wallet that allows you to open payment channels directly from the private coinjoin exits, making this process more efficient. Wasabi Wallet will have to adapt to this new reality in the future, and if you want to take a closer look at how this might happen, <a href='https://blog.wasabiwallet.io/what-lightning-network-enabled-wabisabi-coinjoins-might-look-like/'>read Gustavo's article on the topic</a>. <br/><br/> Bitcoin privacy is constantly evolving, and coinjoin implementations are an essential part of its past, present, and future."
+                "date": "Recently & In the Future",
+                "title": "Additional Wallets implement coinjoin",
+                "id": "future",
+                "body": "It should be noted that you can now use Joinmarket with an alternative GUI application called Jam, which significantly improves the usability with great design and the accessibility through its distribution on many bitcoin node projects like <a href='http://umbrel.com'>Umbrel</a>. <br/><br/> In addition, the Trezor and BTCPay Server teams have implemented coinjoin features in their wallets, implementing the WabiSabi protocol and using the zkSNACKs coordinator, the default coordinator on Wasabi and the most liquid coinjoin coordinator in the world. On the other hand, wallets like Sparrow and Bitcoin Keeper have decided to implement the Whirlpool protocol and use the Samourai Wallet coordinator. <br/><br/> Also, the zkSNACKs coordinator for Wasabi Wallet 1.0 (Zerolink) has now been sunset (RIP).<br/><br/> It's unknown what the future of coinjoins holds, but we have a hint: it will include interoperability with the Lightning network. Vortex is a zerolink-based coinjoin wallet that allows you to open payment channels directly from the private coinjoin exits, making this process more efficient. Wasabi Wallet will have to adapt to this new reality in the future, and if you want to take a closer look at how this might happen, read Gustavo's article on the topic. Bitcoin privacy is constantly evolving, and coinjoin implementations are an essential part of its past, present, and future."
             }
         ]
     }

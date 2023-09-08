@@ -172,18 +172,20 @@
       {/if}
     </div>
     <div
-      class="cursor-default {$page.url.pathname === '/history'
+      class="cursor-default hover:text-green-cj hover:cursor-pointer {$page.url
+        .pathname === '/history'
         ? 'text-green-cj'
-        : 'text-inactive-grey'}"
+        : 'text-white'}"
     >
-      <div class="relative">
-        <div
-          class="absolute -top-4 left-52 md:left-20 md:text-[10px] font-bold md:-top-4 text-sm border rounded-md px-2 text-green-cj"
-        >
-          SOON
-        </div>
+      <a
+        on:click={showMobileMenu
+          ? handleMobileMenuItemClick
+          : handleDesktopMenuItemClick}
+        href="/history"
+        class="no-underline"
+      >
         {headerData.menu.history}
-      </div>
+      </a>
     </div>
     <div class="md:hidden flex justify-center pt-12">
       <a
