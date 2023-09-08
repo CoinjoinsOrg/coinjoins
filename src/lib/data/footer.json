@@ -37,7 +37,7 @@
         "link": "wallet-overview"
       },
       {
-        "text": "Wasabi Wallet",
+        "text": "Wasabi Wallet 2.0",
         "link": "wasabi-2.0"
       },
       {
@@ -48,10 +48,13 @@
         "text": "Samourai Wallet",
         "link": "samourai"
       },
-
       {
         "text": "Sparrow Wallet",
         "link": "sparrow"
+      },
+      {
+        "text": "Wasabi Wallet 1.0",
+        "link": "wasabi-1.0"
       },
       {
         "text": "BTCPay Server",
@@ -75,8 +78,48 @@
     "title": "History",
     "menu": [
       {
-        "text": "",
-        "link": ""
+        "text": "Hashcoin",
+        "link": "hashcoin"
+      },
+      {
+        "text": "Bitcoin Talk",
+        "link": "bitcointalk"
+      },
+      {
+        "text": "First Efforts",
+        "link": "firstefforts"
+      },
+      {
+        "text": "JoinMarket",
+        "link": "joinmarket"
+      },
+      {
+        "text": "Tumblebit",
+        "link": "tumblebit"
+      },
+      {
+        "text": "Zerolink",
+        "link": "zerolink"
+      },
+      {
+        "text": "Wasabi 1.0",
+        "link": "ww1"
+      },
+      {
+        "text": "Whirlpool",
+        "link": "whirlpool"
+      },
+      {
+        "text": "WabiSabi",
+        "link": "wabisabi"
+      },
+      {
+        "text": "Wasabi 2.0",
+        "link": "ww2"
+      },
+      {
+        "text": "Recent & future",
+        "link": "future"
       }
     ]
   },

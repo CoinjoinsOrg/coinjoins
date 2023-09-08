@@ -22,7 +22,7 @@
     </div>
   </div>
   <div
-    class="flex flex-col md:flex-row md:flex-wrap items-center gap-8 md:justify-between"
+    class="flex flex-col md:flex-row md:flex-wrap items-center gap-8 md:justify-center"
   >
     {#each walletsList as wallet}
       {#if !currentPath.includes(wallet.id)}
@@ -34,6 +34,7 @@
           </div>
           <button
             disabled={wallet.id.includes("btcpay") ||
+              wallet.id.includes("jam") ||
               wallet.id.includes("vortex") ||
               wallet.id.includes("trezor")}
             on:click={() => goToWalletPage(wallet.page)}

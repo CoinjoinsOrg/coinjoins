@@ -23,9 +23,11 @@
     <div class="md:flex-1">
       <a href={footerData.logo_url}><div class="w-12"><CoinjoinLogo /></div></a>
     </div>
-    <div class="flex flex-wrap md:flex-auto justify-end">
-      <div class="flex flex-col gap-5 w-1/2 sm:w-[30%]">
-        <div class="text-green-cj font-bold text-lg font-inconsolata">
+    <div
+      class="flex flex-wrap md:flex-auto justify-start md:justify-end md:gap-8"
+    >
+      <div class="flex flex-col gap-5 w-1/2 sm:w-auto">
+        <div class="text-green-cj font-bold text-lg font-inconsolata text-left">
           {footerData.intro.title}
         </div>
 
@@ -39,7 +41,7 @@
           {/each}
         </div>
       </div>
-      <div class="flex flex-col gap-5 w-1/2 sm:w-[30%]">
+      <div class="flex flex-col gap-5 w-1/2 sm:w-auto">
         <div class="text-green-cj font-bold text-lg font-inconsolata">
           {footerData.wallet_overview.title}
         </div>
@@ -61,6 +63,22 @@
                   >SOON</span
                 >
               {/if}
+            </div>
+          {/each}
+        </div>
+      </div>
+      <div class="flex flex-col gap-5 w-1/2 sm:w-auto">
+        <div class="text-green-cj font-bold text-lg font-inconsolata">
+          {footerData.history.title}
+        </div>
+
+        <div class="flex flex-col gap-2">
+          {#each footerData.history.menu as item}
+            <div>
+              <a
+                class="no-underline hover:cursor-pointer"
+                href={`/history/#${item.link}`}>{item.text}</a
+              >
             </div>
           {/each}
         </div>

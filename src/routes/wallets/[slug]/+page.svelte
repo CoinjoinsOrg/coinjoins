@@ -15,10 +15,11 @@
   import GitHub from "@lib/img/GitHub.svelte";
   import Twitter from "@lib/img/Twitter.svelte";
   import Website from "@lib/img/Website.svelte";
-  import Calendar from "../../../lib/img/Calendar.svelte";
-  import Package from "../../../lib/img/Package.svelte";
-  import Code from "../../../lib/img/Code.svelte";
-  import Address from "../../../lib/img/Address.svelte";
+  import Calendar from "@lib/img/Calendar.svelte";
+  import Package from "@lib/img/Package.svelte";
+  import Code from "@lib/img/Code.svelte";
+  import Address from "@lib/img/Address.svelte";
+  import Tag from "@lib/components/Tag.svelte";
 
   export let data;
   let y;
@@ -34,7 +35,12 @@
 </svelte:head>
 
 <div class="relative px-4 pt-10 h-[50vh] max-w-3xl mx-auto">
-  <div class="absolute flex flex-col gap-10 pt-32">
+  <div class="absolute flex flex-col items-start gap-10 pt-32">
+    <div class="flex gap-4">
+      {#each data.content.tags as tag}
+        <Tag title={tag.title} description={tag.description} />
+      {/each}
+    </div>
     <H1
       >{data.content.wallet_name}<br /><GreenText
         >& {data.content.protocol_name}</GreenText
@@ -50,7 +56,7 @@
       <div class="w-6"><a href={data.content.website}> <Website /></a></div>
     </div>
 
-    <div class="flex justify-center">
+    <div class="flex w-full justify-center">
       <div class="w-6 animate-bounce">
         <a href="#overview">
           <ArrowDown />
@@ -59,7 +65,10 @@
     </div>
   </div>
 
-  <img src="/wallets-bg/{data.content.wallet_logo}-bg.png" alt="Wasabi Logo" />
+  <img
+    src="/wallets-bg/{data.content.wallet_logo}-bg.png"
+    alt="{data.content.wallet_name} Logo"
+  />
 </div>
 
 <div>

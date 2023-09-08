@@ -132,10 +132,10 @@
   ],
   "wallets": [
     {
-      "name": "Wasabi Wallet",
+      "name": "Wasabi Wallet 2.0",
       "page": "/wallets/wasabi-2.0",
-      "icon": "wasabi.png",
-      "id": "wasabi"
+      "icon": "wasabi2.png",
+      "id": "wasabi-2.0"
     },
     {
       "name": "Samourai Wallet",
@@ -156,6 +156,12 @@
       "id": "joinmarket"
     },
     {
+      "name": "Wasabi Wallet 1.0",
+      "page": "/wallets/wasabi-1.0",
+      "icon": "wasabi1.png",
+      "id": "wasabi-1.0"
+    },
+    {
       "name": "BTCPay Server",
       "page": "",
       "icon": "btcpay.png",
@@ -166,6 +172,12 @@
       "page": "",
       "icon": "trezor.png",
       "id": "trezor"
+    },
+    {
+      "name": "Jam",
+      "page": "",
+      "icon": "jam.png",
+      "id": "jam"
     },
     {
       "name": "Vortex LN",

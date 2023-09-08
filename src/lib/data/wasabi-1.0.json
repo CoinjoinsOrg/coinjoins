@@ -1,0 +1,64 @@
+{
+    "title": "Coinjoins.org - Wasabi Wallet 1.0 Review",
+    "wallet_name": "Wasabi 1.0",
+    "protocol_name": "Zerolink",
+    "wallet_logo": "wasabi1",
+    "tags": [
+        {
+            "title": "Second Gen",
+            "description": "Zerolink is a second gen coinjoin protocol fixing the limitations of..."
+        },
+        {
+            "title": "Deprecated",
+            "description": "Wasabi 1.0 is now deprecated in favor of third gen coinjoin protocol WabiSabi used in Wasabi Wallet 2.0"
+        }
+    ],
+    "hero": "Wasabi Wallet 1.0 was a bitcoin wallet desktop app with a built-in coinjoin feature using ZeroLink. Wasabi 1.0 is now deprecated. Wasabi Wallet 2.0 is the supported version.",
+    "github": "https://github.com/zkSNACKs/WalletWasabi/",
+    "twitter": "https://twitter.com/wasabiwallet",
+    "website": "https://wasabiwallet.io/",
+    "basics": [
+        {
+            "id": "release_date",
+            "title": "Release Date",
+            "body": "October 31st 2018"
+        },
+        {
+            "id": "platform",
+            "title": "Platform",
+            "body": "Desktop (Mac, Windows, Linux)"
+        },
+        {
+            "id": "programming_language",
+            "title": "Code",
+            "body": ".NET (C#)"
+        },
+        {
+            "id": "address_type",
+            "title": "Address Type",
+            "body": "Segwit Native (bc1), Taproot"
+        }
+    ],
+    "overview": {
+        "point_1": "Zerolink is a first-generation coinjoin protocol that leverages Chaum blind signatures to break input and output linkage, is equipped with DOS and sybil resilience, and uses block filters and Tor for network privacy.",
+        "point_2": "Wasabi updates wallet balances privately using block filters, without needing a full node, although that option is available.",
+        "point_3": "Wasabi coordinator fees are 0.003% per anonymity set, which amounts to 0.3% for an anonymity set of 100, which is the default target value. You pay your mining fees on coinjoin transactions.",
+        "point_4": "The minimum total input amount to participate in a Wasabi 1.0 coinjoin is a little over 0.1 BTC. Coinjoin outputs produced are of that value or its multiplicators.",
+        "point_5": "Users have to manually register every input and queue them. Coinjoin transactions create toxic non-private change outputs.",
+        "point_6": "All traffic is routed through Tor by default, using different Tor hidden identities, making it impossible to connect an input and output from the same wallet in the same coinjoin transaction.",
+        "point_7": "Wasabi 1.0 coinjoin transactions have a maximum of 100 peers. During its peak usage in 2020-2021, most coinjoin transactions had that amount of participants or close."
+    },
+    "benefits": {
+        "point_1": "Zerolink-based coinjoin transactions implement Chaumian blind signatures to protect the user’s input to output link from the coordinator.",
+        "point_2": "Achieving a high level of privacy for a given UTXO is possible in a single coinjoin transaction, making it quite block space efficient and therefore cheap in network fees for users.",
+        "point_3": "All traffic is routed through Tor by default, using different Tor hidden identities, making it impossible to connect an input and output from the same wallet in the same coinjoin transaction.",
+        "point_4": "Wasabi updates wallet balances privately using block filters, fully protecting a user’s network privacy."
+    },
+    "tradeoffs": {
+        "point_1": "Remixing is not free. Users are not incentivized to gain extra anonymity set from further coinjoin transactions. Fees are also higher than on Wasabi Wallet 2.0.",
+        "point_2": "There’s a minimum amount of 0.1 BTC to coinjoin on Whirlpool, which limits accessibility.",
+        "point_3": "Due to the nature of blind signatures, mixed outputs of Wasabi coinjoins are restricted to a fixed set of multiples of a base denomination. This creates toxic change in transactions, making Wasabi 1.0 coinjoin inefficient. ",
+        "point_4": "The user experience was not the best. One had to do many manual tasks. This is now automated on Wasabi 2.0",
+        "point_5": "The Wasabi 1.0 coordinator was a centralized service that can technically censor UTXOs from using its service and this would not be verifiable by the public."
+    }
+}

@@ -36,6 +36,12 @@
       "isDeprecated": true
     },
     {
+      "name": "Wasabi 1.0",
+      "path": "wasabi-1.0",
+      "isActive": true,
+      "isDeprecated": true
+    },
+    {
       "name": "BTCPay Server",
       "path": "btcpay",
       "isActive": false,
