@@ -1,7 +1,7 @@
     {
         "hero": {
             "title": "The History of Coinjoins",
-            "body": "Bitcoin is almost perfect money with coinjoins enabling fungibility. When were coinjoins first discussed? With whom? What were the first coinjoin protocols like in the early days? Let's go down memory lane."
+            "body": "Coinjoins make Bitcoin truly fungible. When were coinjoins first invented? With whom? What were the first coinjoin protocols like in the early days? Let's go down memory lane."
         },
         "timeline": [
             {
@@ -32,7 +32,7 @@
                 "date": "November 2016",
                 "title": "An Alternative To Coinjoins: Tumblebit",
                 "id": "tumblebit",
-                "body": "On Tumblebit, <a href='https://eprint.iacr.org/2016/575.pdf'>introduced in late 2016</a>, users create two fixed-amount payment channels to a Tumbler (coordinator) who can't steal their coins or deanonymize them. The coins get sent back to a user from payment channels of other users. It takes a total of 4 transactions to complete, but you get a very high anonymity rate.  The wallets Breeze and Hidden Wallet (now Wasabi Wallet) were the main clients to use this privacy technique. <br/><br/> Compared to the original version of Joinmarket, Tumblebit was theoretically presented as superior because it allowed you to get a very high anonymity set, the user experience was better, and the coordinator couldn't deanonymize you. However, the high liquidity requirements and lack of incentives made it extremely long in practice (a few hours) and very high in fees. It had very few participants and as of 2023, every Tumbler service seems to have shut down."
+                "body": "On Tumblebit, <a href='https://eprint.iacr.org/2016/575.pdf'>introduced in late 2016</a>, users create two fixed-amount payment channels to a Tumbler (coordinator) who can't steal their coins or deanonymize them. The coins get sent back to a user from payment channels of other users. It takes a total of 4 transactions to complete, but you get a very high anonymity rate. The wallets Breeze and Hidden Wallet (now Wasabi Wallet) were the main clients to use this privacy technique. <br/><br/> Compared to the original version of Joinmarket, Tumblebit was theoretically presented as superior because it allowed you to get a very high anonymity set, the user experience was better, and the coordinator couldn't deanonymize you. However, the high liquidity requirements and lack of incentives made it extremely long in practice (a few hours) and very high in fees. It had very few participants and as of 2023, every Tumbler service seems to have shut down."
             },
             {
                 "date": "August 14th 2017",
@@ -56,7 +56,7 @@
                 "date": "February 2021",
                 "title": "WabiSabi To The Rescue (Paper Release)",
                 "id": "wabisabi",
-                "body": "From 2020, there were <a href='https://www.youtube.com/playlist?list=PLPwc75tPMdsgTYlu9dJZlosCm0s7WmIpF'>many open discussions</a> on the development of a second-generation coinjoin protocol that would solve the predecessor issues. Finally, Nopara73 and three co-authors published the academic paper WabiSabi: Centrally Coordinated Coinjoins with Variable Amounts. By introducing cryptographic methods, the fixed coinjoin output limit was removed and it was now possible to decompose the total bitcoin into variable output amounts. <br/><br/> This massively reduced the occurrence of toxic change and made WabiSabi the most efficient coinjoin protocol ever invented. <br/><br/> It was time to get this innovation into the hands of users."
+                "body": "From 2020, there were <a href='https://www.youtube.com/playlist?list=PLPwc75tPMdsgTYlu9dJZlosCm0s7WmIpF'>many open discussions</a> on the development of a second-generation coinjoin protocol that would solve the predecessor issues. Finally, Ádám Ficsór, Yuval Kogman, Lucas Ontivero, and István András Seres published the academic paper WabiSabi: Centrally Coordinated Coinjoins with Variable Amounts. By introducing cryptographic methods, the fixed coinjoin output limit was removed and it was now possible to decompose the total bitcoin into variable output amounts. <br/><br/> This massively reduced the occurrence of toxic change and made WabiSabi the most efficient coinjoin protocol ever invented. <br/><br/> It was time to get this innovation into the hands of users."
             },
             {
                 "date": "June 15th 2022",
