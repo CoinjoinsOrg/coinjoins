@@ -3,6 +3,12 @@
   "wallet_name": "Sparrow",
   "protocol_name": "Whirlpool",
   "wallet_logo": "sparrow",
+  "tags": [
+    {
+      "title": "Third Gen",
+      "description": "WabiSabi is a third gen coinjoin protocol fixing the limitations of fixed denominations and toxic change that Zerolink, a second gen coinjoin protocol had."
+    }
+  ],
   "hero": "Sparrow Wallet is a bitcoin wallet desktop application with a built-in coinjoin feature using Whirlpool.",
   "github": "https://github.com/sparrowwallet/sparrow",
   "twitter": "https://twitter.com/sparrowwallet",
