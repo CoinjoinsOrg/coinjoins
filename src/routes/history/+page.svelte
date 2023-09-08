@@ -35,10 +35,12 @@
     {#each historyData.timeline as item}
         <div
             id={item.id}
-            class="flex flex-col gap-6 relative border-l-[6px] border-green-cj pl-6 md:pl-20"
+            class="flex flex-col gap-6 relative {item.id === 'future'
+                ? 'border-dark-blue'
+                : 'border-green-cj'} border-l-[4px] pl-6 md:pl-20"
         >
             <div
-                class="absolute border-[6px] rounded-full border-green-cj -left-[19px] -top-7 w-8 h-8"
+                class="absolute border-[4px] rounded-full border-green-cj -left-[18px] -top-7 w-8 h-8"
             />
 
             <div class="w-20 md:w-32">
