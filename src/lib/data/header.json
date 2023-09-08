@@ -58,12 +58,6 @@
       "path": "jam",
       "isActive": false,
       "isDeprecated": false
-    },
-    {
-      "name": "Vortex LN",
-      "path": "vortex",
-      "isActive": false,
-      "isDeprecated": false
     }
   ],
   "cta": "Try Coinjoins"

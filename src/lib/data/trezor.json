@@ -1,8 +1,8 @@
 {
-  "title": "Coinjoins.org - Wasabi Wallet 2.0 Review",
-  "wallet_name": "Wasabi 2.0",
+  "title": "Coinjoins.org - Trezor Suite Review",
+  "wallet_name": "Trezor Suite",
   "protocol_name": "WabiSabi",
-  "wallet_logo": "wasabi",
+  "wallet_logo": "trezor",
   "tags": [
     {
       "title": "Third Gen",
@@ -10,30 +10,30 @@
       "description": "WabiSabi is a third gen coinjoin protocol fixing the limitations of fixed denominations and toxic change that Zerolink, a second gen coinjoin protocol had."
     }
   ],
-  "hero": "Wasabi Wallet 2.0 is a simple to use bitcoin wallet desktop app with a built-in coinjoin feature using WabiSabi.",
-  "github": "https://github.com/zkSNACKs/WalletWasabi/",
-  "twitter": "https://twitter.com/wasabiwallet",
-  "website": "https://wasabiwallet.io/",
+  "hero": "Trezor Suite Review.",
+  "github": "https://github.com/",
+  "twitter": "https://twitter.com/",
+  "website": "https://www.io/",
   "basics": [
     {
       "id": "release_date",
       "title": "Release Date",
-      "body": "October 31st 2018"
+      "body": "Trezor Suite Review"
     },
     {
       "id": "platform",
       "title": "Platform",
-      "body": "Desktop (Mac, Windows, Linux)"
+      "body": "Trezor Suite Review"
     },
     {
       "id": "programming_language",
       "title": "Code",
-      "body": ".NET (C#)"
+      "body": "Trezor Suite Review"
     },
     {
       "id": "address_type",
       "title": "Address Type",
-      "body": "Segwit Native (bc1), Taproot"
+      "body": "Trezor Suite Review"
     }
   ],
   "overview": {
@@ -46,16 +46,19 @@
     "point_7": "The Wasabi coinjoin coordinator ensures at least 150 inputs for a transaction, but there can be more."
   },
   "benefits": {
-    "point_1": "With variable coinjoin output values and a large number of participants, WabiSabi coinjoins allow for an enormous amount of possibilities, making it difficult to trace the flow of funds after a single transaction.",
-    "point_2": "By default, the entire wallet and protocol run on Tor, protecting users (clients) from having their personal IP addresses exposed.",
-    "point_3": "Toxic change outputs are eliminated in most cases, except for lone whales that have relatively large inputs compared to other inputs from the same coinjoin transaction.",
-    "point_4": "Wasabi Wallet has a change avoidance feature for sending bitcoin to other wallets, which allows a payment to be rounded up or down to avoid creating unnecessary change, saving fees and time for the user. ",
-    "point_5": "The coinjoin function is automatic while a user’s balance is at least 1 million sats (0.01 BTC).",
-    "point_6": "Achieving a high level of privacy for a given UTXO is possible in a single coinjoin transaction, making it quite block space efficient and therefore cheap in network fees for users.",
-    "point_7": "Coordinator fees are not paid for remixing coins created by a previous coinjoin round. Coordinator fees are not paid for outputs created by previously mixed coins. This allows the sender’s change and the recipient’s payment to be coinjoined for free. ",
-    "point_8": "'Plebs don't pay' is a fee policy where any input below 1 million sats (0.01 BTC) does not pay the coordinator fee.",
-    "point_9": "Wasabi's 'anonymity score' is very conservative, giving the user a safe measure of how much privacy or plausible deniability has been achieved. Clients only count outputs with matching values towards your score, but coinjoin outputs of other sizes increase privacy as well.",
-    "point_10": "The simple 100% scale of the privacy score is easy for the user to understand at a high level without having to think too deeply about how it is calculated."
+    "point_1": "With a large number of participants, WabiSabi allows for an enormous amount of possibilities, making it difficult to trace the flow of funds after a single transaction.",
+    "point_2": "Variable amounts in WabiSabi allow for many ways to combine different inputs or outputs, making traceability much harder.",
+    "point_3": "By default, the entire wallet and protocol run on Tor, protecting users (clients) from having their personal IP addresses exposed.",
+    "point_4": "Toxic change outputs are eliminated in most cases, except for lone whales that have relatively large inputs compared to other inputs from the same coinjoin transaction.",
+    "point_5": "No one can spy on you. All traffic from the client (desktop application) to the server (coordinator) is routed through Tor by default, which means that using the application is completely anonymous.",
+    "point_6": "Wasabi Wallet has a change avoidance feature for sending bitcoin to other wallets, which allows a payment to be rounded up or down to avoid creating unnecessary change, saving fees and time for the user. ",
+    "point_7": "The coinjoin function is automatic while a user’s balance is at least 1 million sats (0.01 BTC).",
+    "point_8": "Achieving a high level of privacy for a given UTXO is possible in a single coinjoin transaction, making it quite block space efficient and therefore cheap in network fees for users.",
+    "point_9": "Coordinator fees are not paid for remixing coins created by a previous coinjoin round. Coordinator fees are not paid for outputs created by previously mixed coins. This allows the sender’s change and the recipient’s payment to be coinjoined for free. ",
+    "point_10": "'Plebs don't pay' is a fee policy where any input below 1 million sats (0.01 BTC) does not pay the coordinator fee.",
+    "point_11": "Wasabi's 'anonymity score' is very conservative, giving the user a safe measure of how much privacy or plausible deniability has been achieved. Clients only count outputs with matching values towards your score, but coinjoin outputs of other sizes increase privacy as well.",
+    "point_12": "The simple 100% scale of the privacy score is easy for the user to understand at a high level without having to think too deeply about how it is calculated.",
+    "point_13": "Privacy warnings are available for users sending bitcoin from their wallet. Whether users use private or non-private coins, use different labels, create change, consolidate coins or use unconfirmed funds, privacy warnings help users avoid making costly mistakes to protect their privacy."
   },
   "tradeoffs": {
     "point_1": "During onboarding, the Wasabi Wallet Terms of Service can be a friction point for users who want to fully understand the legalities before moving forward.",

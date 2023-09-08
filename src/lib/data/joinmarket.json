@@ -6,6 +6,7 @@
   "tags": [
     {
       "title": "First Gen",
+      "type": "gen",
       "description": "JoinMarket is a first gen coinjoin protocol, introducing the concept of a market-based coinjoin coordination mechanism."
     }
   ],

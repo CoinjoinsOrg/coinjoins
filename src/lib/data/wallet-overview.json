@@ -178,12 +178,6 @@
       "page": "",
       "icon": "jam.png",
       "id": "jam"
-    },
-    {
-      "name": "Vortex LN",
-      "page": "",
-      "icon": "vortex.png",
-      "id": "vortex"
     }
   ]
 }

@@ -42,7 +42,7 @@
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div
     on:click={() => goto(currentPath)}
-    class="hover:cursor-pointer bg-lighter-blue rounded-full p-4 fixed bottom-14 right-8"
+    class="z-10 hover:cursor-pointer bg-lighter-blue rounded-full p-4 fixed bottom-14 right-8"
   >
     <div class="w-8">
       <ClickedArrow color="white" />

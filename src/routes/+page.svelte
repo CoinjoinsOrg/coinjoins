@@ -11,7 +11,6 @@
   import CoinjoinVisual from "@lib/img/CoinjoinVisual.svelte";
   import CoinjoinVisualMobile from "@lib/img/CoinjoinVisualMobile.svelte";
   import Eye from "@lib/img/Eye.svelte";
-  import GreenText from "@lib/components/GreenText.svelte";
   import GreenLine from "@lib/img/GreenLine.svelte";
   import MoneyBill from "@lib/img/MoneyBill.svelte";
   import RedLine from "@lib/img/RedLine.svelte";
@@ -38,7 +37,6 @@
   }
 
   onMount(() => (isLoaded = true));
-  $: console.log("y:", y);
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -444,47 +442,6 @@
     </div>
   </div>
 {/if}
-
-<div id="try" class="flex flex-col max-w-5xl mx-auto gap-28 px-4">
-  <div class="flex flex-col items-center gap-14 max-w-3xl text-center mx-auto">
-    <H2>{data.try.title}</H2>
-    <p class="text-white text-xl">
-      {@html data.try.body}
-    </p>
-  </div>
-  <div class="flex flex-col gap-16 items-center">
-    {#each data.try.features as feature}
-      <div class="flex flex-col md:flex-row justify-between gap-6 md:gap-12">
-        <div>
-          <H3>{@html feature.title}</H3>
-        </div>
-        <p class="max-w-lg md:max-w-md text-xl">
-          {feature.body}
-        </p>
-      </div>
-    {/each}
-  </div>
-</div>
-
-<div class="gap-12 flex flex-col items-center px-4">
-  <div
-    class="flex flex-col md:flex-row justify-between max-w-5xl mx-auto items-center gap-28"
-  >
-    <div class="w-52">
-      <WasabiLogo />
-    </div>
-    <p class="block text-center md:text-left text-xl max-w-lg">
-      {data.try.wasabi.description}
-    </p>
-  </div>
-  <div>
-    <a
-      href={data.try.wasabi.link}
-      class="block border border-green-cj bg-green-cj px-6 py-2 rounded-md text-base text-dark-blue no-underline hover:text-green-cj hover:bg-dark-blue hover:border-green-cj"
-      >{data.try.wasabi.cta}</a
-    >
-  </div>
-</div>
 
 <style>
   ol {

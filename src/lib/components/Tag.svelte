@@ -1,6 +1,7 @@
 <script>
     export let title;
     export let description;
+    export let type = "gen";
 
     let isDescriptionShown = false;
 
@@ -25,7 +26,9 @@
     class="relative"
 >
     <div
-        class="hover:cursor-default border rounded border-green-cj px-2 py-1 text-green-cj bg-dark-blue text-xs uppercase font-semibold font-inconsolata"
+        class="hover:cursor-default border rounded {type === 'gen'
+            ? 'border-green-cj text-green-cj bg-dark-blue'
+            : 'border-red text-white bg-red'}  px-2 py-1 text-xs uppercase font-semibold font-inconsolata"
     >
         {title}
     </div>

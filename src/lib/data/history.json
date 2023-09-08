@@ -1,7 +1,7 @@
     {
         "hero": {
             "title": "The History of Coinjoins",
-            "body": "Bitcoin is almost perfect money with coinjoins enabling fungibility. When were coinjoins first discussed? With whom? What were the first coinjoin protocols like in the early days? Let's go down memory lane."
+            "body": "Coinjoins make Bitcoin truly fungible. When were coinjoins first invented? With whom? What were the first coinjoin protocols like in the early days? Let's go down memory lane."
         },
         "timeline": [
             {
@@ -32,7 +32,7 @@
                 "date": "November 2016",
                 "title": "An Alternative To Coinjoins: Tumblebit",
                 "id": "tumblebit",
-                "body": "On Tumblebit, <a href='https://eprint.iacr.org/2016/575.pdf'>introduced in late 2016</a>, users create two fixed-amount payment channels to a Tumbler (coordinator) who can't steal their coins or deanonymize them. The coins get sent back to a user from payment channels of other users. It takes a total of 4 transactions to complete, but you get a very high anonymity rate.  The wallets Breeze and Hidden Wallet (now Wasabi Wallet) were the main clients to use this privacy technique. <br/><br/> Compared to the original version of Joinmarket, Tumblebit was theoretically presented as superior because it allowed you to get a very high anonymity set, the user experience was better, and the coordinator couldn't deanonymize you. However, the high liquidity requirements and lack of incentives made it extremely long in practice (a few hours) and very high in fees. It had very few participants and as of 2023, every Tumbler service seems to have shut down."
+                "body": "On Tumblebit, <a href='https://eprint.iacr.org/2016/575.pdf'>introduced in late 2016</a>, users create two fixed-amount payment channels to a Tumbler (coordinator) who can't steal their coins or deanonymize them. The coins get sent back to a user from payment channels of other users. It takes a total of 4 transactions to complete, but you get a very high anonymity rate. The wallets Breeze and Hidden Wallet (now Wasabi Wallet) were the main clients to use this privacy technique. <br/><br/> Compared to the original version of Joinmarket, Tumblebit was theoretically presented as superior because it allowed you to get a very high anonymity set, the user experience was better, and the coordinator couldn't deanonymize you. However, the high liquidity requirements and lack of incentives made it extremely long in practice (a few hours) and very high in fees. It had very few participants and as of 2023, every Tumbler service seems to have shut down."
             },
             {
                 "date": "August 14th 2017",
@@ -56,7 +56,7 @@
                 "date": "February 2021",
                 "title": "WabiSabi To The Rescue (Paper Release)",
                 "id": "wabisabi",
-                "body": "From 2020, there were <a href='https://www.youtube.com/playlist?list=PLPwc75tPMdsgTYlu9dJZlosCm0s7WmIpF'>many open discussions</a> on the development of a second-generation coinjoin protocol that would solve the predecessor issues. Finally, Nopara73 and three co-authors published the academic paper WabiSabi: Centrally Coordinated Coinjoins with Variable Amounts. By introducing cryptographic methods, the fixed coinjoin output limit was removed and it was now possible to decompose the total bitcoin into variable output amounts. <br/><br/> This massively reduced the occurrence of toxic change and made WabiSabi the most efficient coinjoin protocol ever invented. <br/><br/> It was time to get this innovation into the hands of users."
+                "body": "From 2020, there were <a href='https://www.youtube.com/playlist?list=PLPwc75tPMdsgTYlu9dJZlosCm0s7WmIpF'>many open discussions</a> on the development of a second-generation coinjoin protocol that would solve the predecessor issues. Finally, Ádám Ficsór, Yuval Kogman, Lucas Ontivero, and István András Seres published the academic paper WabiSabi: Centrally Coordinated Coinjoins with Variable Amounts. By introducing cryptographic methods, the fixed coinjoin output limit was removed and it was now possible to decompose the total bitcoin into variable output amounts. <br/><br/> This massively reduced the occurrence of toxic change and made WabiSabi the most efficient coinjoin protocol ever invented. <br/><br/> It was time to get this innovation into the hands of users."
             },
             {
                 "date": "June 15th 2022",
@@ -65,10 +65,16 @@
                 "body": "Wasabi Wallet's initial user experience wasn't the best. You had to manually select your coins to mix and click on the queue for a coinjoin, and this had to be done for each coinjoin remix transaction. The Wasabi Wallet 2.0 release implemented the WabiSabi protocol and also improved the user experience by automating the coinjoin process. <br/><br/> Simply send bitcoin to your wallet and watch the magic happen without any effort. Once your anonymity score reaches your desired level of privacy, you can effortlessly spend your coins without the need for coin checks. The <a href='https://blog.wasabiwallet.io/what-is-the-difference-between-an-anonymity-set-and-an-anonymity-score/#:~:text=The%20anonymity%20score%20extends%20the%20definition%20of%20anonymity%20set%20by,to%20or%20lower%20than%20set.'>anonymity score</a> of your UTXOs is so high that the privacy impact of consolidation doesn't destroy your privacy. <br/><br/> As of August 31st, 2023, we're now on version 2.0.4 with many new improvements such as faster loading times on wallet initialization, RBF and CPFP to speed up or cancel unconfirmed transactions, and better decomposition to further prevent the creation of toxic change outputs."
             },
             {
-                "date": "Recently & In the Future",
+                "date": "Recently",
                 "title": "Additional Wallets implement coinjoin",
+                "id": "hashcoin",
+                "body": "It should be noted that you can now use Joinmarket with an alternative GUI application called Jam, which significantly improves the usability with great design and the accessibility through its distribution on many bitcoin node projects like <a href='http://umbrel.com'>Umbrel</a>. <br/><br/> In addition, the Trezor and BTCPay Server teams have implemented coinjoin features in their wallets, implementing the WabiSabi protocol and using the zkSNACKs coordinator, the default coordinator on Wasabi and the most liquid coinjoin coordinator in the world. On the other hand, wallets like Sparrow and Bitcoin Keeper have decided to implement the Whirlpool protocol and use the Samourai Wallet coordinator. <br/><br/> Also, the zkSNACKs coordinator for Wasabi Wallet 1.0 (Zerolink) has now been sunset (RIP).<br/><br/>"
+            },
+            {
+                "date": "In the Future",
+                "title": "Who knows what's next...",
                 "id": "future",
-                "body": "It should be noted that you can now use Joinmarket with an alternative GUI application called Jam, which significantly improves the usability with great design and the accessibility through its distribution on many bitcoin node projects like <a href='http://umbrel.com'>Umbrel</a>. <br/><br/> In addition, the Trezor and BTCPay Server teams have implemented coinjoin features in their wallets, implementing the WabiSabi protocol and using the zkSNACKs coordinator, the default coordinator on Wasabi and the most liquid coinjoin coordinator in the world. On the other hand, wallets like Sparrow and Bitcoin Keeper have decided to implement the Whirlpool protocol and use the Samourai Wallet coordinator. <br/><br/> Also, the zkSNACKs coordinator for Wasabi Wallet 1.0 (Zerolink) has now been sunset (RIP).<br/><br/> It's unknown what the future of coinjoins holds, but we have a hint: it will include interoperability with the Lightning network. Vortex is a zerolink-based coinjoin wallet that allows you to open payment channels directly from the private coinjoin exits, making this process more efficient. Wasabi Wallet will have to adapt to this new reality in the future, and if you want to take a closer look at how this might happen, read Gustavo's article on the topic. Bitcoin privacy is constantly evolving, and coinjoin implementations are an essential part of its past, present, and future."
+                "body": "It's unknown what the future of coinjoins holds, but we have a hint: it will include interoperability with the Lightning network. Vortex is a zerolink-based coinjoin wallet that allows you to open payment channels directly from the private coinjoin exits, making this process more efficient. Wasabi Wallet will have to adapt to this new reality in the future, and if you want to take a closer look at how this might happen, read Gustavo's article on the topic. <br/><br/> Bitcoin privacy is constantly evolving, and coinjoin implementations are an essential part of its past, present, and future."
             }
         ]
     }

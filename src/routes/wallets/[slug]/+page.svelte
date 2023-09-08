@@ -38,7 +38,7 @@
   <div class="absolute flex flex-col items-start gap-10 pt-32">
     <div class="flex gap-4">
       {#each data.content.tags as tag}
-        <Tag title={tag.title} description={tag.description} />
+        <Tag type={tag.type} title={tag.title} description={tag.description} />
       {/each}
     </div>
     <H1
@@ -75,7 +75,10 @@
   <FlatCoinjoinSvg />
 </div>
 
-<div id="overview" class="px-4 flex flex-col gap-6 max-w-3xl mx-auto md:gap-12">
+<div
+  id="overview"
+  class="px-4 flex flex-col gap-6 max-w-2xl mx-auto md:gap-12 items-center"
+>
   <div class="w-20">
     <TelescopeSvg />
   </div>
@@ -92,7 +95,7 @@
   </div>
 </div>
 
-<div class="px-4 flex flex-col gap-6 max-w-3xl mx-auto md:gap-12">
+<div class="px-4 flex flex-col gap-6 max-w-2xl mx-auto md:gap-12">
   <div
     class="text-green-cj text-center rounded-lg border-4 border-green-cj px-6 py-4"
   >
@@ -110,7 +113,7 @@
   </div>
 </div>
 
-<div class="px-4 flex flex-col gap-6 md:gap-12 max-w-3xl mx-auto">
+<div class="px-4 flex flex-col gap-6 md:gap-12 max-w-2xl mx-auto">
   <div class="text-center rounded-lg border-4 border-red px-6 py-4">
     <H2><RedText>Trade Offs</RedText></H2>
   </div>
