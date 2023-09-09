@@ -4,7 +4,7 @@
     "hero_subtitle": "Picking the right wallet to use coinjoins isn’t easy. Some folks would tell you to use Wasabi Wallet. Others would say to use Samourai instead. Others would even suggest JoinMarket. So which one to choose? And why?",
     "verify_header": "Don’t Trust, <br/><span style='color:rgb(0,255,25,1.0)'>Verify</span>",
     "verify_body_1": "We’ve done research on the most popular privacy wallets and coinjoin protocols. We tried to be as neutral, educational and accessible as possible. Of course, don’t trust us, but verify yourself.",
-    "verify_body_2": "As of August 2023, there are six popular bitcoin  wallets using three different coinjoin protocols. In our research, we’ve selected 10 categories to make it easier to pick a bitcoin wallet with built-in coinjoins. Let’s dive in.",
+    "verify_body_2": "As of August 2023, there are six popular bitcoin  wallets using three different coinjoin protocols. In our research, we’ve selected 10 criteria categories (and advanced considerations) to make it easier to pick a bitcoin wallet with built-in coinjoins. Let’s dive in.",
     "cj_protocol_header": "What is a Coinjoin Protocol?",
     "cj_protocol_body": "A coinjoin protocol is the design of the software that is used to create collaborative bitcoin transactions. There are currently 3 popular coinjoin protocols that are used in bitcoin wallets: <span style='color:rgb(0,255,25,1.0)'>JoinMarket</span>, <span style='color:rgb(0,255,25,1.0)'>WabiSabi</span>, <span style='color:rgb(0,255,25,1.0)'>Whirlpool</span>.",
     "essentials_header": "Privacy Essentials for Coinjoins",
@@ -47,7 +47,7 @@
     {
       "isClicked": false,
       "title": "Coinjoin & Network Fees",
-      "body": "There are two types of fees associated with coinjoin transactions: coordinator fees (flat or percentage-based) and bitcoin network fees.Some coordinators waive fees for remixes, which incentivize users to coinjoin their bitcoin multiple times for added privacy.Some protocols have fee exemptions or reductions for UTXOs that meet certain criteria. Many mixing pools and different fees are also something to consider. Whirlpool clients like Sparrow and Samourai have discounts (SCODE) based on referral codes. Finally, the P2P nature of Joinmarket creates a different fee dynamic. <br/><br/> We evaluate the total amount of fees considering all these factors and in different scenarios.",
+      "body": "There are two types of fees associated with coinjoin transactions: coordinator fees (flat or percentage-based) and bitcoin network fees. Some coordinators waive fees for remixes, which incentivize users to coinjoin their bitcoin multiple times for added privacy. Some protocols have fee exemptions or reductions for UTXOs that meet certain criteria. Many mixing pools and different fees are also something to consider. Whirlpool clients like Sparrow and Samourai have discounts (SCODE) based on referral codes. Finally, the P2P nature of Joinmarket creates a different fee dynamic. <br/><br/> We evaluate the total amount of fees considering all these factors and in different scenarios.",
       "questions": [
         "How do coordinator fees work in the protocol?",
         "How much network fee does a user pay? How much block space does he pay for?",
@@ -58,7 +58,7 @@
     {
       "isClicked": false,
       "title": "Censorship Resistance",
-      "body": "Coinjoin protocols are not decentralized; unlike bitcoin, there is no guarantee of censorship resistance. While no coordinator ever holds private keys for users, they can still censor because they are the messenger that delivers inputs and outputs before users sign them. Some coordinators have made it public that they actively censor user input that they deem risky. Joinmarket is a marketplace of coordinators (takers) where you can easily switch coordinators if you're restricted, but it's far from providing perfect censorship resistance. <br/><br/> Coordinators need to enforce a certain level of UTXO censorship for DDOS protection against bad actors, and they all have a certain ban policy regarding attacks, which can range from temporary to permanent bans.      ",
+      "body": "Coinjoin protocols are not decentralized (yet); unlike bitcoin, there is no guarantee of censorship resistance. While no coordinator ever holds private keys for users, they can still censor because they are the messenger that delivers inputs and outputs before users sign them. Some coordinators (zkSNACKs) have made it public that they actively censor user input that they deem risky. Joinmarket is a marketplace of coordinators (takers) where you can easily switch coordinators if you're restricted, but it's far from providing perfect censorship resistance. <br/><br/> Coordinators need to enforce a certain level of UTXO censorship for DDOS protection against bad actors, and they all have a certain ban policy regarding attacks, which can range from temporary to permanent bans.      ",
       "questions": [
         "What is the coordinator policy for DDOS protection?",
         "Do they have a blacklisting policy or terms of service?",
@@ -69,7 +69,7 @@
     {
       "isClicked": false,
       "title": "Anonymity Scoring",
-      "body": "The anonymity set is the most commonly accepted way to measure the privacy gained by using a coinjoin wallet. Typically, this metric is meant to be verifiable by anyone using a public block explorer to observe a coinjoin transaction. Anonymity Score (as used in the Wasabi Wallet) is a more conservative approach that accounts for certain edge cases. Anonymity Score is always lower than anonymity set. <br/><br/> The other question, of course, is: how high should privacy goals be? Is there a cutoff? Each coinjoin implementation and privacy wallet has its own view on this.",
+      "body": "The anonymity set is the most commonly accepted way to measure the privacy gained by using a coinjoin wallet. Typically, this metric is meant to be verifiable by anyone using a public block explorer to observe a coinjoin transaction. <a href='https://blog.wasabiwallet.io/what-is-the-difference-between-an-anonymity-set-and-an-anonymity-score/'>Anonymity Score</a> (as used in the Wasabi Wallet) is a more conservative approach that accounts for certain edge cases. Anonymity Score is always lower than anonymity set. <br/><br/> The other question, of course, is: how high should privacy goals be? Is there a cutoff? Each coinjoin implementation and privacy wallet has its own view on this.",
       "questions": [
         "What term is used in the wallet for anonymity scoring? How is it calculated?",
         "How easy is it to understand how anonymity gains are calculated?",
@@ -79,7 +79,7 @@
     {
       "isClicked": false,
       "title": "Coinjoin Efficiency",
-      "body": "Bitcoin block space is immensely scarce and valuable. Coinjoin protocols create collaborative bitcoin transactions with multiple parties involved, which require a high degree of efficiency to make it fast, affordable and reliable over time as fee rates change on the bitcoin network. Coinjoin efficiency is the absence of toxic change non-private coinjoin outputs.",
+      "body": "Bitcoin block space is immensely scarce and valuable. Coinjoin protocols create collaborative bitcoin transactions with multiple parties involved, which require a high degree of efficiency to make it fast, affordable and reliable over time as fee rates change on the bitcoin network. Coinjoin efficiency is the absence of <a href='https://bitcoinmagazine.com/technical/toxic-change-wabisabi-bitcoin-coinjoin-privacy'>toxic change</a> non-private coinjoin outputs.",
       "questions": [
         "Is there toxic change created by the coinjoin protocol? If so, how is it dealt with?"
       ]

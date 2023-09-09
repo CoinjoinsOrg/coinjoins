@@ -46,18 +46,18 @@
   },
   "benefits": {
     "point_1": "Joinmarket is the most censorship-resistant coinjoin on the market, because of the competitive nature of a peer-to-peer free market with many takers and makers. There is no single coordinator in Joinmarket but each round has a centralized coordinator.",
-    "point_2": "Amounts are very flexible on Joinmarket, you can enter a coinjoin transaction with as little as 27300 satoshis, and there’s no maximum amount.",
+    "point_2": "Amounts are very flexible on Joinmarket, you can enter a coinjoin transaction with as little as 27300 satoshis (makes it accessible), and there’s no maximum amount.",
     "point_3": "You can get paid to gain privacy as a maker. A taker can pay low fees: as little as 0.05% for an anonymity set of 50.",
-    "point_4": "Tor can be enabled for the bitcoin network and coinjoin peer communication. Bitcoin network privacy is solved by forcing a user to run Bitcoin Core and connect it to Joinmarket.",
+    "point_4": "Tor is enabled for the bitcoin network and coinjoin peer communication. If a user doesn't have it already, it can be installed alongside Joinmarket with a command. Bitcoin network privacy is solved by forcing a user to run Bitcoin Core and connect it to Joinmarket.",
     "point_5": "Uses <a href='https://github.com/JoinMarket-Org/joinmarket-clientserver/blob/master/docs/fidelity-bonds.md'>fidelity bonds</a> to protect against sybil attacks. Creates a reputation system where makers who lock larger amounts of BTC over longer periods of time are considered more trustworthy.",
     "point_6": "Takers have complete freedom to set up coinjoin transactions in terms of coin selection, number of peers, number of rounds, etc.",
     "point_7": "Ring signatures are used by takers to anonymously prove ownership of UTXOs to makers, before entering into an agreement. This allows makers to collectively identify potential attackers and prevent takers from harming other makers."
   },
   "tradeoffs": {
-    "point_1": "Joinmarket’s complex system creates significant user experience and design challenges such as the installation process, Bitcoin Core enforcement, fidelity bonds, maker user experience available only on CLI, etc. The learning curve is steep.",
+    "point_1": "Joinmarket’s complex system creates significant user experience and design challenges such as the installation process, Bitcoin Core enforcement, fidelity bonds, maker user experience available only on CLI, onion service set up as a maker, etc. The learning curve is steep.",
     "point_2": "There is no concept of anonymity set / score on Joinmarket, and there is no difference between non-private and private UTXOs, except for mix depths, which doesn’t take into account the number of peers in a coinjoin transaction.",
-    "point_3": "The lack of a centralized coordinator server run by an organization limits the amount of anonymity set / score a user can gain per transaction, resulting in a longer process for a complete coinjoin experience.",
-    "point_4": "Toxic change is present in Joinmarket transactions, leading to higher coinjoin inefficiency. ",
+    "point_3": "The lack of a centralized coordinator server run by an organization limits the amount of anonymity set / score a user can gain per transaction (compared to Wasabi 2.0), resulting in a longer process for a complete coinjoin experience.",
+    "point_4": "Toxic change is present in Joinmarket transactions, leading to higher coinjoin inefficiency.",
     "point_5": "Taker coordinator is completely unblinded, does not use any kind of zero-knowledge method or Tor identity update, which leads to takers being fully aware of their peers' input and output linkages.",
     "point_6": "Sybil attacks are possible since mining fees for remixes are paid by the attack victims instead of the attacker, if the fidelity bond opportunity cost can be written off by the attacker."
   }
