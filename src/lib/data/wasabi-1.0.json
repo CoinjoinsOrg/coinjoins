@@ -58,7 +58,7 @@
     },
     "tradeoffs": {
         "point_1": "Remixing is not free. Users are not incentivized to gain extra anonymity set from further coinjoin transactions. Fees are also higher than on Wasabi Wallet 2.0.",
-        "point_2": "There’s a minimum amount of 0.1 BTC to coinjoin on Whirlpool, which limits accessibility.",
+        "point_2": "There’s a minimum amount of 0.1 BTC to coinjoin on Wasabi 1.0, which limits accessibility.",
         "point_3": "Due to the nature of blind signatures, mixed outputs of Wasabi coinjoins are restricted to a fixed set of multiples of a base denomination. This creates toxic change in transactions, making Wasabi 1.0 coinjoin inefficient. ",
         "point_4": "The user experience was not the best. One had to do many manual tasks. This is now automated on Wasabi 2.0",
         "point_5": "The Wasabi 1.0 coordinator was a centralized service that can technically censor UTXOs from using its service and this would not be verifiable by the public."
