@@ -70,7 +70,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <header
-  class="z-10 min-w-[320px] flex justify-between h-[90px] md:max-w-5xl md:mx-auto py-6 items-center px-4"
+  class="z-50 min-w-[320px] flex justify-between h-[90px] md:max-w-5xl md:mx-auto py-6 items-center px-4"
 >
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <div
@@ -199,7 +199,7 @@
         {headerData.menu.history}
       </a>
     </div>
-    <div class="md:hidden flex justify-center pt-12">
+    <div class="isolate z-20 md:hidden flex justify-center pt-12">
       <a
         href="/try"
         on:click={showMobileMenu
@@ -215,12 +215,12 @@
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div
     on:click={handleMobileIconClick}
-    class="mobile-icon w-6 h-4 relative cursor-pointer z-10 md:hidden"
+    class="mobile-icon w-6 h-4 relative cursor-pointer z-40 md:hidden"
   >
     <div class="middle-line" />
   </div>
 
-  <div class="hidden md:flex flex-auto justify-end">
+  <div class="hidden md:flex flex-auto justify-end isolate z-20">
     <a
       href="/try"
       class="block border border-green-cj bg-green-cj px-6 py-2 rounded-md text-base text-dark-blue no-underline hover:text-green-cj hover:bg-dark-blue hover:border-green-cj"
