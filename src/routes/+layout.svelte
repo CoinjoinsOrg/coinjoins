@@ -1,5 +1,6 @@
 <script>
   import "../app.css";
+  import { onMount } from "svelte";
   import { page } from "$app/stores";
   import { goto } from "$app/navigation";
   import { fly } from "svelte/transition";
@@ -12,6 +13,12 @@
 
   let y;
   $: currentPath = $page.url.pathname;
+
+  onMount(() => {
+    const { hash } = document.location;
+    const scrollTo = hash && document.getElementById(hash.slice(1));
+    if (scrollTo) scrollTo.scrollIntoView();
+  });
 </script>
 
 <svelte:head>

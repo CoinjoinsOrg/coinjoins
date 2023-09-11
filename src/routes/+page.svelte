@@ -1,4 +1,5 @@
 <script>
+  import { page } from "$app/stores";
   import { fade, fly } from "svelte/transition";
   import { onMount } from "svelte";
   import basicsData from "@data/basics.json";
@@ -35,8 +36,21 @@
   function handleQuestionClick(i) {
     data.fudBustList[i].isClicked = !data.fudBustList[i].isClicked;
   }
+  $: currentPath = $page.url;
+  $: hashUrl = $page.url.hash;
 
-  onMount(() => (isLoaded = true));
+  onMount(() => {
+    isLoaded = true;
+    // const { hash } = document.location;
+    // console.log("hash", hash);
+    // const scrollTo = hash && document.getElementById(hash.slice(1));
+    // console.log("scrollTo", scrollTo);
+    // if (scrollTo) {
+    //   setTimeout(() => scrollTo.scrollIntoView(), 500);
+    // } else {
+    //   setTimeout(() => currentPath.scrollIntoView(), 500);
+    // }
+  });
 </script>
 
 <svelte:window bind:scrollY={y} />
