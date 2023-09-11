@@ -7,7 +7,7 @@
     {
       "title": "First Gen",
       "type": "gen",
-      "description": "JoinMarket is a first gen coinjoin protocol, introducing the concept of a market-based coinjoin coordination mechanism."
+      "description": "Available in QT and CLI, JoinMarket is a first gen coinjoin protocol, introducing the concept of a market-based coinjoin coordination mechanism."
     }
   ],
   "hero": "Joinmarket is a P2P market-based coinjoin protocol and implementation that has typically attracted more advanced and technical users.",
