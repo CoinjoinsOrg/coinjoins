@@ -4,10 +4,21 @@
     import H1 from "@lib/components/H1.svelte";
     import FlatCoinjoinSvg from "@lib/components/FlatCoinjoinSvg.svelte";
     import ArrowDown from "@lib/img/ArrowDown.svelte";
+    import { onMount } from "svelte";
 
     const historyData = data;
 
     let y;
+
+    onMount(() => {
+        const { hash } = document.location;
+        console.log("hash", hash);
+        const scrollTo = hash && document.getElementById(hash.slice(1));
+        console.log("scrollTo", scrollTo);
+        if (scrollTo) {
+            setTimeout(() => scrollTo.scrollIntoView(), 800);
+        }
+    });
 </script>
 
 <svelte:window bind:scrollY={y} />

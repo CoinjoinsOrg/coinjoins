@@ -7,7 +7,7 @@
     {
       "title": "Third Gen",
       "type": "gen",
-      "description": "WabiSabi is a third gen coinjoin protocol fixing the limitations of fixed denominations and toxic change that Zerolink, a second gen coinjoin protocol had."
+      "description": "In Wasabi 2.0, WabiSabi is a third gen coinjoin protocol. It changed fixed denominations into variable amounts to eliminate toxic change."
     }
   ],
   "hero": "Wasabi Wallet 2.0 is a simple to use bitcoin wallet desktop app with a built-in coinjoin feature using WabiSabi.",
@@ -37,7 +37,7 @@
     }
   ],
   "overview": {
-    "point_1": "WabiSabi is a second-generation coinjoin protocol that overcomes limitations of the Zerolink protocol, allowing variable output amount denominations. This makes it possible to create coinjoin transactions without any toxic change.",
+    "point_1": "WabiSabi is a third-generation coinjoin protocol that overcomes limitations of the Zerolink protocol, allowing variable output amount denominations. This makes it possible to create coinjoin transactions without any toxic change.",
     "point_2": "Wasabi updates wallet balances privately using block filters, without needing a full node, although that option is available. ",
     "point_3": "Wasabi coordinator fees are 0.3% of the fresh bitcoin amount (fresh means not coinjoined before). ",
     "point_4": "The minimum amount to participate in a coinjoin is 5,000 sat (0.00005000 BTC), and the maximum is 40,000 BTC, with 79 standard output denominations.",
@@ -47,11 +47,11 @@
   },
   "benefits": {
     "point_1": "With variable coinjoin output values and a large number of participants, WabiSabi coinjoins allow for an enormous amount of possibilities, making it difficult to trace the flow of funds after a single transaction.",
-    "point_2": "By default, the entire wallet and protocol run on Tor, protecting users (clients) from having their personal IP addresses exposed.",
-    "point_3": "Toxic change outputs are eliminated in most cases, except for lone whales that have relatively large inputs compared to other inputs from the same coinjoin transaction.",
-    "point_4": "Wasabi Wallet has a change avoidance feature for sending bitcoin to other wallets, which allows a payment to be rounded up or down to avoid creating unnecessary change, saving fees and time for the user. ",
-    "point_5": "The coinjoin function is automatic while a user’s balance is at least 1 million sats (0.01 BTC).",
-    "point_6": "Achieving a high level of privacy for a given UTXO is possible in a single coinjoin transaction, making it quite block space efficient and therefore cheap in network fees for users.",
+    "point_2": "By default, the entire wallet and protocol run on Tor (it comes bundled in), protecting users (clients) from having their personal IP addresses exposed.",
+    "point_3": "Toxic change outputs are eliminated in most cases, except for lone whales that have relatively large inputs compared to other inputs from the same coinjoin transaction. As of the 2.0.4 release, toxic change is reduced even further with the introduction of naive decomposition as an alternative output method to create more efficient coinjoins.",
+    "point_4": "Wasabi Wallet has a change avoidance feature for sending bitcoin to other wallets, which allows a payment to be rounded up or down to avoid creating unnecessary change, saving fees and time for the user.",
+    "point_5": "The coinjoin function is automatic while a user’s balance is at least 1 million sats (0.01 BTC). Just send funds to Wasabi 2.0 and you will reach your anonymity score target after a few bitcoin confirmed blocks.",
+    "point_6": "Achieving a high level of privacy for a given UTXO is possible in a single coinjoin transaction, making it quite block space efficient and therefore cheap in network fees for users. It used to be an issue that uneconomically small outputs would be created on a Wasabi 2.0 coinjoin, but the 2.0.4 release fixed this.",
     "point_7": "Coordinator fees are not paid for remixing coins created by a previous coinjoin round. Coordinator fees are not paid for outputs created by previously mixed coins. This allows the sender’s change and the recipient’s payment to be coinjoined for free. ",
     "point_8": "'Plebs don't pay' is a fee policy where any input below 1 million sats (0.01 BTC) does not pay the coordinator fee.",
     "point_9": "Wasabi's 'anonymity score' is very conservative, giving the user a safe measure of how much privacy or plausible deniability has been achieved. Clients only count outputs with matching values towards your score, but coinjoin outputs of other sizes increase privacy as well.",
@@ -61,7 +61,7 @@
     "point_1": "During onboarding, the Wasabi Wallet Terms of Service can be a friction point for users who want to fully understand the legalities before moving forward.",
     "point_2": "The “on by default” coinjoin feature can surprise users who may see their coins being coinjoined automatically after the fact, having paid both the regular coordinator and network fees.",
     "point_3": "The “anonymity scores” of Wasabi Wallet are hard to understand. “How much is enough?” is not that straight forward. The way anonymity scoring is calculated is also difficult to understand.",
-    "point_4": "On Wasabi Wallet, the wallet loading phase can be slow for large wallets or wallets that have been out of sync with the blockchain for some time, as it uses blockfiltering for privacy.",
+    "point_4": "On Wasabi Wallet, the wallet loading phase can be slow for large wallets or wallets that have been out of sync with the blockchain for some time, as it uses blockfiltering for privacy. However, this has been greatly improved on the 2.0.4 release with the introduction of Turbosync as a faster loading and filter scanning method.",
     "point_5": "The company that runs the default server for all Wasabi Wallet clients buys data from a chain analysis provider to prevent some inputs from registering with its coinjoin service. While the privacy tradeoff is very limited, this setup lacks censorship resistance. Users may prefer other P2P alternatives such as JoinMarket."
   }
 }

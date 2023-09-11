@@ -7,7 +7,7 @@
     {
       "title": "Second Gen",
       "type": "gen",
-      "description": "Whirlpool is a Zerolink coinjoin implementation, which has improvements over first gen coinjoins such as JoinMarket but is now falling behind third gen coinjoin implementations such as WabiSabi"
+      "description": "Samourai uses Whirlpool, a second gen Zerolink coinjoin protocol. It is now falling behind third gen coinjoin protocols. It lacks efficiency isolating toxic change due to having fixed amount denominations."
     }
   ],
   "hero": "Samourai Wallet is a bitcoin wallet mobile application on Android with built-in coinjoin functionality using Whirlpool.",
@@ -46,25 +46,24 @@
   },
   "benefits": {
     "point_1": "Total fees can be as low as 0.05%: If you register a lot of bitcoin, you will pay very little as coordinator fee because you pay the same amount if you register 0.5 or 35 bitcoin. You only pay mining fees for the premix tx0 and for the first coinjoin transaction.",
-    "point_2": "Zerolink-based coinjoin transactions implement Chaumian blind signatures to protect the user’s input to output link from the coordinator. ",
+    "point_2": "Zerolink-based coinjoin transactions implement Chaumian blind signatures to protect the user’s input to output link from the coordinator.",
     "point_3": "There are no terms of service for Samourai or Whirlpool and there is no announced blacklisting policy.",
     "point_4": "The anonymity set gain of Whirlpool coinjoin transactions is easy to calculate and understand, the terms used are backward looking anonymity set and forward looking anonymity set.",
     "point_5": "Tor is bundled in, can be enabled with a single click on first startup but it is opt-in. Your Tor identity updates between input and output registration. You can also change Tor identities in the network settings with a single click.",
-    "point_6": "Samourai has many additional privacy features that complement the post-mixing experience.",
+    "point_6": "Samourai has many additional privacy features that complement the post-mixing experience. Samourai provides a mobile coinjoin experience, unlike other wallets.",
     "point_7": "You can connect your own node by running the Dojo software and connecting it to your wallet during the initial setup process.",
-    "point_8": "Once you set up mixing in Samourai, the coinjoin transactions will be automated and mixing will continue if you leave the software open.",
-    "point_9": "You can enter a promo code SCODE when registering bitcoin with Whirlpool for discounted coordinator fees during social media promotions. "
+    "point_8": "You can enter a promo code SCODE when registering bitcoin with Whirlpool for discounted coordinator fees during social media promotions. "
   },
   "tradeoffs": {
-    "point_1": "Fees can be high: if you register one single UTXO to coinjoin, you pay 3.5%-5% in coordinator fees and some extra in mining fees.",
-    "point_2": "Whirlpool Tx0 reveals common input ownership, which connects different past transactions together.",
-    "point_3": "Since the maximum anonymity set gain per Whirlpool coinjoin transaction is 8, many users want to remix many times. This may result in longer waiting times.",
-    "point_4": "Toxic change is not eliminated, it is simply segregated into a different wallet account. You will have to deal with these non-private outputs in the future.",
-    "point_5": "The premix transaction (Tx0) will incur transaction mining fees, which elevates the cost of the mixing experience.",
+    "point_1": "Fees can be high: if you register one single UTXO to coinjoin, you pay 3.5%-5% in coordinator fees and some extra in mining fees. Additionally, The premix transaction (Tx0) incurs transaction mining fees, which elevates the cost of the mixing experience.",
+    "point_2": "Remixing is not practical on Samourai because it's a mobile application. To address this, the Samourai team has released a Whirlpool GUI desktop application where you can set up remixing remotely, but this requires a separate installation and setup process.",
+    "point_3": "Since the maximum anonymity set gain per Whirlpool coinjoin transaction is 8, users often want to remix. However, you have no control as to when you will enter a remixing coinjoin transaction. This may result in longer waiting times",
+    "point_4": "Toxic change is not eliminated, it is simply segregated into a different wallet account. You will have to deal with these non-private outputs in the future. Additionally, Whirlpool Tx0 reveals common input ownership, which connects different past transactions together that might not have been already connected.",
+    "point_5": "Samourai’s is an API (application specific interface) wallet, which means the wallet sends your master public key (XPUB) to Samourai’s servers by default. If you don’t run and connect Dojo, the coordinator knows all the information about your transaction and your wallet. This tradeoff is very problematic for non-dojo users.",
     "point_6": "There’s a minimum amount of 0.001 BTC to coinjoin on Whirlpool, which limits accessibility.",
-    "point_7": "Samourai’s is an API (application specific interface) wallet, which means the wallet sends your master public key (XPUB) to Samourai’s servers by default. If you don’t run and connect Dojo, the coordinator knows all the information about your transaction and your wallet.",
-    "point_8": "The Whirlpool coordinator is a centralized service that can technically censor UTXOs from using its service and this would not be verifiable by the public.",
-    "point_9": "The privacy objectives are not clear to the user. It's unknown if he's advised to mix two times, five times, or whatever.",
-    "point_10": "The learning curve is steep to understand all the terms used in Samourai such as STONEWALL, Stowaway, Joinbot, Ricochet, PayNyms, Cahoots, Badbank, etc."
+    "point_7": "The Whirlpool coordinator is a centralized service that can technically censor UTXOs from using its service and this would not be verifiable by the public.",
+    "point_8": "The privacy objectives are not clear to the user. It's unknown if he's advised to mix two times, five times, or whatever.",
+    "point_9": "The learning curve is steep to understand all the terms used in Samourai such as STONEWALL, Stowaway, Joinbot, Ricochet, PayNyms, Cahoots, Badbank, etc.",
+    "point_10": "Before the 5th of May 2023, Samourai Wallet build was unreproducible. This signifies that for years, users could not reproduce the wallet on the App Store from the source code. Since then, it can be reproducibly built."
   }
 }

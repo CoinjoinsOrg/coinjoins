@@ -89,7 +89,7 @@
         <div class="w-4 flex-shrink-0">
           <GreenCircleSvg />
         </div>
-        <p>{text}</p>
+        <p>{@html text}</p>
       </div>
     {/each}
   </div>
@@ -107,7 +107,7 @@
         <div class="w-4 flex-shrink-0">
           <BlueCheckSvg />
         </div>
-        <p>{text}</p>
+        <p>{@html text}</p>
       </div>
     {/each}
   </div>
@@ -123,7 +123,7 @@
         <div class="w-4 flex-shrink-0">
           <XCircleSvg />
         </div>
-        <p>{text}</p>
+        <p>{@html text}</p>
       </div>
     {/each}
   </div>

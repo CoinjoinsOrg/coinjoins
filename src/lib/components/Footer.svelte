@@ -39,8 +39,9 @@
           <div class="flex flex-col gap-2">
             {#each footerData.intro.menu as item}
               <div>
-                <a class="no-underline hover:cursor-pointer" href={item.link}
-                  >{item.text}</a
+                <button
+                  class="no-underline hover:cursor-pointer hover:text-green-cj"
+                  on:click={() => goto(item.link)}>{item.text}</button
                 >
               </div>
             {/each}
@@ -80,9 +81,10 @@
           <div class="flex flex-col gap-2">
             {#each footerData.history.menu as item}
               <div>
-                <a
-                  class="no-underline hover:cursor-pointer"
-                  href={`/history/#${item.link}`}>{item.text}</a
+                <button
+                  class="no-underline hover:cursor-pointer hover:text-green-cj"
+                  on:click={() => goto(`/history/#${item.link}`)}
+                  >{item.text}</button
                 >
               </div>
             {/each}
