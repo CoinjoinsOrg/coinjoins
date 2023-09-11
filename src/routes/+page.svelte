@@ -45,7 +45,7 @@
   <title>{data.title}</title>
 </svelte:head>
 
-<div class="flex items-center relative w-full z-0 h-[70vh] md:h-[80vh]">
+<div class="flex items-center relative w-full isolate z-0 h-[70vh] md:h-[80vh]">
   <div class="flex md:hidden items-center w-full">
     <CoinjoinVisualMobile />
   </div>
