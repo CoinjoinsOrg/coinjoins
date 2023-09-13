@@ -54,7 +54,7 @@
 
           <div class="flex flex-col gap-2">
             {#each footerData.wallet_overview.menu as item}
-              <div class="flex gap-2 items-center">
+              <div class="flex gap-2 items-center whitespace-nowrap">
                 <button
                   disabled={item.link === "#"}
                   class="no-underline {item.link.includes('#')
