@@ -7,7 +7,7 @@
     {
       "title": "Second Gen",
       "type": "gen",
-      "description": "Sparrow uses Whirlpool, a second gen Zerolink coinjoin protocol. It is now falling behind third gen coinjoin protocols. It lacks efficiency isolating toxic change due to having fixed amount denominations."
+      "description": "A second generation coinjoin protocol is a term used to describe all Zerolink-based protocols such as Wasabi Wallet 1.0 and Whirlpool (Samourai and Sparrow). They lack coinjoin efficiency because of toxic change (segregated in Whirlpool’s case) due to having fixed amount denominations."
     }
   ],
   "hero": "Sparrow Wallet is a bitcoin wallet desktop application with a built-in coinjoin feature using Whirlpool.",

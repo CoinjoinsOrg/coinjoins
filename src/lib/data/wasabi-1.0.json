@@ -7,7 +7,7 @@
         {
             "title": "Second Gen",
             "type": "gen",
-            "description": "Wasabi 1.0 is now deprecated and used Zerolink, a second gen coinjoin protocol, which had low efficiency. It created toxic change due to having fixed amount denominations."
+            "description": "A second generation coinjoin protocol is a term used to describe all Zerolink-based protocols such as Wasabi Wallet 1.0 and Whirlpool (Samourai and Sparrow). They lack coinjoin efficiency because of toxic change (segregated in Whirlpool’s case) due to having fixed amount denominations."
         },
         {
             "title": "Deprecated",
@@ -42,7 +42,7 @@
         }
     ],
     "overview": {
-        "point_1": "Zerolink is a first-generation coinjoin protocol that leverages Chaum blind signatures to break input and output linkage, is equipped with DOS and sybil resilience, and uses block filters and Tor for network privacy.",
+        "point_1": "Zerolink is a second-generation coinjoin protocol that leverages Chaum blind signatures to break input and output linkage, is equipped with DOS and sybil resilience, and uses block filters and Tor for network privacy.",
         "point_2": "Wasabi updates wallet balances privately using block filters, without needing a full node, although that option is available.",
         "point_3": "Wasabi coordinator fees are 0.003% per anonymity set, which amounts to 0.3% for an anonymity set of 100, which is the default target value. You pay your mining fees on coinjoin transactions.",
         "point_4": "The minimum total input amount to participate in a Wasabi 1.0 coinjoin is a little over 0.1 BTC. Coinjoin outputs produced are of that value or its multiplicators.",

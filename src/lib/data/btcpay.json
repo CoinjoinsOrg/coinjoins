@@ -7,7 +7,7 @@
     {
       "title": "Third Gen",
       "type": "gen",
-      "description": "WabiSabi is a third gen coinjoin protocol fixing the limitations of fixed denominations and toxic change that Zerolink, a second gen coinjoin protocol had."
+      "description": "A third generation coinjoin protocol is a term used to describe protocols that have solved the toxic change issue and provide strong efficiency. WabiSabi is the only one publicly available and it leverages flexible output amount decomposition to achieve that goal."
     }
   ],
   "hero": "BTCPay Server Review.",
@@ -37,7 +37,7 @@
     }
   ],
   "overview": {
-    "point_1": "WabiSabi is a second-generation coinjoin protocol that overcomes limitations of the Zerolink protocol, allowing variable output amount denominations. This makes it possible to create coinjoin transactions without any toxic change.",
+    "point_1": "WabiSabi is a third-generation coinjoin protocol that overcomes limitations of the Zerolink protocol, allowing variable output amount denominations. This makes it possible to create coinjoin transactions without any toxic change.",
     "point_2": "Wasabi updates wallet balances privately using block filters, without needing a full node, although that option is available. ",
     "point_3": "Wasabi coordinator fees are 0.3% of the fresh bitcoin amount (fresh means not coinjoined before). ",
     "point_4": "The minimum amount to participate in a coinjoin is 5,000 sat (0.00005000 BTC), and the maximum is 40,000 BTC, with 79 standard output denominations.",
