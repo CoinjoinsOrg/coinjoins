@@ -7,7 +7,7 @@
     {
       "title": "Third Gen",
       "type": "gen",
-      "description": "In Wasabi 2.0, WabiSabi is a third gen coinjoin protocol. It changed fixed denominations into variable amounts to eliminate toxic change."
+      "description": "A third generation coinjoin protocol is a term used to describe protocols that have solved the toxic change issue and provide strong efficiency. WabiSabi is the only one publicly available and it leverages flexible output amount decomposition to achieve that goal."
     }
   ],
   "hero": "Wasabi Wallet 2.0 is a simple to use bitcoin wallet desktop app with a built-in coinjoin feature using WabiSabi.",
