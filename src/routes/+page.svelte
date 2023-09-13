@@ -349,7 +349,7 @@
 
         <div class="flex flex-col max-w-xl lg:flex-row lg:max-w-none gap-12">
           {#each data.coinjoins.description as desc}
-            <div class="text-white text-2xl text-center">
+            <div class="text-white text-2xl text-center flex-1">
               {desc}
             </div>
           {/each}
