@@ -3,7 +3,6 @@
 
   import H1 from "@components/H1.svelte";
   import H2 from "@components/H2.svelte";
-  import FlatCoinjoinSvg from "@components/FlatCoinjoinSvg.svelte";
   import ArrowDown from "@lib/img/ArrowDown.svelte";
   import GreenText from "@components/GreenText.svelte";
   import CompareWalletsBox from "@components/CompareWalletsBox.svelte";
@@ -34,7 +33,7 @@
   <title>{data.content.title}</title>
 </svelte:head>
 
-<div class="relative px-4 pt-10 h-[50vh] max-w-3xl mx-auto">
+<div class="relative px-4 pt-10 h-[60vh] max-w-3xl mx-auto">
   <div class="absolute flex flex-col items-start gap-10 pt-32">
     <div class="flex gap-4">
       {#each data.content.tags as tag}
@@ -69,10 +68,6 @@
     src="/wallets-bg/{data.content.wallet_logo}-bg.png"
     alt="{data.content.wallet_name} Logo"
   />
-</div>
-
-<div>
-  <FlatCoinjoinSvg />
 </div>
 
 <div
