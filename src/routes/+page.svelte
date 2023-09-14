@@ -6,7 +6,6 @@
 
   import H1 from "@lib/components/H1.svelte";
   import H2 from "@lib/components/H2.svelte";
-  import H3 from "@lib/components/H3.svelte";
   import ArrowDown from "@lib/img/ArrowDown.svelte";
   import Bitcoin from "@lib/img/Bitcoin.svelte";
   import CoinjoinVisual from "@lib/img/CoinjoinVisual.svelte";
@@ -25,35 +24,24 @@
   import GreenBrackets from "@lib/img/GreenBrackets.svelte";
   import GreenBan from "@lib/img/GreenBan.svelte";
   import GreenKey from "@lib/img/GreenKey.svelte";
-  import WasabiLogo from "@lib/img/WasabiLogo.svelte";
   import Cj from "@lib/img/Cj.svelte";
   import CoinjoinMobile from "@lib/img/CoinjoinMobile.svelte";
 
   const data = basicsData;
   let isLoaded = false;
   let y;
+  let screenSize;
 
   function handleQuestionClick(i) {
     data.fudBustList[i].isClicked = !data.fudBustList[i].isClicked;
   }
-  $: currentPath = $page.url;
-  $: hashUrl = $page.url.hash;
 
   onMount(() => {
     isLoaded = true;
-    // const { hash } = document.location;
-    // console.log("hash", hash);
-    // const scrollTo = hash && document.getElementById(hash.slice(1));
-    // console.log("scrollTo", scrollTo);
-    // if (scrollTo) {
-    //   setTimeout(() => scrollTo.scrollIntoView(), 500);
-    // } else {
-    //   setTimeout(() => currentPath.scrollIntoView(), 500);
-    // }
   });
 </script>
 
-<svelte:window bind:scrollY={y} />
+<svelte:window bind:scrollY={y} bind:innerWidth={screenSize} />
 
 <svelte:head>
   <title>{data.title}</title>
@@ -67,7 +55,7 @@
     <CoinjoinVisual />
   </div>
 
-  {#if isLoaded}
+  {#if screenSize < 767 || isLoaded}
     <div
       in:fly={{ duration: 2000 }}
       out:fade={{ delay: 0, duration: 300 }}
@@ -91,7 +79,7 @@
   {/if}
 </div>
 
-{#if isLoaded}
+{#if screenSize < 767 || isLoaded}
   <div
     id="open"
     class="relative mx-auto w-full h-full"
@@ -154,7 +142,7 @@
   </div>
 {/if}
 
-{#if y > 600}
+{#if screenSize < 767 || y > 600}
   <div
     in:fly={{ delay: 1000, x: 200, duration: 1400 }}
     out:fade={{ delay: 0, duration: 300 }}
@@ -171,7 +159,7 @@
   </div>
 {/if}
 
-{#if y > 1100}
+{#if screenSize < 767 || y > 1100}
   <div
     id="transactions"
     in:fly={{ delay: 1000, x: -400, duration: 1400 }}
@@ -193,7 +181,7 @@
   </div>
 {/if}
 
-{#if y > 2000}
+{#if screenSize < 767 || y > 2000}
   <div
     class="flex flex-col items-center gap-8 mx-auto max-w-5xl px-4"
     in:fly={{ delay: 1000, x: 200, duration: 1400 }}
@@ -230,7 +218,7 @@
   </div>
 {/if}
 
-{#if y > 2700}
+{#if screenSize < 767 || y > 2700}
   <div
     in:fly={{ delay: 1000, x: -400, duration: 1000 }}
     out:fade={{ delay: 0, duration: 300 }}
@@ -247,7 +235,7 @@
   </div>
 {/if}
 
-{#if y > 3000}
+{#if screenSize < 767 || y > 3000}
   <div
     in:fade={{ delay: 1000, duration: 1600 }}
     out:fade={{ delay: 0, duration: 300 }}
@@ -266,7 +254,7 @@
   </div>
 {/if}
 
-{#if y > 3800}
+{#if screenSize < 767 || y > 3800}
   <div
     in:fly={{ delay: 1000, x: -400, duration: 1400 }}
     out:fade={{ delay: 0, duration: 300 }}
@@ -281,7 +269,7 @@
   </div>
 {/if}
 
-{#if y > 4300}
+{#if screenSize < 767 || y > 4300}
   <div
     in:fade={{ delay: 1000, duration: 1400 }}
     out:fade={{ delay: 0, duration: 300 }}
@@ -294,7 +282,7 @@
   </div>
 {/if}
 
-{#if y > 4800}
+{#if screenSize < 767 || y > 4800}
   <div
     in:fade={{ delay: 1000, duration: 1400 }}
     out:fade={{ delay: 0, duration: 300 }}
@@ -320,7 +308,7 @@
   </div>
 {/if}
 
-{#if y > 6200}
+{#if screenSize < 767 || y > 6200}
   <div
     class="relative"
     in:fade={{ delay: 1000, duration: 1400 }}
@@ -359,7 +347,7 @@
   </div>
 {/if}
 
-{#if y > 7400}
+{#if screenSize < 767 || y > 7400}
   <div
     id="faq"
     class="px-4 flex flex-col gap-28"
@@ -420,7 +408,7 @@
   </div>
 {/if}
 
-{#if y > 9000}
+{#if screenSize < 767 || y > 9000}
   <div
     in:fly={{ delay: 1000, y: -100, duration: 1400 }}
     out:fade={{ delay: 0, duration: 300 }}

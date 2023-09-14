@@ -2,13 +2,12 @@
   import { page } from "$app/stores";
   import { goto } from "$app/navigation";
   import data from "@lib/data/header.json";
-
   import CoinjoinLogo from "@lib/img/CoinjoinLogo.svelte";
   import ClickedArrow from "@lib/img/ClickedArrow.svelte";
   import UnclickedArrow from "@lib/img/UnclickedArrow.svelte";
 
-  let showMobileMenu = false;
   let y;
+  let showMobileMenu;
   let timeoutHideSubMenuWallets;
   let isWalletsSubMenuShown = false;
 
