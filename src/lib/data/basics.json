@@ -4,28 +4,28 @@
   "subheader": "Reclaim your privacy <br /> with collaborative bitcoin transactions.",
   "open": {
     "title": "Bitcoin is open",
-    "body": " By design, all bitcoin transactions are publicly visible. That’s great to prevent inflation and fraud without relying on third parties. But it has some privacy drawbacks."
+    "body": " By design, all bitcoin transactions are publicly visible. That’s great to prevent inflation and fraud without relying on third parties, but it has some privacy drawbacks."
   },
   "utxos": {
     "title": "It’s all about the coins",
-    "body": "Unspent Transaction Outputs, or UTXOs, are essentially the coins in the bitcoin network. <br /><br /> Each coin has a distinct transaction history, making all bitcoin transactions unique and easily trackable."
+    "body": "Unspent Transaction Outputs, or UTXOs, are essentially the coins in the Bitcoin network. <br /><br /> Each coin has a distinct transaction history, making all Bitcoin transactions unique and easily trackable."
   },
   "transactions": {
     "title": "How a Bitcoin transaction works",
     "explainer": [
-      "User picks an amount of bitcoin to send (0.7 BTC) with the destination address. To do so, a bitcoin wallet selects at least one spendable coin or UTXO, and adds it as an input (1 BTC) in the transaction",
+      "A user picks an amount of bitcoin to send (0.7 BTC) to a destination address. To do so, their bitcoin wallet selects at least one spendable coin or UTXO and adds it as an input (1 BTC) in the transaction",
       "The transaction has two outputs: a payment output (0.7 BTC) and a change output (0.29 BTC), which returns to the user’s wallet. There is also a usual network fee (0.01 BTC to keep it simple in this example).",
-      "The user signs the transaction and sends it to the bitcoin network so a miner can add it to a block to get the network fees. Anyone can verify the transaction status at any time."
+      "The user signs the transaction and sends it to the Bitcoin network so a miner can add it to a block to get the network fees. Anyone can verify the transaction status at any time."
     ]
   },
   "tracking": {
     "title": "Tracking Bitcoin transactions",
-    "body": " Most bitcoin transactions are public. Is a transaction a payment or a self-spend? Is it a Lightning channel opening? Is it connected to other transactions? It’s a guessing game with popular heuristics that chain analysts use to track bitcoin users.",
+    "body": " Bitcoin transactions are public. Is a transaction a payment or a self-spend? Is it a Lightning channel opening? Is it connected to other transactions? It’s a guessing game with popular heuristics that chain analysts use to track bitcoin users.",
     "examples": [
       {
         "icon": "moneybill",
         "title": "Payment",
-        "body": " If there is a change output, then it’s likely a payment where the sender receives the unused amount back to its wallet."
+        "body": " If a transaction has two outputs, then it’s likely a payment where the sender receives an unused amount back to their wallet."
       },
       {
         "icon": "rotate",
@@ -41,15 +41,15 @@
   },
   "surveillance": {
     "title": "Surveillance is easy & cheap on Bitcoin",
-    "body": "There is a whole industry of bitcoin surveillance, referred to as chain analysis. <br /><br /> Public block explorers allow anyone to monitor, record and analyse transactions. <br /><br /> It is not necessarily bad or good. It just is. Bitcoin is easily verified by anyone."
+    "body": "There is a whole industry of bitcoin surveillance, referred to as chain analysis. <br /><br /> Public block explorers allow anyone to monitor, record and analyse transactions."
   },
   "catch": {
-    "title": "“Good, we can catch the bad guys, right?”",
-    "body": "Well...technically, due to its transparency, Bitcoin could become one of the most advanced tools for financial surveillance.<br /><br /> By default, that makes privacy for regular users quite low, which is harmful for the personal safety of consumers and commercial interests of businesses."
+    "title": "Bitcoin is easily verified by anyone",
+    "body": "And technically, due to the transparency of its database, Bitcoin could become one of the most advanced tools for financial surveillance.<br /><br /> By default, that makes privacy for regular users quite low, which is harmful for the personal safety of consumers and commercial interests of businesses."
   },
   "hide": {
     "title": "Do you really have nothing to hide?",
-    "body": "How about strangers knowing how much money you earn per month or saved in a year? <br /><br /><br /> Or your future spouse knowing you bought her wedding ring before you pop the big question?<br /><br /><br /> Or your employer knowing who you make political donations to?"
+    "body": "Would you want strangers knowing how much money you earn per month or saved in a year? <br /><br /><br /> Or your future spouse knowing you bought her wedding ring before you pop the big question?<br /><br /><br /> Or your employer knowing who you make political donations to?"
   },
   "privacy": {
     "title": "Privacy is a choice to not share certain information",
@@ -65,12 +65,12 @@
     "description": [
       "In a coinjoin, many different users participate together in one single collaborative transaction.",
       "A coinjoin transaction has many standard outputs of the same amounts, which makes it very hard to track them back to their initial inputs.",
-      "That allows coinjoin users to conceal the history of their coins from the public to make their UTXOs fungible on the public bitcoin network."
+      "That allows coinjoin users to conceal the history of their coins from the public to make their UTXOs fungible on the public Bitcoin network."
     ]
   },
   "fud": {
     "title": "Heard bad things about coinjoins?",
-    "body": "Even 9 years after coinjoins were first discussed, there is still uncertainty about its usage. Let’s bust the Fear, Uncertainty and Doubt (FUD) surrounding coinjoins."
+    "body": "Over 10 years after coinjoins were first discussed, there is still uncertainty about its usage. Let’s bust the Fear, Uncertainty and Doubt (FUD) surrounding coinjoins."
   },
   "fudBustList": [
     {
@@ -80,22 +80,22 @@
     },
     {
       "question": "“Coinjoins are illegal.”",
-      "answer": "oCan coinjoins be deemed illegal?<br/><br/>From a user’s perspective, coinjoins follow the same legality pattern as bitcoin. In other words, if bitcoin is legal in your country then it is most likely that coinjoins are. If the funds that are coinjoined are considered illegal due to coming from theft, fraud or money laundering, then it’s already illegal but that’s because of the nature of the funds rather than the nature of the coinjoin activity.<br/><br/>With coinjoins, if you want, you can decide to share your transaction information with confidentiality to any interested party to reveal your transaction flow (input to output) but that choice is now yours instead of being public by default.",
+      "answer": "Can coinjoins be deemed illegal?<br/><br/>From a user’s perspective, coinjoins follow the same legality pattern as Bitcoin. In other words, if Bitcoin is legal in your country then it is most likely that coinjoins are. If the funds that are coinjoined are considered illegal due to coming from theft or fraud, then it’s already illegal but that’s because of the nature of the funds rather than the nature of the coinjoin activity.<br/><br/>With coinjoins, if you want, you can decide to share your transaction information with confidentiality to any interested party to reveal your transaction flow (input to output) but that choice is now yours instead of being public by default.",
       "isClicked": false
     },
     {
       "question": "“Coinjoins will make it impossible to use exchanges.”",
-      "answer": "Some exchanges will refuse to sell bitcoin you deposit if they can trace it back to a coinjoin transaction. While it’s been reported that platforms like <a href='https://twitter.com/BlockFiZac/status/1234531935038341120?s=20'>BlockFi</a> or <a href='https://twitter.com/Bitcoinbeach/status/1643786690337669121'>Chivo</a> do this, it's important to remember that they find themselves in the minority for now, and you can use platforms that don’t block coinjoined UTXOs, or use <a href='https://bitcoinmagazine.com/guides/best-p2p-decentralised-exchanges'>P2P exchanges</a>. This has nothing to do with coinjoins, per se.<br/><br/>Bitcoin UTXOs (coins) have distinct transaction histories, which make them strictly distinguishable from one another and therefore not fungible by default. It's also possible to selectively disclose your transaction history with an exchange platform if you believe this would help you get your coins accepted, however, this is not guaranteed.",
+      "answer": "Some exchanges will refuse to sell bitcoin you deposit if they can trace it back to a coinjoin transaction. While it’s been reported that platforms do this, it's important to remember that they find themselves in the minority for now, and you can use platforms that don’t block coinjoined UTXOs, or use <a href='https://bitcoinmagazine.com/guides/best-p2p-decentralised-exchanges'>P2P exchanges</a>. This has nothing to do with coinjoins, per se.<br/><br/> It's also possible to selectively disclose your transaction history with an exchange platform if you believe this would help you get your coins accepted, however, this is not guaranteed.",
       "isClicked": false
     },
     {
-      "question": "“Coinjoins are only used by criminals and for money laundering.”",
-      "answer": "While criminals may use mobile phones, the Internet, and bitcoin, they may also try to use coinjoins as they are only a type of bitcoin transactions. Like for the Internet and bitcoin, the vast majority of people using these technologies are regular individuals just going on about their lives. Financial privacy is quite usual in traditional banking today. Confidentiality with personal consumer data is standard across financial institutions in Western countries. Coinjoins only help bitcoin users gain privacy to a comparable level enjoyed in the traditional financial system. It has been demonstrated by chain analysis companies that only a <a href='https://go.chainalysis.com/rs/503-FAP-074/images/Crypto-Crime-Report-2022.pdf'>small minority</a> of transactions are tied to illicit activities.",
+      "question": "“Coinjoins are only used by criminals.”",
+      "answer": "While criminals may use mobile phones, the Internet, and Bitcoin, they may also try to use coinjoins as they are only a type of bitcoin transactions. Like for the Internet and bitcoin, the vast majority of people using these technologies are regular individuals just going on about their lives. Financial privacy is quite usual in traditional banking today. Confidentiality with personal consumer data is standard across financial institutions in Western countries. Coinjoins only help Bitcoin users gain privacy to a comparable level enjoyed in the traditional financial system.",
       "isClicked": false
     },
     {
       "question": "“Coinjoins will get your funds stolen.”",
-      "answer": "A coinjoin is nothing more than a regular bitcoin transaction which allows multiple participants at the same time. All coinjoin participants hold their own private keys, so even if there is a central coordinator facilitating participants’ registrations, it does not take control of funds. Coinjoins are completely different from custodial mixing service providers, which are shady businesses with a history full of fraud and scams.<br/><br/>A coinjoin coordinator does not take custody, accept deposits or issue withdrawals as it never holds user funds. The coordinator works as a message whiteboard to facilitate the registration of different participants. The coordinator is non-custodial and collects no personal information on users other than what is available publicly on the bitcoin blockchain. All transaction signing is done on the client side application, outside of the coordinator’s control. Learn more <a href='https://en.bitcoin.it/wiki/CoinJoin'>about coinjoins here</a>.",
+      "answer": "A coinjoin is nothing more than a regular bitcoin transaction which allows multiple participants at the same time. All coinjoin participants hold their own private keys, so even if there is a central coordinator facilitating participants’ registrations, it does not take control of funds. Coinjoins are completely different from custodial mixing service providers, which are shady businesses with a history full of fraud and scams.<br/><br/>A coinjoin coordinator does not take custody, accept deposits or issue withdrawals as it never holds user funds. The coordinator works as a message whiteboard to facilitate the registration of different participants. By default, the coordinator should collect no personal information on users other than what is available publicly on the bitcoin blockchain (some coordinators do such as Whirlpool with Samourai Wallet). All transaction signing is done on the client side application, outside of the coordinator’s control. Learn more <a href='https://en.bitcoin.it/wiki/CoinJoin'>about coinjoins here</a>.",
       "isClicked": false
     },
     {
@@ -115,7 +115,7 @@
     },
     {
       "question": "“Coinjoins are made by intelligence agencies.”",
-      "answer": "Some people claim that governments, public authorities or surveillance agencies are in charge of the main coinjoin implementations, allowing them to de-anonymize users. Most teams behind the major coinjoin implementations are publicly known and are not believed to be bad actors. While not all coinjoin designs are the same, what matters is that you use a wallet that has the least amount of information about you. You should use coinjoins such that you can still gain privacy even if the coordinator or wallet is acting against you. “Can do no harm” is an important feature of a coinjoin implementation that you must seek. Coinjoin software is open-source for both client-side and server-side code for all major implementations, which anybody can verify. Reproducible builds are also an important feature to verify that the software you download is the same as the open source code base.",
+      "answer": "Some people claim that governments, public authorities or surveillance agencies are in charge of the main coinjoin implementations, allowing them to de-anonymize users. While not all coinjoin designs are the same, what matters is that you use a wallet that has the least amount of information about you. You should use coinjoins such that you can still gain privacy even if the coordinator or wallet is acting against you. “Can do no harm” is an important feature of a coinjoin implementation that you must seek. Coinjoin software is open-source for both client-side and server-side code for all major implementations, which anybody can verify. Reproducible builds are also an important feature to verify that the software you download is the same as the open source code base.",
       "isClicked": false
     },
     {
@@ -148,7 +148,7 @@
   },
   "try": {
     "title": "Ready to Try for <span style='color:rgb(0,255,25,1.0)'>Yourself</span>?",
-    "body": " Don’t trust, verify. See for yourself and learn how coinjoins work by participating in them. There are different bitcoin wallets with built-in coinjoin features. Wasabi Wallet is one of them though there are others that we discuss <a href='/wallet-overview'>here</a>.",
+    "body": " Don’t trust, verify. See for yourself and learn how coinjoins work by participating in them. There are different bitcoin wallets with built-in coinjoin features. We recommend Wasabi Wallet after reviewing every privacy wallet based on the evaluation framework found <a href='/wallet-overview'>here</a>.",
     "features": [
       {
         "title": "Fully <br /> Trustless",
