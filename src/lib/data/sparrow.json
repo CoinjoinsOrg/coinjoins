@@ -47,7 +47,7 @@
     "point_2": "Zerolink-based coinjoin transactions implement Chaumian blind signatures to protect the user’s input to output linkage from the coordinator.",
     "point_3": "There are no terms of service for Sparrow or Whirlpool and there is no announced blacklisting policy.",
     "point_4": "The anonymity set gain of Whirlpool coinjoin transactions is easy to calculate and understand, the terms used are backward looking anonymity set and forward looking anonymity set.",
-    "point_5": "Tor can be connected for Bitcoin network and coordinator communication, but it’s not bundled in. If enabled, your Tor identity updates between input and output registration. You can also connect your own node through the RPC interface or with a private Electrum server.",
+    "point_5": "Tor is bundled in and can be used for Bitcoin network and coordinator communication, it is automatically started when an onion address is configured in the Server Preferences (should an external proxy not be configured and enabled). If enabled, your Tor identity updates between input and output registration. You can also connect your own node through the RPC interface or with a private Electrum server.",
     "point_6": "You can mix into another Sparrow wallet such as a multi-signature or hardware wallet, and also target a number of mixing rounds before sending the UTXO to the other wallet.",
     "point_7": "Once you set up mixing in Sparrow and the premix transaction, the coinjoin transactions will be automated and mixing will continue if you leave the software open.",
     "point_8": "You can enter a promo code SCODE when registering bitcoin with Whirlpool for discounted coordinator fees during social media promotions."
@@ -57,7 +57,7 @@
     "point_2": "Since the maximum anonymity set gain per Whirlpool coinjoin transaction is 8, users often want to remix. However, you have no control as to when you will enter a remixing coinjoin transaction. This may result in longer waiting times.",
     "point_3": "Toxic change is not eliminated, it is simply segregated into another wallet account. You will have to deal with those non-private outputs in the future. Additionally, Whirlpool Tx0 reveals common input ownership, which connects different past transactions together that might not have been already connected.",
     "point_4": "There’s a minimum amount of 0.001 BTC to coinjoin on Whirlpool, which limits accessibility. ",
-    "point_5": "Electrum SPV network connection is used by default which allows public servers to connect all the UTXOs from your wallet, even the non-private ones with the private ones.",
+    "point_5": "Electrum SPV network connection is used by default which allows public servers to connect all the UTXOs from your wallet, even the non-private ones with the private ones. However, the public servers come from a small curated list run by entities with a history of favouring privacy, rather than any random server.",
     "point_6": "Tor is not bundled with Sparrow and must be installed separately by the user, it’s not enabled by default. This can lead to IP address leakage to the coordinator, and to a public Electrum server (if you are not using your full node or a private Electrum server).",
     "point_7": "The Whirlpool coordinator is a centralized service that can technically censor UTXOs from using its service and this would not be verifiable by the public. ",
     "point_8": "The privacy objectives are not clear to the user. It's unknown if he's advised to mix two times, five times, or whatever."
