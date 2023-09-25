@@ -123,7 +123,11 @@
           {headerData.menu.wallets}
         </div>
 
-        <div class="w-6">
+        <div
+          class="w-6"
+          on:mouseover={handleShowSubMenuOnHover}
+          on:mouseout={handleHideSubMenuOnHoverOut}
+        >
           {#if isWalletsSubMenuShown}
             <ClickedArrow
               color={$page.url.pathname === "/wallet-overview" ||

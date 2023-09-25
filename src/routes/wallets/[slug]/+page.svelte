@@ -34,7 +34,7 @@
 </svelte:head>
 
 <div class="relative px-4 pt-10 h-[60vh] max-w-3xl mx-auto">
-  <div class="absolute flex flex-col items-start gap-10 pt-32">
+  <div class="absolute flex flex-col items-start gap-10 pt-32 px-4">
     <div class="flex gap-4">
       {#each data.content.tags as tag}
         <Tag type={tag.type} title={tag.title} description={tag.description} />
