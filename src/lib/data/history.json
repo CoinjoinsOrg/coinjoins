@@ -68,13 +68,13 @@
                 "date": "Recently",
                 "title": "Additional Wallets implement coinjoin",
                 "id": "hashcoin",
-                "body": "It should be noted that you can now use Joinmarket with an alternative GUI application called Jam, which significantly improves the usability with great design and the accessibility through its distribution on many bitcoin node projects like <a href='http://umbrel.com'>Umbrel</a>. <br/><br/> In addition, the Trezor and BTCPay Server teams have implemented coinjoin features in their wallets, implementing the WabiSabi protocol and using the zkSNACKs coordinator, the default coordinator on Wasabi and the most liquid coinjoin coordinator in the world. On the other hand, wallets like Sparrow and Bitcoin Keeper have decided to implement the Whirlpool protocol and use the Samourai Wallet coordinator. <br/><br/> Also, the zkSNACKs coordinator for Wasabi Wallet 1.0 (Zerolink) has now been sunset (RIP).<br/><br/>"
+                "body": "It should be noted that you can now use Joinmarket with an alternative GUI application called Jam, which significantly improves the usability with great design and the accessibility through its distribution on many bitcoin node projects like <a href='http://umbrel.com'>Umbrel</a>. <br/><br/> In addition, the Trezor and BTCPay Server teams have implemented coinjoin features in their wallets, implementing the WabiSabi protocol and using the zkSNACKs coordinator, the default coordinator on Wasabi. On the other hand, wallets like Sparrow and Bitcoin Keeper have decided to implement the Whirlpool protocol and use the Samourai Wallet coordinator. <br/><br/> Also, the zkSNACKs coordinator for Wasabi Wallet 1.0 (Zerolink) has now been sunset (RIP).<br/><br/>"
             },
             {
                 "date": "In the Future",
                 "title": "Who knows what's next...",
                 "id": "future",
-                "body": "It's unknown what the future of coinjoins holds, but we have a hint: it will include interoperability with the Lightning network. Wasabi Wallet will have to adapt to this new reality in the future, and if you want to take a closer look at how this might happen, read Gustavo's article on the topic. <br/><br/> Bitcoin privacy is constantly evolving, and coinjoin implementations are an essential part of its past, present, and future."
+                "body": "It's unknown what the future of coinjoins holds, but some believe that it will inclkude interoperability with the Lightning network. If you want to take a closer look at how this might happen in some implementations, you can read Gustavo's article on the topic. <br/><br/> Bitcoin privacy is constantly evolving, and coinjoin implementations are an essential part of its past, present, and future."
             }
         ]
     }
