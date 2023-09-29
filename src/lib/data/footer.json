@@ -37,8 +37,12 @@
         "link": "wallet-overview"
       },
       {
-        "text": "Wasabi Wallet 2.0",
-        "link": "wasabi-2.0"
+        "text": "BTCPay Server",
+        "link": "#"
+      },
+      {
+        "text": "Jam",
+        "link": "#"
       },
       {
         "text": "JoinMarket",
@@ -53,20 +57,16 @@
         "link": "sparrow"
       },
       {
-        "text": "Wasabi Wallet 1.0",
-        "link": "wasabi-1.0"
-      },
-      {
-        "text": "BTCPay Server",
-        "link": "#"
-      },
-      {
         "text": "Trezor Suite",
         "link": "#"
       },
       {
-        "text": "Jam",
-        "link": "#"
+        "text": "Wasabi Wallet 1.0",
+        "link": "wasabi-1.0"
+      },
+      {
+        "text": "Wasabi Wallet 2.0",
+        "link": "wasabi-2.0"
       }
     ]
   },
