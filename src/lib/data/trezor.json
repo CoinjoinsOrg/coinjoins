@@ -65,6 +65,6 @@
     "point_2": "The “on by default” coinjoin feature can surprise users who may see their coins being coinjoined automatically after the fact, having paid both the regular coordinator and network fees.",
     "point_3": "The “anonymity scores” of Wasabi Wallet are hard to understand. “How much is enough?” is not that straight forward. The way anonymity scoring is calculated is also difficult to understand.",
     "point_4": "On Wasabi Wallet, the wallet loading phase can be slow for large wallets or wallets that have been out of sync with the blockchain for some time, as it uses blockfiltering for privacy.",
-    "point_5": "The company that runs the default server for all Wasabi Wallet clients buys data from a chain analysis provider to prevent some inputs from registering with its coinjoin service. While the privacy tradeoff is very limited, this setup lacks censorship resistance. Users may prefer other P2P alternatives such as JoinMarket."
+    "point_5": "The company that runs the default server for all Wasabi Wallet clients buys data from a chain analysis provider to prevent some inputs from registering with its coinjoin service. Although it introduces no privacy tradeoff, this highlights the lack of censorship resistance. Users may prefer more P2P alternatives such as JoinMarket."
   }
 }
