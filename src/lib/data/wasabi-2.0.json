@@ -40,7 +40,7 @@
     "point_1": "WabiSabi is a third-generation coinjoin protocol that overcomes limitations of the Zerolink protocol, allowing variable output amount denominations. This makes it possible to create coinjoin transactions without any toxic change.",
     "point_2": "Wasabi updates wallet balances privately using block filters, without needing a full node, although that option is available. ",
     "point_3": "Wasabi coordinator fees are 0.3% of the fresh bitcoin amount (fresh means not coinjoined before). ",
-    "point_4": "The minimum amount to participate in a coinjoin is 5,000 sat (0.00005000 BTC), and the maximum is 40,000 BTC, with 79 standard output denominations.",
+    "point_4": "The minimum amount to participate in a coinjoin is 5,000 sat (0.00005000 BTC), and the maximum is 43,000 BTC, with 79 standard output denominations.",
     "point_5": "Clients can randomly register up to 10 different inputs and 10 outputs into a coinjoin from the same wallet, without revealing connections. Randomly, Wasabi can create more or less outputs than inputs selected.",
     "point_6": "All traffic is routed through Tor by default, using different Tor hidden identities, making it impossible to connect an input and output from the same wallet in the same coinjoin transaction.",
     "point_7": "The Wasabi coinjoin coordinator ensures at least 150 inputs for a transaction, but there can be more."
