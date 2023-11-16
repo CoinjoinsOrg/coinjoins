@@ -15,7 +15,7 @@
   "essentialsList": [
     {
       "isClicked": false,
-      "title": "Block Chain Privacy",
+      "title": "Blockchain Privacy",
       "body": "The main goal of a coinjoin protocol is to break the deterministic link between an input and an output on the blockchain. We evaluate coinjoin protocols by examining the details of how they work. Anything that anyone can see in the public bitcoin ledger is fair game for this section. Look at the shape of transactions coming from a particular coinjoin protocol or privacy wallet. Some coinjoin designs require a minimum number of inputs to have a valid transaction while other designs have a fixed number of inputs and outputs for all their transactions. The number of transactions required to achieve a given level of privacy should also be considered. <br/><br/>  All of these points are going to be used by blockchain analysts who try to find insights by searching all bitcoin transactions.",
       "questions": [
         "How does the coinjoin protocol work in a nutshell?",
@@ -27,7 +27,7 @@
     {
       "isClicked": false,
       "title": "Coordinator & Peer Knowledge",
-      "body": "Privacy wallets with built-in coinjoin features have a coordinator. In WabiSabi and Whirlpool, this coordinator is a single entity server. In Joinmarket, anybody can be a coinjoin coordinator. We evaluate how the coordinator process works and what user information is known to him.By default, there should be no information collection or sharing.      ",
+      "body": "Privacy wallets with built-in coinjoin features have a coordinator. In WabiSabi and Whirlpool, this coordinator is a single entity server. In Joinmarket, anybody can be a coinjoin coordinator. We evaluate how the coordinator process works and what user information is known to him. By default, there should be no information collection or sharing.",
       "questions": [
         "Can the coordinator link your inputs together?",
         "Can the coordinator link your inputs to outputs?",
