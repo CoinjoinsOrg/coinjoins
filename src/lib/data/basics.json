@@ -13,7 +13,7 @@
   "transactions": {
     "title": "How a Bitcoin transaction works",
     "explainer": [
-      "A user picks an amount of bitcoin to send (0.7 BTC) to a destination address. To do so, their bitcoin wallet selects at least one spendable coin or UTXO and adds it as an input (1 BTC) in the transaction",
+      "A user picks an amount of bitcoin to send (0.7 BTC) to a destination address. To do so, their bitcoin wallet selects at least one spendable coin or UTXO and adds it as an input (1 BTC) in the transaction.",
       "The transaction has two outputs: a payment output (0.7 BTC) and a change output (0.29 BTC), which returns to the user’s wallet. There is also a usual network fee (0.01 BTC to keep it simple in this example).",
       "The user signs the transaction and sends it to the Bitcoin network so a miner can add it to a block to get the network fees. Anyone can verify the transaction status at any time."
     ]
