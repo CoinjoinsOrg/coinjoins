@@ -1,0 +1,71 @@
+{
+  "title": "Coinjoins.org - QT & CLI JoinMarket Review",
+  "wallet_name": "QT & CLI",
+  "protocol_name": "JoinMarket",
+  "wallet_logo": "joinmarket",
+  "tags": [
+    {
+      "title": "First Gen",
+      "type": "gen",
+      "description": "A first generation coinjoin protocol is a term used to describe protocols before the invention of Zerolink such as Joinmarket because they lack blind signing, making the coordinator aware of a user’s private information."
+    }
+  ],
+  "hero": "Jam is a web interface for JoinMarket focusing on user-friendliness and ease-of-use. It aims to provide sensible defaults and be easy to use for beginners while still having the features advanced users expect.",
+  "github": "https://github.com/joinmarket-webui/jam",
+  "twitter": "https://twitter.com/jamapporg",
+  "website": "https://jamapp.org/",
+  "basics": [
+    {
+      "id": "release_date",
+      "title": "Release Date",
+      "body": "February 18th 2022"
+    },
+    {
+      "id": "platform",
+      "title": "Platform",
+      "body": "Web"
+    },
+    {
+      "id": "programming_language",
+      "title": "Code",
+      "body": "Typescript"
+    },
+    {
+      "id": "address_type",
+      "title": "Address Type",
+      "body": "Segwit Native (bc1), P2TR"
+    }
+  ],
+  "overview": {
+    "point_1": "Joinmarket is a P2P market-based coinjoin protocol and implementation that has typically attracted more advanced and technical users.",
+    "point_2": "It differs from other coinjoin protocols because it doesn’t have a centralized individual entity coordinator, but rather two user roles in a P2P (peer-to-peer) environment: makers (who provide liquidity for a fee) and takers (who pay a fee for liquidity and coordinate the coinjoin transaction). Any user can be a maker or a taker.",
+    "point_3": "The main drawback of Joinmarket is the poor user experience, and Jam aims to solve this.",
+    "point_4": "The easiest way to use Jam is to install it as a package on various node systems such as Umbrel, Citadel, Start9, Raspiblitz, MyNode, and Raspibolt. You can also install it manually (through the terminal) with a docker image that packages it with Joinmarket and other required software, or just barebones.",
+    "point_5": "Upon setup, you will be presented with a cheat sheet that lays out the 5 steps to using Jam: fund your wallet, send a (coinjoin) collaborative transaction to another Jar (explained below), optionally lock funds in a fidelity bond (explained below), earn sats by providing liquidity, schedule sweep transactions to empty your wallet. There are four tabs: Fund, Send, Earn, and Sweep.",
+    "point_6": "In the Fund tab, you will need to select a Jar to fund your wallet. A Jar is a container that holds your bitcoin. Jars exist to segregate your coins into multiple buckets that are disconnected from each other, which aids privacy. They work like subaccounts for your wallet. To avoid compromising your privacy, you can only spend from one Jar at a time.",
+    "point_7": "Coinjoin transactions occur when you spend bitcoin on the Send or Sweep tab, but you can also make self-spends by moving coins from one Jar to another. Coinjoins are on by default when you spend, but can be turned off. The recommended number of participants is between 8 and 10, but an advanced user can set this to a different value.",
+    "point_8": "On the 'Earn' tab, you can choose to provide liquidity to the market (to be a maker), and you can customize your offer by setting either an absolute fee (a fixed amount) or a relative fee (%). You can also set up a fidelity bond, which the Jam docs define as a “long-term deposit that makes cryptographic identities deliberately costly. By cryptographically locking up funds for a specific duration, you signal that you are a serious market participant and increase the chance of your offers being taken.”",
+    "point_9": "Your offers created on the Earn tab will appear in the Joinmarket order book. When other users go to Send or Sweep and choose to do a collaborative transaction, the software may automatically select your maker offer if it's competitive enough on fees and liquidity.",
+    "point_10": "Finally, the Sweep tab allows you to completely empty your Jam wallet by spending all coins in all Jars. To avoid compromising your privacy, the sweep process is a series of many (9 seems to be the default) coinjoin transactions, one after the other, using random amounts and time intervals. The number of transactions may seem excessive, but this feature is still experimental. You can stop the sweep at any time.",
+    "point_11": "There can be anywhere from 4 (theoretically as low as one) to 20 (10 is the maximum recommended to avoid problems) makers per transaction, but there can only be 1 taker at a time. Maker fees create economic incentives that attract liquidity and allow equilibrium to occur.",
+    "point_12": "Percentage fees are variable, but they increase with increasing liquidity, with most high liquidity (+1BTC) orders being around 0.001%. Order sizes range from 0.001 BTC to 240 BTC, but there is no minimum or maximum protocol size."
+  },
+  "benefits": {
+    "point_1": "Jam significantly improves the user experience by abstracting away the complexity of Joinmarket.",
+    "point_2": "Joinmarket is the most censorship-resistant coinjoin on the market due to the competitive nature of a peer-to-peer free market with many takers and makers. There is no single coordinator in Joinmarket, but each round has a central coordinator (the taker).",
+    "point_3": "You can get paid to gain privacy as a maker on the Earn tab. Also, a taker can pay low fees: as little as 0.05% to be part of 5 transactions with 10 participants each. Fees can be considerably lower than on other coinjoin protocols.",
+    "point_4": "Amounts are very flexible on Jam (Joinmarket), you can enter a coinjoin transaction with as little as 27,300 satoshis (makes it accessible), and there’s no maximum amount.",
+    "point_5": "Tor is enabled (by default) for the bitcoin network and coinjoin peer communication. Bitcoin network privacy is solved by forcing a user to run Bitcoin Core and connect it to Joinmarket (Jam). This process can be abstracted away if you have one of the node systems mentioned above.",
+    "point_6": "Joinmarket (Jam) uses fidelity bonds to protect against sybil attacks. It creates a reputation system where makers who lock larger amounts of BTC over longer periods of time are considered more trustworthy.",
+    "point_7": "Ring signatures are used by takers to anonymously prove ownership of UTXOs to makers, before entering into an agreement. This allows makers to collectively identify potential attackers and prevent takers from harming other makers."
+  },
+  "tradeoffs": {
+    "point_1": "According to the Github release page, '⚠️ Jam is considered beta software. ⚠️ While JoinMarket is tried and tested, Jam is new and things might break. Use with caution.' It is the only privacy wallet with a coinjoin feature (on coinjoins.org) that is not production ready.",
+    "point_2": "Jam is not easy to install if you don't have a node system like the ones mentioned above, it requires technical skills. If a user doesn't buy the pre-built node systems, it also requires technical skills to DIY (do it yourself).",
+    "point_3": "There is no concept of anonymity set / score on Joinmarket (Jam), and there is no difference between non-private and private UTXOs, except for the division of coins in Jars.",
+    "point_4": "The lack of a centralized coordinator server run by an organization limits the amount of anonymity set / score a user can gain per transaction (compared to Wasabi 2.0), resulting in a longer process for a complete coinjoin experience.",
+    "point_5": "Toxic change is present in Joinmarket (Jam) collaborative transactions, leading to higher coinjoin inefficiency.",
+    "point_6": "Taker coordinator is completely unblinded, does not use any kind of zero-knowledge method or Tor identity update, which leads to takers being fully aware of their peers' input and output linkages.",
+    "point_7": "Sybil attacks remain possible since mining fees for remixes are paid by the attack victims instead of the attacker, if the fidelity bond opportunity cost can be written off by the attacker."
+  }
+}
