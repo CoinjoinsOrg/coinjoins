@@ -18,22 +18,22 @@
     {
       "id": "release_date",
       "title": "Release Date",
-      "body": "Trezor Suite Review"
+      "body": "October 14, 2020"
     },
     {
       "id": "platform",
       "title": "Platform",
-      "body": "Trezor Suite Review"
+      "body": "Desktop (Mac, Windows, Linux)"
     },
     {
       "id": "programming_language",
       "title": "Code",
-      "body": "Trezor Suite Review"
+      "body": "Typescript/Javascript"
     },
     {
       "id": "address_type",
       "title": "Address Type",
-      "body": "Trezor Suite Review"
+      "body": "Type: P2TR (Taproot)"
     }
   ],
   "overview": {
