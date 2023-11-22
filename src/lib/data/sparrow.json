@@ -58,7 +58,7 @@
     "point_3": "Toxic change is not eliminated, it is simply segregated into another wallet account. You will have to deal with those non-private outputs in the future. Additionally, Whirlpool Tx0 reveals common input ownership, which connects different past transactions together that might not have been already connected.",
     "point_4": "Electrum SPV network connection is used by default which allows public servers to connect all the UTXOs from your wallet, even the non-private ones with the private ones. However, the public servers come from a small curated list run by entities with a history of favouring privacy, rather than any random server.",
     "point_5": "Tor is not bundled with Sparrow and must be installed separately by the user, it’s not enabled by default. This can lead to IP address leakage to the coordinator, and to a public Electrum server (if you are not using your full node or a private Electrum server).",
-    "point_6": "The Whirlpool coordinator is a centralized service that can technically censor UTXOs from using its service and this would not be verifiable by the public.  This makes Whirlpool less censorship-resistant than P2P coinjoin protocols like Joinmarket.",
+    "point_6": "The Whirlpool coordinator is a centralized service that can technically censor UTXOs from using its service and this would not be verifiable by the public.  This makes Whirlpool less censorship-resistant than more P2P coinjoin protocols like Joinmarket.",
     "point_7": "The privacy objectives are not clear to the user. It's unknown if he should aim for a forward anonymity set of 8, 20 or 100."
   }
 }
