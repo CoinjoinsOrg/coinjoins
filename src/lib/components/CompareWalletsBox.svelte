@@ -33,19 +33,9 @@
             <img src={"/wallets-icon/" + wallet.icon} alt={wallet.name} />
           </div>
           <button
-            disabled={wallet.id.includes("btcpay") ||
-              wallet.id.includes("jam") ||
-              wallet.id.includes("vortex") ||
-              wallet.id.includes("trezor")}
             on:click={() => goToWalletPage(wallet.page)}
-            class="border-2 w-full text-center rounded-lg py-2 px-4 no-underline {wallet.id.includes(
-              'wasabi'
-            ) ||
-            wallet.id.includes('samourai') ||
-            wallet.id.includes('sparrow') ||
-            wallet.id.includes('joinmarket')
-              ? 'border-green-cj text-green-cj enabled:hover:bg-green-cj hover:text-dark-blue'
-              : 'text-inactive-grey border-inactive-grey hover:cursor-not-allowed hover:text-inactive-grey'}"
+            class="border-2 w-full text-center rounded-lg py-2 px-4 no-underline
+             'border-green-cj text-green-cj enabled:hover:bg-green-cj hover:text-dark-blue"
             >About {wallet.name}</button
           >
         </div>

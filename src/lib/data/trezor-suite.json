@@ -1,0 +1,70 @@
+{
+  "title": "Coinjoins.org - Trezor Suite Review",
+  "wallet_name": "Trezor Suite",
+  "protocol_name": "WabiSabi",
+  "wallet_logo": "trezor-suite",
+  "tags": [
+    {
+      "title": "Third Gen",
+      "type": "gen",
+      "description": "A third generation coinjoin protocol is a term used to describe protocols that have solved the toxic change issue and provide strong efficiency. WabiSabi is the only one publicly available and it leverages flexible output amount decomposition to achieve that goal."
+    }
+  ],
+  "hero": "Trezor Suite is an easy-to-use bitcoin wallet desktop application with hardware wallet integration (Trezor T, One and Safe) and a built-in coinjoin feature using WabiSabi.",
+  "github": "https://github.com/trezor/trezor-suite",
+  "twitter": "https://twitter.com/trezor",
+  "website": "https://trezor.io/trezor-suite",
+  "basics": [
+    {
+      "id": "release_date",
+      "title": "Release Date",
+      "body": "Trezor Suite Review"
+    },
+    {
+      "id": "platform",
+      "title": "Platform",
+      "body": "Trezor Suite Review"
+    },
+    {
+      "id": "programming_language",
+      "title": "Code",
+      "body": "Trezor Suite Review"
+    },
+    {
+      "id": "address_type",
+      "title": "Address Type",
+      "body": "Trezor Suite Review"
+    }
+  ],
+  "overview": {
+    "point_1": "WabiSabi is a third-generation coinjoin protocol that overcomes the limitations of the Zerolink protocol by allowing variable output amount denominations. This makes it possible to create coinjoin transactions without any toxic change.",
+    "point_2": "The Trezor Coinjoin wallet is a separate account within the Trezor Suite application, that enforces block filters (to update wallet balances privately) for network privacy. You can easily rescan your wallet on the blockchain if the transaction history was loaded incorrectly.",
+    "point_3": "All traffic is routed through Tor by default, using different Tor hidden identities, making it harder to prove a relationship between your inputs.",
+    "point_4": "You connect to the zkSNACKs coinjoin coordinator, it guarantees at least 150 inputs for a transaction, but there can be more. The coordinator fee is 0.3% of the fresh bitcoin amount (fresh means not coinjoined before).",
+    "point_5": "There is a recommended set of settings for coinjoins that sets your desired level of privacy (anonymity score) to 5 and your maximum mining fee to 190 sats/vbyte. This can be customized.",
+    "point_6": "There’s a round skipping feature that allows Trezor to skip coinjoin rounds, so it becomes more difficult to prove any relation between your inputs.",
+    "point_7": "As with all Wabisabi-based wallets, the minimum amount to participate in a coinjoin is 5,000 sat (0.00005000 BTC), and the maximum is 40,000 BTC, with 79 standard output denominations.",
+    "point_8": "You can connect to your own node with an Electrum server.",
+    "point_9": "You can easily export your transaction history in CSV, PDF, and JSON format.",
+    "point_10": "Clients can randomly register up to 10 different inputs and 10 outputs in a coinjoin from the same wallet, without revealing the connections. Randomly, Trezor Suite can create more or fewer outputs than selected inputs.",
+    "point_11": "When spending funds, you can set RBF on (by default) or off, you can use coin control to select UTXOs, batch spend and add a locktime."
+  },
+  "benefits": {
+    "point_1": "Trezor Suite is the only wallet that allows you to coinjoin directly from a hardware wallet account, significantly increasing the security of your bitcoin. There is no need to use a hot wallet.",
+    "point_2": "With variable coinjoin output values and a large number of participants, WabiSabi coinjoins allow for an enormous amount of possibilities, making it difficult to trace the flow of funds after a single transaction.",
+    "point_3": "By default, the entire wallet and protocol run on Tor (it comes bundled in), protecting users (clients) from having their personal IP addresses exposed.",
+    "point_4": "Toxic change outputs are eliminated in most cases, except for lone whales that have relatively large inputs compared to other inputs from the same coinjoin transaction.",
+    "point_5": "Trezor Suite uses the zkSNACKs coordinator, which provides the largest pool of liquidity for coinjoins.",
+    "point_6": "The implementation of block filters is only available for the coinjoin wallet (other wallet accounts are updated via API), which allows you to retrieve your transaction history privately.",
+    "point_7": "There is a very good user experience that is friendly to new users and doesn't require knowledge of terms like anonymity scoring like in Wasabi Wallet. On the other hand, for more advanced users, there's customization to the anonymity level set and the maximum fee paid.",
+    "point_8": "The Coinjoin wallet is split between non-private and private UTXOs, allowing users to have clear control over what they're spending. Coin control is also available."
+  },
+  "tradeoffs": {
+    "point_1": "The process of coinjoining is somewhat manual: you need to create a coinjoin wallet account, and once you've deposited funds, you need to manually click start to join a round.",
+    "point_2": "Coinjoins with multiple output denominations can be uneconomical under 0.01 BTC, but the software warns you about it.",
+    "point_3": "The 'plebs don't pay' policy is not advertised but is implemented by the coordinator. Users that coinjoin less than 750,000 sats (0.0075 BTC) don't pay coordinator fees.",
+    "point_4": "The zkSNACKs coordinator buys data from a chain analysis provider to prevent some inputs from registering with its coinjoin service. While there is no privacy tradeoff, this setup lacks censorship resistance. Users may prefer more P2P alternatives such as JoinMarket.",
+    "point_5": "You can't opt out of the zkSNACKs coordinator on the Trezor Suite coinjoin wallet.",
+    "point_6": "Unlike Wasabi Wallet 2.0, there is no transaction labeling by default, which can lead to poor coin management, and there is no payjoin implementation."
+  }
+}

@@ -9,7 +9,7 @@ export default {
       red: "#EA2424",
       "lighter-blue": "#3141A5",
       "inactive-grey": "rgba(107,110,134,0.95)",
-      black: "#000000"
+      black: "#000000",
     },
     extend: {
       fontFamily: {

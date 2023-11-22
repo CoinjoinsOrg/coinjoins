@@ -1,6 +1,6 @@
 {
-  "title": "Coinjoins.org - BTCPay Server Review",
-  "wallet_name": "BTC Pay Server",
+  "title": "Coinjoins.org - BTCPay Coinjoin Plugin Review",
+  "wallet_name": "BTCPay Coinjoin Plugin",
   "protocol_name": "WabiSabi",
   "wallet_logo": "btcpay",
   "tags": [
@@ -10,61 +10,59 @@
       "description": "A third generation coinjoin protocol is a term used to describe protocols that have solved the toxic change issue and provide strong efficiency. WabiSabi is the only one publicly available and it leverages flexible output amount decomposition to achieve that goal."
     }
   ],
-  "hero": "BTCPay Server Review.",
-  "github": "https://github.com/",
-  "twitter": "https://twitter.com/",
-  "website": "https://www.io/",
+  "hero": "BTCPay Server is a self-hosted, open-source bitcoin payment processor that includes a bitcoin wallet with a WabiSabi coinjoin plugin. ",
+  "github": "https://github.com/btcpayserver/btcpayserver",
+  "twitter": "https://twitter.com/BtcpayServer",
+  "website": "http://btcpayserver.org",
   "basics": [
     {
       "id": "release_date",
       "title": "Release Date",
-      "body": "BTCPay Server Review"
+      "body": " December 1, 2017"
     },
     {
       "id": "platform",
       "title": "Platform",
-      "body": "BTCPay Server Review"
+      "body": "Web"
     },
     {
       "id": "programming_language",
       "title": "Code",
-      "body": "BTCPay Server Review"
+      "body": "C#"
     },
     {
       "id": "address_type",
       "title": "Address Type",
-      "body": "BTCPay Server Review"
+      "body": "Bech32 (Segwit Native), P2TR."
     }
   ],
   "overview": {
-    "point_1": "WabiSabi is a third-generation coinjoin protocol that overcomes limitations of the Zerolink protocol, allowing variable output amount denominations. This makes it possible to create coinjoin transactions without any toxic change.",
-    "point_2": "Wasabi updates wallet balances privately using block filters, without needing a full node, although that option is available. ",
-    "point_3": "Wasabi coordinator fees are 0.3% of the fresh bitcoin amount (fresh means not coinjoined before). ",
-    "point_4": "The minimum amount to participate in a coinjoin is 5,000 sat (0.00005000 BTC), and the maximum is 40,000 BTC, with 79 standard output denominations.",
-    "point_5": "Clients can randomly register up to 10 different inputs and 10 outputs into a coinjoin from the same wallet, without revealing connections. Randomly, Wasabi can create more or less outputs than inputs selected.",
-    "point_6": "All traffic is routed through Tor by default, using different Tor hidden identities, making it impossible to connect an input and output from the same wallet in the same coinjoin transaction.",
-    "point_7": "The Wasabi coinjoin coordinator ensures at least 150 inputs for a transaction, but there can be more."
+    "point_1": "WabiSabi is a third-generation coinjoin protocol that overcomes the limitations of the Zerolink protocol by allowing variable output amount denominations. This makes it possible to create coinjoin transactions without any toxic change.",
+    "point_2": "As an admin user of your BTCPay server instance, you need to enable coinjoin in the plugin settings. A bitcoin hot wallet is required, and you should only use it if you own the BTC.",
+    "point_3": "By default, you connect to the zkSNACKs coinjoin coordinator. It guarantees at least 150 inputs for a transaction, but there can be more. The coordinator fee is 0.3% of the fresh bitcoin amount (fresh means not coinjoined before).",
+    "point_4": "You can choose to use another WabiSabi coordinator, or you can set up your own coordinator (and configure fees and other settings) with a few clicks from the BTCPay Server interface. Coordinators can be published on Nostr for easy discovery.",
+    "point_5": "There are two configuration modes: pleb as the default, and scientist as the fully customizable option. Default settings are an anonymity score target of 5, and batched payments set to on.",
+    "point_6": "Batched payments is a feature that allows you to schedule transactions on your bitcoin hot wallet that are executed directly from a WabiSabi coinjoin transaction. BTCPay is the only coinjoin wallet that allows you to make payments directly from a coinjoin transaction.",
+    "point_7": "Other scientist mode settings include: mining fee limits in hours, minimum output denomination amount, consolidation mode, cautious coinjoin entry mode, mix funds between different coordinators, continuous coinjoin in percentage, send to other wallet, and finally only mix coins with (out) labels.",
+    "point_8": "Once you have completed the setup by selecting the mode, coordinator, and agreeing to the coordinator's terms and conditions, the coinjoin process will automatically start, and you will be able to view the status in your BTCPay server store or wallet dashboard.",
+    "point_9": "BTCPay server instance has its own Bitcoin node for transaction history retrieval, so you don't depend on third parties.",
+    "point_10": "All traffic is routed through Tor by default, using different Tor hidden identities, making it harder to prove a relationship between your inputs. Tor is enabled by default when deploying a BTCPay Server instance."
   },
   "benefits": {
-    "point_1": "With a large number of participants, WabiSabi allows for an enormous amount of possibilities, making it difficult to trace the flow of funds after a single transaction.",
-    "point_2": "Variable amounts in WabiSabi allow for many ways to combine different inputs or outputs, making traceability much harder.",
-    "point_3": "By default, the entire wallet and protocol run on Tor, protecting users (clients) from having their personal IP addresses exposed.",
-    "point_4": "Toxic change outputs are eliminated in most cases, except for lone whales that have relatively large inputs compared to other inputs from the same coinjoin transaction.",
-    "point_5": "No one can spy on you. All traffic from the client (desktop application) to the server (coordinator) is routed through Tor by default, which means that using the application is completely anonymous.",
-    "point_6": "Wasabi Wallet has a change avoidance feature for sending bitcoin to other wallets, which allows a payment to be rounded up or down to avoid creating unnecessary change, saving fees and time for the user. ",
-    "point_7": "The coinjoin function is automatic while a user’s balance is at least 1 million sats (0.01 BTC).",
-    "point_8": "Achieving a high level of privacy for a given UTXO is possible in a single coinjoin transaction, making it quite block space efficient and therefore cheap in network fees for users.",
-    "point_9": "Coordinator fees are not paid for remixing coins created by a previous coinjoin round. Coordinator fees are not paid for outputs created by previously mixed coins. This allows the sender’s change and the recipient’s payment to be coinjoined for free. ",
-    "point_10": "'Plebs don't pay' is a fee policy where any input below 1 million sats (0.01 BTC) does not pay the coordinator fee.",
-    "point_11": "Wasabi's 'anonymity score' is very conservative, giving the user a safe measure of how much privacy or plausible deniability has been achieved. Clients only count outputs with matching values towards your score, but coinjoin outputs of other sizes increase privacy as well.",
-    "point_12": "The simple 100% scale of the privacy score is easy for the user to understand at a high level without having to think too deeply about how it is calculated.",
-    "point_13": "Privacy warnings are available for users sending bitcoin from their wallet. Whether users use private or non-private coins, use different labels, create change, consolidate coins or use unconfirmed funds, privacy warnings help users avoid making costly mistakes to protect their privacy."
+    "point_1": "With variable coinjoin output values and a large number of participants, WabiSabi coinjoins allow for an enormous number of possibilities, making it difficult to trace the flow of funds after a single transaction.",
+    "point_2": "By default, the entire wallet and protocol run on Tor (it comes bundled in), protecting users (clients) from having their personal IP addresses exposed.",
+    "point_3": "Toxic change outputs are eliminated in most cases, except for lone whales that have relatively large inputs compared to other inputs from the same coinjoin transaction.",
+    "point_4": "By default, BTCPay Server uses the zkSNACKs coordinator, which provides the largest pool of liquidity for coinjoins.",
+    "point_5": "Bitcoin network privacy is solved by the bundling of a Bitcoin Core node when deploying a BTCPay Server instance.",
+    "point_6": "BTCPay Server is the most censorship-resistant WabiSabi bitcoin wallet because you can browse coordinators on Nostr (uncensored social media platform) and also run your own coordinator and publish it for discoverability.",
+    "point_7": "BTCPay is the only coinjoin wallet that allows you to make payments directly from a coinjoin transaction using the Batched Payments feature.",
+    "point_8": "A default setting mode called “pleb mode” is available with a default coordinator (zkSNACKs) so that new users can easily start the coinjoin process. However, extensive customization is possible for more advanced users.",
+    "point_9": "Unlike on Wasabi Wallet, a user can set the minimum output denomination amount so you have full control and avoid creating uneconomical outputs when mining fees go up.",
+    "point_10": "There’s transaction labeling, coin control, and an anonymity score target for each coin, to allow for very precise coin selection."
   },
   "tradeoffs": {
-    "point_1": "During onboarding, the Wasabi Wallet Terms of Service can be a friction point for users who want to fully understand the legalities before moving forward.",
-    "point_2": "The “on by default” coinjoin feature can surprise users who may see their coins being coinjoined automatically after the fact, having paid both the regular coordinator and network fees.",
-    "point_3": "The “anonymity scores” of Wasabi Wallet are hard to understand. “How much is enough?” is not that straight forward. The way anonymity scoring is calculated is also difficult to understand.",
-    "point_4": "On Wasabi Wallet, the wallet loading phase can be slow for large wallets or wallets that have been out of sync with the blockchain for some time, as it uses blockfiltering for privacy.",
-    "point_5": "The company that runs the default server for all Wasabi Wallet clients buys data from a chain analysis provider to prevent some inputs from registering with its coinjoin service. While the privacy tradeoff is very limited, this setup lacks censorship resistance. Users may prefer other P2P alternatives such as JoinMarket."
+    "point_1": "The default coordinator (zkSNACKs) buys data from a chain analysis provider to prevent some inputs from registering with its coinjoin service. While there is no privacy tradeoff, this setup lacks censorship resistance. It can be fixed by changing coordinators or using your own.",
+    "point_2": "There don't seem to be many high liquidity coordinator alternatives to the default zkSNACKs.",
+    "point_3": "It's harder to run your own BTCPay server instance than it is to install a desktop or mobile wallet application. To use the WabiSabi coinjoin plugin, you need to install it after deploying BTCPay. It's mandatory to use coinjoin only on your own instance because you need to use a hot wallet."
   }
 }

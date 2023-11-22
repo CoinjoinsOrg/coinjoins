@@ -163,19 +163,19 @@
     },
     {
       "name": "BTCPay Server",
-      "page": "",
+      "page": "/wallets/btcpay",
       "icon": "btcpay.png",
       "id": "btcpay"
     },
     {
       "name": "Trezor Suite",
-      "page": "",
-      "icon": "trezor.png",
-      "id": "trezor"
+      "page": "/wallets/trezor-suite",
+      "icon": "trezor-suite.png",
+      "id": "trezor-suite"
     },
     {
       "name": "Jam",
-      "page": "",
+      "page": "/wallets/jam",
       "icon": "jam.png",
       "id": "jam"
     }

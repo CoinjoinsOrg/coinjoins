@@ -56,19 +56,13 @@
             {#each footerData.wallet_overview.menu as item}
               <div class="flex gap-2 items-center whitespace-nowrap">
                 <button
-                  disabled={item.link === "#"}
                   class="no-underline {item.link.includes('#')
                     ? 'text-inactive-grey hover:cursor-default'
                     : 'hover:cursor-pointer hover:text-green-cj'}"
                   on:click={item.link === "wallet-overview"
                     ? () => goto("/" + item.link)
                     : () => goto("/wallets/" + item.link)}>{item.text}</button
-                >{#if item.link.includes("#")}
-                  <span
-                    class="text-green-cj text-[9px] px-1 rounded border border-green-cj"
-                    >SOON</span
-                  >
-                {/if}
+                >
               </div>
             {/each}
           </div>

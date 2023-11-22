@@ -38,11 +38,11 @@
       },
       {
         "text": "BTCPay Server",
-        "link": "#"
+        "link": "btcpay"
       },
       {
         "text": "Jam",
-        "link": "#"
+        "link": "jam"
       },
       {
         "text": "JoinMarket",
@@ -58,7 +58,7 @@
       },
       {
         "text": "Trezor Suite",
-        "link": "#"
+        "link": "trezor-suite"
       },
       {
         "text": "Wasabi Wallet 1.0",
