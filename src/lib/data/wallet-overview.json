@@ -47,7 +47,7 @@
     {
       "isClicked": false,
       "title": "Coinjoin & Network Fees",
-      "body": "There are two types of fees associated with coinjoin transactions: coordinator fees (flat or percentage-based) and bitcoin network fees. Some coordinators waive fees for remixes, which incentivize users to coinjoin their bitcoin multiple times for added privacy. Some protocols have fee exemptions or reductions for UTXOs that meet certain criteria. Many mixing pools and different fees are also something to consider. Whirlpool clients like Sparrow and Samourai have discounts (SCODE) based on referral codes. Finally, the P2P nature of Joinmarket creates a different fee dynamic. <br/><br/> We evaluate the total amount of fees considering all these factors and in different scenarios.",
+      "body": "There are two types of fees associated with coinjoin transactions: coordinator fees (flat or percentage-based) and bitcoin network fees. Some coordinators waive fees for remixes, which incentivize users to coinjoin their bitcoin multiple times for added privacy. Some protocols have fee exemptions or reductions for UTXOs that meet certain criteria. Many mixing pools and different fees are also something to consider. Whirlpool clients like Sparrow and Samourai have discounts (SCODE) based on referral codes. Finally, the more P2P nature of Joinmarket creates a different fee dynamic. <br/><br/> We evaluate the total amount of fees considering all these factors and in different scenarios.",
       "questions": [
         "How do coordinator fees work in the protocol?",
         "How much network fee does a user pay? How much block space does he pay for?",
