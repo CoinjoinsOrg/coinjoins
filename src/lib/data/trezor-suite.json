@@ -18,22 +18,22 @@
     {
       "id": "release_date",
       "title": "Release Date",
-      "body": "Trezor Suite Review"
+      "body": "October 14, 2020"
     },
     {
       "id": "platform",
       "title": "Platform",
-      "body": "Trezor Suite Review"
+      "body": "Desktop (Mac, Windows, Linux)"
     },
     {
       "id": "programming_language",
       "title": "Code",
-      "body": "Trezor Suite Review"
+      "body": "Typescript/Javascript"
     },
     {
       "id": "address_type",
       "title": "Address Type",
-      "body": "Trezor Suite Review"
+      "body": "Type: P2TR (Taproot)"
     }
   ],
   "overview": {
@@ -62,7 +62,7 @@
   "tradeoffs": {
     "point_1": "The process of coinjoining is somewhat manual: you need to create a coinjoin wallet account, and once you've deposited funds, you need to manually click start to join a round.",
     "point_2": "Coinjoins with multiple output denominations can be uneconomical under 0.01 BTC, but the software warns you about it.",
-    "point_3": "The 'plebs don't pay' policy is not advertised but is implemented by the coordinator. Users that coinjoin less than 750,000 sats (0.0075 BTC) don't pay coordinator fees.",
+    "point_3": "The 'plebs don't pay' policy is not advertised but is implemented by the coordinator. Users that coinjoin less than 1,000,000 sats (0.01000000 BTC) don't pay coordinator fees.",
     "point_4": "The zkSNACKs coordinator buys data from a chain analysis provider to prevent some inputs from registering with its coinjoin service. While there is no privacy tradeoff, this setup lacks censorship resistance. Users may prefer more P2P alternatives such as JoinMarket.",
     "point_5": "You can't opt out of the zkSNACKs coordinator on the Trezor Suite coinjoin wallet.",
     "point_6": "Unlike Wasabi Wallet 2.0, there is no transaction labeling by default, which can lead to poor coin management, and there is no payjoin implementation."
