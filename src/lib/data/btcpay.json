@@ -1,6 +1,6 @@
 {
-  "title": "Coinjoins.org - BTCPay Server Review",
-  "wallet_name": "BTCPay Server Coinjoin Plugin WabiSabi Review",
+  "title": "Coinjoins.org - BTCPay Coinjoin Plugin Review",
+  "wallet_name": "BTCPay Coinjoin Plugin",
   "protocol_name": "WabiSabi",
   "wallet_logo": "btcpay",
   "tags": [
@@ -64,5 +64,5 @@
     "point_1": "The default coordinator (zkSNACKs) buys data from a chain analysis provider to prevent some inputs from registering with its coinjoin service. While there is no privacy tradeoff, this setup lacks censorship resistance. It can be fixed by changing coordinators or using your own.",
     "point_2": "There don't seem to be many high liquidity coordinator alternatives to the default zkSNACKs.",
     "point_3": "It's harder to run your own BTCPay server instance than it is to install a desktop or mobile wallet application. To use the WabiSabi coinjoin plugin, you need to install it after deploying BTCPay. It's mandatory to use coinjoin only on your own instance because you need to use a hot wallet."
-  },
+  }
 }

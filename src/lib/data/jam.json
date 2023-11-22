@@ -1,8 +1,8 @@
 {
-  "title": "Coinjoins.org - QT & CLI JoinMarket Review",
-  "wallet_name": "QT & CLI",
+  "title": "Coinjoins.org - Jame & JoinMarket Review",
+  "wallet_name": "Jam",
   "protocol_name": "JoinMarket",
-  "wallet_logo": "joinmarket",
+  "wallet_logo": "jam",
   "tags": [
     {
       "title": "First Gen",

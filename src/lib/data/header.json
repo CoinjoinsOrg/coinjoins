@@ -44,19 +44,19 @@
     {
       "name": "BTCPay Server",
       "path": "btcpay",
-      "isActive": false,
+      "isActive": true,
       "isDeprecated": false
     },
     {
       "name": "Trezor Suite",
-      "path": "trezor",
-      "isActive": false,
+      "path": "trezor-suite",
+      "isActive": true,
       "isDeprecated": false
     },
     {
       "name": "Jam",
       "path": "jam",
-      "isActive": false,
+      "isActive": true,
       "isDeprecated": false
     }
   ],
