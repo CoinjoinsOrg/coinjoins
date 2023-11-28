@@ -33,7 +33,7 @@
     {
       "id": "address_type",
       "title": "Address Type",
-      "body": "Segwit Native (bc1), P2TR"
+      "body": "Segwit Native (bc1)"
     }
   ],
   "overview": {
