@@ -1,8 +1,8 @@
 {
-  "title": "Coinjoins.org - Jame & JoinMarket Review",
-  "wallet_name": "Jam",
-  "protocol_name": "JoinMarket",
-  "wallet_logo": "jam",
+  "title": "Coinjoins.org - Joinstr Review",
+  "wallet_name": "joinstr",
+  "protocol_name": "joinstr",
+  "wallet_logo": "joinstr",
   "tags": [
     {
       "title": "Fourth Gen",
@@ -23,12 +23,12 @@
     {
       "id": "release_date",
       "title": "Release Date",
-      "body": "Proof of Concept: 20 August 2022"
+      "body": "Proof of Concept: August 20, 2022"
     },
     {
       "id": "platform",
       "title": "Platform",
-      "body": "Web, Cli, Electrum Desktop Plugin"
+      "body": "Web, CLI and Electrum Desktop Plugin"
     },
     {
       "id": "programming_language",
@@ -41,32 +41,31 @@
       "body": "Segwit Native (bc1)"
     }
   ],
-  "overview": {
-    "point_1": "Joinstr aims to decentralize the coinjoin coordinator to solve the censorship resistance of coinjoin rounds, making it available as an Electrum Wallet plugin for desktop, as well as a web application, and a CLI, with the latter two requiring the use of Bitcoin Core as a wallet.",
-    "point_2": "It is not currently available on the Bitcoin mainnet network and usage with real money is strongly discouraged.",
-    "point_3": "To utilize Joinstr, users first select an input they wish to include in the next coinjoin round. Once participants are selected, the process begins.",
-    "point_4": "The Nostr relay coordinator receives an output of the same denomination from each participant with the sighash flag ALL|ANYONECANPAY, after which each participant registers and signs the previously selected input of the same denomination.",
-    "point_5": "After all participants are registered and signed, everyone receives the final transaction, which is automatically broadcasted to the network by Nostr relays, with each participant contributing an equal amount for mining fees.",
-    "point_6": "Each step of the process involves publishing a Nostr event and using a new public/private key pair to enhance privacy.",
-    "point_7": "The protocol allows for customization of the number of participants and the denomination of the output amount, with current settings being 5 participants and an output denomination of 0.10 BTC.",
-    "point_8": "There is no Tor dependency for Joinstr, but it can be used with it. All communications between the Nostr relay and the participants leverage the riseupVPN API, a free service.",
-    "point_9": "DoS vectors can be reduced by using encrypted Nostr channels for each round and encouraging users to try paid, private, custom Nostr relays."
-  },
- "benefits": {
-    "point_1": "Joinstr is as censorship-resistant as Nostr, making it the most censorship-resistant of the coordinator-based coinjoin protocols, but the long-term resilience of Nostr remains to be proven.",
+"overview": {
+    "point_1": "Joinstr aims to decentralize the coinjoin coordinator to solve the censorship resistance problem of other centralized protocols.",
+    "point_2": "It is currently not available on the Bitcoin mainnet network and using it with real money is strongly discouraged.",
+    "point_3": "Users start by selecting an input to be part of the next coinjoin round, with the process commencing once the required number of participants is reached.",
+    "point_4": "The Nostr relay coordinator receives an output of the same denomination from each participant with the sighash flag ALL|ANYONECANPAY, followed by each participant registering and signing the previously selected input.",
+    "point_5": "Each event is published with a new Nostr public key and a new IP address using the RISEUP API free service (not yet implemented). Tor is optional.",
+    "point_7": "Customization is available for the number of participants and the output denomination, currently set to 5 participants and 0.10 BTC respectively.",
+    "point_8": "DoS attack vectors can be mitigated through the use of encrypted Nostr channels for each round and by encouraging the use of paid, private, custom Nostr relays."
+},
+  "benefits": {
+    "point_1": "Joinstr is as censorship-resistant as Nostr, making it the most censorship-resistant of the coordinator-based coinjoin protocols, though the long-term resilience of Nostr is still to be proven.",
     "point_2": "The coordinator steps are simplified by the introduction of outputs with the sighash flag ALL|ANYONECANPAY.",
     "point_3": "The protocol allows for customization in terms of the number of participants and the denominations of the output amounts.",
-    "point_4": "It builds on top of proven and well-known wallets such as Electrum Wallet (Desktop) and Bitcoin Core. Electum allows you to connect to your own node through the middleware of an Electrum server.",
-    "point_5": "It avoids Tor dependency by using the riseupVPN API for network communication to avoid leaking the participants' IP addresses.",
-    "point_6": "There are no coordinator fees and each user contributes the same amount for mining fees. Participants would each pay about 2000 sats using the 10 sat/vbyte fee rate for the coinjoin transaction, with the mempool.space API used for fee estimation.",
-    "point_7": "There are no non-private toxic change outputs produced by Joinstr coinjoin transactions, allowing users to prepare their outputs according to the pool they wish to be a part of. On the Electrum Plugin, users can manually choose the output addresses of a Joinstr coinjoin transaction.",
-    "point_8": "Joinstr's DoS attack vector protection creates an incentive for paid, private, and custom Nostr relays.",
-    "point_9": "Unlike Joinmarket, fidelity bonds are not required because Joinstr is not a peer-to-peer marketplace of takers and makers, but rather relies on Nostr relays for coinjoin coordination."
+    "point_4": "It is built on top of proven and well-known wallets such as Electrum Wallet (Desktop) and Bitcoin Core, with Electrum allowing users to connect to their own node through the middleware of an Electrum server.",
+    "point_5": "It avoids Tor dependency by planning to use the riseupVPN API for network communication to avoid leaking the participants' IP addresses.",
+    "point_6": "There are no coordinator fees, and each user contributes the same amount for mining fees, estimated to be about 10000 sats using the 50 sat/vbyte fee rate. The mempool.space API is used to estimate fees.",
+    "point_7": "There are no non-private toxic change outputs produced by Joinstr coinjoin transactions, as users must prepare their outputs according to the pool they wish to be a part of. The Electrum plugin allows manual selection of output addresses.",
+    "point_8": "Joinstr's DoS attack vector protection incentivizes the use of paid, private, and custom Nostr relays.",
+    "point_9": "Unlike Joinmarket, Joinstr doesn’t require fidelity bonds, as it relies on Nostr relays for coinjoin coordination instead of being a peer-to-peer marketplace of takers and makers."
   },
   "tradeoffs": {
-    "point_1": "It is not currently available on the Bitcoin mainnet network and it is strongly discouraged to use it with real money. Many of the features are still in development.",
-    "point_2": "Because it hasn't been deployed with real money, it hasn't been well stress tested for Sybil, DoS, liquidity, and blockchain deanonymization and network privacy attack vectors.",
-    "point_3": "The web and CLI applications require the deployment of a Bitcoin Core node, which consumes hundreds of GBs of bandwidth, disk space (pruning is possible), and time.",
-    "point_4": "There is no anonymity rating or other way to quantify the privacy value of a Joinstr coinjoin transaction."
+    "point_1": "It is currently not available on the Bitcoin mainnet network, and using it with real money is strongly discouraged, with many features still under development such as the Riseup VPN implementation.",
+    "point_2": "Without real money usage, it hasn't been stress tested for Sybil, DoS, liquidity, blockchain deanonymization, and network privacy attack vectors.",
+    "point_3": "The web and CLI applications require deploying a Bitcoin Core node, which consumes hundreds of GB of bandwidth, disk space (though pruning is possible), and time.",
+    "point_4": "There is no anonymity rating or other method to quantify the privacy value of a Joinstr coinjoin transaction.",
+    "point_5": "Users must create outputs of a specific denomination in advance, which may generate non-private toxic change outputs."
   }
 }
