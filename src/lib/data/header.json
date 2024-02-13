@@ -58,6 +58,12 @@
       "path": "jam",
       "isActive": true,
       "isDeprecated": false
+    },
+    {
+      "name": "Joinstr",
+      "path": "joinstr",
+      "isActive": true,
+      "isDeprecated": false
     }
   ],
   "cta": "Try Coinjoins"

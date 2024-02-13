@@ -7,9 +7,9 @@
     {
       "title": "Fourth Gen",
       "type": "gen",
-      "description": "A fourth generation coinjoin protocol is a term used to describe protocols that have decentralized the coordinator model leveraging Nostr relays.",
+      "description": "A fourth generation coinjoin protocol is a term used to describe protocols that have decentralized the coordinator model leveraging Nostr relays"
     },
-      {
+    {
       "title": "Alpha",
       "type": "status",
       "description": "Joinstr is alpha software and it's recommended to only use it in test networks."
@@ -41,7 +41,7 @@
       "body": "Segwit Native (bc1)"
     }
   ],
-"overview": {
+  "overview": {
     "point_1": "Joinstr aims to decentralize the coinjoin coordinator to solve the censorship resistance problem of other centralized protocols.",
     "point_2": "It is currently not available on the Bitcoin mainnet network and using it with real money is strongly discouraged.",
     "point_3": "Users start by selecting an input to be part of the next coinjoin round, with the process commencing once the required number of participants is reached.",
@@ -49,7 +49,7 @@
     "point_5": "Each event is published with a new Nostr public key and a new IP address using the RISEUP API free service (not yet implemented). Tor is optional.",
     "point_7": "Customization is available for the number of participants and the output denomination, currently set to 5 participants and 0.10 BTC respectively.",
     "point_8": "DoS attack vectors can be mitigated through the use of encrypted Nostr channels for each round and by encouraging the use of paid, private, custom Nostr relays."
-},
+  },
   "benefits": {
     "point_1": "Joinstr is as censorship-resistant as Nostr, making it the most censorship-resistant of the coordinator-based coinjoin protocols, though the long-term resilience of Nostr is still to be proven.",
     "point_2": "The coordinator steps are simplified by the introduction of outputs with the sighash flag ALL|ANYONECANPAY.",
