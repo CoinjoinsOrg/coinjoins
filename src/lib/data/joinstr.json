@@ -42,11 +42,11 @@
     }
   ],
   "overview": {
-    "point_1": "Joinstr aims to decentralize the coinjoin coordinator to solve the censorship resistance problem of other centralized protocols.",
-    "point_2": "It is currently not available on the Bitcoin mainnet network and using it with real money is strongly discouraged.",
+    "point_1": "Joinstr aims to decentralize the coinjoin coordinator to solve the censorship resistance problem of other centralized protocols. Joinstr is a protocol and anyone can build a client for it. There’s currently a CLI/web client, an electrum plugin and a mobile application is currently being developed. ",
+    "point_2": "It is not yet available on the Bitcoin mainnet network and using it with real money is strongly discouraged.",
     "point_3": "Users start by selecting an input to be part of the next coinjoin round, with the process commencing once the required number of participants is reached.",
     "point_4": "The Nostr relay coordinator receives an output of the same denomination from each participant with the sighash flag ALL|ANYONECANPAY, followed by each participant registering and signing the previously selected input.",
-    "point_5": "Each event is published with a new Nostr public key and a new IP address using the RISEUP API free service (not yet implemented). Tor is optional.",
+    "point_5": "Each event is published with a new Nostr public key and a new IP address using the RISEUP API free service (implemented only on the Electrum plugin). Tor is optional.",
     "point_7": "Customization is available for the number of participants and the output denomination, currently set to 5 participants and 0.10 BTC respectively.",
     "point_8": "DoS attack vectors can be mitigated through the use of encrypted Nostr channels for each round and by encouraging the use of paid, private, custom Nostr relays."
   },
@@ -66,6 +66,6 @@
     "point_2": "Without real money usage, it hasn't been stress tested for Sybil, DoS, liquidity, blockchain deanonymization, and network privacy attack vectors.",
     "point_3": "The web and CLI applications require deploying a Bitcoin Core node, which consumes hundreds of GB of bandwidth, disk space (though pruning is possible), and time.",
     "point_4": "There is no anonymity rating or other method to quantify the privacy value of a Joinstr coinjoin transaction.",
-    "point_5": "Users must create outputs of a specific denomination in advance, which may generate non-private toxic change outputs."
+    "point_5": "Users must create outputs of a specific denomination in advance, which may generate non-private toxic change outputs. However, these toxic change outputs can be used to open lightning network channels directly from Electrum."
   }
 }
