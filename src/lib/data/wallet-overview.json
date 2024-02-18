@@ -178,6 +178,12 @@
       "page": "/wallets/jam",
       "icon": "jam.png",
       "id": "jam"
+    },
+    {
+      "name": "Joinstr",
+      "page": "/wallets/joinstr",
+      "icon": "joinstr.png",
+      "id": "joinstr"
     }
   ]
 }
