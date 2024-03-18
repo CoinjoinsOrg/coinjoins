@@ -1,0 +1,71 @@
+{
+  "no_results": {
+    "title": "No results for now. Run the numbers first!"
+  },
+  "hero": {
+    "title": "Coinjoin Fee Calculator",
+    "body": "Coinjoin fees can be difficult to calculate. This calculator aims to make coinjoin fees easier to estimate for Wasabi Wallet. For educational purposes only."
+  },
+  "calculator": {
+    "how_much_bitcoin": {
+      "label": "How much bitcoin to coinjoin?",
+      "placeholder": "Enter the amount of BTC",
+      "btc": "BTC"
+    },
+    "how_many_inputs": {
+      "label": "How many inputs?",
+      "placeholder": "Enter the amount of coins"
+    },
+    "expected_privacy": {
+      "label": "What is your expected level of privacy?",
+      "placeholder": "Select your privacy level",
+      "dropdown": [
+        {
+          "id": "low",
+          "value": false,
+          "name": "Low"
+        },
+        {
+          "id": "high",
+          "value": true,
+          "name": "High"
+        }
+      ]
+    },
+    "current_fee_rate": "Current fee rate (from Mempool.Space)",
+    "is_first_coinjoin": {
+      "label": "Is this your first coinjoin with this wallet?",
+      "placeholder": "Choose your situation",
+      "dropdown": [
+        {
+          "id": "false",
+          "value": false,
+          "name": "No, used it before"
+        },
+        {
+          "id": "true",
+          "value": true,
+          "name": "Yes, first wallet"
+        }
+      ]
+    },
+    "cta": {
+      "text": "Calculate fees"
+    }
+  },
+  "results": {
+    "title": "Results",
+    "total_fees": {
+      "title": "Total Fees",
+      "subtitle": "All fees, including coordinator and mining fees."
+    },
+    "coordinator_fees": {
+      "title": "Coordinator Fees (0.3%)",
+      "subtitle": "Fees that the coinjoin coordinator takes for its service."
+    },
+    "mining_fees": {
+      "title": "Mining Fees",
+      "subtitle": "Depend on the live block space market conditions."
+    }
+  }
+}
