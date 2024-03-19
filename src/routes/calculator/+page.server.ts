@@ -1,19 +1,26 @@
-// import
-
-enum PrivacyLevelEnum {
-  Five = 5,
-  Fifty = 50,
-}
+import { fail } from "@sveltejs/kit";
 
 export const load = async (event) => {
-  const response = await fetch("https://mempool.space/api/v1/fees/recommended");
-  const data = await response.json();
+  try {
+    const response = await fetch(
+      "https://mempool.space/api/v1/fees/recommended"
+    );
+    if (!response.ok) {
+      throw new Error(`Failed to fetch data: ${response.status}`);
+    }
+    const data = await response.json();
 
-  return {
-    miningFees: {
-      data,
-    },
-  };
+    return {
+      miningFees: {
+        data,
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return {
+      error: "Failed to fetch data",
+    };
+  }
 };
 
 export const actions = {
@@ -21,10 +28,24 @@ export const actions = {
     const { request } = event;
     const formData = await request.formData();
     const btcAmount: number = Number(formData.get("how_much_bitcoin"));
-    const inputsCount: number = Number(formData.get("how_many_inputs"));
-    const privacyLevelStr = formData.get("privacy_level");
 
-    console.log("privacyLevelStr", privacyLevelStr);
+    if (btcAmount <= 0) {
+      return fail(400, { errBtcAmount: "Amount should be positive." });
+    }
+
+    const inputsCount: number = Number(formData.get("how_many_inputs"));
+
+    if (inputsCount <= 0) {
+      return fail(400, {
+        errInputsCount: "There should be at least one input.",
+      });
+    }
+    const privacyLevelStr: string = String(formData.get("privacy_level"));
+
+    if (privacyLevelStr !== "low" && privacyLevelStr !== "high")
+      return fail(400, {
+        errPrivacyLevel: "Choose a desired privacy level.",
+      });
 
     let isPrivacyLevelHigh: boolean;
 
@@ -39,7 +60,18 @@ export const actions = {
     }
 
     const miningFeeRate: number = Number(formData.get("mining_fees"));
+
+    if (miningFeeRate === 0)
+      return fail(400, {
+        errMiningFeeRate: "Cannot get mining fee rate from Mempool.Space",
+      });
+
     const isFirstCoinjoinRaw = formData.get("is_first_coinjoin");
+    if (isFirstCoinjoinRaw !== "false" && isFirstCoinjoinRaw !== "true")
+      return fail(400, {
+        errIsFirstCoinjoin: "Choose if you have already coinjoined or not.",
+      });
+
     const isFirstCoinjoin: boolean =
       isFirstCoinjoinRaw !== null && isFirstCoinjoinRaw !== undefined
         ? isFirstCoinjoinRaw.toString().toLowerCase() === "true" ||
