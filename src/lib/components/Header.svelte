@@ -202,6 +202,22 @@
         {headerData.menu.history}
       </a>
     </div>
+    <div
+      class="cursor-default hover:text-green-cj hover:cursor-pointer {$page.url
+        .pathname === '/calculator'
+        ? 'text-green-cj'
+        : 'text-white'}"
+    >
+      <a
+        on:click={showMobileMenu
+          ? handleMobileMenuItemClick
+          : handleDesktopMenuItemClick}
+        href="/calculator"
+        class="no-underline"
+      >
+        {headerData.menu.calculator}
+      </a>
+    </div>
     <div class="isolate z-20 md:hidden flex justify-center pt-12">
       <a
         href="/try"

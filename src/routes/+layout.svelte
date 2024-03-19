@@ -60,7 +60,7 @@
 <Header />
 {#key data.url}
   <div
-    class="z-0 min-w-[320px] bg-dark-blue flex flex-col gap-52 md:gap-56"
+    class="z-0 min-w-[320px] bg-dark-blue flex flex-col gap-16 md:gap-32"
     in:fly={{ x: -200, duration: 300, delay: 300 }}
     out:fly={{ x: 200, duration: 300 }}
   >
