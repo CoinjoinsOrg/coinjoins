@@ -37,6 +37,41 @@
   }
 
   function scrollToResults() {
+    if (form?.errBtcAmount) {
+      const element = document.getElementById("btc_amount");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
+    if (form?.errInputsCount) {
+      const element = document.getElementById("inputs_count");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
+    if (form?.errPrivacyLevel) {
+      const element = document.getElementById("privacy_level");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
+    if (form?.errMiningFeeRate) {
+      const element = document.getElementById("mining_fees");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
+    if (form?.errIsFirstCoinjoin) {
+      const element = document.getElementById("is_first_coinjoin");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
     const element = document.getElementById("results");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -71,6 +106,7 @@
     }}
   >
     <label
+      id="btc_amount"
       for="how_much_bitcoin"
       class="border rounded-md border-green-cj p-6 flex flex-col md:flex-row items-start md:items-center gap-4 font-inconsolata text-base w-full justify-between"
     >
@@ -92,6 +128,7 @@
     {/if}
 
     <label
+      id="inputs_count"
       for="how_many_inputs"
       class="border rounded-md border-green-cj p-6 flex flex-col md:flex-row items-start md:items-center gap-4 font-inconsolata text-base w-full justify-between"
     >
@@ -112,6 +149,7 @@
     {/if}
 
     <label
+      id="privacy_level"
       for="privacy_level"
       class="border rounded-md border-green-cj p-6 flex flex-col md:flex-row items-start md:items-center gap-4 font-inconsolata text-base w-full justify-between"
     >
@@ -136,6 +174,7 @@
     {/if}
 
     <label
+      id="mining_fees"
       for="mining_fees"
       class="border rounded-md border-green-cj p-6 flex flex-col md:flex-row items-start md:items-center gap-4 font-inconsolata text-base w-full justify-between"
     >
@@ -157,6 +196,7 @@
     {/if}
 
     <label
+      id="is_first_coinjoin"
       for="is_first_coinjoin"
       class="border rounded-md border-green-cj p-6 flex flex-col md:flex-row items-start md:items-center gap-4 font-inconsolata text-base w-full justify-between"
     >
