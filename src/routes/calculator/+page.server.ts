@@ -112,20 +112,20 @@ export const actions = {
 
     let standaloneTransactionInputs: number = 0;
 
-    standaloneTransactionInputs = inputsCount % 10;
+    standaloneTransactionInputs = inputsCount % 9;
 
-    let initialTransactionsWith10Inputs: number = 0;
+    let initialTransactionsWith9Inputs: number = 0;
 
-    initialTransactionsWith10Inputs = Math.floor(inputsCount / 10);
+    initialTransactionsWith9Inputs = Math.floor(inputsCount / 9);
 
     let totalNumberOfTransactions: number = 0;
 
     if (standaloneTransactionInputs === 0) {
       totalNumberOfTransactions =
-        initialTransactionsWith10Inputs * transactionQueueLength;
+        initialTransactionsWith9Inputs * transactionQueueLength;
     } else {
       totalNumberOfTransactions =
-        initialTransactionsWith10Inputs * transactionQueueLength +
+        initialTransactionsWith9Inputs * transactionQueueLength +
         transactionQueueLength;
     }
 
@@ -138,23 +138,23 @@ export const actions = {
     let numberOfInitialTransactions: number = 0;
 
     numberOfInitialTransactions =
-      Math.ceil(inputsCount / 10) * liquidityMultiplier;
+      Math.ceil(inputsCount / 9) * liquidityMultiplier;
 
-    let utxosFor10InputsTransaction: number = 0;
+    let utxosFor9InputsTransaction: number = 0;
 
-    if (initialTransactionsWith10Inputs === 0) {
-      utxosFor10InputsTransaction = 0;
+    if (initialTransactionsWith9Inputs === 0) {
+      utxosFor9InputsTransaction = 0;
     } else {
-      utxosFor10InputsTransaction = 10;
+      utxosFor9InputsTransaction = 9;
     }
 
     const vbytesPerInput: number = 69;
     const vbytesPerOutput: number = 31;
-    let totalVbytesFor10Utxos: number = 0;
+    let totalVbytesFor9Utxos: number = 0;
 
-    totalVbytesFor10Utxos =
+    totalVbytesFor9Utxos =
       (vbytesPerInput + vbytesPerOutput) *
-      utxosFor10InputsTransaction *
+      utxosFor9InputsTransaction *
       transactionQueueLength;
 
     let outputs_first_tx: number;
@@ -166,48 +166,48 @@ export const actions = {
 
     if (standaloneTransactionInputs === 0) {
       outputs_first_tx = 0;
-    } else if (standaloneTransactionInputs >= 10) {
-      outputs_first_tx = 10;
+    } else if (standaloneTransactionInputs >= 9) {
+      outputs_first_tx = 9;
     } else {
       outputs_first_tx = standaloneTransactionInputs + 1;
     }
 
     if (outputs_first_tx === 0) {
       outputs_second_tx = 0;
-    } else if (outputs_first_tx >= 10) {
-      outputs_second_tx = 10;
+    } else if (outputs_first_tx >= 9) {
+      outputs_second_tx = 9;
     } else {
       outputs_second_tx = outputs_first_tx + 1;
     }
 
     if (outputs_second_tx === 0) {
       outputs_third_tx = 0;
-    } else if (outputs_second_tx >= 10) {
-      outputs_third_tx = 10;
+    } else if (outputs_second_tx >= 9) {
+      outputs_third_tx = 9;
     } else {
       outputs_third_tx = outputs_second_tx + 1;
     }
 
     if (outputs_third_tx === 0) {
       outputs_fourth_tx = 0;
-    } else if (outputs_third_tx >= 10) {
-      outputs_fourth_tx = 10;
+    } else if (outputs_third_tx >= 9) {
+      outputs_fourth_tx = 9;
     } else {
       outputs_fourth_tx = outputs_third_tx + 1;
     }
 
     if (outputs_fourth_tx === 0) {
       outputs_fifth_tx = 0;
-    } else if (outputs_fourth_tx >= 10) {
-      outputs_fifth_tx = 10;
+    } else if (outputs_fourth_tx >= 9) {
+      outputs_fifth_tx = 9;
     } else {
       outputs_fifth_tx = outputs_fourth_tx + 1;
     }
 
     if (outputs_fifth_tx === 0) {
       outputs_sixth_tx = 0;
-    } else if (outputs_fifth_tx >= 10) {
-      outputs_sixth_tx = 10;
+    } else if (outputs_fifth_tx >= 9) {
+      outputs_sixth_tx = 9;
     } else {
       outputs_sixth_tx = outputs_fifth_tx + 1;
     }
@@ -216,13 +216,13 @@ export const actions = {
 
     if (isPrivacyLevelHigh) {
       finalNumberOfOutputs =
-        initialTransactionsWith10Inputs * 10 * outputs_sixth_tx;
+        initialTransactionsWith9Inputs * 9 * outputs_sixth_tx;
     } else if (isFirstCoinjoin) {
       finalNumberOfOutputs =
-        initialTransactionsWith10Inputs * 10 + outputs_second_tx;
+        initialTransactionsWith9Inputs * 9 + outputs_second_tx;
     } else {
       finalNumberOfOutputs =
-        initialTransactionsWith10Inputs * 10 + outputs_first_tx;
+        initialTransactionsWith9Inputs * 9 + outputs_first_tx;
     }
 
     finalNumberOfOutputs = finalNumberOfOutputs * liquidityMultiplier;
@@ -258,7 +258,7 @@ export const actions = {
     let totalVbytesForAllTransactions: number = 0;
 
     totalVbytesForAllTransactions =
-      (totalVbytesFor10Utxos * initialTransactionsWith10Inputs +
+      (totalVbytesFor9Utxos * initialTransactionsWith9Inputs +
         totalVbytesStandaloneTransaction) *
       liquidityMultiplier;
 
