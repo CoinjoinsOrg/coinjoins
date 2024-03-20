@@ -163,9 +163,6 @@ export const actions = {
     let outputs_fourth_tx: number;
     let outputs_fifth_tx: number;
     let outputs_sixth_tx: number;
-    let outputs_seventh_tx: number;
-    let outputs_eighth_tx: number;
-    let outputs_ninth_tx: number;
 
     if (standaloneTransactionInputs === 0) {
       outputs_first_tx = 0;
@@ -215,35 +212,11 @@ export const actions = {
       outputs_sixth_tx = outputs_fifth_tx + 1;
     }
 
-    if (outputs_sixth_tx === 0) {
-      outputs_seventh_tx = 0;
-    } else if (outputs_sixth_tx >= 10) {
-      outputs_seventh_tx = 10;
-    } else {
-      outputs_seventh_tx = outputs_sixth_tx + 1;
-    }
-
-    if (outputs_seventh_tx === 0) {
-      outputs_eighth_tx = 0;
-    } else if (outputs_seventh_tx >= 10) {
-      outputs_eighth_tx = 10;
-    } else {
-      outputs_eighth_tx = outputs_seventh_tx + 1;
-    }
-
-    if (outputs_eighth_tx === 0) {
-      outputs_ninth_tx = 0;
-    } else if (outputs_eighth_tx >= 10) {
-      outputs_ninth_tx = 10;
-    } else {
-      outputs_ninth_tx = outputs_eighth_tx + 1;
-    }
-
     let finalNumberOfOutputs: number = 0;
 
     if (isPrivacyLevelHigh) {
       finalNumberOfOutputs =
-        initialTransactionsWith10Inputs * 10 * outputs_ninth_tx;
+        initialTransactionsWith10Inputs * 10 * outputs_sixth_tx;
     } else if (isFirstCoinjoin) {
       finalNumberOfOutputs =
         initialTransactionsWith10Inputs * 10 + outputs_second_tx;
@@ -265,18 +238,11 @@ export const actions = {
         vbytesPerInput * outputs_second_tx +
         vbytesPerOutput * outputs_third_tx +
         vbytesPerInput * outputs_third_tx +
-        vbytesPerInput * outputs_fourth_tx + // error?
         vbytesPerOutput * outputs_fourth_tx +
-        vbytesPerInput * outputs_fifth_tx +
+        vbytesPerInput * outputs_fourth_tx +
         vbytesPerOutput * outputs_fifth_tx +
-        vbytesPerInput * outputs_sixth_tx +
-        vbytesPerOutput * outputs_sixth_tx +
-        vbytesPerInput * outputs_seventh_tx +
-        vbytesPerOutput * outputs_seventh_tx +
-        vbytesPerInput * outputs_eighth_tx +
-        vbytesPerOutput * outputs_eighth_tx +
-        vbytesPerInput * outputs_ninth_tx +
-        vbytesPerOutput * outputs_ninth_tx;
+        vbytesPerInput * outputs_fifth_tx +
+        vbytesPerOutput * outputs_sixth_tx;
     } else if (isFirstCoinjoin) {
       totalVbytesStandaloneTransaction =
         vbytesPerInput * standaloneTransactionInputs +
