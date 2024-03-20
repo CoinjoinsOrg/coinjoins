@@ -114,6 +114,8 @@
       <div>
         <input
           type="number"
+          min="0"
+          step="0.00000001"
           id="how_much_bitcoin"
           name="how_much_bitcoin"
           class="text-dark-blue text-right px-2 max-w-20"
@@ -135,6 +137,7 @@
       {text.calculator.how_many_inputs.label}
       <input
         type="number"
+        min="0"
         id="how_many_inputs"
         name="how_many_inputs"
         bind:value={inputCount}
