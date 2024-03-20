@@ -174,28 +174,6 @@
     {/if}
 
     <label
-      id="mining_fees"
-      for="mining_fees"
-      class="border rounded-md border-green-cj p-6 flex flex-col md:flex-row items-start md:items-center gap-4 font-inconsolata text-base w-full justify-between"
-    >
-      {text.calculator.current_fee_rate}
-      <input
-        type="text"
-        id="mining_fees"
-        name="mining_fees"
-        bind:value={currentFeeRate}
-        readonly
-        class="text-dark-blue text-right px-2 hover:cursor-not-allowed"
-      />
-    </label>
-
-    {#if form?.errMiningFeeRate}
-      <div class="text-red text-sm w-full text-left">
-        {form?.errMiningFeeRate}
-      </div>
-    {/if}
-
-    <label
       id="is_first_coinjoin"
       for="is_first_coinjoin"
       class="border rounded-md border-green-cj p-6 flex flex-col md:flex-row items-start md:items-center gap-4 font-inconsolata text-base w-full justify-between"
@@ -218,6 +196,28 @@
     {#if form?.errIsFirstCoinjoin}
       <div class="text-red text-sm w-full text-left">
         {form?.errIsFirstCoinjoin}
+      </div>
+    {/if}
+
+    <label
+      id="mining_fees"
+      for="mining_fees"
+      class="border rounded-md border-green-cj p-6 flex flex-col md:flex-row items-start md:items-center gap-4 font-inconsolata text-base w-full justify-between"
+    >
+      {text.calculator.current_fee_rate}
+      <input
+        type="text"
+        id="mining_fees"
+        name="mining_fees"
+        bind:value={currentFeeRate}
+        readonly
+        class="text-dark-blue text-right px-2 hover:cursor-not-allowed"
+      />
+    </label>
+
+    {#if form?.errMiningFeeRate}
+      <div class="text-red text-sm w-full text-left">
+        {form?.errMiningFeeRate}
       </div>
     {/if}
 
