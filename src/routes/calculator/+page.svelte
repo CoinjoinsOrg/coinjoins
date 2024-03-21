@@ -77,6 +77,10 @@
       element.scrollIntoView({ behavior: "smooth" });
     }
   }
+
+  function handleInput() {
+    btcAmount = parseFloat(event.target.value).toString();
+  }
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -113,11 +117,12 @@
       {text.calculator.how_much_bitcoin.label}
       <div>
         <input
-          type="number"
+          type="text"
           id="how_much_bitcoin"
           name="how_much_bitcoin"
           class="text-dark-blue text-right px-2 max-w-20"
-          bind:value={btcAmount}
+          value={btcAmount}
+          on:input={handleInput}
         />
         {text.calculator.how_much_bitcoin.btc}
       </div>
@@ -135,6 +140,7 @@
       {text.calculator.how_many_inputs.label}
       <input
         type="number"
+        min="0"
         id="how_many_inputs"
         name="how_many_inputs"
         bind:value={inputCount}
@@ -174,28 +180,6 @@
     {/if}
 
     <label
-      id="mining_fees"
-      for="mining_fees"
-      class="border rounded-md border-green-cj p-6 flex flex-col md:flex-row items-start md:items-center gap-4 font-inconsolata text-base w-full justify-between"
-    >
-      {text.calculator.current_fee_rate}
-      <input
-        type="text"
-        id="mining_fees"
-        name="mining_fees"
-        bind:value={currentFeeRate}
-        readonly
-        class="text-dark-blue text-right px-2 hover:cursor-not-allowed"
-      />
-    </label>
-
-    {#if form?.errMiningFeeRate}
-      <div class="text-red text-sm w-full text-left">
-        {form?.errMiningFeeRate}
-      </div>
-    {/if}
-
-    <label
       id="is_first_coinjoin"
       for="is_first_coinjoin"
       class="border rounded-md border-green-cj p-6 flex flex-col md:flex-row items-start md:items-center gap-4 font-inconsolata text-base w-full justify-between"
@@ -218,6 +202,28 @@
     {#if form?.errIsFirstCoinjoin}
       <div class="text-red text-sm w-full text-left">
         {form?.errIsFirstCoinjoin}
+      </div>
+    {/if}
+
+    <label
+      id="mining_fees"
+      for="mining_fees"
+      class="border rounded-md border-green-cj p-6 flex flex-col md:flex-row items-start md:items-center gap-4 font-inconsolata text-base w-full justify-between"
+    >
+      {text.calculator.current_fee_rate}
+      <input
+        type="text"
+        id="mining_fees"
+        name="mining_fees"
+        bind:value={currentFeeRate}
+        class="text-dark-blue text-right px-2"
+      />
+      sats/vbyte
+    </label>
+
+    {#if form?.errMiningFeeRate}
+      <div class="text-red text-sm w-full text-left">
+        {form?.errMiningFeeRate}
       </div>
     {/if}
 
