@@ -77,6 +77,10 @@
       element.scrollIntoView({ behavior: "smooth" });
     }
   }
+
+  function handleInput() {
+    btcAmount = parseFloat(event.target.value).toString();
+  }
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -113,13 +117,12 @@
       {text.calculator.how_much_bitcoin.label}
       <div>
         <input
-          type="number"
-          min="0"
-          step="0.00000001"
+          type="text"
           id="how_much_bitcoin"
           name="how_much_bitcoin"
           class="text-dark-blue text-right px-2 max-w-20"
-          bind:value={btcAmount}
+          value={btcAmount}
+          on:input={handleInput}
         />
         {text.calculator.how_much_bitcoin.btc}
       </div>
@@ -213,9 +216,9 @@
         id="mining_fees"
         name="mining_fees"
         bind:value={currentFeeRate}
-        readonly
-        class="text-dark-blue text-right px-2 hover:cursor-not-allowed"
+        class="text-dark-blue text-right px-2"
       />
+      sats/vbyte
     </label>
 
     {#if form?.errMiningFeeRate}
