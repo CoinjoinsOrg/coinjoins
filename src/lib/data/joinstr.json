@@ -45,14 +45,14 @@
     "point_1": "Joinstr aims to decentralize the coinjoin coordinator to solve the censorship resistance problem of other centralized protocols. Joinstr is a protocol and anyone can build a client for it. There’s currently a CLI/web client, an electrum plugin and a mobile application is currently being developed. ",
     "point_2": "It is not yet available on the Bitcoin mainnet network and using it with real money is strongly discouraged.",
     "point_3": "The CLI and web app approach is different from the new one used in the Electrum plugin. The old approach starts with input registration, followed by output registration using SIGHASH_ALL or the default SIGHASH flag. A PSBT is created and all users sign it to complete the transaction.",
-    "point_4": "The new approach is to first register the outputs with SIGHASH_ALL | SIGHASH_ANYONECANPAY flags, then each user creates a PSBT with their input and all outputs signed, and finally all PSBTs are combined, finalized and sent.",
+    "point_4": "The new approach is to first register the outputs, then each user creates a PSBT with their input and all outputs signed with SIGHASH_ALL | SIGHASH_ANYONECANPAY flag, and finally all PSBTs are combined, finalized and sent.",
     "point_5": "Each event is published with a new Nostr public key and a new IP address using the RISEUP API free service (implemented only on the Electrum plugin). Tor is optional.",
     "point_7": "Customization is available for the number of participants and the output denomination, currently set to 5 participants and 0.10 BTC respectively.",
     "point_8": "DoS attack vectors can be mitigated through the use of encrypted Nostr channels for each round and by encouraging the use of paid, private, custom Nostr relays."
   },
   "benefits": {
     "point_1": "Joinstr is as censorship-resistant as Nostr, making it the most censorship-resistant of the coordinator-based coinjoin protocols, though the long-term resilience of Nostr is still to be proven.",
-    "point_2": "The coordinator steps are simplified by the introduction of outputs with the sighash flag ALL|ANYONECANPAY.",
+    "point_2": "The coordinator steps are simplified by the introduction of sighash flag ALL|ANYONECANPAY.",
     "point_3": "The protocol allows for customization in terms of the number of participants and the denominations of the output amounts.",
     "point_4": "It is built on top of proven and well-known wallets such as Electrum Wallet (Desktop) and Bitcoin Core, with Electrum allowing users to connect to their own node through the middleware of an Electrum server.",
     "point_5": "It avoids Tor dependency by planning to use the riseupVPN API for network communication to avoid leaking the participants' IP addresses.",

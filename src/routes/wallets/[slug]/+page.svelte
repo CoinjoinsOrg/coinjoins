@@ -41,10 +41,11 @@
       {/each}
     </div>
     <H1
-      >{data.content.wallet_name}<br /><GreenText
-        >& {data.content.protocol_name}</GreenText
-      ></H1
-    >
+      >{data.content.wallet_name}<br />
+      {#if data.content.wallet_name !== "Joinstr"}
+        <GreenText>& {data.content.protocol_name}</GreenText>
+      {/if}
+    </H1>
     <div class="text-lg">
       {data.content.hero}
     </div>
