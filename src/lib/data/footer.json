@@ -49,14 +49,6 @@
         "link": "joinmarket"
       },
       {
-        "text": "Samourai Wallet",
-        "link": "samourai"
-      },
-      {
-        "text": "Sparrow Wallet",
-        "link": "sparrow"
-      },
-      {
         "text": "Trezor Suite",
         "link": "trezor-suite"
       },
@@ -104,10 +96,6 @@
       {
         "text": "Wasabi 1.0",
         "link": "ww1"
-      },
-      {
-        "text": "Whirlpool",
-        "link": "whirlpool"
       },
       {
         "text": "WabiSabi",

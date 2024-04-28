@@ -148,7 +148,7 @@
   },
   "try": {
     "title": "Ready to Try for <span style='color:rgb(0,255,25,1.0)'>Yourself</span>?",
-    "body": " Don’t trust, verify. See for yourself and learn how coinjoins work by participating in them. There are different bitcoin wallets with built-in coinjoin features. We recommend Wasabi Wallet after reviewing every privacy wallet based on the evaluation framework found <a href='/wallet-overview'>here</a>.",
+    "body": " Don’t trust, verify. See for yourself and learn how coinjoins work. There are different bitcoin wallets with built-in coinjoin features. We recommend trying Wasabi Wallet for educational purposes after reviewing some privacy wallets based on the evaluation framework found <a href='/wallet-overview'>here</a>.",
     "features": [
       {
         "title": "Fully <br /> Trustless",

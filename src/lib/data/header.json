@@ -25,18 +25,6 @@
       "isDeprecated": false
     },
     {
-      "name": "Samourai",
-      "path": "samourai",
-      "isActive": true,
-      "isDeprecated": true
-    },
-    {
-      "name": "Sparrow",
-      "path": "sparrow",
-      "isActive": true,
-      "isDeprecated": true
-    },
-    {
       "name": "Wasabi 1.0",
       "path": "wasabi-1.0",
       "isActive": true,
